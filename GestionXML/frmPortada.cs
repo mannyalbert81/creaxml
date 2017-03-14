@@ -20,7 +20,7 @@ namespace GestionXML
             timer2.Start();
             timer2.Tick += (s, e) => {
 
-                frmMenucs frm = new frmMenucs();
+                frmLogin frm = new frmLogin();
                 frm.Show();
                 this.Hide();
                 timer2.Stop();

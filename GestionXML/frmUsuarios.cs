@@ -49,9 +49,25 @@ namespace GestionXML
         }
 
 
-        private void Guardar_Click(object sender, EventArgs e)
-        {
 
+        private void dataGridViewUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dataGridViewUsuarios.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
+            txt_nombres_apellidos.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
+            txt_telefono.Text = Convert.ToString(fila.Cells[2].Value);
+            txt_celular.Text = Convert.ToString(fila.Cells[3].Value);
+            txt_correo.Text = Convert.ToString(fila.Cells[4].Value);
+            txt_usuario.Text = Convert.ToString(fila.Cells[8].Value);
+            cbm_rol.SelectedText = Convert.ToString(fila.Cells[5].Value);
+            cbm_estado.SelectedText = Convert.ToString(fila.Cells[6].Value);
+            cbm_ciudad.SelectedText = Convert.ToString(fila.Cells[7].Value);
+
+        }
+
+       
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
             string _error = "";
             string _nombre_usuarios = txt_nombres_apellidos.Text;
             string _usuario_usuarios = txt_usuario.Text;
@@ -60,7 +76,7 @@ namespace GestionXML
             string _telefono_usuarios = txt_telefono.Text;
             string _celular_usuarios = txt_celular.Text;
             string _correo_usuarios = txt_correo.Text;
-            
+
             int _id_rol = Convert.ToInt16(cbm_rol.SelectedValue.ToString());
             int _id_estado = Convert.ToInt16(cbm_estado.SelectedValue.ToString());
             int _id_ciudad = Convert.ToInt16(cbm_ciudad.SelectedValue.ToString());
@@ -70,7 +86,7 @@ namespace GestionXML
             Boolean valida_email = false;
 
 
-            
+
             if (_nombre_usuarios.Length == 0)
             {
                 _error = "Debe Indicar un nombre y apellido del usuario";
@@ -141,27 +157,9 @@ namespace GestionXML
             {
                 MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void dataGridViewUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow fila = dataGridViewUsuarios.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
-            txt_nombres_apellidos.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
-            txt_telefono.Text = Convert.ToString(fila.Cells[2].Value);
-            txt_celular.Text = Convert.ToString(fila.Cells[3].Value);
-            txt_correo.Text = Convert.ToString(fila.Cells[4].Value);
-            txt_usuario.Text = Convert.ToString(fila.Cells[8].Value);
-            cbm_rol.SelectedText = Convert.ToString(fila.Cells[5].Value);
-            cbm_estado.SelectedText = Convert.ToString(fila.Cells[6].Value);
-            cbm_ciudad.SelectedText = Convert.ToString(fila.Cells[7].Value);
-
-
-           
-
-        }
-
-        private void Buscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             string _nombre_usuarios = txt_nombres_apellidos.Text;
             string _usuario_usuarios = txt_usuario.Text;
@@ -194,7 +192,7 @@ namespace GestionXML
 
         }
 
-        private void Eliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             string _error = "";
             if (txt_nombres_apellidos.Text.Length == 0)
@@ -227,6 +225,16 @@ namespace GestionXML
             {
                 MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

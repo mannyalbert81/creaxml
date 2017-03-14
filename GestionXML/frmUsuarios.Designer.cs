@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,10 +49,12 @@
             this.cbm_ciudad = new System.Windows.Forms.ComboBox();
             this.cbm_rol = new System.Windows.Forms.ComboBox();
             this.cbm_estado = new System.Windows.Forms.ComboBox();
-            this.Guardar = new System.Windows.Forms.Button();
             this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
-            this.Buscar = new System.Windows.Forms.Button();
-            this.Eliminar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,7 +124,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(413, 274);
+            this.label9.Location = new System.Drawing.Point(413, 268);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(33, 17);
             this.label9.TabIndex = 8;
@@ -170,15 +173,19 @@
             // 
             this.txt_clave.Location = new System.Drawing.Point(171, 158);
             this.txt_clave.Name = "txt_clave";
+            this.txt_clave.PasswordChar = '*';
             this.txt_clave.Size = new System.Drawing.Size(202, 22);
             this.txt_clave.TabIndex = 16;
+            this.txt_clave.UseSystemPasswordChar = true;
             // 
             // txt_confirme_clave
             // 
             this.txt_confirme_clave.Location = new System.Drawing.Point(561, 147);
             this.txt_confirme_clave.Name = "txt_confirme_clave";
+            this.txt_confirme_clave.PasswordChar = '*';
             this.txt_confirme_clave.Size = new System.Drawing.Size(188, 22);
             this.txt_confirme_clave.TabIndex = 17;
+            this.txt_confirme_clave.UseSystemPasswordChar = true;
             // 
             // txt_telefono
             // 
@@ -205,7 +212,7 @@
             // cbm_rol
             // 
             this.cbm_rol.FormattingEnabled = true;
-            this.cbm_rol.Location = new System.Drawing.Point(561, 274);
+            this.cbm_rol.Location = new System.Drawing.Point(561, 265);
             this.cbm_rol.Name = "cbm_rol";
             this.cbm_rol.Size = new System.Drawing.Size(188, 24);
             this.cbm_rol.TabIndex = 21;
@@ -218,55 +225,99 @@
             this.cbm_estado.Size = new System.Drawing.Size(202, 24);
             this.cbm_estado.TabIndex = 22;
             // 
-            // Guardar
-            // 
-            this.Guardar.Location = new System.Drawing.Point(171, 383);
-            this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(99, 28);
-            this.Guardar.TabIndex = 23;
-            this.Guardar.Text = "Guardar";
-            this.Guardar.UseVisualStyleBackColor = true;
-            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
-            // 
             // dataGridViewUsuarios
             // 
             this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsuarios.Location = new System.Drawing.Point(64, 435);
+            this.dataGridViewUsuarios.Location = new System.Drawing.Point(30, 459);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             this.dataGridViewUsuarios.RowTemplate.Height = 24;
-            this.dataGridViewUsuarios.Size = new System.Drawing.Size(713, 210);
+            this.dataGridViewUsuarios.Size = new System.Drawing.Size(789, 264);
             this.dataGridViewUsuarios.TabIndex = 24;
             this.dataGridViewUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuarios_CellContentClick);
             // 
-            // Buscar
+            // btnGuardar
             // 
-            this.Buscar.Location = new System.Drawing.Point(347, 383);
-            this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(99, 28);
-            this.Buscar.TabIndex = 25;
-            this.Buscar.Text = "Buscar";
-            this.Buscar.UseVisualStyleBackColor = true;
-            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
+            this.btnGuardar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.Location = new System.Drawing.Point(129, 358);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(100, 83);
+            this.btnGuardar.TabIndex = 27;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // Eliminar
+            // btnSalir
             // 
-            this.Eliminar.Location = new System.Drawing.Point(505, 383);
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(99, 28);
-            this.Eliminar.TabIndex = 26;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.UseVisualStyleBackColor = true;
-            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalir.Location = new System.Drawing.Point(622, 358);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(103, 83);
+            this.btnSalir.TabIndex = 31;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(496, 358);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(106, 83);
+            this.btnEliminar.TabIndex = 30;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLimpiar.Location = new System.Drawing.Point(375, 358);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 83);
+            this.btnLimpiar.TabIndex = 29;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscar.Location = new System.Drawing.Point(252, 358);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(98, 83);
+            this.btnBuscar.TabIndex = 28;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 669);
-            this.Controls.Add(this.Eliminar);
-            this.Controls.Add(this.Buscar);
+            this.ClientSize = new System.Drawing.Size(857, 735);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dataGridViewUsuarios);
-            this.Controls.Add(this.Guardar);
             this.Controls.Add(this.cbm_estado);
             this.Controls.Add(this.cbm_rol);
             this.Controls.Add(this.cbm_ciudad);
@@ -318,9 +369,11 @@
         private System.Windows.Forms.ComboBox cbm_ciudad;
         private System.Windows.Forms.ComboBox cbm_rol;
         private System.Windows.Forms.ComboBox cbm_estado;
-        private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.DataGridView dataGridViewUsuarios;
-        private System.Windows.Forms.Button Buscar;
-        private System.Windows.Forms.Button Eliminar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
