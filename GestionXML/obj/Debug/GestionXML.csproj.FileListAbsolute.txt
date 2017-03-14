@@ -74,3 +74,6 @@ C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.Properties
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.GenerateResource.Cache
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmLogin.resources
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmUsuarios.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmControladores.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmRoles.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmPermisosRoles.resources
