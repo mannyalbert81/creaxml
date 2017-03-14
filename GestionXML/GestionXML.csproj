@@ -79,6 +79,12 @@
     <Compile Include="frmCarpetasCrea.Designer.cs">
       <DependentUpon>frmCarpetasCrea.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmControladores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmControladores.Designer.cs">
+      <DependentUpon>frmControladores.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaPendienteTXT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,11 +115,23 @@
     <Compile Include="frmPortada.Designer.cs">
       <DependentUpon>frmPortada.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoles.Designer.cs">
+      <DependentUpon>frmRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPermisosRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPermisosRoles.Designer.cs">
+      <DependentUpon>frmPermisosRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarpetasCrea.resx">
       <DependentUpon>frmCarpetasCrea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmControladores.resx">
+      <DependentUpon>frmControladores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaPendienteTXT.resx">
       <DependentUpon>frmListaPendienteTXT.cs</DependentUpon>
@@ -144,8 +165,14 @@
     <EmbeddedResource Include="frmPortada.resx">
       <DependentUpon>frmPortada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRoles.resx">
+      <DependentUpon>frmRoles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPermisosRoles.resx">
+      <DependentUpon>frmPermisosRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

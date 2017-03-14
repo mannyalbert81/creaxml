@@ -37,6 +37,9 @@
             this.controlarCalidadXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controladoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.permisosRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +98,10 @@
             // administraciónToolStripMenuItem
             // 
             this.administraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem});
+            this.usuariosToolStripMenuItem,
+            this.rolesToolStripMenuItem,
+            this.controladoresToolStripMenuItem,
+            this.permisosRolesToolStripMenuItem});
             this.administraciónToolStripMenuItem.Name = "administraciónToolStripMenuItem";
             this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
             this.administraciónToolStripMenuItem.Text = "Administración";
@@ -103,9 +109,30 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.rolesToolStripMenuItem.Text = "Roles";
+            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
+            // 
+            // controladoresToolStripMenuItem
+            // 
+            this.controladoresToolStripMenuItem.Name = "controladoresToolStripMenuItem";
+            this.controladoresToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.controladoresToolStripMenuItem.Text = "Controladores";
+            this.controladoresToolStripMenuItem.Click += new System.EventHandler(this.controladoresToolStripMenuItem_Click);
+            // 
+            // permisosRolesToolStripMenuItem
+            // 
+            this.permisosRolesToolStripMenuItem.Name = "permisosRolesToolStripMenuItem";
+            this.permisosRolesToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.permisosRolesToolStripMenuItem.Text = "Permisos Roles";
+            this.permisosRolesToolStripMenuItem.Click += new System.EventHandler(this.permisosRolesToolStripMenuItem_Click);
             // 
             // frmMenucs
             // 
@@ -141,5 +168,8 @@
         private System.Windows.Forms.ToolStripMenuItem controlarCalidadXMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administraciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controladoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem permisosRolesToolStripMenuItem;
     }
 }

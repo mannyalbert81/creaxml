@@ -55,5 +55,23 @@ namespace GestionXML
                 e.Cancel = false;
             }
         }
+
+        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRoles frm = new frmRoles();
+            frm.Show();
+        }
+
+        private void controladoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmControladores frm = new frmControladores();
+            frm.Show();
+        }
+
+        private void permisosRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPermisosRoles frm = new frmPermisosRoles();
+            frm.Show();
+        }
     }
 }
