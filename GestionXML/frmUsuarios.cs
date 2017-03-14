@@ -25,12 +25,12 @@ namespace GestionXML
             clases.Funciones.CargarCombo(cbm_rol, "id_rol", "nombre_rol", "rol");
             clases.Funciones.CargarCombo(cbm_estado, "id_estado", "nombre_estado", "estado");
             clases.Funciones.CargarCombo(cbm_ciudad, "id_ciudad", "nombre_ciudad", "ciudad");
-            llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado");
+            llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado AND usuarios.id_ciudad = ciudad.id_ciudad");
         }
 
         private void llenar_grid(string _parametro)
         {
-            clases.Funciones.CargarGridView(dataGridViewUsuarios, "usuarios.id_usuarios, usuarios.nombre_usuarios, usuarios.telefono_usuarios, usuarios.celular_usuarios, usuarios.correo_usuarios, rol.nombre_rol, estado.nombre_estado, usuarios.creado, usuarios.modificado", "usuarios, rol, estado", _parametro, "Id?Nombre?Telefono?Celular?Correo?Rol?Estado?Creado?Modificado");
+            clases.Funciones.CargarGridView(dataGridViewUsuarios, "usuarios.id_usuarios, usuarios.nombre_usuarios, usuarios.telefono_usuarios, usuarios.celular_usuarios, usuarios.correo_usuarios, rol.nombre_rol, estado.nombre_estado, ciudad.nombre_ciudad, usuarios.usuario_usuarios, usuarios.creado, usuarios.modificado", "usuarios, rol, estado, ciudad", _parametro, "Id?Nombre?Telefono?Celular?Correo?Rol?Estado?Ciudad?Usuario?Creado?Modificado");
 
         }
 
@@ -126,7 +126,7 @@ namespace GestionXML
                     if (resul < 0)
                     {
                         MessageBox.Show("El Usuario se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado");
+                        llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado AND usuarios.id_ciudad = ciudad.id_ciudad");
                         limpiar();
 
 
@@ -148,14 +148,17 @@ namespace GestionXML
         {
             DataGridViewRow fila = dataGridViewUsuarios.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
             txt_nombres_apellidos.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
-            txt_usuario.Text = Convert.ToString(fila.Cells[2].Value);
-            txt_clave.Text = Convert.ToString(fila.Cells[3].Value);
-            txt_telefono.Text = Convert.ToString(fila.Cells[4].Value);
-            txt_celular.Text = Convert.ToString(fila.Cells[5].Value);
-            txt_correo.Text = Convert.ToString(fila.Cells[6].Value);
-            cbm_rol.SelectedText = Convert.ToString(fila.Cells[7].Value);
-            cbm_estado.SelectedText = Convert.ToString(fila.Cells[8].Value);
-            
+            txt_telefono.Text = Convert.ToString(fila.Cells[2].Value);
+            txt_celular.Text = Convert.ToString(fila.Cells[3].Value);
+            txt_correo.Text = Convert.ToString(fila.Cells[4].Value);
+            txt_usuario.Text = Convert.ToString(fila.Cells[8].Value);
+            cbm_rol.SelectedText = Convert.ToString(fila.Cells[5].Value);
+            cbm_estado.SelectedText = Convert.ToString(fila.Cells[6].Value);
+            cbm_ciudad.SelectedText = Convert.ToString(fila.Cells[7].Value);
+
+
+           
+
         }
 
         private void Buscar_Click(object sender, EventArgs e)
@@ -187,7 +190,7 @@ namespace GestionXML
                 _correo_usuarios = "%";
             }
 
-            llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado AND usuarios.nombre_usuarios LIKE '" + _nombre_usuarios + "' AND usuarios.telefono_usuarios LIKE '" + _telefono_usuarios + "' AND usuarios.celular_usuarios LIKE '" + _celular_usuarios + "' AND usuarios.correo_usuarios LIKE '" + _correo_usuarios + "' AND usuarios.usuario_usuarios LIKE '" + _usuario_usuarios + "'   ");
+            llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado AND usuarios.id_ciudad = ciudad.id_ciudad AND usuarios.nombre_usuarios LIKE '" + _nombre_usuarios + "' AND usuarios.telefono_usuarios LIKE '" + _telefono_usuarios + "' AND usuarios.celular_usuarios LIKE '" + _celular_usuarios + "' AND usuarios.correo_usuarios LIKE '" + _correo_usuarios + "' AND usuarios.usuario_usuarios LIKE '" + _usuario_usuarios + "'   ");
 
         }
 
@@ -208,7 +211,7 @@ namespace GestionXML
                     if (resul == 1)
                     {
                         MessageBox.Show("El Usuario se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado");
+                        llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado AND usuarios.id_ciudad = ciudad.id_ciudad");
                         limpiar();
 
 
