@@ -35,5 +35,11 @@ namespace GestionXML
             frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML(); 
             frm.Show();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios frm = new frmUsuarios();
+            frm.Show();
+        }
     }
 }
