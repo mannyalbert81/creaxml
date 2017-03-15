@@ -41,5 +41,10 @@ namespace GestionXML
         {
 
         }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

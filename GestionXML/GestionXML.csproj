@@ -200,6 +200,8 @@
     <Content Include="caminos.txt" />
     <Content Include="crea-xml.ico" />
     <Content Include="indice.txt" />
+    <None Include="Resources\portada2.jpg" />
+    <None Include="Resources\portada.jpg" />
     <None Include="Resources\primera.png" />
     <None Include="Resources\atras.png" />
     <None Include="Resources\portadamain1.jpg" />
