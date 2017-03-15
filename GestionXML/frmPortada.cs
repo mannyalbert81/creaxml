@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace GestionXML
 {
+
     public partial class frmPortada : Form
     {
         public frmPortada()
         {
             InitializeComponent();
 
-            timer2.Interval = 5000;
+            timer2.Interval = 10000;
             timer2.Start();
             timer2.Tick += (s, e) => {
 
@@ -44,7 +45,18 @@ namespace GestionXML
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+           
+        }
 
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            this.progressBar1.Increment(1);
+            
         }
     }
 }
