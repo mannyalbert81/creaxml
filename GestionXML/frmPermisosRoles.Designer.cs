@@ -58,6 +58,7 @@
             this.dataGridViewPermisosRoles.RowTemplate.Height = 24;
             this.dataGridViewPermisosRoles.Size = new System.Drawing.Size(749, 232);
             this.dataGridViewPermisosRoles.TabIndex = 0;
+            this.dataGridViewPermisosRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPermisosRoles_CellContentClick);
             // 
             // label1
             // 
@@ -101,7 +102,6 @@
             this.label3.Size = new System.Drawing.Size(164, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Nombre Permisos Roles:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txt_nombre_permisos_roles
             // 
@@ -122,6 +122,7 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
@@ -135,6 +136,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnLimpiar
             // 
@@ -148,6 +150,7 @@
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnBuscar
             // 
@@ -162,6 +165,7 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnGuardar
             // 
@@ -176,6 +180,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label4
             // 
@@ -207,6 +212,9 @@
             // cbm_ver
             // 
             this.cbm_ver.FormattingEnabled = true;
+            this.cbm_ver.Items.AddRange(new object[] {
+            "True",
+            "False"});
             this.cbm_ver.Location = new System.Drawing.Point(141, 243);
             this.cbm_ver.Name = "cbm_ver";
             this.cbm_ver.Size = new System.Drawing.Size(121, 24);
@@ -215,6 +223,9 @@
             // cbm_editar
             // 
             this.cbm_editar.FormattingEnabled = true;
+            this.cbm_editar.Items.AddRange(new object[] {
+            "True",
+            "False"});
             this.cbm_editar.Location = new System.Drawing.Point(361, 243);
             this.cbm_editar.Name = "cbm_editar";
             this.cbm_editar.Size = new System.Drawing.Size(121, 24);
@@ -223,6 +234,9 @@
             // cbm_borrar
             // 
             this.cbm_borrar.FormattingEnabled = true;
+            this.cbm_borrar.Items.AddRange(new object[] {
+            "True",
+            "False"});
             this.cbm_borrar.Location = new System.Drawing.Point(575, 243);
             this.cbm_borrar.Name = "cbm_borrar";
             this.cbm_borrar.Size = new System.Drawing.Size(121, 24);
@@ -255,6 +269,8 @@
             this.MinimizeBox = false;
             this.Name = "frmPermisosRoles";
             this.Text = "PermisosRoles";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPermisosRoles_FormClosing);
+            this.Load += new System.EventHandler(this.frmPermisosRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPermisosRoles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
