@@ -73,6 +73,26 @@ namespace GestionXML.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_gestor_copia {
+            get {
+                object obj = ResourceManager.GetObject("login gestor copia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_gestor_copia2 {
+            get {
+                object obj = ResourceManager.GetObject("login gestor copia2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap portada {
             get {
                 object obj = ResourceManager.GetObject("portada", resourceCulture);

@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaPendienteXML));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ARCHIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCamino = new System.Windows.Forms.Label();
             this.btnRecargar = new System.Windows.Forms.Button();
             this.cmbEquipos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreArchivo = new System.Windows.Forms.TextBox();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ARCHIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +54,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(682, 389);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "#";
+            this.numero.Name = "numero";
+            this.numero.Width = 30;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "CREADO";
+            this.fecha.Name = "fecha";
+            this.fecha.Width = 200;
+            // 
+            // ARCHIVO
+            // 
+            this.ARCHIVO.HeaderText = "ARCHIVO";
+            this.ARCHIVO.Name = "ARCHIVO";
+            this.ARCHIVO.Width = 450;
             // 
             // lblCamino
             // 
@@ -127,24 +146,6 @@
             this.txtNombreArchivo.TabIndex = 7;
             this.txtNombreArchivo.TextChanged += new System.EventHandler(this.txtNombreArchivo_TextChanged);
             // 
-            // numero
-            // 
-            this.numero.HeaderText = "#";
-            this.numero.Name = "numero";
-            this.numero.Width = 30;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "CREADO";
-            this.fecha.Name = "fecha";
-            this.fecha.Width = 200;
-            // 
-            // ARCHIVO
-            // 
-            this.ARCHIVO.HeaderText = "ARCHIVO";
-            this.ARCHIVO.Name = "ARCHIVO";
-            this.ARCHIVO.Width = 450;
-            // 
             // frmListaPendienteXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +158,7 @@
             this.Controls.Add(this.btnRecargar);
             this.Controls.Add(this.lblCamino);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaPendienteXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Archivos XML Pendientes";
