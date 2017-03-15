@@ -53,14 +53,16 @@ namespace GestionXML
         private void dataGridViewUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dataGridViewUsuarios.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
-            txt_nombres_apellidos.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
-            txt_telefono.Text = Convert.ToString(fila.Cells[2].Value);
-            txt_celular.Text = Convert.ToString(fila.Cells[3].Value);
-            txt_correo.Text = Convert.ToString(fila.Cells[4].Value);
-            txt_usuario.Text = Convert.ToString(fila.Cells[8].Value);
-            cbm_rol.SelectedText = Convert.ToString(fila.Cells[5].Value);
-            cbm_estado.SelectedText = Convert.ToString(fila.Cells[6].Value);
-            cbm_ciudad.SelectedText = Convert.ToString(fila.Cells[7].Value);
+            txt_nombres_apellidos.Text = Convert.ToString(fila.Cells[0].Value); //obtengo el valor de la primer columna
+            txt_telefono.Text = Convert.ToString(fila.Cells[1].Value);
+            txt_celular.Text = Convert.ToString(fila.Cells[2].Value);
+            txt_correo.Text = Convert.ToString(fila.Cells[3].Value);
+            cbm_rol.Text = Convert.ToString(fila.Cells[4].Value);
+            cbm_estado.Text = Convert.ToString(fila.Cells[5].Value);
+            cbm_ciudad.Text = Convert.ToString(fila.Cells[6].Value);
+            txt_usuario.Text = Convert.ToString(fila.Cells[7].Value);
+            
+
 
         }
 
