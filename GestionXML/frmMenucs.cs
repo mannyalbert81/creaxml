@@ -75,5 +75,11 @@ namespace GestionXML
             frmPermisosRoles frm = new frmPermisosRoles();
             frm.Show();
         }
+
+        private void proyectosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProyectos frm = new frmProyectos();
+            frm.Show();
+        }
     }
 }
