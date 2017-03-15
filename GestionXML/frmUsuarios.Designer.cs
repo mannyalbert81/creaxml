@@ -161,7 +161,7 @@
             // txt_nombres_apellidos
             // 
             this.txt_nombres_apellidos.Location = new System.Drawing.Point(172, 43);
-            this.txt_nombres_apellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_nombres_apellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombres_apellidos.Name = "txt_nombres_apellidos";
             this.txt_nombres_apellidos.Size = new System.Drawing.Size(391, 20);
             this.txt_nombres_apellidos.TabIndex = 13;
@@ -169,7 +169,7 @@
             // txt_usuario
             // 
             this.txt_usuario.Location = new System.Drawing.Point(128, 84);
-            this.txt_usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(152, 20);
             this.txt_usuario.TabIndex = 14;
@@ -177,7 +177,7 @@
             // txt_correo
             // 
             this.txt_correo.Location = new System.Drawing.Point(421, 79);
-            this.txt_correo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_correo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(142, 20);
             this.txt_correo.TabIndex = 15;
@@ -185,7 +185,7 @@
             // txt_clave
             // 
             this.txt_clave.Location = new System.Drawing.Point(128, 128);
-            this.txt_clave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_clave.Margin = new System.Windows.Forms.Padding(2);
             this.txt_clave.Name = "txt_clave";
             this.txt_clave.PasswordChar = '*';
             this.txt_clave.Size = new System.Drawing.Size(152, 20);
@@ -195,7 +195,7 @@
             // txt_confirme_clave
             // 
             this.txt_confirme_clave.Location = new System.Drawing.Point(421, 119);
-            this.txt_confirme_clave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_confirme_clave.Margin = new System.Windows.Forms.Padding(2);
             this.txt_confirme_clave.Name = "txt_confirme_clave";
             this.txt_confirme_clave.PasswordChar = '*';
             this.txt_confirme_clave.Size = new System.Drawing.Size(142, 20);
@@ -205,7 +205,7 @@
             // txt_telefono
             // 
             this.txt_telefono.Location = new System.Drawing.Point(128, 167);
-            this.txt_telefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_telefono.Margin = new System.Windows.Forms.Padding(2);
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(152, 20);
             this.txt_telefono.TabIndex = 18;
@@ -213,7 +213,7 @@
             // txt_celular
             // 
             this.txt_celular.Location = new System.Drawing.Point(421, 167);
-            this.txt_celular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_celular.Margin = new System.Windows.Forms.Padding(2);
             this.txt_celular.Name = "txt_celular";
             this.txt_celular.Size = new System.Drawing.Size(142, 20);
             this.txt_celular.TabIndex = 19;
@@ -222,7 +222,7 @@
             // 
             this.cbm_ciudad.FormattingEnabled = true;
             this.cbm_ciudad.Location = new System.Drawing.Point(128, 215);
-            this.cbm_ciudad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbm_ciudad.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_ciudad.Name = "cbm_ciudad";
             this.cbm_ciudad.Size = new System.Drawing.Size(152, 21);
             this.cbm_ciudad.TabIndex = 20;
@@ -231,7 +231,7 @@
             // 
             this.cbm_rol.FormattingEnabled = true;
             this.cbm_rol.Location = new System.Drawing.Point(421, 215);
-            this.cbm_rol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbm_rol.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_rol.Name = "cbm_rol";
             this.cbm_rol.Size = new System.Drawing.Size(142, 21);
             this.cbm_rol.TabIndex = 21;
@@ -240,7 +240,7 @@
             // 
             this.cbm_estado.FormattingEnabled = true;
             this.cbm_estado.Location = new System.Drawing.Point(128, 257);
-            this.cbm_estado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbm_estado.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_estado.Name = "cbm_estado";
             this.cbm_estado.Size = new System.Drawing.Size(152, 21);
             this.cbm_estado.TabIndex = 22;
@@ -249,7 +249,7 @@
             // 
             this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsuarios.Location = new System.Drawing.Point(22, 373);
-            this.dataGridViewUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             this.dataGridViewUsuarios.RowTemplate.Height = 24;
             this.dataGridViewUsuarios.Size = new System.Drawing.Size(592, 214);
@@ -263,7 +263,7 @@
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnGuardar.Location = new System.Drawing.Point(97, 291);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);
             this.btnGuardar.TabIndex = 27;
@@ -278,7 +278,7 @@
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSalir.Location = new System.Drawing.Point(466, 291);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
             this.btnSalir.TabIndex = 31;
@@ -293,7 +293,7 @@
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEliminar.Location = new System.Drawing.Point(372, 291);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
             this.btnEliminar.TabIndex = 30;
@@ -308,7 +308,7 @@
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLimpiar.Location = new System.Drawing.Point(281, 291);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
             this.btnLimpiar.TabIndex = 29;
@@ -324,7 +324,7 @@
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscar.Location = new System.Drawing.Point(189, 291);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
             this.btnBuscar.TabIndex = 28;
@@ -365,8 +365,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUsuarios";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).EndInit();
