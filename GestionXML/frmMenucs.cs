@@ -41,5 +41,37 @@ namespace GestionXML
             frmUsuarios frm = new frmUsuarios();
             frm.Show();
         }
+
+        private void frmMenucs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogo = MessageBox.Show("¿Desea cerrar el programa?",
+              "Cerrar el programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRoles frm = new frmRoles();
+            frm.Show();
+        }
+
+        private void controladoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmControladores frm = new frmControladores();
+            frm.Show();
+        }
+
+        private void permisosRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPermisosRoles frm = new frmPermisosRoles();
+            frm.Show();
+        }
     }
 }
