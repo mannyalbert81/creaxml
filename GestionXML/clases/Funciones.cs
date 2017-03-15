@@ -98,7 +98,7 @@ namespace GestionXML.clases
                 string[] vectorTitulos = Vector(titulos);
                 for (int i = 1; i <= vectorTitulos.Length; i++)
                 {
-                    gridView.Columns[i].HeaderCell.Value = vectorTitulos[i - 1];
+                    gridView.Columns[i].HeaderCell.Value = vectorTitulos[i];
                 }
             }
             catch

@@ -40,3 +40,6 @@ C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\AxInterop.AcroPDFLib.
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.ResolveComReference.cache
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.exe
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.pdb
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmControladores.resources
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmRoles.resources
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmPermisosRoles.resources
