@@ -82,7 +82,7 @@
             this.Ingresar.TabIndex = 4;
             this.Ingresar.Text = "Ingresar";
             this.Ingresar.UseVisualStyleBackColor = false;
-            this.Ingresar.Click += new System.EventHandler(this.Ingresar_Click);
+            this.Ingresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // Salir
             // 
@@ -96,7 +96,7 @@
             this.Salir.TabIndex = 5;
             this.Salir.Text = "Salir";
             this.Salir.UseVisualStyleBackColor = false;
-            this.Salir.Click += new System.EventHandler(this.Salir_Click);
+            this.Salir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label1
             // 
