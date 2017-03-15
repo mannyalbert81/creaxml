@@ -48,7 +48,6 @@
             this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Roles:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_roles
             // 
@@ -65,6 +64,7 @@
             this.dataGridViewRoles.RowTemplate.Height = 24;
             this.dataGridViewRoles.Size = new System.Drawing.Size(642, 244);
             this.dataGridViewRoles.TabIndex = 2;
+            this.dataGridViewRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRoles_CellContentClick);
             // 
             // btnSalir
             // 
@@ -132,6 +132,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmRoles
             // 
@@ -150,6 +151,7 @@
             this.MinimizeBox = false;
             this.Name = "frmRoles";
             this.Text = "Roles";
+            this.Load += new System.EventHandler(this.frmRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
