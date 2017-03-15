@@ -30,7 +30,7 @@ namespace GestionXML
 
         private void llenar_grid(string _parametro)
         {
-            clases.Funciones.CargarGridView(dataGridViewUsuarios, "usuarios.id_usuarios, usuarios.nombre_usuarios, usuarios.telefono_usuarios, usuarios.celular_usuarios, usuarios.correo_usuarios, rol.nombre_rol, estado.nombre_estado, ciudad.nombre_ciudad, usuarios.usuario_usuarios, usuarios.creado, usuarios.modificado", "usuarios, rol, estado, ciudad", _parametro, "Id?Nombre?Telefono?Celular?Correo?Rol?Estado?Ciudad?Usuario?Creado?Modificado");
+            clases.Funciones.CargarGridView(dataGridViewUsuarios, "usuarios.nombre_usuarios, usuarios.telefono_usuarios, usuarios.celular_usuarios, usuarios.correo_usuarios, rol.nombre_rol, estado.nombre_estado, ciudad.nombre_ciudad, usuarios.usuario_usuarios, usuarios.creado, usuarios.modificado", "usuarios, rol, estado, ciudad", _parametro, "Nombre?Telefono?Celular?Correo?Rol?Estado?Ciudad?Usuario?Creado?Modificado");
 
         }
 

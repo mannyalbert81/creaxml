@@ -30,14 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPortada));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GestionXML.Properties.Resources.portadamain1;
+            this.pictureBox2.Image = global::GestionXML.Properties.Resources.portada2;
             this.pictureBox2.Location = new System.Drawing.Point(0, -1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(602, 409);
