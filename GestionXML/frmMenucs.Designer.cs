@@ -45,6 +45,7 @@
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoIndiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caminosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartonDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,7 +153,8 @@
             this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.proyectosToolStripMenuItem,
             this.tipoIndiceToolStripMenuItem,
-            this.caminosToolStripMenuItem});
+            this.caminosToolStripMenuItem,
+            this.cartonDocumentosToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
@@ -160,23 +162,30 @@
             // proyectosToolStripMenuItem
             // 
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
             this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
             // 
             // tipoIndiceToolStripMenuItem
             // 
             this.tipoIndiceToolStripMenuItem.Name = "tipoIndiceToolStripMenuItem";
-            this.tipoIndiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipoIndiceToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.tipoIndiceToolStripMenuItem.Text = "Tipo Indice";
             this.tipoIndiceToolStripMenuItem.Click += new System.EventHandler(this.tipoIndiceToolStripMenuItem_Click);
             // 
             // caminosToolStripMenuItem
             // 
             this.caminosToolStripMenuItem.Name = "caminosToolStripMenuItem";
-            this.caminosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.caminosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.caminosToolStripMenuItem.Text = "Caminos";
             this.caminosToolStripMenuItem.Click += new System.EventHandler(this.caminosToolStripMenuItem_Click);
+            // 
+            // cartonDocumentosToolStripMenuItem
+            // 
+            this.cartonDocumentosToolStripMenuItem.Name = "cartonDocumentosToolStripMenuItem";
+            this.cartonDocumentosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.cartonDocumentosToolStripMenuItem.Text = "Carton Documentos";
+            this.cartonDocumentosToolStripMenuItem.Click += new System.EventHandler(this.cartonDocumentosToolStripMenuItem_Click);
             // 
             // frmMenucs
             // 
@@ -216,5 +225,6 @@
         private System.Windows.Forms.ToolStripMenuItem formulariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoIndiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem caminosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cartonDocumentosToolStripMenuItem;
     }
 }

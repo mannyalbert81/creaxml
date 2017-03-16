@@ -108,6 +108,12 @@
     <Compile Include="frmCarpetasCrea.Designer.cs">
       <DependentUpon>frmCarpetasCrea.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCartonDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCartonDocumentos.Designer.cs">
+      <DependentUpon>frmCartonDocumentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmControladores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarpetasCrea.resx">
       <DependentUpon>frmCarpetasCrea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCartonDocumentos.resx">
+      <DependentUpon>frmCartonDocumentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmControladores.resx">
       <DependentUpon>frmControladores.cs</DependentUpon>
