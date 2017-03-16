@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clases\Funciones.cs" />
+    <Compile Include="clases\Variables.cs" />
     <Compile Include="CreadorTXT.cs">
       <SubType>Form</SubType>
     </Compile>
