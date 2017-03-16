@@ -42,8 +42,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridViewPermisosRoles = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPermisosRoles)).BeginInit();
+            this.dataGridViewCaminos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCaminos)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -55,7 +55,6 @@
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nombre Caminos";
-           
             // 
             // txt_nombre_caminos
             // 
@@ -64,7 +63,6 @@
             this.txt_nombre_caminos.Name = "txt_nombre_caminos";
             this.txt_nombre_caminos.Size = new System.Drawing.Size(210, 20);
             this.txt_nombre_caminos.TabIndex = 7;
-            
             // 
             // label1
             // 
@@ -75,7 +73,6 @@
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Path Caminos";
-           
             // 
             // txt_path_caminos
             // 
@@ -137,6 +134,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnLimpiar
             // 
@@ -151,6 +149,7 @@
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -165,6 +164,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
@@ -179,6 +179,7 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnBuscar
             // 
@@ -194,24 +195,25 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dataGridViewPermisosRoles
+            // dataGridViewCaminos
             // 
-            this.dataGridViewPermisosRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPermisosRoles.Location = new System.Drawing.Point(1, 303);
-            this.dataGridViewPermisosRoles.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewPermisosRoles.Name = "dataGridViewPermisosRoles";
-            this.dataGridViewPermisosRoles.RowTemplate.Height = 24;
-            this.dataGridViewPermisosRoles.Size = new System.Drawing.Size(562, 178);
-            this.dataGridViewPermisosRoles.TabIndex = 49;
-            this.dataGridViewPermisosRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPermisosRoles_CellContentClick);
+            this.dataGridViewCaminos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCaminos.Location = new System.Drawing.Point(1, 303);
+            this.dataGridViewCaminos.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewCaminos.Name = "dataGridViewCaminos";
+            this.dataGridViewCaminos.RowTemplate.Height = 24;
+            this.dataGridViewCaminos.Size = new System.Drawing.Size(562, 178);
+            this.dataGridViewCaminos.TabIndex = 49;
+            this.dataGridViewCaminos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCaminos_CellContentClick);
             // 
             // frmCaminos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 492);
-            this.Controls.Add(this.dataGridViewPermisosRoles);
+            this.Controls.Add(this.dataGridViewCaminos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
@@ -229,8 +231,9 @@
             this.MinimizeBox = false;
             this.Name = "frmCaminos";
             this.Text = "Caminos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCaminos_FormClosing);
             this.Load += new System.EventHandler(this.frmCaminos_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPermisosRoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCaminos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,6 +254,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridViewPermisosRoles;
+        private System.Windows.Forms.DataGridView dataGridViewCaminos;
     }
 }
