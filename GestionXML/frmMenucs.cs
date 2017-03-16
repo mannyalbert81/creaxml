@@ -81,5 +81,17 @@ namespace GestionXML
             frmProyectos frm = new frmProyectos();
             frm.Show();
         }
+
+        private void formulariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFormularios frm = new frmFormularios();
+            frm.Show();
+        }
+
+        private void tipoIndiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTipoIndice frm = new frmTipoIndice();
+            frm.Show();
+        }
     }
 }
