@@ -24,6 +24,11 @@ namespace GestionXML
         {
             string _error = "";
             string _nombre_controladores = txt_controladores.Text;
+            string _descripcion_controladores = txt_descripcion_controladores.Text;
+            string _orden_controladores = cmb_orden_controladores.Text;
+            string _nivel_controladores = cmb_nivel_controladores.Text;
+            int _id_formulario = Convert.ToInt16(cbm_formulario.SelectedValue.ToString());
+
 
 
             if (_nombre_controladores.Length == 0)
@@ -31,13 +36,30 @@ namespace GestionXML
                 _error = "Debe Indicar un nombre de Controladores";
             }
 
+            if (_descripcion_controladores.Length == 0)
+            {
+                _error = "Debe Indicar una Descricion de Controladores";
+            }
+
+            if (_orden_controladores.Length == 0)
+            {
+                _error = "Debe Indicar un orden de controladores";
+            }
+
+            if (_nivel_controladores.Length == 0)
+            {
+                _error = "Debe Indicar un nivel de controladores";
+            }
+            
+
+
 
 
             if (_error.Length == 0)
             {
-                string datos = _nombre_controladores;
-                string columnas = "_nombre_controladores";
-                string tipodatos = "NpgsqlDbType.Varchar";
+                string datos = _nombre_controladores + "?" +_descripcion_controladores + "?" + _orden_controladores + "?" + _nivel_controladores + "?" + _id_formulario;
+                string columnas = "_nombre_controladores?_descripcion_controladores?_orden_controladores?_nivel_controladores?_id_formulario";
+                string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Varchar?NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Integer";
 
 
                 try
@@ -46,7 +68,8 @@ namespace GestionXML
                     if (resul < 0)
                     {
                         MessageBox.Show("El Controlador se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("id_controladores > 0");
+                        llenar_grid("formularios.id_formularios = controladores.id_formularios");
+
                         limpiar();
 
 
@@ -65,19 +88,23 @@ namespace GestionXML
 
         private void frmControladores_Load(object sender, EventArgs e)
         {
-            llenar_grid("id_controladores > 0");
+            clases.Funciones.CargarCombo(cbm_formulario, "id_formularios", "nombre_formularios", "formularios");
+            llenar_grid("formularios.id_formularios = controladores.id_formularios");
+            
+            
         }
 
 
         private void llenar_grid(string _parametro)
         {
-            clases.Funciones.CargarGridView(dataGridViewControladores, "controladores.id_controladores AS Id, controladores.nombre_controladores, controladores.creado, controladores.modificado", "controladores", _parametro, "Id?Nombre Controlador?Creado?Modificado");
+            clases.Funciones.CargarGridView(dataGridViewControladores, "controladores.id_controladores AS Id, controladores.nombre_controladores, controladores.descripcion_controladores, controladores.orden_controladores, controladores.nivel_controladores, formularios.nombre_formularios, controladores.creado, controladores.modificado", "controladores, formularios", _parametro, "Id?Nombre Controlador?Descripcion Controlador?Orden?Nivel?Formulario?Creado?Modificado");
 
         }
 
         public void limpiar()
         {
             txt_controladores.Text = "";
+            txt_descripcion_controladores.Text = "";
 
 
         }
@@ -86,7 +113,10 @@ namespace GestionXML
         {
             DataGridViewRow fila = dataGridViewControladores.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
             txt_controladores.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
-
+            txt_descripcion_controladores.Text = Convert.ToString(fila.Cells[2].Value);
+            cmb_orden_controladores.Text = Convert.ToString(fila.Cells[3].Value);
+            cmb_nivel_controladores.Text = Convert.ToString(fila.Cells[4].Value);
+            cbm_formulario.Text = Convert.ToString(fila.Cells[5].Value);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -100,7 +130,7 @@ namespace GestionXML
             }
 
 
-            llenar_grid("controladores.nombre_controladores LIKE '" + _nombre_controladores + "'");
+            llenar_grid("formularios.id_formularios = controladores.id_formularios AND controladores.nombre_controladores LIKE '" + _nombre_controladores + "'");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -120,7 +150,7 @@ namespace GestionXML
                     if (resul == 1)
                     {
                         MessageBox.Show("El Controlador se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("id_controladores > 0");
+                        llenar_grid("formularios.id_formularios = controladores.id_formularios");
                         limpiar();
 
 
@@ -171,6 +201,11 @@ namespace GestionXML
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmb_orden_controladores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
         }
     }
 }
