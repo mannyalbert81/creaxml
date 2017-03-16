@@ -99,5 +99,11 @@ namespace GestionXML
             frmCaminos frm = new frmCaminos();
             frm.Show();
         }
+
+        private void cartonDocumentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCartonDocumentos frm = new frmCartonDocumentos();
+            frm.Show();
+        }
     }
 }

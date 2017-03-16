@@ -41,3 +41,4 @@ C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmUsuarios
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmPermisosRoles.resources
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.Properties.Resources.resources
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.GenerateResource.Cache
+C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmCartonDocumentos.resources
