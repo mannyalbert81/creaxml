@@ -90,6 +90,12 @@
     <Compile Include="CreadorXML.Designer.cs">
       <DependentUpon>CreadorXML.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCaminos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaminos.Designer.cs">
+      <DependentUpon>frmCaminos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCarpetasCalidadXML.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreadorXML.resx">
       <DependentUpon>CreadorXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCaminos.resx">
+      <DependentUpon>frmCaminos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCarpetasCalidadXML.resx">
       <DependentUpon>frmCarpetasCalidadXML.cs</DependentUpon>
