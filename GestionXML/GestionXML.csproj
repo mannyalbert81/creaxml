@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clases\Funciones.cs" />
+    <Compile Include="clases\Variables.cs" />
     <Compile Include="CreadorTXT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="CreadorXML.Designer.cs">
       <DependentUpon>CreadorXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCaminos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCaminos.Designer.cs">
+      <DependentUpon>frmCaminos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCarpetasCalidadXML.cs">
       <SubType>Form</SubType>
@@ -106,6 +113,12 @@
     </Compile>
     <Compile Include="frmControladores.Designer.cs">
       <DependentUpon>frmControladores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFormularios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFormularios.Designer.cs">
+      <DependentUpon>frmFormularios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaPendienteTXT.cs">
       <SubType>Form</SubType>
@@ -149,6 +162,12 @@
     <Compile Include="frmRoles.Designer.cs">
       <DependentUpon>frmRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTipoIndice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoIndice.Designer.cs">
+      <DependentUpon>frmTipoIndice.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +188,9 @@
     <EmbeddedResource Include="CreadorXML.resx">
       <DependentUpon>CreadorXML.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCaminos.resx">
+      <DependentUpon>frmCaminos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCarpetasCalidadXML.resx">
       <DependentUpon>frmCarpetasCalidadXML.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmControladores.resx">
       <DependentUpon>frmControladores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormularios.resx">
+      <DependentUpon>frmFormularios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaPendienteTXT.resx">
       <DependentUpon>frmListaPendienteTXT.cs</DependentUpon>
@@ -198,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRoles.resx">
       <DependentUpon>frmRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoIndice.resx">
+      <DependentUpon>frmTipoIndice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>

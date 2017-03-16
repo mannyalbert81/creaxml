@@ -40,8 +40,11 @@
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controladoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.permisosRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formulariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoIndiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.caminosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,7 +106,8 @@
             this.usuariosToolStripMenuItem,
             this.rolesToolStripMenuItem,
             this.controladoresToolStripMenuItem,
-            this.permisosRolesToolStripMenuItem});
+            this.permisosRolesToolStripMenuItem,
+            this.formulariosToolStripMenuItem});
             this.administraciónToolStripMenuItem.Name = "administraciónToolStripMenuItem";
             this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.administraciónToolStripMenuItem.Text = "Administración";
@@ -136,10 +140,19 @@
             this.permisosRolesToolStripMenuItem.Text = "Permisos Roles";
             this.permisosRolesToolStripMenuItem.Click += new System.EventHandler(this.permisosRolesToolStripMenuItem_Click_1);
             // 
+            // formulariosToolStripMenuItem
+            // 
+            this.formulariosToolStripMenuItem.Name = "formulariosToolStripMenuItem";
+            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.formulariosToolStripMenuItem.Text = "Formularios";
+            this.formulariosToolStripMenuItem.Click += new System.EventHandler(this.formulariosToolStripMenuItem_Click);
+            // 
             // mantenimientoToolStripMenuItem
             // 
             this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.proyectosToolStripMenuItem});
+            this.proyectosToolStripMenuItem,
+            this.tipoIndiceToolStripMenuItem,
+            this.caminosToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
@@ -150,6 +163,20 @@
             this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
             this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
+            // 
+            // tipoIndiceToolStripMenuItem
+            // 
+            this.tipoIndiceToolStripMenuItem.Name = "tipoIndiceToolStripMenuItem";
+            this.tipoIndiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipoIndiceToolStripMenuItem.Text = "Tipo Indice";
+            this.tipoIndiceToolStripMenuItem.Click += new System.EventHandler(this.tipoIndiceToolStripMenuItem_Click);
+            // 
+            // caminosToolStripMenuItem
+            // 
+            this.caminosToolStripMenuItem.Name = "caminosToolStripMenuItem";
+            this.caminosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.caminosToolStripMenuItem.Text = "Caminos";
+            this.caminosToolStripMenuItem.Click += new System.EventHandler(this.caminosToolStripMenuItem_Click);
             // 
             // frmMenucs
             // 
@@ -186,5 +213,8 @@
         private System.Windows.Forms.ToolStripMenuItem permisosRolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formulariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoIndiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem caminosToolStripMenuItem;
     }
 }
