@@ -21,13 +21,13 @@ namespace GestionXML
 
         private void frmProyectos_Load(object sender, EventArgs e)
         {
-            llenar_grid("usuarios.id_usuarios = proyectos.id_usuarios");
+            llenar_grid("id_proyectos > 0");
         }
 
 
         private void llenar_grid(string _parametro)
         {
-            clases.Funciones.CargarGridView(dataGridViewProyectos, "proyectos.id_proyectos AS Id, proyectos.nombre_proyectos, proyectos.observaciones_proyectos, usuarios.nombre_usuarios, proyectos.creado, proyectos.modificado", "public.proyectos, public.usuarios", _parametro, "Id?Nombre Proyecto?Observaciones?Usuario Registra?Creado?Modificado");
+            clases.Funciones.CargarGridView(dataGridViewProyectos, "proyectos.id_proyectos AS Id, proyectos.nombre_proyectos, proyectos.observaciones_proyectos, proyectos.creado, proyectos.modificado", "public.proyectos", _parametro, "Id?Nombre Proyecto?Observaciones?Creado?Modificado");
 
         }
 
@@ -92,7 +92,7 @@ namespace GestionXML
                     if (resul < 0)
                     {
                         MessageBox.Show("El Proyecto se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("usuarios.id_usuarios = proyectos.id_usuarios");
+                        llenar_grid("id_proyectos > 0");
                         limpiar();
 
 
@@ -126,7 +126,7 @@ namespace GestionXML
             }
 
 
-            llenar_grid("usuarios.id_usuarios = proyectos.id_usuarios AND proyectos.nombre_proyectos LIKE '" + _nombre_protecto + "' AND proyectos.observaciones_proyectos LIKE '" + _observaciones + "'");
+            llenar_grid("proyectos.nombre_proyectos LIKE '" + _nombre_protecto + "' AND proyectos.observaciones_proyectos LIKE '" + _observaciones + "'");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -147,7 +147,7 @@ namespace GestionXML
                     if (resul == 1)
                     {
                         MessageBox.Show("El Proyecto se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("usuarios.id_usuarios = proyectos.id_usuarios");
+                        llenar_grid("id_proyectos > 0");
                         limpiar();
 
 

@@ -93,5 +93,17 @@ namespace GestionXML
             frmTipoIndice frm = new frmTipoIndice();
             frm.Show();
         }
+
+        private void caminosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCaminos frm = new frmCaminos();
+            frm.Show();
+        }
+
+        private void cartonDocumentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCartonDocumentos frm = new frmCartonDocumentos();
+            frm.Show();
+        }
     }
 }

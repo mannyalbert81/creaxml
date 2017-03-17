@@ -223,5 +223,10 @@ namespace GestionXML
                 e.Cancel = false;
             }
         }
+
+        private void txt_nombre_permisos_roles_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

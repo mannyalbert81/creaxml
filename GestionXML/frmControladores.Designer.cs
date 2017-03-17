@@ -40,11 +40,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txt_descripcion_controladores = new System.Windows.Forms.TextBox();
-            this.txt_orden_controladores = new System.Windows.Forms.TextBox();
-            this.txt_formulario_controladores = new System.Windows.Forms.TextBox();
             this.cmb_nivel_controladores = new System.Windows.Forms.ComboBox();
+            this.cmb_orden_controladores = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbm_formulario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewControladores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,15 +183,6 @@
             this.label4.TabIndex = 39;
             this.label4.Text = "Nivel:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Formulario:";
-            // 
             // txt_descripcion_controladores
             // 
             this.txt_descripcion_controladores.Location = new System.Drawing.Point(197, 97);
@@ -199,38 +190,60 @@
             this.txt_descripcion_controladores.Size = new System.Drawing.Size(341, 20);
             this.txt_descripcion_controladores.TabIndex = 41;
             // 
-            // txt_orden_controladores
-            // 
-            this.txt_orden_controladores.Location = new System.Drawing.Point(197, 128);
-            this.txt_orden_controladores.Name = "txt_orden_controladores";
-            this.txt_orden_controladores.Size = new System.Drawing.Size(56, 20);
-            this.txt_orden_controladores.TabIndex = 42;
-            // 
-            // txt_formulario_controladores
-            // 
-            this.txt_formulario_controladores.Location = new System.Drawing.Point(197, 186);
-            this.txt_formulario_controladores.Name = "txt_formulario_controladores";
-            this.txt_formulario_controladores.Size = new System.Drawing.Size(322, 20);
-            this.txt_formulario_controladores.TabIndex = 44;
-            // 
             // cmb_nivel_controladores
             // 
             this.cmb_nivel_controladores.FormattingEnabled = true;
+            this.cmb_nivel_controladores.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
             this.cmb_nivel_controladores.Location = new System.Drawing.Point(197, 155);
             this.cmb_nivel_controladores.Name = "cmb_nivel_controladores";
             this.cmb_nivel_controladores.Size = new System.Drawing.Size(56, 21);
             this.cmb_nivel_controladores.TabIndex = 45;
+            // 
+            // cmb_orden_controladores
+            // 
+            this.cmb_orden_controladores.FormattingEnabled = true;
+            this.cmb_orden_controladores.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cmb_orden_controladores.Location = new System.Drawing.Point(197, 128);
+            this.cmb_orden_controladores.Name = "cmb_orden_controladores";
+            this.cmb_orden_controladores.Size = new System.Drawing.Size(56, 21);
+            this.cmb_orden_controladores.TabIndex = 46;
+            this.cmb_orden_controladores.SelectedIndexChanged += new System.EventHandler(this.cmb_orden_controladores_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(63, 191);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Formulario:";
+            // 
+            // cbm_formulario
+            // 
+            this.cbm_formulario.FormattingEnabled = true;
+            this.cbm_formulario.Location = new System.Drawing.Point(197, 191);
+            this.cbm_formulario.Name = "cbm_formulario";
+            this.cbm_formulario.Size = new System.Drawing.Size(231, 21);
+            this.cbm_formulario.TabIndex = 48;
             // 
             // frmControladores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 486);
-            this.Controls.Add(this.cmb_nivel_controladores);
-            this.Controls.Add(this.txt_formulario_controladores);
-            this.Controls.Add(this.txt_orden_controladores);
-            this.Controls.Add(this.txt_descripcion_controladores);
+            this.Controls.Add(this.cbm_formulario);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.cmb_orden_controladores);
+            this.Controls.Add(this.cmb_nivel_controladores);
+            this.Controls.Add(this.txt_descripcion_controladores);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -268,10 +281,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_descripcion_controladores;
-        private System.Windows.Forms.TextBox txt_orden_controladores;
-        private System.Windows.Forms.TextBox txt_formulario_controladores;
         private System.Windows.Forms.ComboBox cmb_nivel_controladores;
+        private System.Windows.Forms.ComboBox cmb_orden_controladores;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbm_formulario;
     }
 }
