@@ -186,7 +186,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Name = "frmCartonDocumentos";
-            this.Text = "frmCartonDocumentos";
+            this.Text = "CartonDocumentos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCartonDocumentos_FormClosing);
             this.Load += new System.EventHandler(this.frmCartonDocumentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCartonDocumentos)).EndInit();

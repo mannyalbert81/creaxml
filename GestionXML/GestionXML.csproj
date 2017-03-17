@@ -126,6 +126,12 @@
     <Compile Include="frmFormularios.Designer.cs">
       <DependentUpon>frmFormularios.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIndice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIndice.Designer.cs">
+      <DependentUpon>frmIndice.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListaPendienteTXT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFormularios.resx">
       <DependentUpon>frmFormularios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIndice.resx">
+      <DependentUpon>frmIndice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaPendienteTXT.resx">
       <DependentUpon>frmListaPendienteTXT.cs</DependentUpon>
