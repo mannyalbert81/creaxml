@@ -84,3 +84,6 @@ C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmUsuarios.
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmPermisosRoles.resources
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.Properties.Resources.resources
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.GenerateResource.Cache
+C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmCartonDocumentos.resources
+C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmEstado.resources
+C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.Produccion.resources
