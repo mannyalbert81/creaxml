@@ -33,10 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_nombres_apellidos = new System.Windows.Forms.TextBox();
-            this.cbm_ciudad = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_nombres_indice = new System.Windows.Forms.TextBox();
+            this.cbm_caminos = new System.Windows.Forms.ComboBox();
+            this.cbm_usuarios = new System.Windows.Forms.ComboBox();
+            this.txt_total_indice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,11 +48,11 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewIndice = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIndice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,39 +91,39 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Usuarios:";
             // 
-            // txt_nombres_apellidos
+            // txt_nombres_indice
             // 
-            this.txt_nombres_apellidos.Location = new System.Drawing.Point(94, 35);
-            this.txt_nombres_apellidos.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_nombres_apellidos.Name = "txt_nombres_apellidos";
-            this.txt_nombres_apellidos.Size = new System.Drawing.Size(158, 20);
-            this.txt_nombres_apellidos.TabIndex = 14;
+            this.txt_nombres_indice.Location = new System.Drawing.Point(94, 35);
+            this.txt_nombres_indice.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_nombres_indice.Name = "txt_nombres_indice";
+            this.txt_nombres_indice.Size = new System.Drawing.Size(158, 20);
+            this.txt_nombres_indice.TabIndex = 14;
             // 
-            // cbm_ciudad
+            // cbm_caminos
             // 
-            this.cbm_ciudad.FormattingEnabled = true;
-            this.cbm_ciudad.Location = new System.Drawing.Point(94, 76);
-            this.cbm_ciudad.Margin = new System.Windows.Forms.Padding(2);
-            this.cbm_ciudad.Name = "cbm_ciudad";
-            this.cbm_ciudad.Size = new System.Drawing.Size(158, 21);
-            this.cbm_ciudad.TabIndex = 21;
+            this.cbm_caminos.FormattingEnabled = true;
+            this.cbm_caminos.Location = new System.Drawing.Point(94, 76);
+            this.cbm_caminos.Margin = new System.Windows.Forms.Padding(2);
+            this.cbm_caminos.Name = "cbm_caminos";
+            this.cbm_caminos.Size = new System.Drawing.Size(158, 21);
+            this.cbm_caminos.TabIndex = 21;
             // 
-            // comboBox1
+            // cbm_usuarios
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(94, 164);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 21);
-            this.comboBox1.TabIndex = 22;
+            this.cbm_usuarios.FormattingEnabled = true;
+            this.cbm_usuarios.Location = new System.Drawing.Point(94, 164);
+            this.cbm_usuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.cbm_usuarios.Name = "cbm_usuarios";
+            this.cbm_usuarios.Size = new System.Drawing.Size(158, 21);
+            this.cbm_usuarios.TabIndex = 22;
             // 
-            // textBox1
+            // txt_total_indice
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 122);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 20);
-            this.textBox1.TabIndex = 23;
+            this.txt_total_indice.Location = new System.Drawing.Point(94, 122);
+            this.txt_total_indice.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_total_indice.Name = "txt_total_indice";
+            this.txt_total_indice.Size = new System.Drawing.Size(158, 20);
+            this.txt_total_indice.TabIndex = 23;
             // 
             // label5
             // 
@@ -222,13 +222,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(288, 63);
             this.dataGridView1.TabIndex = 34;
             // 
-            // dataGridView2
+            // dataGridViewIndice
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(45, 369);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(595, 77);
-            this.dataGridView2.TabIndex = 35;
+            this.dataGridViewIndice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewIndice.Location = new System.Drawing.Point(45, 369);
+            this.dataGridViewIndice.Name = "dataGridViewIndice";
+            this.dataGridViewIndice.Size = new System.Drawing.Size(595, 77);
+            this.dataGridViewIndice.TabIndex = 35;
             // 
             // btnGuardar
             // 
@@ -244,7 +244,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // button1
             // 
@@ -260,6 +259,7 @@
             this.button1.Text = "Guardar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmIndice
             // 
@@ -268,7 +268,7 @@
             this.ClientSize = new System.Drawing.Size(652, 458);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridViewIndice);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox5);
@@ -280,18 +280,19 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cbm_ciudad);
-            this.Controls.Add(this.txt_nombres_apellidos);
+            this.Controls.Add(this.txt_total_indice);
+            this.Controls.Add(this.cbm_usuarios);
+            this.Controls.Add(this.cbm_caminos);
+            this.Controls.Add(this.txt_nombres_indice);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmIndice";
             this.Text = "Indice";
+            this.Load += new System.EventHandler(this.frmIndice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIndice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,10 +304,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_nombres_apellidos;
-        private System.Windows.Forms.ComboBox cbm_ciudad;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_nombres_indice;
+        private System.Windows.Forms.ComboBox cbm_caminos;
+        private System.Windows.Forms.ComboBox cbm_usuarios;
+        private System.Windows.Forms.TextBox txt_total_indice;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -318,7 +319,7 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewIndice;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button button1;
     }

@@ -156,3 +156,8 @@ C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.Gene
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmFormularios.resources
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmProyectos.resources
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmTipoIndice.resources
+C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmCaminos.resources
+C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmCartonDocumentos.resources
+C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmFormularios.resources
+C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmIndice.resources
+C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmTipoIndice.resources

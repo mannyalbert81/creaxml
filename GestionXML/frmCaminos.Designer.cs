@@ -63,6 +63,7 @@
             this.txt_nombre_caminos.Name = "txt_nombre_caminos";
             this.txt_nombre_caminos.Size = new System.Drawing.Size(210, 20);
             this.txt_nombre_caminos.TabIndex = 7;
+          
             // 
             // label1
             // 
