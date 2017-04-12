@@ -66,3 +66,4 @@ C:\Users\Steven\Source\Repos\creaxml\Datos\bin\Debug\zh-CN\Npgsql.resources.dll
 C:\Users\Steven\Source\Repos\creaxml\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\Steven\Source\Repos\creaxml\Datos\obj\Debug\Datos.dll
 C:\Users\Steven\Source\Repos\creaxml\Datos\obj\Debug\Datos.pdb
+C:\Users\ManuelAlberto\Source\Repos\creaxml\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache

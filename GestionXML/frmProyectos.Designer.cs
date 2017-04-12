@@ -178,6 +178,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProyectos";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proyectos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmProyectos_FormClosing);
             this.Load += new System.EventHandler(this.frmProyectos_Load);

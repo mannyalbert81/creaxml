@@ -142,6 +142,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnSalir
             // 
@@ -167,6 +168,7 @@
             this.dataGridViewCartonDocumentos.RowTemplate.Height = 24;
             this.dataGridViewCartonDocumentos.Size = new System.Drawing.Size(471, 133);
             this.dataGridViewCartonDocumentos.TabIndex = 57;
+            this.dataGridViewCartonDocumentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCartonDocumentos_CellContentClick);
             // 
             // frmCartonDocumentos
             // 
@@ -184,7 +186,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Name = "frmCartonDocumentos";
-            this.Text = "frmCartonDocumentos";
+            this.Text = "CartonDocumentos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCartonDocumentos_FormClosing);
+            this.Load += new System.EventHandler(this.frmCartonDocumentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCartonDocumentos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

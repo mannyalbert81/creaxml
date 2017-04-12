@@ -50,7 +50,7 @@ namespace GestionXML
             if (_error.Length == 0)
 
             {
-                string datos = _numero_carton_documentos + "?" + _estado_carton_documentos + "?";
+                string datos = _numero_carton_documentos + "?" + _estado_carton_documentos;
                 string columnas = "_numero_carton_documentos?_estado_carton_documentos?";
                 string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Boolean";
 
@@ -61,7 +61,7 @@ namespace GestionXML
                     if (resul < 0)
                     {
                         MessageBox.Show("El Carton se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("");
+                        llenar_grid("id_carton_documentos > 0");
                         limpiar();
 
 
@@ -92,22 +92,58 @@ namespace GestionXML
 
 
 
-                llenar_grid("" + _numero_carton_documentos + "");
+                llenar_grid("carton_documentos.numero_carton_documentos LIKE '" + _numero_carton_documentos + "'");
             }
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        
+
+       
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
         {
             limpiar();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
+            this.Hide();
+        }
 
+        private void frmCartonDocumentos_Load(object sender, EventArgs e)
+        {
+            
+            llenar_grid("id_carton_documentos > 0");
+        }
+
+        private void dataGridViewCartonDocumentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dataGridViewCartonDocumentos.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
+            txt_numero_carton_documentos.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
+            cbm_estado_carton_documentos.Text = Convert.ToString(fila.Cells[2].Value);
+         
+        }
+
+        private void frmCartonDocumentos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogo = MessageBox.Show("¿Desea cerrar el programa?",
+            "Cerrar el programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
             string _error = "";
             if (txt_numero_carton_documentos.Text.Length == 0)
             {
-                _error = "EL numero de carton no Puede estar Vacio";
+                _error = "EL nombre caminos no Puede estar Vacio";
             }
             if (_error.Length == 0)
             {
@@ -118,8 +154,8 @@ namespace GestionXML
 
                     if (resul == 1)
                     {
-                        MessageBox.Show("El Camino se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("");
+                        MessageBox.Show("El Carton se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        llenar_grid("id_carton_documentos > 0");
                         limpiar();
 
 
@@ -136,16 +172,6 @@ namespace GestionXML
                 MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-        }
-
-        private void btnLimpiar_Click_1(object sender, EventArgs e)
-        {
-            limpiar();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }

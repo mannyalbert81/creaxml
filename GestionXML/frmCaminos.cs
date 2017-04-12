@@ -180,7 +180,9 @@ namespace GestionXML
                 e.Cancel = false;
             }
         }
+
+        }
     }
 
-     }
+     
 
