@@ -161,10 +161,10 @@ namespace GestionXML
         private void dataGridViewCaminos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dataGridViewCaminos.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
-            txt_nombre_caminos.Text = Convert.ToString(fila.Cells[0].Value); //obtengo el valor de la primer columna
-            txt_path_caminos.Text = Convert.ToString(fila.Cells[1].Value);
-            cbm_usuarios.Text = Convert.ToString(fila.Cells[2].Value);
-            cbm_proyectos.Text = Convert.ToString(fila.Cells[3].Value);
+            txt_nombre_caminos.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
+            txt_path_caminos.Text = Convert.ToString(fila.Cells[2].Value);
+            cbm_usuarios.Text = Convert.ToString(fila.Cells[3].Value);
+            cbm_proyectos.Text = Convert.ToString(fila.Cells[4].Value);
         }
 
         private void frmCaminos_FormClosing(object sender, FormClosingEventArgs e)

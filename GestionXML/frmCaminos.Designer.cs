@@ -63,7 +63,6 @@
             this.txt_nombre_caminos.Name = "txt_nombre_caminos";
             this.txt_nombre_caminos.Size = new System.Drawing.Size(210, 20);
             this.txt_nombre_caminos.TabIndex = 7;
-          
             // 
             // label1
             // 
@@ -213,6 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(574, 492);
             this.Controls.Add(this.dataGridViewCaminos);
             this.Controls.Add(this.btnBuscar);
@@ -228,10 +228,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_nombre_caminos);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCaminos";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caminos";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCaminos_FormClosing);
             this.Load += new System.EventHandler(this.frmCaminos_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCaminos)).EndInit();

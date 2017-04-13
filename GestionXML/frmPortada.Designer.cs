@@ -76,6 +76,7 @@
             // 
             // frmPortada
             // 
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 393);
             this.ControlBox = false;
             this.Controls.Add(this.progressBar1);
@@ -85,6 +86,7 @@
             this.Name = "frmPortada";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 

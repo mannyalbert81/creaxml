@@ -45,7 +45,12 @@ namespace GestionXML
                 txt_usuario.Text = "";
                 txt_password.Text = "";
             }
+            
+
         }
+
+
+
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
