@@ -214,6 +214,7 @@
             this.txt_min.Name = "txt_min";
             this.txt_min.Size = new System.Drawing.Size(57, 20);
             this.txt_min.TabIndex = 36;
+            this.txt_min.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numeros_KeyPress);
             // 
             // txt_max
             // 
@@ -221,6 +222,7 @@
             this.txt_max.Name = "txt_max";
             this.txt_max.Size = new System.Drawing.Size(57, 20);
             this.txt_max.TabIndex = 37;
+            this.txt_max.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeros_KeyPress);
             // 
             // txt_orden
             // 
@@ -228,6 +230,7 @@
             this.txt_orden.Name = "txt_orden";
             this.txt_orden.Size = new System.Drawing.Size(59, 20);
             this.txt_orden.TabIndex = 38;
+            this.txt_orden.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeros_KeyPress);
             // 
             // cbm_tipo_indice
             // 
