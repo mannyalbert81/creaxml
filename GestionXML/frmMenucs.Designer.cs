@@ -46,6 +46,7 @@
             this.tipoIndiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caminosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cartonDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.indiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,7 +155,8 @@
             this.proyectosToolStripMenuItem,
             this.tipoIndiceToolStripMenuItem,
             this.caminosToolStripMenuItem,
-            this.cartonDocumentosToolStripMenuItem});
+            this.cartonDocumentosToolStripMenuItem,
+            this.indiceToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
@@ -186,6 +188,13 @@
             this.cartonDocumentosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.cartonDocumentosToolStripMenuItem.Text = "Carton Documentos";
             this.cartonDocumentosToolStripMenuItem.Click += new System.EventHandler(this.cartonDocumentosToolStripMenuItem_Click);
+            // 
+            // indiceToolStripMenuItem
+            // 
+            this.indiceToolStripMenuItem.Name = "indiceToolStripMenuItem";
+            this.indiceToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.indiceToolStripMenuItem.Text = "Indice";
+            this.indiceToolStripMenuItem.Click += new System.EventHandler(this.indiceToolStripMenuItem_Click);
             // 
             // frmMenucs
             // 
@@ -226,5 +235,6 @@
         private System.Windows.Forms.ToolStripMenuItem tipoIndiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem caminosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cartonDocumentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem indiceToolStripMenuItem;
     }
 }

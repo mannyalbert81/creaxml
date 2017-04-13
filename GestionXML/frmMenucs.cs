@@ -105,5 +105,11 @@ namespace GestionXML
             frmCartonDocumentos frm = new frmCartonDocumentos();
             frm.Show();
         }
+
+        private void indiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIndice frm = new frmIndice();
+            frm.Show();
+        }
     }
 }
