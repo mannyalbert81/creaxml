@@ -119,6 +119,10 @@ namespace GestionXML
             frm.Show();
         }
 
-        
+        private void indiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIndice frm = new frmIndice();
+            frm.Show();
+        }
     }
 }
