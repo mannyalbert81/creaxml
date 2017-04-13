@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GestionXML
 {
     public partial class frmMenucs : Form
@@ -109,6 +110,12 @@ namespace GestionXML
         private void estadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmEstado frm = new frmEstado();
+            frm.Show();
+        }
+
+        private void proyectosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           // conProyectos frm = new conProyectos();
             frm.Show();
         }
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Negocio;
+using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +21,24 @@ namespace GestionXML.reportes
 
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
+
+    
+          
+            datas.dtCaminos dtCaminos = new datas.dtCaminos();
+
+            NpgsqlDataAdapter daCaminos = new NpgsqlDataAdapter();
+            daCaminos = AccesoLogica.Select_reporte("caminos.id_caminos, caminos.nombre_caminos, caminos.path_caminos, usuarios.nombre_usuarios, proyectos.nombre_proyectos, caminos.creado, caminos.modificado", "public.caminos, public.usuarios, public.proyectos", "usuarios.id_usuarios = caminos.id_usuarios AND   proyectos.id_proyectos = caminos.id_proyectos ");
+
+            daCaminos.Fill(dtCaminos, "proyectos");
+            int reg = dtCaminos.Tables[1].Rows.Count;
+            reportes.rptCaminos ObjRep = new reportes.rptCaminos();
+            ObjRep.SetDataSource(dtCaminos.Tables[1]);
+            crystalReportViewer1.ReportSource = ObjRep;
+            //llena_documento.Dispose();
+         
+
+
+
 
             /*
             datas.dtParticipantes dtParticipantes = new datas.dtParticipantes();

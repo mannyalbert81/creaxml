@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Datos;
-
-
+using Npgsql;
 
 namespace Negocio
 {
@@ -26,6 +25,11 @@ namespace Negocio
             {
                 return false;
             }
+        }
+
+        public static global::Npgsql.NpgsqlDataAdapter Select_proyectos(string v)
+        {
+            throw new NotImplementedException();
         }
 
         public static DataTable Select(string comando)
@@ -83,5 +87,13 @@ namespace Negocio
             Consultas fun = new Consultas();
             return fun.Update(tabla, campo, where);
         }
+
+        public static NpgsqlDataAdapter Select_reporte(string cadena1, string tabla, string parametro)
+        {
+            Consultas fun = new Consultas();
+            return fun.Select_reporte(cadena1, tabla, parametro);
+
+        }
+
     }
 }

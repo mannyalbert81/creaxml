@@ -32,21 +32,24 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.controlarCalidadXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controladoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.permisosRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlarCalidadXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoIndiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caminosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cartonDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proyectosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.caminosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +60,8 @@
             this.archivoToolStripMenuItem,
             this.administraciónToolStripMenuItem,
             this.gestionXMLToolStripMenuItem,
-            this.mantenimientoToolStripMenuItem});
+            this.mantenimientoToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(788, 24);
@@ -75,32 +79,9 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // gestionXMLToolStripMenuItem
-            // 
-            this.gestionXMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearXMLToolStripMenuItem,
-            this.controlarCalidadXMLToolStripMenuItem});
-            this.gestionXMLToolStripMenuItem.Name = "gestionXMLToolStripMenuItem";
-            this.gestionXMLToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.gestionXMLToolStripMenuItem.Text = "Gestion XML";
-            // 
-            // crearXMLToolStripMenuItem
-            // 
-            this.crearXMLToolStripMenuItem.Name = "crearXMLToolStripMenuItem";
-            this.crearXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.crearXMLToolStripMenuItem.Text = "Crear XML";
-            this.crearXMLToolStripMenuItem.Click += new System.EventHandler(this.crearXMLToolStripMenuItem_Click);
-            // 
-            // controlarCalidadXMLToolStripMenuItem
-            // 
-            this.controlarCalidadXMLToolStripMenuItem.Name = "controlarCalidadXMLToolStripMenuItem";
-            this.controlarCalidadXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.controlarCalidadXMLToolStripMenuItem.Text = "Controlar Calidad XML";
-            this.controlarCalidadXMLToolStripMenuItem.Click += new System.EventHandler(this.controlarCalidadXMLToolStripMenuItem_Click);
             // 
             // administraciónToolStripMenuItem
             // 
@@ -149,6 +130,29 @@
             this.formulariosToolStripMenuItem.Text = "Formularios";
             this.formulariosToolStripMenuItem.Click += new System.EventHandler(this.formulariosToolStripMenuItem_Click);
             // 
+            // gestionXMLToolStripMenuItem
+            // 
+            this.gestionXMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearXMLToolStripMenuItem,
+            this.controlarCalidadXMLToolStripMenuItem});
+            this.gestionXMLToolStripMenuItem.Name = "gestionXMLToolStripMenuItem";
+            this.gestionXMLToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.gestionXMLToolStripMenuItem.Text = "Gestion XML";
+            // 
+            // crearXMLToolStripMenuItem
+            // 
+            this.crearXMLToolStripMenuItem.Name = "crearXMLToolStripMenuItem";
+            this.crearXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.crearXMLToolStripMenuItem.Text = "Crear XML";
+            this.crearXMLToolStripMenuItem.Click += new System.EventHandler(this.crearXMLToolStripMenuItem_Click);
+            // 
+            // controlarCalidadXMLToolStripMenuItem
+            // 
+            this.controlarCalidadXMLToolStripMenuItem.Name = "controlarCalidadXMLToolStripMenuItem";
+            this.controlarCalidadXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.controlarCalidadXMLToolStripMenuItem.Text = "Controlar Calidad XML";
+            this.controlarCalidadXMLToolStripMenuItem.Click += new System.EventHandler(this.controlarCalidadXMLToolStripMenuItem_Click);
+            // 
             // mantenimientoToolStripMenuItem
             // 
             this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -196,6 +200,28 @@
             this.estadoToolStripMenuItem.Text = "Estado";
             this.estadoToolStripMenuItem.Click += new System.EventHandler(this.estadoToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.proyectosToolStripMenuItem1,
+            this.caminosToolStripMenuItem1});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // proyectosToolStripMenuItem1
+            // 
+            this.proyectosToolStripMenuItem1.Name = "proyectosToolStripMenuItem1";
+            this.proyectosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.proyectosToolStripMenuItem1.Text = "Proyectos";
+            this.proyectosToolStripMenuItem1.Click += new System.EventHandler(this.proyectosToolStripMenuItem1_Click);
+            // 
+            // caminosToolStripMenuItem1
+            // 
+            this.caminosToolStripMenuItem1.Name = "caminosToolStripMenuItem1";
+            this.caminosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.caminosToolStripMenuItem1.Text = "Caminos";
+            // 
             // frmMenucs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,5 +262,8 @@
         private System.Windows.Forms.ToolStripMenuItem caminosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cartonDocumentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem caminosToolStripMenuItem1;
     }
 }
