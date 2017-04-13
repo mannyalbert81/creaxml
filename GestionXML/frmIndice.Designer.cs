@@ -265,6 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(652, 458);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardar);
@@ -290,6 +291,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmIndice";
             this.Text = "Indice";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmIndice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIndice)).EndInit();

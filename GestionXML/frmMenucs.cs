@@ -12,9 +12,16 @@ namespace GestionXML
 {
     public partial class frmMenucs : Form
     {
+        public static frmMenucs mdiobj;
         public frmMenucs()
         {
             InitializeComponent();
+            
+        }
+
+        private void frmMenucs_Load(object sender, EventArgs e)
+        {
+   
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -111,5 +118,7 @@ namespace GestionXML
             frmEstado frm = new frmEstado();
             frm.Show();
         }
+
+        
     }
 }

@@ -43,26 +43,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 83);
+            this.label1.Location = new System.Drawing.Point(44, 67);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Roles:";
             // 
             // txt_roles
             // 
-            this.txt_roles.Location = new System.Drawing.Point(184, 83);
+            this.txt_roles.Location = new System.Drawing.Point(138, 67);
+            this.txt_roles.Margin = new System.Windows.Forms.Padding(2);
             this.txt_roles.Name = "txt_roles";
-            this.txt_roles.Size = new System.Drawing.Size(460, 22);
+            this.txt_roles.Size = new System.Drawing.Size(346, 20);
             this.txt_roles.TabIndex = 1;
             // 
             // dataGridViewRoles
             // 
             this.dataGridViewRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRoles.Location = new System.Drawing.Point(41, 264);
+            this.dataGridViewRoles.Location = new System.Drawing.Point(31, 214);
+            this.dataGridViewRoles.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewRoles.Name = "dataGridViewRoles";
             this.dataGridViewRoles.RowTemplate.Height = 24;
-            this.dataGridViewRoles.Size = new System.Drawing.Size(642, 244);
+            this.dataGridViewRoles.Size = new System.Drawing.Size(482, 198);
             this.dataGridViewRoles.TabIndex = 2;
             this.dataGridViewRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRoles_CellContentClick);
             // 
@@ -71,9 +74,10 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(554, 163);
+            this.btnSalir.Location = new System.Drawing.Point(416, 132);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(103, 83);
+            this.btnSalir.Size = new System.Drawing.Size(77, 67);
             this.btnSalir.TabIndex = 41;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -85,9 +89,10 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(428, 163);
+            this.btnEliminar.Location = new System.Drawing.Point(321, 132);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(106, 83);
+            this.btnEliminar.Size = new System.Drawing.Size(80, 67);
             this.btnEliminar.TabIndex = 40;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -99,9 +104,10 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(307, 163);
+            this.btnLimpiar.Location = new System.Drawing.Point(230, 132);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 83);
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
             this.btnLimpiar.TabIndex = 39;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -114,9 +120,10 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(184, 163);
+            this.btnBuscar.Location = new System.Drawing.Point(138, 132);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(98, 83);
+            this.btnBuscar.Size = new System.Drawing.Size(74, 67);
             this.btnBuscar.TabIndex = 38;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -129,9 +136,10 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(61, 163);
+            this.btnGuardar.Location = new System.Drawing.Point(46, 132);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 83);
+            this.btnGuardar.Size = new System.Drawing.Size(75, 67);
             this.btnGuardar.TabIndex = 37;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -140,9 +148,10 @@
             // 
             // frmRoles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 557);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(551, 453);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnLimpiar);
@@ -151,10 +160,15 @@
             this.Controls.Add(this.dataGridViewRoles);
             this.Controls.Add(this.txt_roles);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmRoles";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roles";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRoles_FormClosing);
             this.Load += new System.EventHandler(this.frmRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoles)).EndInit();
