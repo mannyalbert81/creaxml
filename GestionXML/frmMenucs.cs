@@ -8,14 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace GestionXML
 {
     public partial class frmMenucs : Form
     {
+        public static frmMenucs mdiobj;
         public frmMenucs()
         {
             InitializeComponent();
+            
+        }
+
+        private void frmMenucs_Load(object sender, EventArgs e)
+        {
+   
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,16 +113,12 @@ namespace GestionXML
             frm.Show();
         }
 
-        private void indiceToolStripMenuItem_Click(object sender, EventArgs e)
+        private void estadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmIndice frm = new frmIndice();
+            frmEstado frm = new frmEstado();
             frm.Show();
         }
 
-        private void proyectosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-           // conProyectos frm = new conProyectos();
-            frm.Show();
-        }
+        
     }
 }
