@@ -173,6 +173,16 @@ namespace GestionXML.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hojas {
+            get {
+                object obj = ResourceManager.GetObject("hojas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap indice {
             get {
                 object obj = ResourceManager.GetObject("indice", resourceCulture);
