@@ -115,6 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::GestionXML.Properties.Resources.login_gestor_copia2;
             this.ClientSize = new System.Drawing.Size(509, 352);
             this.ControlBox = false;
@@ -131,6 +132,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

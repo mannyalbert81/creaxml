@@ -174,6 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(534, 459);
             this.Controls.Add(this.dataGridViewCartonDocumentos);
             this.Controls.Add(this.btnSalir);
@@ -185,8 +186,14 @@
             this.Controls.Add(this.txt_numero_carton_documentos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCartonDocumentos";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CartonDocumentos";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCartonDocumentos_FormClosing);
             this.Load += new System.EventHandler(this.frmCartonDocumentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCartonDocumentos)).EndInit();

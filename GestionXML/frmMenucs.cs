@@ -107,9 +107,9 @@ namespace GestionXML
             frm.Show();
         }
 
-        private void estadoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void indiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstado frm = new frmEstado();
+            frmIndice frm = new frmIndice();
             frm.Show();
         }
 
