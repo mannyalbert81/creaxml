@@ -249,6 +249,12 @@
     <Compile Include="reportes\contTipoIndice.Designer.cs">
       <DependentUpon>contTipoIndice.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\FiltroCaminos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\FiltroCaminos.Designer.cs">
+      <DependentUpon>FiltroCaminos.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\rptCaminos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -345,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\contTipoIndice.resx">
       <DependentUpon>contTipoIndice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\FiltroCaminos.resx">
+      <DependentUpon>FiltroCaminos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptCaminos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

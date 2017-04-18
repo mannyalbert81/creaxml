@@ -14,6 +14,9 @@ namespace GestionXML.reportes
 {
     public partial class contCaminos : Form
     {
+        public int _id_proyectos = 0;
+
+
         public contCaminos()
         {
             InitializeComponent();
@@ -27,7 +30,7 @@ namespace GestionXML.reportes
             datas.dtCaminos dtCaminos = new datas.dtCaminos();
 
             NpgsqlDataAdapter daCaminos = new NpgsqlDataAdapter();
-            daCaminos = AccesoLogica.Select_reporte("caminos.id_caminos, caminos.nombre_caminos, caminos.path_caminos, usuarios.nombre_usuarios, proyectos.nombre_proyectos, caminos.creado, caminos.modificado", "public.caminos, public.usuarios, public.proyectos", "usuarios.id_usuarios = caminos.id_usuarios AND   proyectos.id_proyectos = caminos.id_proyectos ");
+            daCaminos = AccesoLogica.Select_reporte("caminos.id_caminos, caminos.nombre_caminos, caminos.path_caminos, usuarios.nombre_usuarios, proyectos.nombre_proyectos, caminos.creado, caminos.modificado", "public.caminos, public.usuarios, public.proyectos", "usuarios.id_usuarios = caminos.id_usuarios AND   proyectos.id_proyectos = caminos.id_proyectos AND   proyectos.id_proyectos = '"+ _id_proyectos+"'  ");
 
             daCaminos.Fill(dtCaminos, "proyectos");
             int reg = dtCaminos.Tables[1].Rows.Count;
