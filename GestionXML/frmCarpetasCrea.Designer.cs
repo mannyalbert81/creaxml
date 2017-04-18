@@ -32,7 +32,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCargar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbm_proyectos = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.camino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.XML = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,27 +46,28 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbm_proyectos);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnCargar);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox1.Location = new System.Drawing.Point(5, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(861, 454);
+            this.groupBox1.Size = new System.Drawing.Size(861, 409);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Archivoss por Carpetas";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnCargar
             // 
             this.btnCargar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCargar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnCargar.Image = global::GestionXML.Properties.Resources.agregarCarpeta;
-            this.btnCargar.Location = new System.Drawing.Point(730, 12);
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCargar.Location = new System.Drawing.Point(298, 19);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(122, 95);
+            this.btnCargar.Size = new System.Drawing.Size(122, 45);
             this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "Cargar Carpetas";
-            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
@@ -72,15 +76,35 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numero,
+            this.NOMBRE,
             this.camino,
             this.PDF,
             this.XML,
             this.dif});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 117);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 93);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(839, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 297);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // cbm_proyectos
+            // 
+            this.cbm_proyectos.FormattingEnabled = true;
+            this.cbm_proyectos.Location = new System.Drawing.Point(71, 24);
+            this.cbm_proyectos.Margin = new System.Windows.Forms.Padding(2);
+            this.cbm_proyectos.Name = "cbm_proyectos";
+            this.cbm_proyectos.Size = new System.Drawing.Size(210, 21);
+            this.cbm_proyectos.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 27);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Proyectos";
             // 
             // numero
             // 
@@ -88,11 +112,17 @@
             this.numero.Name = "numero";
             this.numero.Width = 30;
             // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "NOMBRE";
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.Width = 250;
+            // 
             // camino
             // 
             this.camino.HeaderText = "CAMINO";
             this.camino.Name = "camino";
-            this.camino.Width = 645;
+            this.camino.Width = 400;
             // 
             // PDF
             // 
@@ -117,7 +147,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(878, 480);
+            this.ClientSize = new System.Drawing.Size(878, 435);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -129,6 +159,7 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -138,7 +169,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.ComboBox cbm_proyectos;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn camino;
         private System.Windows.Forms.DataGridViewTextBoxColumn PDF;
         private System.Windows.Forms.DataGridViewTextBoxColumn XML;

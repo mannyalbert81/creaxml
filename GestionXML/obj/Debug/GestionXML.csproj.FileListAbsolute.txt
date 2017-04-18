@@ -130,6 +130,7 @@ C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmTipoIndice
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmUsuarios.resources
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmPermisosRoles.resources
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.Properties.Resources.resources
+C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.conProyectos.resources
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contCaminos.resources
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.GenerateResource.Cache
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.exe
@@ -249,5 +250,4 @@ C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.repo
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contCaminos.resources
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contTipoIndice.resources
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.GenerateResource.Cache
-C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contProyectos.resources
-C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contTipoIndice.resources
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroCaminos.resources
