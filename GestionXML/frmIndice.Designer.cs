@@ -340,6 +340,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_nombre_indice_detalle;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        internal System.Windows.Forms.ComboBox comboBox1;
     }
 }
