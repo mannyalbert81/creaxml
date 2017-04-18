@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GestionXML.reportes
 {
-    public partial class conProyectos : Form
+    public partial class contProyectos : Form
     {
-        public conProyectos()
+        public contProyectos()
         {
             InitializeComponent();
         }
