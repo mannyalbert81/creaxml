@@ -124,5 +124,11 @@ namespace GestionXML
             frmIndice frm = new frmIndice();
             frm.Show();
         }
+
+        private void caminosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            reportes.FiltroCaminos frm = new reportes.FiltroCaminos();
+            frm.Show();
+        }
     }
 }

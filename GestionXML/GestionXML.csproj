@@ -113,6 +113,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtProyectos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="datas\dtTipoIndice.cs">
+      <DependentUpon>dtTipoIndice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datas\dtTipoIndice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtTipoIndice.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCaminos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,17 +231,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="reportes\conProyectos.cs">
+    <Compile Include="reportes\contProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reportes\conProyectos.Designer.cs">
-      <DependentUpon>conProyectos.cs</DependentUpon>
+    <Compile Include="reportes\contProyectos.Designer.cs">
+      <DependentUpon>contProyectos.cs</DependentUpon>
     </Compile>
     <Compile Include="reportes\contCaminos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="reportes\contCaminos.Designer.cs">
       <DependentUpon>contCaminos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\contTipoIndice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\contTipoIndice.Designer.cs">
+      <DependentUpon>contTipoIndice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\FiltroCaminos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\FiltroCaminos.Designer.cs">
+      <DependentUpon>FiltroCaminos.cs</DependentUpon>
     </Compile>
     <Compile Include="reportes\rptCaminos.cs">
       <AutoGen>True</AutoGen>
@@ -245,6 +265,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptProyectos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rptTipoIndice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTipoIndice.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="CreadorTXT.resx">
@@ -317,11 +343,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="reportes\conProyectos.resx">
-      <DependentUpon>conProyectos.cs</DependentUpon>
+    <EmbeddedResource Include="reportes\contProyectos.resx">
+      <DependentUpon>contProyectos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\contCaminos.resx">
       <DependentUpon>contCaminos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\contTipoIndice.resx">
+      <DependentUpon>contTipoIndice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\FiltroCaminos.resx">
+      <DependentUpon>FiltroCaminos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptCaminos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -330,6 +362,10 @@
     <EmbeddedResource Include="reportes\rptProyectos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptProyectos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptTipoIndice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTipoIndice.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="datas\dtCaminos.xsc">
       <DependentUpon>dtCaminos.xsd</DependentUpon>
@@ -352,6 +388,17 @@
     </None>
     <None Include="datas\dtProyectos.xss">
       <DependentUpon>dtProyectos.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtTipoIndice.xsc">
+      <DependentUpon>dtTipoIndice.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtTipoIndice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtTipoIndice.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datas\dtTipoIndice.xss">
+      <DependentUpon>dtTipoIndice.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -397,6 +444,9 @@
     <Content Include="crea-xml.ico" />
     <Content Include="iconoGestor.ico" />
     <Content Include="indice.txt" />
+    <None Include="Resources\agregarCarpeta.png" />
+    <None Include="Resources\agregar.png" />
+    <None Include="Resources\Agregar Indice.png" />
     <None Include="Resources\hojas.png" />
     <None Include="Resources\Estado.png" />
     <None Include="Resources\carton.png" />

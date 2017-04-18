@@ -1,6 +1,6 @@
 ﻿namespace GestionXML.reportes
 {
-    partial class conProyectos
+    partial class contProyectos
     {
         /// <summary>
         /// Required designer variable.

@@ -22,7 +22,7 @@ namespace GestionXML
 
         private void frmCreaXML_Load(object sender, EventArgs e)
         {
-            cmbEquipos.SelectedIndex = 0;
+            //cmbEquipos.SelectedIndex = 0;
 
 
             lblCamino.Text = _camino;
@@ -55,13 +55,7 @@ namespace GestionXML
 
         private void btnRecargar_Click(object sender, EventArgs e)
         {
-            if (cmbEquipos.SelectedItem.ToString().Length >0 )
-            {
-
                 CargaGrid(1);
-            }
-
-            
            
         }
 
@@ -71,7 +65,6 @@ namespace GestionXML
             dataGridView1.Rows.Clear();
 
             DirectoryInfo directory = new DirectoryInfo(@_camino);
-            
             FileInfo[] filesPDF = directory.GetFiles("*.PDF");
             FileInfo[] filesXML = directory.GetFiles("*.XML");
 
@@ -84,8 +77,7 @@ namespace GestionXML
             for (int ii = 0; ii < filesXML.Length; ii++)
             {
                 _nombre_xml = ((FileInfo)filesXML[ii]).FullName;
-                //MessageBox.Show(_nombre_xml.Substring(0, 7));
-
+            
                 dtXML.Rows.Add(_nombre_xml);
                 _cantidadXMLCrear++;
 
@@ -99,6 +91,7 @@ namespace GestionXML
             string _equipo = "";
             for (int i = 0; i < filesPDF.Length; i++)
             {
+                
                 _nombre_pdf = ((FileInfo)filesPDF[i]).FullName;
                 _date_creado_pdf = File.GetLastWriteTime(filesPDF[i].FullName);
                 _nombre_pdf_name = ((FileInfo)filesPDF[i]).Name;
@@ -117,6 +110,8 @@ namespace GestionXML
                 if (foundRows.Length == 0)
                 {
                     
+
+                    /* 
                     if (_tipo == 1)
                     {
                     
@@ -135,11 +130,14 @@ namespace GestionXML
                         }
 
                     }
+                    */
+
                     if (_tipo == 2)
                     {
+                        
 
-                        _equipo = cmbEquipos.SelectedItem.ToString();
-
+                        _equipo = txtNombreArchivo.Text.ToString()  ;
+                        
                         bool b = _nombre_pdf_name.Contains(_equipo);
 
                         if (_equipo == "TODOS")
@@ -195,7 +193,8 @@ namespace GestionXML
 
         private void txtNombreArchivo_TextChanged(object sender, EventArgs e)
         {
-            CargaGrid(2);
+            
+           CargaGrid(2);
         }
     }
 }
