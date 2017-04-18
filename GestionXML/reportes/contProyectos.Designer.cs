@@ -39,17 +39,18 @@
             this.ReportViewerProyectos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReportViewerProyectos.Location = new System.Drawing.Point(0, 0);
             this.ReportViewerProyectos.Name = "ReportViewerProyectos";
-            this.ReportViewerProyectos.Size = new System.Drawing.Size(829, 371);
+            this.ReportViewerProyectos.Size = new System.Drawing.Size(901, 471);
             this.ReportViewerProyectos.TabIndex = 0;
+            this.ReportViewerProyectos.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.ReportViewerProyectos.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // conProyectos
+            // contProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 371);
+            this.ClientSize = new System.Drawing.Size(901, 471);
             this.Controls.Add(this.ReportViewerProyectos);
-            this.Name = "conProyectos";
+            this.Name = "contProyectos";
             this.Text = "conProyectos";
             this.ResumeLayout(false);
 
