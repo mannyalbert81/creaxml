@@ -303,6 +303,18 @@ namespace GestionXML
             txt_max.Text = Convert.ToString(fila.Cells[3].Value);
             txt_orden.Text = Convert.ToString(fila.Cells[4].Value);
         }
+
+        private void cbm_proyectos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            }
+        }
     }
-    }
+    
 

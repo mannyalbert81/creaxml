@@ -48,7 +48,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox1.Location = new System.Drawing.Point(5, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(861, 409);
+            this.groupBox1.Size = new System.Drawing.Size(861, 454);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Archivoss por Carpetas";
@@ -56,12 +56,14 @@
             // btnCargar
             // 
             this.btnCargar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCargar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCargar.Location = new System.Drawing.Point(730, 11);
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnCargar.Image = global::GestionXML.Properties.Resources.agregarCarpeta;
+            this.btnCargar.Location = new System.Drawing.Point(730, 12);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(122, 45);
+            this.btnCargar.Size = new System.Drawing.Size(122, 95);
             this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "Cargar Carpetas";
+            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
@@ -74,7 +76,7 @@
             this.PDF,
             this.XML,
             this.dif});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 117);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(839, 328);
             this.dataGridView1.TabIndex = 0;
@@ -115,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(878, 435);
+            this.ClientSize = new System.Drawing.Size(878, 480);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
