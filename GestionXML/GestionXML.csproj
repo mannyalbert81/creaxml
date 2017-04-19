@@ -105,6 +105,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtCaminos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="datas\dtCartonDocumentos.cs">
+      <DependentUpon>dtCartonDocumentos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datas\dtCartonDocumentos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtCartonDocumentos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datas\dtEstado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtEstado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datas\dtIndice.cs">
+      <DependentUpon>dtIndice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datas\dtIndice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtIndice.xsd</DependentUpon>
+    </Compile>
     <Compile Include="datas\dtProyectos.cs">
       <DependentUpon>dtProyectos.xsd</DependentUpon>
     </Compile>
@@ -231,6 +252,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportes\contCartonDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\contCartonDocumentos.Designer.cs">
+      <DependentUpon>contCartonDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\contEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\contEstado.Designer.cs">
+      <DependentUpon>contEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\contIndice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\contIndice.Designer.cs">
+      <DependentUpon>contIndice.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\contProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,10 +294,34 @@
     <Compile Include="reportes\FiltroCaminos.Designer.cs">
       <DependentUpon>FiltroCaminos.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\FiltroIndice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\FiltroIndice.Designer.cs">
+      <DependentUpon>FiltroIndice.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\rptCaminos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptCaminos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rptCartonDocuementos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCartonDocuementos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rptEstado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEstado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rptIndice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptIndice.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="reportes\rptProyectos.cs">
@@ -343,6 +406,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reportes\contCartonDocumentos.resx">
+      <DependentUpon>contCartonDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\contEstado.resx">
+      <DependentUpon>contEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\contIndice.resx">
+      <DependentUpon>contIndice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\contProyectos.resx">
       <DependentUpon>contProyectos.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,9 +427,24 @@
     <EmbeddedResource Include="reportes\FiltroCaminos.resx">
       <DependentUpon>FiltroCaminos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\FiltroIndice.resx">
+      <DependentUpon>FiltroIndice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptCaminos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptCaminos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptCartonDocuementos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCartonDocuementos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptEstado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEstado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptIndice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIndice.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptProyectos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -377,6 +464,39 @@
     </None>
     <None Include="datas\dtCaminos.xss">
       <DependentUpon>dtCaminos.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtCartonDocumentos.xsc">
+      <DependentUpon>dtCartonDocumentos.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtCartonDocumentos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtCartonDocumentos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datas\dtCartonDocumentos.xss">
+      <DependentUpon>dtCartonDocumentos.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtEstado.xsc">
+      <DependentUpon>dtEstado.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtEstado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtEstado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datas\dtEstado.xss">
+      <DependentUpon>dtEstado.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtIndice.xsc">
+      <DependentUpon>dtIndice.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtIndice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtIndice.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datas\dtIndice.xss">
+      <DependentUpon>dtIndice.xsd</DependentUpon>
     </None>
     <None Include="datas\dtProyectos.xsc">
       <DependentUpon>dtProyectos.xsd</DependentUpon>

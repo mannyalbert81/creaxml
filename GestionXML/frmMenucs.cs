@@ -127,7 +127,37 @@ namespace GestionXML
 
         private void caminosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            reportes.contProyectos frm = new reportes.contProyectos();
+            frm.Show();
+        }
+
+        private void caminosToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            reportes.contTipoIndice frm = new reportes.contTipoIndice();
+            frm.Show();
+        }
+
+        private void caminosToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
             reportes.FiltroCaminos frm = new reportes.FiltroCaminos();
+            frm.Show();
+        }
+
+        private void cartónDocumentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reportes.contCartonDocumentos frm = new reportes.contCartonDocumentos();
+            frm.Show();
+        }
+
+        private void estadoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            reportes.contEstado frm = new reportes.contEstado();
+            frm.Show();
+        }
+
+        private void indiceToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            reportes.FiltroIndice frm = new reportes.FiltroIndice();
             frm.Show();
         }
     }

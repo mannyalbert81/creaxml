@@ -14,6 +14,7 @@ namespace GestionXML
     public partial class frmListaPendienteXML : Form
     {
         public  string _camino = "";
+        public int _id_caminos = 0;
 
         public frmListaPendienteXML()
         {
@@ -109,7 +110,18 @@ namespace GestionXML
                 
                 if (foundRows.Length == 0)
                 {
+
+
+                    if (_tipo == 0)
+                    {
+                        
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf, _nombre_pdf);
+                            _agregados++;
+                        
+                    }
                     
+
+
 
                     /* 
                     if (_tipo == 1)
