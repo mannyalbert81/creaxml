@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 52);
+            this.label1.Location = new System.Drawing.Point(81, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 13);
@@ -61,17 +61,17 @@
             // dataGridViewControladores
             // 
             this.dataGridViewControladores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewControladores.Location = new System.Drawing.Point(63, 309);
+            this.dataGridViewControladores.Location = new System.Drawing.Point(86, 293);
             this.dataGridViewControladores.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewControladores.Name = "dataGridViewControladores";
             this.dataGridViewControladores.RowTemplate.Height = 24;
-            this.dataGridViewControladores.Size = new System.Drawing.Size(475, 166);
+            this.dataGridViewControladores.Size = new System.Drawing.Size(475, 182);
             this.dataGridViewControladores.TabIndex = 1;
             this.dataGridViewControladores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewControladores_CellContentClick);
             // 
             // txt_controladores
             // 
-            this.txt_controladores.Location = new System.Drawing.Point(197, 52);
+            this.txt_controladores.Location = new System.Drawing.Point(197, 31);
             this.txt_controladores.Margin = new System.Windows.Forms.Padding(2);
             this.txt_controladores.Name = "txt_controladores";
             this.txt_controladores.Size = new System.Drawing.Size(344, 20);
@@ -82,7 +82,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(442, 224);
+            this.btnSalir.Location = new System.Drawing.Point(443, 208);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
@@ -97,7 +97,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(348, 224);
+            this.btnEliminar.Location = new System.Drawing.Point(359, 208);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
@@ -112,7 +112,7 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(257, 224);
+            this.btnLimpiar.Location = new System.Drawing.Point(280, 208);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
@@ -128,7 +128,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(166, 224);
+            this.btnBuscar.Location = new System.Drawing.Point(203, 208);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
@@ -144,7 +144,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(72, 224);
+            this.btnGuardar.Location = new System.Drawing.Point(124, 208);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);
@@ -157,17 +157,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 97);
+            this.label2.Location = new System.Drawing.Point(60, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 13);
             this.label2.TabIndex = 37;
-            this.label2.Text = "Descripcion Controladores:";
+            this.label2.Text = "Descripción Controladores:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 128);
+            this.label3.Location = new System.Drawing.Point(157, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 38;
@@ -177,7 +177,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 164);
+            this.label4.Location = new System.Drawing.Point(162, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 39;
@@ -185,7 +185,7 @@
             // 
             // txt_descripcion_controladores
             // 
-            this.txt_descripcion_controladores.Location = new System.Drawing.Point(197, 97);
+            this.txt_descripcion_controladores.Location = new System.Drawing.Point(197, 77);
             this.txt_descripcion_controladores.Name = "txt_descripcion_controladores";
             this.txt_descripcion_controladores.Size = new System.Drawing.Size(341, 20);
             this.txt_descripcion_controladores.TabIndex = 41;
@@ -198,7 +198,7 @@
             "2",
             "3",
             "4"});
-            this.cmb_nivel_controladores.Location = new System.Drawing.Point(197, 155);
+            this.cmb_nivel_controladores.Location = new System.Drawing.Point(197, 143);
             this.cmb_nivel_controladores.Name = "cmb_nivel_controladores";
             this.cmb_nivel_controladores.Size = new System.Drawing.Size(56, 21);
             this.cmb_nivel_controladores.TabIndex = 45;
@@ -211,7 +211,7 @@
             "2",
             "3",
             "4"});
-            this.cmb_orden_controladores.Location = new System.Drawing.Point(197, 128);
+            this.cmb_orden_controladores.Location = new System.Drawing.Point(197, 107);
             this.cmb_orden_controladores.Name = "cmb_orden_controladores";
             this.cmb_orden_controladores.Size = new System.Drawing.Size(56, 21);
             this.cmb_orden_controladores.TabIndex = 46;
@@ -220,7 +220,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 191);
+            this.label5.Location = new System.Drawing.Point(138, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 47;
@@ -229,7 +229,7 @@
             // cbm_formulario
             // 
             this.cbm_formulario.FormattingEnabled = true;
-            this.cbm_formulario.Location = new System.Drawing.Point(197, 191);
+            this.cbm_formulario.Location = new System.Drawing.Point(197, 170);
             this.cbm_formulario.Name = "cbm_formulario";
             this.cbm_formulario.Size = new System.Drawing.Size(231, 21);
             this.cbm_formulario.TabIndex = 48;

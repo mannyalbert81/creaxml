@@ -45,26 +45,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 50);
+            this.label3.Location = new System.Drawing.Point(24, 44);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Numero de Carton";
+            this.label3.Text = "Número de Carton:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 115);
+            this.label1.Location = new System.Drawing.Point(24, 93);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Estado de Carton";
+            this.label1.Text = "Estado de Carton:";
             // 
             // txt_numero_carton_documentos
             // 
-            this.txt_numero_carton_documentos.Location = new System.Drawing.Point(178, 47);
+            this.txt_numero_carton_documentos.Location = new System.Drawing.Point(147, 47);
             this.txt_numero_carton_documentos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_numero_carton_documentos.Name = "txt_numero_carton_documentos";
             this.txt_numero_carton_documentos.Size = new System.Drawing.Size(210, 20);
@@ -76,10 +76,10 @@
             this.cbm_estado_carton_documentos.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.cbm_estado_carton_documentos.Location = new System.Drawing.Point(178, 112);
+            this.cbm_estado_carton_documentos.Location = new System.Drawing.Point(147, 93);
             this.cbm_estado_carton_documentos.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_estado_carton_documentos.Name = "cbm_estado_carton_documentos";
-            this.cbm_estado_carton_documentos.Size = new System.Drawing.Size(92, 21);
+            this.cbm_estado_carton_documentos.Size = new System.Drawing.Size(99, 21);
             this.cbm_estado_carton_documentos.TabIndex = 51;
             // 
             // btnGuardar
@@ -88,7 +88,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(27, 188);
+            this.btnGuardar.Location = new System.Drawing.Point(69, 169);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);
@@ -104,7 +104,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(124, 188);
+            this.btnBuscar.Location = new System.Drawing.Point(147, 169);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
@@ -119,7 +119,7 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(221, 188);
+            this.btnLimpiar.Location = new System.Drawing.Point(224, 169);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
@@ -134,7 +134,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(317, 188);
+            this.btnEliminar.Location = new System.Drawing.Point(303, 169);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
@@ -149,7 +149,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(421, 188);
+            this.btnSalir.Location = new System.Drawing.Point(386, 169);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
@@ -162,11 +162,11 @@
             // dataGridViewCartonDocumentos
             // 
             this.dataGridViewCartonDocumentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCartonDocumentos.Location = new System.Drawing.Point(27, 296);
+            this.dataGridViewCartonDocumentos.Location = new System.Drawing.Point(27, 277);
             this.dataGridViewCartonDocumentos.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewCartonDocumentos.Name = "dataGridViewCartonDocumentos";
             this.dataGridViewCartonDocumentos.RowTemplate.Height = 24;
-            this.dataGridViewCartonDocumentos.Size = new System.Drawing.Size(471, 133);
+            this.dataGridViewCartonDocumentos.Size = new System.Drawing.Size(471, 161);
             this.dataGridViewCartonDocumentos.TabIndex = 57;
             this.dataGridViewCartonDocumentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCartonDocumentos_CellContentClick);
             // 
