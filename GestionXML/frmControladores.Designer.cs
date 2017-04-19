@@ -51,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 31);
+            this.label1.Location = new System.Drawing.Point(21, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 13);
@@ -71,11 +71,11 @@
             // 
             // txt_controladores
             // 
-            this.txt_controladores.Location = new System.Drawing.Point(197, 31);
+            this.txt_controladores.Location = new System.Drawing.Point(162, 31);
             this.txt_controladores.Margin = new System.Windows.Forms.Padding(2);
             this.txt_controladores.Name = "txt_controladores";
             this.txt_controladores.Size = new System.Drawing.Size(344, 20);
-            this.txt_controladores.TabIndex = 2;
+            this.txt_controladores.TabIndex = 0;
             // 
             // btnSalir
             // 
@@ -86,7 +86,7 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
-            this.btnSalir.TabIndex = 36;
+            this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
-            this.btnEliminar.TabIndex = 35;
+            this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
-            this.btnLimpiar.TabIndex = 34;
+            this.btnLimpiar.TabIndex = 7;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
-            this.btnBuscar.TabIndex = 33;
+            this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);
-            this.btnGuardar.TabIndex = 32;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 77);
+            this.label2.Location = new System.Drawing.Point(21, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 13);
             this.label2.TabIndex = 37;
@@ -167,7 +167,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(157, 107);
+            this.label3.Location = new System.Drawing.Point(21, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 38;
@@ -177,7 +177,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(162, 143);
+            this.label4.Location = new System.Drawing.Point(21, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 39;
@@ -185,10 +185,10 @@
             // 
             // txt_descripcion_controladores
             // 
-            this.txt_descripcion_controladores.Location = new System.Drawing.Point(197, 77);
+            this.txt_descripcion_controladores.Location = new System.Drawing.Point(162, 77);
             this.txt_descripcion_controladores.Name = "txt_descripcion_controladores";
             this.txt_descripcion_controladores.Size = new System.Drawing.Size(341, 20);
-            this.txt_descripcion_controladores.TabIndex = 41;
+            this.txt_descripcion_controladores.TabIndex = 1;
             // 
             // cmb_nivel_controladores
             // 
@@ -198,10 +198,10 @@
             "2",
             "3",
             "4"});
-            this.cmb_nivel_controladores.Location = new System.Drawing.Point(197, 143);
+            this.cmb_nivel_controladores.Location = new System.Drawing.Point(162, 143);
             this.cmb_nivel_controladores.Name = "cmb_nivel_controladores";
             this.cmb_nivel_controladores.Size = new System.Drawing.Size(56, 21);
-            this.cmb_nivel_controladores.TabIndex = 45;
+            this.cmb_nivel_controladores.TabIndex = 3;
             // 
             // cmb_orden_controladores
             // 
@@ -211,16 +211,16 @@
             "2",
             "3",
             "4"});
-            this.cmb_orden_controladores.Location = new System.Drawing.Point(197, 107);
+            this.cmb_orden_controladores.Location = new System.Drawing.Point(162, 107);
             this.cmb_orden_controladores.Name = "cmb_orden_controladores";
             this.cmb_orden_controladores.Size = new System.Drawing.Size(56, 21);
-            this.cmb_orden_controladores.TabIndex = 46;
+            this.cmb_orden_controladores.TabIndex = 2;
             this.cmb_orden_controladores.SelectedIndexChanged += new System.EventHandler(this.cmb_orden_controladores_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(138, 173);
+            this.label5.Location = new System.Drawing.Point(21, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 47;
@@ -229,10 +229,10 @@
             // cbm_formulario
             // 
             this.cbm_formulario.FormattingEnabled = true;
-            this.cbm_formulario.Location = new System.Drawing.Point(197, 170);
+            this.cbm_formulario.Location = new System.Drawing.Point(162, 170);
             this.cbm_formulario.Name = "cbm_formulario";
             this.cbm_formulario.Size = new System.Drawing.Size(231, 21);
-            this.cbm_formulario.TabIndex = 48;
+            this.cbm_formulario.TabIndex = 4;
             // 
             // frmControladores
             // 
