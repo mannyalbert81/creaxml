@@ -26,7 +26,7 @@ namespace GestionXML
                 clases.Funciones.CargarCombo(cbm_tipo_indice, "id_tipo_indice", "nombre_tipo_indice", "tipo_indice");
 
                 llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
-              
+                  
             }
         }
         private void llenar_grid(string _parametro)
