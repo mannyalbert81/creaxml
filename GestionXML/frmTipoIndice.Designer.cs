@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 86);
+            this.label1.Location = new System.Drawing.Point(72, 86);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 13);
@@ -52,16 +52,16 @@
             // 
             // txt_nombre_tipo_indice
             // 
-            this.txt_nombre_tipo_indice.Location = new System.Drawing.Point(176, 84);
+            this.txt_nombre_tipo_indice.Location = new System.Drawing.Point(177, 86);
             this.txt_nombre_tipo_indice.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombre_tipo_indice.Name = "txt_nombre_tipo_indice";
-            this.txt_nombre_tipo_indice.Size = new System.Drawing.Size(329, 20);
+            this.txt_nombre_tipo_indice.Size = new System.Drawing.Size(314, 20);
             this.txt_nombre_tipo_indice.TabIndex = 1;
             // 
             // dataGridViewTipoIndice
             // 
             this.dataGridViewTipoIndice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTipoIndice.Location = new System.Drawing.Point(52, 235);
+            this.dataGridViewTipoIndice.Location = new System.Drawing.Point(54, 237);
             this.dataGridViewTipoIndice.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewTipoIndice.Name = "dataGridViewTipoIndice";
             this.dataGridViewTipoIndice.RowTemplate.Height = 24;
@@ -74,7 +74,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(417, 147);
+            this.btnSalir.Location = new System.Drawing.Point(393, 147);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
@@ -89,7 +89,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(322, 147);
+            this.btnEliminar.Location = new System.Drawing.Point(310, 147);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
@@ -120,7 +120,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(140, 147);
+            this.btnBuscar.Location = new System.Drawing.Point(155, 147);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
@@ -136,7 +136,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(47, 147);
+            this.btnGuardar.Location = new System.Drawing.Point(75, 147);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);

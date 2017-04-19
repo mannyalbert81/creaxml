@@ -49,16 +49,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 55);
+            this.label3.Location = new System.Drawing.Point(123, 45);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Nombre Caminos";
+            this.label3.Text = "Nombre Caminos:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txt_nombre_caminos
             // 
-            this.txt_nombre_caminos.Location = new System.Drawing.Point(199, 55);
+            this.txt_nombre_caminos.Location = new System.Drawing.Point(216, 45);
             this.txt_nombre_caminos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombre_caminos.Name = "txt_nombre_caminos";
             this.txt_nombre_caminos.Size = new System.Drawing.Size(210, 20);
@@ -67,16 +68,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 105);
+            this.label1.Location = new System.Drawing.Point(138, 95);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Path Caminos";
+            this.label1.Text = "Path Caminos:";
             // 
             // txt_path_caminos
             // 
-            this.txt_path_caminos.Location = new System.Drawing.Point(199, 101);
+            this.txt_path_caminos.Location = new System.Drawing.Point(216, 95);
             this.txt_path_caminos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_path_caminos.Name = "txt_path_caminos";
             this.txt_path_caminos.Size = new System.Drawing.Size(210, 20);
@@ -85,27 +86,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 148);
+            this.label2.Location = new System.Drawing.Point(163, 138);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Usuarios";
+            this.label2.Text = "Usuarios:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 186);
+            this.label4.Location = new System.Drawing.Point(157, 176);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Proyectos";
+            this.label4.Text = "Proyectos:";
             // 
             // cbm_usuarios
             // 
             this.cbm_usuarios.FormattingEnabled = true;
-            this.cbm_usuarios.Location = new System.Drawing.Point(199, 145);
+            this.cbm_usuarios.Location = new System.Drawing.Point(216, 138);
             this.cbm_usuarios.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_usuarios.Name = "cbm_usuarios";
             this.cbm_usuarios.Size = new System.Drawing.Size(210, 21);
@@ -114,7 +115,7 @@
             // cbm_proyectos
             // 
             this.cbm_proyectos.FormattingEnabled = true;
-            this.cbm_proyectos.Location = new System.Drawing.Point(199, 183);
+            this.cbm_proyectos.Location = new System.Drawing.Point(216, 176);
             this.cbm_proyectos.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(210, 21);
@@ -126,7 +127,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(59, 220);
+            this.btnGuardar.Location = new System.Drawing.Point(106, 220);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);
@@ -156,7 +157,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(361, 220);
+            this.btnEliminar.Location = new System.Drawing.Point(341, 220);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
@@ -171,7 +172,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(467, 220);
+            this.btnSalir.Location = new System.Drawing.Point(425, 220);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
@@ -187,7 +188,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(165, 220);
+            this.btnBuscar.Location = new System.Drawing.Point(185, 220);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
@@ -200,7 +201,7 @@
             // dataGridViewCaminos
             // 
             this.dataGridViewCaminos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCaminos.Location = new System.Drawing.Point(1, 303);
+            this.dataGridViewCaminos.Location = new System.Drawing.Point(7, 303);
             this.dataGridViewCaminos.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewCaminos.Name = "dataGridViewCaminos";
             this.dataGridViewCaminos.RowTemplate.Height = 24;
