@@ -130,7 +130,6 @@ C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmTipoIndice
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmUsuarios.resources
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmPermisosRoles.resources
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.Properties.Resources.resources
-C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.conProyectos.resources
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contCaminos.resources
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.GenerateResource.Cache
 C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.exe
@@ -157,6 +156,7 @@ C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\stdole.dll
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmCartonDocumentos.resources
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmEstado.resources
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmIndice.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.conProyectos.resources
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contCaminos.resources
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.ReportSource.dll
@@ -250,6 +250,6 @@ C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.repo
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contTipoIndice.resources
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.GenerateResource.Cache
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroCaminos.resources
-C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contProyectos.resources
-C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contTipoIndice.resources
-C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroCaminos.resources
+C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contProyectos.resources
+C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contTipoIndice.resources
+C:\Users\User\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroCaminos.resources

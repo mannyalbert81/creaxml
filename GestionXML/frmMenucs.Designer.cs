@@ -50,6 +50,11 @@
             this.indiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caminosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.caminosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.caminosToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartónDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.indiceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -229,7 +234,12 @@
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.caminosToolStripMenuItem1});
+            this.caminosToolStripMenuItem1,
+            this.caminosToolStripMenuItem2,
+            this.caminosToolStripMenuItem3,
+            this.cartónDocumentosToolStripMenuItem,
+            this.estadoToolStripMenuItem1,
+            this.indiceToolStripMenuItem1});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -237,9 +247,44 @@
             // caminosToolStripMenuItem1
             // 
             this.caminosToolStripMenuItem1.Name = "caminosToolStripMenuItem1";
-            this.caminosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.caminosToolStripMenuItem1.Text = "Caminos";
+            this.caminosToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem1.Text = "Proyectos";
             this.caminosToolStripMenuItem1.Click += new System.EventHandler(this.caminosToolStripMenuItem1_Click);
+            // 
+            // caminosToolStripMenuItem2
+            // 
+            this.caminosToolStripMenuItem2.Name = "caminosToolStripMenuItem2";
+            this.caminosToolStripMenuItem2.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem2.Text = "Tipo Indice";
+            this.caminosToolStripMenuItem2.Click += new System.EventHandler(this.caminosToolStripMenuItem2_Click);
+            // 
+            // caminosToolStripMenuItem3
+            // 
+            this.caminosToolStripMenuItem3.Name = "caminosToolStripMenuItem3";
+            this.caminosToolStripMenuItem3.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem3.Text = "Caminos";
+            this.caminosToolStripMenuItem3.Click += new System.EventHandler(this.caminosToolStripMenuItem3_Click);
+            // 
+            // cartónDocumentosToolStripMenuItem
+            // 
+            this.cartónDocumentosToolStripMenuItem.Name = "cartónDocumentosToolStripMenuItem";
+            this.cartónDocumentosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.cartónDocumentosToolStripMenuItem.Text = "Cartón Documentos";
+            this.cartónDocumentosToolStripMenuItem.Click += new System.EventHandler(this.cartónDocumentosToolStripMenuItem_Click);
+            // 
+            // estadoToolStripMenuItem1
+            // 
+            this.estadoToolStripMenuItem1.Name = "estadoToolStripMenuItem1";
+            this.estadoToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.estadoToolStripMenuItem1.Text = "Estado";
+            this.estadoToolStripMenuItem1.Click += new System.EventHandler(this.estadoToolStripMenuItem1_Click);
+            // 
+            // indiceToolStripMenuItem1
+            // 
+            this.indiceToolStripMenuItem1.Name = "indiceToolStripMenuItem1";
+            this.indiceToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.indiceToolStripMenuItem1.Text = "Indice";
+            this.indiceToolStripMenuItem1.Click += new System.EventHandler(this.indiceToolStripMenuItem1_Click);
             // 
             // frmMenucs
             // 
@@ -286,5 +331,10 @@
         private System.Windows.Forms.ToolStripMenuItem indiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem caminosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem caminosToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem caminosToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem cartónDocumentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem indiceToolStripMenuItem1;
     }
 }

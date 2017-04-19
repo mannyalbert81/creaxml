@@ -34,6 +34,7 @@ namespace GestionXML.clases
 
         
 
+
         public static void CargarCombo_inner(System.Windows.Forms.ComboBox cmb, string id, string columna, string tabla_uno, string tabla_dos, string parametro)
         {
             try

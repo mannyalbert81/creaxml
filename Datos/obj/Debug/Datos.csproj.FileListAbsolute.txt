@@ -91,6 +91,5 @@ C:\Users\Oscar\Source\Repos\creaxml\Datos\bin\Debug\fi\Npgsql.resources.dll
 C:\Users\Oscar\Source\Repos\creaxml\Datos\bin\Debug\fr\Npgsql.resources.dll
 C:\Users\Oscar\Source\Repos\creaxml\Datos\bin\Debug\ja\Npgsql.resources.dll
 C:\Users\Oscar\Source\Repos\creaxml\Datos\bin\Debug\zh-CN\Npgsql.resources.dll
-C:\Users\Oscar\Source\Repos\creaxml\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\Oscar\Source\Repos\creaxml\Datos\obj\Debug\Datos.dll
 C:\Users\Oscar\Source\Repos\creaxml\Datos\obj\Debug\Datos.pdb

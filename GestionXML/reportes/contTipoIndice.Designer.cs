@@ -39,17 +39,18 @@
             this.ReportViewerTipoIndice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReportViewerTipoIndice.Location = new System.Drawing.Point(0, 0);
             this.ReportViewerTipoIndice.Name = "ReportViewerTipoIndice";
-            this.ReportViewerTipoIndice.Size = new System.Drawing.Size(284, 261);
+            this.ReportViewerTipoIndice.Size = new System.Drawing.Size(964, 420);
             this.ReportViewerTipoIndice.TabIndex = 0;
+            this.ReportViewerTipoIndice.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.ReportViewerTipoIndice.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // contTipoProyectos
+            // contTipoIndice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(964, 420);
             this.Controls.Add(this.ReportViewerTipoIndice);
-            this.Name = "contTipoProyectos";
+            this.Name = "contTipoIndice";
             this.Text = "contTipoProyectos";
             this.ResumeLayout(false);
 
