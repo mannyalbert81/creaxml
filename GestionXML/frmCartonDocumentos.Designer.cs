@@ -45,7 +45,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 47);
+            this.label3.Location = new System.Drawing.Point(24, 44);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 13);
@@ -55,7 +55,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 93);
+            this.label1.Location = new System.Drawing.Point(24, 93);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
@@ -64,7 +64,7 @@
             // 
             // txt_numero_carton_documentos
             // 
-            this.txt_numero_carton_documentos.Location = new System.Drawing.Point(223, 47);
+            this.txt_numero_carton_documentos.Location = new System.Drawing.Point(147, 47);
             this.txt_numero_carton_documentos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_numero_carton_documentos.Name = "txt_numero_carton_documentos";
             this.txt_numero_carton_documentos.Size = new System.Drawing.Size(210, 20);
@@ -76,7 +76,7 @@
             this.cbm_estado_carton_documentos.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.cbm_estado_carton_documentos.Location = new System.Drawing.Point(223, 93);
+            this.cbm_estado_carton_documentos.Location = new System.Drawing.Point(147, 93);
             this.cbm_estado_carton_documentos.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_estado_carton_documentos.Name = "cbm_estado_carton_documentos";
             this.cbm_estado_carton_documentos.Size = new System.Drawing.Size(99, 21);
