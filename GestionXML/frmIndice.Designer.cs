@@ -59,7 +59,7 @@
             this.cbm_proyectos.Location = new System.Drawing.Point(430, 33);
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(175, 21);
-            this.cbm_proyectos.TabIndex = 0;
+            this.cbm_proyectos.TabIndex = 1;
             this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
             // 
             // label1
@@ -85,7 +85,7 @@
             this.txt_nombre_indice.Location = new System.Drawing.Point(135, 33);
             this.txt_nombre_indice.Name = "txt_nombre_indice";
             this.txt_nombre_indice.Size = new System.Drawing.Size(189, 20);
-            this.txt_nombre_indice.TabIndex = 3;
+            this.txt_nombre_indice.TabIndex = 0;
             // 
             // label3
             // 
@@ -128,14 +128,14 @@
             this.txt_min.Location = new System.Drawing.Point(178, 98);
             this.txt_min.Name = "txt_min";
             this.txt_min.Size = new System.Drawing.Size(57, 20);
-            this.txt_min.TabIndex = 36;
+            this.txt_min.TabIndex = 4;
             // 
             // txt_max
             // 
             this.txt_max.Location = new System.Drawing.Point(388, 98);
             this.txt_max.Name = "txt_max";
             this.txt_max.Size = new System.Drawing.Size(67, 20);
-            this.txt_max.TabIndex = 37;
+            this.txt_max.TabIndex = 5;
             // 
             // cbm_tipo_indice
             // 
@@ -143,7 +143,7 @@
             this.cbm_tipo_indice.Location = new System.Drawing.Point(430, 63);
             this.cbm_tipo_indice.Name = "cbm_tipo_indice";
             this.cbm_tipo_indice.Size = new System.Drawing.Size(175, 21);
-            this.cbm_tipo_indice.TabIndex = 39;
+            this.cbm_tipo_indice.TabIndex = 3;
             // 
             // label7
             // 
@@ -159,7 +159,7 @@
             this.txt_nombre_indice_detalle.Location = new System.Drawing.Point(135, 64);
             this.txt_nombre_indice_detalle.Name = "txt_nombre_indice_detalle";
             this.txt_nombre_indice_detalle.Size = new System.Drawing.Size(190, 20);
-            this.txt_nombre_indice_detalle.TabIndex = 41;
+            this.txt_nombre_indice_detalle.TabIndex = 2;
             // 
             // button1
             // 
@@ -258,7 +258,7 @@
             this.comboBox1.Location = new System.Drawing.Point(514, 97);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(91, 21);
-            this.comboBox1.TabIndex = 43;
+            this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label8
