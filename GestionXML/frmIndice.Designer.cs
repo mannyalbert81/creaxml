@@ -65,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(370, 33);
+            this.label1.Location = new System.Drawing.Point(345, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 33);
+            this.label2.Location = new System.Drawing.Point(21, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 2;
@@ -108,7 +108,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 101);
+            this.label4.Location = new System.Drawing.Point(21, 101);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 13);
             this.label4.TabIndex = 33;
@@ -125,14 +125,14 @@
             // 
             // txt_min
             // 
-            this.txt_min.Location = new System.Drawing.Point(178, 98);
+            this.txt_min.Location = new System.Drawing.Point(178, 101);
             this.txt_min.Name = "txt_min";
             this.txt_min.Size = new System.Drawing.Size(57, 20);
             this.txt_min.TabIndex = 4;
             // 
             // txt_max
             // 
-            this.txt_max.Location = new System.Drawing.Point(388, 98);
+            this.txt_max.Location = new System.Drawing.Point(388, 101);
             this.txt_max.Name = "txt_max";
             this.txt_max.Size = new System.Drawing.Size(67, 20);
             this.txt_max.TabIndex = 5;
@@ -140,7 +140,7 @@
             // cbm_tipo_indice
             // 
             this.cbm_tipo_indice.FormattingEnabled = true;
-            this.cbm_tipo_indice.Location = new System.Drawing.Point(430, 63);
+            this.cbm_tipo_indice.Location = new System.Drawing.Point(430, 64);
             this.cbm_tipo_indice.Name = "cbm_tipo_indice";
             this.cbm_tipo_indice.Size = new System.Drawing.Size(175, 21);
             this.cbm_tipo_indice.TabIndex = 3;
@@ -148,7 +148,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 64);
+            this.label7.Location = new System.Drawing.Point(21, 64);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 13);
             this.label7.TabIndex = 40;
@@ -169,7 +169,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 67);
-            this.button1.TabIndex = 42;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Agregar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
@@ -184,7 +184,7 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
-            this.btnSalir.TabIndex = 32;
+            this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(77, 67);
-            this.btnEliminar.TabIndex = 31;
+            this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(77, 67);
-            this.btnLimpiar.TabIndex = 30;
+            this.btnLimpiar.TabIndex = 9;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -230,7 +230,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(77, 67);
-            this.btnBuscar.TabIndex = 29;
+            this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -246,7 +246,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);
-            this.btnGuardar.TabIndex = 28;
+            this.btnGuardar.TabIndex = 12;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -255,7 +255,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(514, 97);
+            this.comboBox1.Location = new System.Drawing.Point(514, 101);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(91, 21);
             this.comboBox1.TabIndex = 6;
@@ -303,7 +303,7 @@
             this.Name = "frmIndice";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmIndice";
+            this.Text = "Índice";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmIndice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIndice)).EndInit();
