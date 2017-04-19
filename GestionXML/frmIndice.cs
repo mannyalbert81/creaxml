@@ -44,10 +44,8 @@ namespace GestionXML
            txt_max.Text = "";
             comboBox1.Text = "";
         }
-       
 
-        
-            private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             int _id_tipo_indice = 0;
             string _nombre_indice_detalle = "";
@@ -60,42 +58,52 @@ namespace GestionXML
             string tablas = "public.tipo_indice,  public.temp_indice";
             string where = "temp_indice.id_tipo_indice = tipo_indice.id_tipo_indice";
 
-            
+
             DataTable dtTemporal = AccesoLogica.Select(columnas1, tablas, where);
             int registros = dtTemporal.Rows.Count;
             if (registros > 0)
             {
-            
-
-                    string _error = "";
-                    string _nombre_indice_cabeza = txt_nombre_indice.Text;
-                    int _id_proyectos = Convert.ToInt16(cbm_proyectos.SelectedValue.ToString());
 
 
-                    if (_nombre_indice_cabeza.Length == 0)
+                string _error = "";
+                string _nombre_indice_cabeza = txt_nombre_indice.Text;
+                int _id_proyectos = Convert.ToInt16(cbm_proyectos.SelectedValue.ToString());
+
+
+                if (_nombre_indice_cabeza.Length == 0)
+                {
+                    _error = "Debe Indicar un Nombre de Indice Cabeza";
+                }
+
+                if (_error.Length == 0)
+
+                {
+                    string datos = _nombre_indice_cabeza + "?" + _id_proyectos;
+                    string columnas = "_nombre_indice_cabeza?_id_proyectos";
+                    string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Integer";
+
+
+                    try
                     {
-                        _error = "Debe Indicar un Nombre de Indice Cabeza";
-                    }
-                    
-                    if (_error.Length == 0)
-
-                    {
-                        string datos = _nombre_indice_cabeza + "?" + _id_proyectos;
-                        string columnas = "_nombre_indice_cabeza?_id_proyectos";
-                        string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Integer";
-
-
-                        try
-                        {
                         int resul = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_indice_cabeza");
 
+                        string columnas3 = "indice_cabeza.id_indice_cabeza";
+                        string tablas3 = "public.indice_cabeza";
+                        string where3 = "indice_cabeza.nombre_indice_cabeza = '" + _nombre_indice_cabeza + "' AND indice_cabeza.id_proyectos = '" + _id_proyectos + "'";
+
+                        DataTable dtCabeza = AccesoLogica.Select(columnas3, tablas3, where3);
+
+                        foreach (DataRow renglon in dtCabeza.Rows)
+                        {
+                            _id_indice_cabeza = Convert.ToInt32(renglon["id_indice_cabeza"].ToString());
+                        }
                         foreach (DataRow renglon in dtTemporal.Rows)
                         {
-                            
+
 
                             try
                             {
-                                _id_indice_cabeza = 1;
+
                                 _id_tipo_indice = Convert.ToInt32(renglon["id_tipo_indice"].ToString());
                                 _nombre_indice_detalle = Convert.ToString(renglon["nombre_indice_detalle"].ToString());
                                 _min_indice_detalle = Convert.ToInt32(renglon["min_indice_detalle"].ToString());
@@ -111,61 +119,52 @@ namespace GestionXML
 
                                     int result = AccesoLogica.Insert(datos2, columnas2, tipodatos2, "ins_indice_detalle");
                                     {
-                                        MessageBox.Show("El Tipo Indice se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        MessageBox.Show("Se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                         limpiar();
-       }
+                                        int resulT = AccesoLogica.Delete("nombre_indice_detalle = '" + _nombre_indice_detalle + "' ", "temp_indice");
+                                        llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
+                                    }
 
                                 }
                                 catch (NpgsqlException)
                                 {
-
                                     MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-  }
-
-
+                                }
                             }
                             catch
                             {
-                                
+
                             }
-
-
                         }
                     }
-                        catch (NpgsqlException )
-                        {
-                            MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    else
+                    catch (NpgsqlException)
                     {
-                        MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                  
-            
-            
-
+                }
+                else
+                {
+                    MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            //jghjh
-
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             {
                 {
                     string _nombre_indice_detalle = txt_nombre_indice_detalle.Text;
-                    
+
                     if (_nombre_indice_detalle.Length == 0)
                     {
                         _nombre_indice_detalle = "%";
                     }
-                    
+
                     llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice AND temp_indice.nombre_indice_detalle LIKE '" + _nombre_indice_detalle + "'");
                 }
             }
         }
+
+
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
