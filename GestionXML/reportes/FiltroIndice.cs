@@ -27,10 +27,12 @@ namespace GestionXML.reportes
         private void button1_Click(object sender, EventArgs e)
         {
             int _id_proyectos = Convert.ToInt32(cbm_proyectos.SelectedValue.ToString());
-            
+            int _id_caminos = Convert.ToInt32(cmb_Caminos.SelectedValue.ToString());
+
 
             reportes.contIndice frm = new reportes.contIndice();
             frm._id_proyectos = _id_proyectos;
+            frm._id_caminos = _id_caminos;
             frm.Show();
 
             
