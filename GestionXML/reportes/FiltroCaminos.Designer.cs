@@ -49,14 +49,15 @@
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(217, 21);
             this.cbm_proyectos.TabIndex = 2;
+            this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 86);
+            this.button1.Image = global::GestionXML.Properties.Resources.Reporte_;
+            this.button1.Location = new System.Drawing.Point(164, 107);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(129, 82);
             this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -69,6 +70,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbm_proyectos);
             this.Name = "FiltroCaminos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FiltroCaminos";
             this.Load += new System.EventHandler(this.FiltroCaminos_Load);
             this.ResumeLayout(false);

@@ -95,5 +95,28 @@ namespace Negocio
 
         }
 
+
+
+
+
+        public static DataTable Select2(string comando)
+        {
+            Consultas fun = new Consultas();
+            return fun.Select(comando);
+        }
+
+        public static DataTable Select2(string columnas, string tabla)
+        {
+            Consultas fun = new Consultas();
+            return fun.Select(columnas, tabla);
+        }
+
+        public static DataTable Select2(string columnas, string tabla, string where)
+        {
+            Consultas fun = new Consultas();
+            return fun.Select(columnas, tabla, where);
+        }
+
+
     }
 }

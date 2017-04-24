@@ -39,7 +39,7 @@
             this.ReportViewerCartonDocumentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReportViewerCartonDocumentos.Location = new System.Drawing.Point(0, 0);
             this.ReportViewerCartonDocumentos.Name = "ReportViewerCartonDocumentos";
-            this.ReportViewerCartonDocumentos.Size = new System.Drawing.Size(829, 415);
+            this.ReportViewerCartonDocumentos.Size = new System.Drawing.Size(876, 415);
             this.ReportViewerCartonDocumentos.TabIndex = 0;
             this.ReportViewerCartonDocumentos.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.ReportViewerCartonDocumentos.Load += new System.EventHandler(this.ReportViewerCartonDocumentos_Load);
@@ -48,9 +48,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 415);
+            this.ClientSize = new System.Drawing.Size(876, 415);
             this.Controls.Add(this.ReportViewerCartonDocumentos);
             this.Name = "contCartonDocumentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "contCartonDocumentos";
             this.ResumeLayout(false);
 

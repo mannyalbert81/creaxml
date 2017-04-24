@@ -32,9 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.controlarCalidadXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +45,9 @@
             this.cartonDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlarCalidadXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caminosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.caminosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,9 +63,9 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
-            this.gestionXMLToolStripMenuItem,
             this.administraciónToolStripMenuItem,
             this.mantenimientoToolStripMenuItem,
+            this.gestionXMLToolStripMenuItem,
             this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -89,32 +89,6 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // gestionXMLToolStripMenuItem
-            // 
-            this.gestionXMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearXMLToolStripMenuItem,
-            this.controlarCalidadXMLToolStripMenuItem});
-            this.gestionXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.xml;
-            this.gestionXMLToolStripMenuItem.Name = "gestionXMLToolStripMenuItem";
-            this.gestionXMLToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
-            this.gestionXMLToolStripMenuItem.Text = "Gestion XML";
-            // 
-            // crearXMLToolStripMenuItem
-            // 
-            this.crearXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.nuevo_archivo;
-            this.crearXMLToolStripMenuItem.Name = "crearXMLToolStripMenuItem";
-            this.crearXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.crearXMLToolStripMenuItem.Text = "Crear XML";
-            this.crearXMLToolStripMenuItem.Click += new System.EventHandler(this.crearXMLToolStripMenuItem_Click);
-            // 
-            // controlarCalidadXMLToolStripMenuItem
-            // 
-            this.controlarCalidadXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.certificado;
-            this.controlarCalidadXMLToolStripMenuItem.Name = "controlarCalidadXMLToolStripMenuItem";
-            this.controlarCalidadXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.controlarCalidadXMLToolStripMenuItem.Text = "Controlar Calidad XML";
-            this.controlarCalidadXMLToolStripMenuItem.Click += new System.EventHandler(this.controlarCalidadXMLToolStripMenuItem_Click);
             // 
             // administraciónToolStripMenuItem
             // 
@@ -231,6 +205,32 @@
             this.indiceToolStripMenuItem.Text = "Indice";
             this.indiceToolStripMenuItem.Click += new System.EventHandler(this.indiceToolStripMenuItem_Click);
             // 
+            // gestionXMLToolStripMenuItem
+            // 
+            this.gestionXMLToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearXMLToolStripMenuItem,
+            this.controlarCalidadXMLToolStripMenuItem});
+            this.gestionXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.xml;
+            this.gestionXMLToolStripMenuItem.Name = "gestionXMLToolStripMenuItem";
+            this.gestionXMLToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
+            this.gestionXMLToolStripMenuItem.Text = "Gestion XML";
+            // 
+            // crearXMLToolStripMenuItem
+            // 
+            this.crearXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.nuevo_archivo;
+            this.crearXMLToolStripMenuItem.Name = "crearXMLToolStripMenuItem";
+            this.crearXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.crearXMLToolStripMenuItem.Text = "Crear XML";
+            this.crearXMLToolStripMenuItem.Click += new System.EventHandler(this.crearXMLToolStripMenuItem_Click);
+            // 
+            // controlarCalidadXMLToolStripMenuItem
+            // 
+            this.controlarCalidadXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.certificado;
+            this.controlarCalidadXMLToolStripMenuItem.Name = "controlarCalidadXMLToolStripMenuItem";
+            this.controlarCalidadXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.controlarCalidadXMLToolStripMenuItem.Text = "Controlar Calidad XML";
+            this.controlarCalidadXMLToolStripMenuItem.Click += new System.EventHandler(this.controlarCalidadXMLToolStripMenuItem_Click);
+            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -240,49 +240,56 @@
             this.cartónDocumentosToolStripMenuItem,
             this.estadoToolStripMenuItem1,
             this.indiceToolStripMenuItem1});
+            this.reportesToolStripMenuItem.Image = global::GestionXML.Properties.Resources.reportesG;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // caminosToolStripMenuItem1
             // 
+            this.caminosToolStripMenuItem1.Image = global::GestionXML.Properties.Resources.reportesU;
             this.caminosToolStripMenuItem1.Name = "caminosToolStripMenuItem1";
-            this.caminosToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem1.Size = new System.Drawing.Size(185, 26);
             this.caminosToolStripMenuItem1.Text = "Proyectos";
             this.caminosToolStripMenuItem1.Click += new System.EventHandler(this.caminosToolStripMenuItem1_Click);
             // 
             // caminosToolStripMenuItem2
             // 
+            this.caminosToolStripMenuItem2.Image = global::GestionXML.Properties.Resources.reportes1;
             this.caminosToolStripMenuItem2.Name = "caminosToolStripMenuItem2";
-            this.caminosToolStripMenuItem2.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem2.Size = new System.Drawing.Size(185, 26);
             this.caminosToolStripMenuItem2.Text = "Tipo Indice";
             this.caminosToolStripMenuItem2.Click += new System.EventHandler(this.caminosToolStripMenuItem2_Click);
             // 
             // caminosToolStripMenuItem3
             // 
+            this.caminosToolStripMenuItem3.Image = global::GestionXML.Properties.Resources.reportes2;
             this.caminosToolStripMenuItem3.Name = "caminosToolStripMenuItem3";
-            this.caminosToolStripMenuItem3.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem3.Size = new System.Drawing.Size(185, 26);
             this.caminosToolStripMenuItem3.Text = "Caminos";
             this.caminosToolStripMenuItem3.Click += new System.EventHandler(this.caminosToolStripMenuItem3_Click);
             // 
             // cartónDocumentosToolStripMenuItem
             // 
+            this.cartónDocumentosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.reportes3;
             this.cartónDocumentosToolStripMenuItem.Name = "cartónDocumentosToolStripMenuItem";
-            this.cartónDocumentosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.cartónDocumentosToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.cartónDocumentosToolStripMenuItem.Text = "Cartón Documentos";
             this.cartónDocumentosToolStripMenuItem.Click += new System.EventHandler(this.cartónDocumentosToolStripMenuItem_Click);
             // 
             // estadoToolStripMenuItem1
             // 
+            this.estadoToolStripMenuItem1.Image = global::GestionXML.Properties.Resources.reportes4;
             this.estadoToolStripMenuItem1.Name = "estadoToolStripMenuItem1";
-            this.estadoToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.estadoToolStripMenuItem1.Size = new System.Drawing.Size(185, 26);
             this.estadoToolStripMenuItem1.Text = "Estado";
             this.estadoToolStripMenuItem1.Click += new System.EventHandler(this.estadoToolStripMenuItem1_Click);
             // 
             // indiceToolStripMenuItem1
             // 
+            this.indiceToolStripMenuItem1.Image = global::GestionXML.Properties.Resources.reportes5;
             this.indiceToolStripMenuItem1.Name = "indiceToolStripMenuItem1";
-            this.indiceToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.indiceToolStripMenuItem1.Size = new System.Drawing.Size(185, 26);
             this.indiceToolStripMenuItem1.Text = "Indice";
             this.indiceToolStripMenuItem1.Click += new System.EventHandler(this.indiceToolStripMenuItem1_Click);
             // 

@@ -26,23 +26,23 @@ namespace GestionXML
                 clases.Funciones.CargarCombo(cbm_tipo_indice, "id_tipo_indice", "nombre_tipo_indice", "tipo_indice");
 
                 llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
-              
+
             }
         }
         private void llenar_grid(string _parametro)
         {
             clases.Funciones.CargarGridView(dataGridIndice, "temp_indice.id_temp_indice AS Id, tipo_indice.nombre_tipo_indice, temp_indice.nombre_indice_detalle, temp_indice.min_indice_detalle, temp_indice.max_indice_detalle, temp_indice.orden_indice_detalle", "public.temp_indice, public.tipo_indice", _parametro, "Id?Tipo?Nombre Indice?Min?Max?Orden");
 
-         
+
         }
-        
+
         public void limpiar()
         {
 
-           txt_nombre_indice_detalle.Text= "";
-           txt_min.Text = "";
-           txt_max.Text = "";
-           txt_orden.Text = "";
+            txt_nombre_indice_detalle.Text = "";
+            txt_min.Text = "";
+            txt_max.Text = "";
+            comboBox1.Text = "";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -212,7 +212,7 @@ namespace GestionXML
             this.Hide();
         }
 
-        
+
 
         private void frmIndice_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -228,7 +228,7 @@ namespace GestionXML
             }
         }
 
-       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -237,7 +237,7 @@ namespace GestionXML
             string _nombre_indice_detalle = txt_nombre_indice_detalle.Text;
             string _min_indice_detalle = txt_min.Text;
             string _max_indice_detalle = txt_max.Text;
-            string _orden_indice_detalle = txt_orden.Text;
+            string _orden_indice_detalle = comboBox1.Text;
             int _id_tipo_indice = Convert.ToInt16(cbm_tipo_indice.SelectedValue.ToString());
 
 
@@ -261,7 +261,7 @@ namespace GestionXML
                 _error = "Debe Indicar un Orden";
             }
 
-            
+
             if (_error.Length == 0)
 
             {
@@ -300,19 +300,25 @@ namespace GestionXML
             txt_nombre_indice_detalle.Text = Convert.ToString(fila.Cells[1].Value);
             txt_min.Text = Convert.ToString(fila.Cells[2].Value);
             txt_max.Text = Convert.ToString(fila.Cells[3].Value);
-            txt_orden.Text = Convert.ToString(fila.Cells[3].Value);
-      }
-        private void txt_numeros_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsNumber(e.KeyChar) && e.KeyChar != (char)8)
-            {
-
-                e.Handled = true;
-
-            }
+            comboBox1.Text = Convert.ToString(fila.Cells[4].Value);
         }
-        
+
+        private void cbm_proyectos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void txt_nombre_indice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}
     
 

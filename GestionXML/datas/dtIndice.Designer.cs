@@ -279,15 +279,35 @@ namespace GestionXML.datas {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
+            private global::System.Data.DataColumn columnid_caminos;
+            
+            private global::System.Data.DataColumn columnnombre_caminos;
+            
+            private global::System.Data.DataColumn columnpath_caminos;
+            
+            private global::System.Data.DataColumn columnid_proyectos;
+            
+            private global::System.Data.DataColumn columnnombre_proyectos;
+            
+            private global::System.Data.DataColumn columnobservaciones_proyectos;
+            
             private global::System.Data.DataColumn columnid_indice_cabeza;
             
             private global::System.Data.DataColumn columnnombre_indice_cabeza;
             
-            private global::System.Data.DataColumn columnnombre_proyectos;
+            private global::System.Data.DataColumn columnid_indice_detalle;
             
-            private global::System.Data.DataColumn columncreado;
+            private global::System.Data.DataColumn columnid_tipo_indice;
             
-            private global::System.Data.DataColumn columnmodificado;
+            private global::System.Data.DataColumn columnnombre_tipo_indice;
+            
+            private global::System.Data.DataColumn columnnombre_indice_detalle;
+            
+            private global::System.Data.DataColumn columnmin_indice_detalle;
+            
+            private global::System.Data.DataColumn columnmax_indice_detalle;
+            
+            private global::System.Data.DataColumn columnorden_indice_detalle;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -324,6 +344,54 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn id_caminosColumn {
+                get {
+                    return this.columnid_caminos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre_caminosColumn {
+                get {
+                    return this.columnnombre_caminos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn path_caminosColumn {
+                get {
+                    return this.columnpath_caminos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn id_proyectosColumn {
+                get {
+                    return this.columnid_proyectos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre_proyectosColumn {
+                get {
+                    return this.columnnombre_proyectos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn observaciones_proyectosColumn {
+                get {
+                    return this.columnobservaciones_proyectos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn id_indice_cabezaColumn {
                 get {
                     return this.columnid_indice_cabeza;
@@ -340,25 +408,57 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombre_proyectosColumn {
+            public global::System.Data.DataColumn id_indice_detalleColumn {
                 get {
-                    return this.columnnombre_proyectos;
+                    return this.columnid_indice_detalle;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn creadoColumn {
+            public global::System.Data.DataColumn id_tipo_indiceColumn {
                 get {
-                    return this.columncreado;
+                    return this.columnid_tipo_indice;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn modificadoColumn {
+            public global::System.Data.DataColumn nombre_tipo_indiceColumn {
                 get {
-                    return this.columnmodificado;
+                    return this.columnnombre_tipo_indice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre_indice_detalleColumn {
+                get {
+                    return this.columnnombre_indice_detalle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn min_indice_detalleColumn {
+                get {
+                    return this.columnmin_indice_detalle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn max_indice_detalleColumn {
+                get {
+                    return this.columnmax_indice_detalle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn orden_indice_detalleColumn {
+                get {
+                    return this.columnorden_indice_detalle;
                 }
             }
             
@@ -399,14 +499,24 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(int id_indice_cabeza, string nombre_indice_cabeza, string nombre_proyectos, System.DateTime creado, System.DateTime modificado) {
+            public DataTable1Row AddDataTable1Row(int id_caminos, string nombre_caminos, string path_caminos, int id_proyectos, string nombre_proyectos, string observaciones_proyectos, int id_indice_cabeza, string nombre_indice_cabeza, int id_indice_detalle, int id_tipo_indice, string nombre_tipo_indice, string nombre_indice_detalle, int min_indice_detalle, int max_indice_detalle, int orden_indice_detalle) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        id_caminos,
+                        nombre_caminos,
+                        path_caminos,
+                        id_proyectos,
+                        nombre_proyectos,
+                        observaciones_proyectos,
                         id_indice_cabeza,
                         nombre_indice_cabeza,
-                        nombre_proyectos,
-                        creado,
-                        modificado};
+                        id_indice_detalle,
+                        id_tipo_indice,
+                        nombre_tipo_indice,
+                        nombre_indice_detalle,
+                        min_indice_detalle,
+                        max_indice_detalle,
+                        orden_indice_detalle};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -429,26 +539,56 @@ namespace GestionXML.datas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnid_caminos = base.Columns["id_caminos"];
+                this.columnnombre_caminos = base.Columns["nombre_caminos"];
+                this.columnpath_caminos = base.Columns["path_caminos"];
+                this.columnid_proyectos = base.Columns["id_proyectos"];
+                this.columnnombre_proyectos = base.Columns["nombre_proyectos"];
+                this.columnobservaciones_proyectos = base.Columns["observaciones_proyectos"];
                 this.columnid_indice_cabeza = base.Columns["id_indice_cabeza"];
                 this.columnnombre_indice_cabeza = base.Columns["nombre_indice_cabeza"];
-                this.columnnombre_proyectos = base.Columns["nombre_proyectos"];
-                this.columncreado = base.Columns["creado"];
-                this.columnmodificado = base.Columns["modificado"];
+                this.columnid_indice_detalle = base.Columns["id_indice_detalle"];
+                this.columnid_tipo_indice = base.Columns["id_tipo_indice"];
+                this.columnnombre_tipo_indice = base.Columns["nombre_tipo_indice"];
+                this.columnnombre_indice_detalle = base.Columns["nombre_indice_detalle"];
+                this.columnmin_indice_detalle = base.Columns["min_indice_detalle"];
+                this.columnmax_indice_detalle = base.Columns["max_indice_detalle"];
+                this.columnorden_indice_detalle = base.Columns["orden_indice_detalle"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnid_caminos = new global::System.Data.DataColumn("id_caminos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_caminos);
+                this.columnnombre_caminos = new global::System.Data.DataColumn("nombre_caminos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_caminos);
+                this.columnpath_caminos = new global::System.Data.DataColumn("path_caminos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpath_caminos);
+                this.columnid_proyectos = new global::System.Data.DataColumn("id_proyectos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_proyectos);
+                this.columnnombre_proyectos = new global::System.Data.DataColumn("nombre_proyectos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_proyectos);
+                this.columnobservaciones_proyectos = new global::System.Data.DataColumn("observaciones_proyectos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnobservaciones_proyectos);
                 this.columnid_indice_cabeza = new global::System.Data.DataColumn("id_indice_cabeza", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_indice_cabeza);
                 this.columnnombre_indice_cabeza = new global::System.Data.DataColumn("nombre_indice_cabeza", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_indice_cabeza);
-                this.columnnombre_proyectos = new global::System.Data.DataColumn("nombre_proyectos", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_proyectos);
-                this.columncreado = new global::System.Data.DataColumn("creado", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncreado);
-                this.columnmodificado = new global::System.Data.DataColumn("modificado", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmodificado);
+                this.columnid_indice_detalle = new global::System.Data.DataColumn("id_indice_detalle", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_indice_detalle);
+                this.columnid_tipo_indice = new global::System.Data.DataColumn("id_tipo_indice", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_tipo_indice);
+                this.columnnombre_tipo_indice = new global::System.Data.DataColumn("nombre_tipo_indice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_tipo_indice);
+                this.columnnombre_indice_detalle = new global::System.Data.DataColumn("nombre_indice_detalle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_indice_detalle);
+                this.columnmin_indice_detalle = new global::System.Data.DataColumn("min_indice_detalle", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmin_indice_detalle);
+                this.columnmax_indice_detalle = new global::System.Data.DataColumn("max_indice_detalle", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmax_indice_detalle);
+                this.columnorden_indice_detalle = new global::System.Data.DataColumn("orden_indice_detalle", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnorden_indice_detalle);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -591,6 +731,102 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int id_caminos {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable1.id_caminosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_caminos\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.id_caminosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre_caminos {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.nombre_caminosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombre_caminos\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.nombre_caminosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string path_caminos {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.path_caminosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'path_caminos\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.path_caminosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int id_proyectos {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable1.id_proyectosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_proyectos\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.id_proyectosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre_proyectos {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.nombre_proyectosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombre_proyectos\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.nombre_proyectosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string observaciones_proyectos {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.observaciones_proyectosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'observaciones_proyectos\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.observaciones_proyectosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int id_indice_cabeza {
                 get {
                     try {
@@ -623,50 +859,186 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre_proyectos {
+            public int id_indice_detalle {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.nombre_proyectosColumn]));
+                        return ((int)(this[this.tableDataTable1.id_indice_detalleColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nombre_proyectos\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_indice_detalle\' in table \'DataTable1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.nombre_proyectosColumn] = value;
+                    this[this.tableDataTable1.id_indice_detalleColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime creado {
+            public int id_tipo_indice {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.creadoColumn]));
+                        return ((int)(this[this.tableDataTable1.id_tipo_indiceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'creado\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_tipo_indice\' in table \'DataTable1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.creadoColumn] = value;
+                    this[this.tableDataTable1.id_tipo_indiceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime modificado {
+            public string nombre_tipo_indice {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.modificadoColumn]));
+                        return ((string)(this[this.tableDataTable1.nombre_tipo_indiceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'modificado\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombre_tipo_indice\' in table \'DataTable1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.modificadoColumn] = value;
+                    this[this.tableDataTable1.nombre_tipo_indiceColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre_indice_detalle {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.nombre_indice_detalleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombre_indice_detalle\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.nombre_indice_detalleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int min_indice_detalle {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable1.min_indice_detalleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'min_indice_detalle\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.min_indice_detalleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int max_indice_detalle {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable1.max_indice_detalleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'max_indice_detalle\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.max_indice_detalleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int orden_indice_detalle {
+                get {
+                    try {
+                        return ((int)(this[this.tableDataTable1.orden_indice_detalleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'orden_indice_detalle\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.orden_indice_detalleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isid_caminosNull() {
+                return this.IsNull(this.tableDataTable1.id_caminosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setid_caminosNull() {
+                this[this.tableDataTable1.id_caminosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnombre_caminosNull() {
+                return this.IsNull(this.tableDataTable1.nombre_caminosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnombre_caminosNull() {
+                this[this.tableDataTable1.nombre_caminosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispath_caminosNull() {
+                return this.IsNull(this.tableDataTable1.path_caminosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpath_caminosNull() {
+                this[this.tableDataTable1.path_caminosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isid_proyectosNull() {
+                return this.IsNull(this.tableDataTable1.id_proyectosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setid_proyectosNull() {
+                this[this.tableDataTable1.id_proyectosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnombre_proyectosNull() {
+                return this.IsNull(this.tableDataTable1.nombre_proyectosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnombre_proyectosNull() {
+                this[this.tableDataTable1.nombre_proyectosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isobservaciones_proyectosNull() {
+                return this.IsNull(this.tableDataTable1.observaciones_proyectosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setobservaciones_proyectosNull() {
+                this[this.tableDataTable1.observaciones_proyectosColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -695,38 +1067,86 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isnombre_proyectosNull() {
-                return this.IsNull(this.tableDataTable1.nombre_proyectosColumn);
+            public bool Isid_indice_detalleNull() {
+                return this.IsNull(this.tableDataTable1.id_indice_detalleColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setnombre_proyectosNull() {
-                this[this.tableDataTable1.nombre_proyectosColumn] = global::System.Convert.DBNull;
+            public void Setid_indice_detalleNull() {
+                this[this.tableDataTable1.id_indice_detalleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscreadoNull() {
-                return this.IsNull(this.tableDataTable1.creadoColumn);
+            public bool Isid_tipo_indiceNull() {
+                return this.IsNull(this.tableDataTable1.id_tipo_indiceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcreadoNull() {
-                this[this.tableDataTable1.creadoColumn] = global::System.Convert.DBNull;
+            public void Setid_tipo_indiceNull() {
+                this[this.tableDataTable1.id_tipo_indiceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsmodificadoNull() {
-                return this.IsNull(this.tableDataTable1.modificadoColumn);
+            public bool Isnombre_tipo_indiceNull() {
+                return this.IsNull(this.tableDataTable1.nombre_tipo_indiceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetmodificadoNull() {
-                this[this.tableDataTable1.modificadoColumn] = global::System.Convert.DBNull;
+            public void Setnombre_tipo_indiceNull() {
+                this[this.tableDataTable1.nombre_tipo_indiceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isnombre_indice_detalleNull() {
+                return this.IsNull(this.tableDataTable1.nombre_indice_detalleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setnombre_indice_detalleNull() {
+                this[this.tableDataTable1.nombre_indice_detalleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ismin_indice_detalleNull() {
+                return this.IsNull(this.tableDataTable1.min_indice_detalleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setmin_indice_detalleNull() {
+                this[this.tableDataTable1.min_indice_detalleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ismax_indice_detalleNull() {
+                return this.IsNull(this.tableDataTable1.max_indice_detalleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setmax_indice_detalleNull() {
+                this[this.tableDataTable1.max_indice_detalleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isorden_indice_detalleNull() {
+                return this.IsNull(this.tableDataTable1.orden_indice_detalleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setorden_indice_detalleNull() {
+                this[this.tableDataTable1.orden_indice_detalleColumn] = global::System.Convert.DBNull;
             }
         }
         

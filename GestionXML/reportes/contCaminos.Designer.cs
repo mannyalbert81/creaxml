@@ -51,6 +51,7 @@
             this.ClientSize = new System.Drawing.Size(897, 418);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "contCaminos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "contCaminos";
             this.ResumeLayout(false);
 
