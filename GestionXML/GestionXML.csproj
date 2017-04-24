@@ -564,6 +564,17 @@
     <Content Include="crea-xml.ico" />
     <Content Include="iconoGestor.ico" />
     <Content Include="indice.txt" />
+    <None Include="Resources\Reporte .jpg" />
+    <None Include="Resources\Reporte I1.JPEG" />
+    <None Include="Resources\Reporte I.JPEG" />
+    <None Include="Resources\Reportes_2014.jpg" />
+    <None Include="Resources\reportes5.png" />
+    <None Include="Resources\reportes4.png" />
+    <None Include="Resources\reportes3.png" />
+    <None Include="Resources\reportes2.png" />
+    <None Include="Resources\reportes1.png" />
+    <None Include="Resources\reportesU.png" />
+    <None Include="Resources\reportesG.png" />
     <None Include="Resources\agregarCarpeta.png" />
     <None Include="Resources\agregar.png" />
     <None Include="Resources\Agregar Indice.png" />

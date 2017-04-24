@@ -62,17 +62,17 @@
             // cbm_proyectos
             // 
             this.cbm_proyectos.FormattingEnabled = true;
-            this.cbm_proyectos.Location = new System.Drawing.Point(72, 26);
+            this.cbm_proyectos.Location = new System.Drawing.Point(84, 26);
             this.cbm_proyectos.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(210, 21);
-            this.cbm_proyectos.TabIndex = 15;
+            this.cbm_proyectos.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(13, 26);
+            this.label4.Location = new System.Drawing.Point(15, 26);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);

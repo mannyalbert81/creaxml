@@ -63,7 +63,7 @@
             this.btnCargar.Location = new System.Drawing.Point(725, 17);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(122, 98);
-            this.btnCargar.TabIndex = 1;
+            this.btnCargar.TabIndex = 0;
             this.btnCargar.Text = "Cargar Carpetas";
             this.btnCargar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCargar.UseVisualStyleBackColor = false;

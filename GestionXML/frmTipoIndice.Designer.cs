@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 86);
+            this.label1.Location = new System.Drawing.Point(21, 86);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 13);
@@ -52,21 +52,21 @@
             // 
             // txt_nombre_tipo_indice
             // 
-            this.txt_nombre_tipo_indice.Location = new System.Drawing.Point(177, 86);
+            this.txt_nombre_tipo_indice.Location = new System.Drawing.Point(127, 86);
             this.txt_nombre_tipo_indice.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombre_tipo_indice.Name = "txt_nombre_tipo_indice";
-            this.txt_nombre_tipo_indice.Size = new System.Drawing.Size(314, 20);
-            this.txt_nombre_tipo_indice.TabIndex = 1;
+            this.txt_nombre_tipo_indice.Size = new System.Drawing.Size(332, 20);
+            this.txt_nombre_tipo_indice.TabIndex = 0;
             // 
             // dataGridViewTipoIndice
             // 
             this.dataGridViewTipoIndice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTipoIndice.Location = new System.Drawing.Point(54, 237);
+            this.dataGridViewTipoIndice.Location = new System.Drawing.Point(51, 237);
             this.dataGridViewTipoIndice.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewTipoIndice.Name = "dataGridViewTipoIndice";
             this.dataGridViewTipoIndice.RowTemplate.Height = 24;
             this.dataGridViewTipoIndice.Size = new System.Drawing.Size(437, 196);
-            this.dataGridViewTipoIndice.TabIndex = 2;
+            this.dataGridViewTipoIndice.TabIndex = 6;
             this.dataGridViewTipoIndice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTipoIndice_CellContentClick);
             // 
             // btnSalir
@@ -78,7 +78,7 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
-            this.btnSalir.TabIndex = 46;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -93,7 +93,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
-            this.btnEliminar.TabIndex = 45;
+            this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
-            this.btnLimpiar.TabIndex = 44;
+            this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
-            this.btnBuscar.TabIndex = 43;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);
-            this.btnGuardar.TabIndex = 42;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
