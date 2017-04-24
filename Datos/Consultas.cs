@@ -125,9 +125,34 @@ namespace Datos
             }
             return vector;
         }
-        
 
-      
+
+
+
+
+
+
+        ///dos
+        /// 
+
+        public DataTable Select2(string comando)
+        {
+            return MetodosDatos.EjecutarConsula(comando);
+        }
+
+        public DataTable Select2(string columnas, string tabla)
+        {
+            string comando = "SELECT " + columnas + " FROM " + tabla;
+            return MetodosDatos.EjecutarConsula(comando);
+        }
+
+        public DataTable Select2(string columnas, string tabla, string where)
+        {
+            where = where.Replace("''", "null");
+            string comando = "SELECT " + columnas + " FROM " + tabla + " WHERE " + where;
+            return MetodosDatos.EjecutarConsula(comando);
+        }
+
 
 
 
