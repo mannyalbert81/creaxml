@@ -26,22 +26,22 @@ namespace GestionXML
                 clases.Funciones.CargarCombo(cbm_tipo_indice, "id_tipo_indice", "nombre_tipo_indice", "tipo_indice");
 
                 llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
-                  
+
             }
         }
         private void llenar_grid(string _parametro)
         {
             clases.Funciones.CargarGridView(dataGridIndice, "temp_indice.id_temp_indice AS Id, tipo_indice.nombre_tipo_indice, temp_indice.nombre_indice_detalle, temp_indice.min_indice_detalle, temp_indice.max_indice_detalle, temp_indice.orden_indice_detalle", "public.temp_indice, public.tipo_indice", _parametro, "Id?Tipo?Nombre Indice?Min?Max?Orden");
 
-         
+
         }
-        
+
         public void limpiar()
         {
 
-           txt_nombre_indice_detalle.Text= "";
-           txt_min.Text = "";
-           txt_max.Text = "";
+            txt_nombre_indice_detalle.Text = "";
+            txt_min.Text = "";
+            txt_max.Text = "";
             comboBox1.Text = "";
         }
 
@@ -212,7 +212,7 @@ namespace GestionXML
             this.Hide();
         }
 
-        
+
 
         private void frmIndice_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -228,7 +228,7 @@ namespace GestionXML
             }
         }
 
-       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -261,7 +261,7 @@ namespace GestionXML
                 _error = "Debe Indicar un Orden";
             }
 
-            
+
             if (_error.Length == 0)
 
             {
@@ -310,11 +310,15 @@ namespace GestionXML
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-     
+
 
         }
 
+        private void txt_nombre_indice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}
     
 
