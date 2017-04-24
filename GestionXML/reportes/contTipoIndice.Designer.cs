@@ -51,6 +51,7 @@
             this.ClientSize = new System.Drawing.Size(964, 420);
             this.Controls.Add(this.ReportViewerTipoIndice);
             this.Name = "contTipoIndice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "contTipoProyectos";
             this.ResumeLayout(false);
 

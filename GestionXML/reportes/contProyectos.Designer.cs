@@ -51,6 +51,7 @@
             this.ClientSize = new System.Drawing.Size(901, 471);
             this.Controls.Add(this.ReportViewerProyectos);
             this.Name = "contProyectos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "conProyectos";
             this.ResumeLayout(false);
 

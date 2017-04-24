@@ -86,6 +86,7 @@
             this.txt_nombre_indice.Name = "txt_nombre_indice";
             this.txt_nombre_indice.Size = new System.Drawing.Size(189, 20);
             this.txt_nombre_indice.TabIndex = 0;
+            this.txt_nombre_indice.TextChanged += new System.EventHandler(this.txt_nombre_indice_TextChanged);
             // 
             // label3
             // 
