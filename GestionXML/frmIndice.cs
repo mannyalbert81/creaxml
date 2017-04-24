@@ -42,7 +42,7 @@ namespace GestionXML
            txt_nombre_indice_detalle.Text= "";
            txt_min.Text = "";
            txt_max.Text = "";
-            comboBox1.Text = "";
+           txt_orden.Text = "";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -237,7 +237,7 @@ namespace GestionXML
             string _nombre_indice_detalle = txt_nombre_indice_detalle.Text;
             string _min_indice_detalle = txt_min.Text;
             string _max_indice_detalle = txt_max.Text;
-            string _orden_indice_detalle = comboBox1.Text;
+            string _orden_indice_detalle = txt_orden.Text;
             int _id_tipo_indice = Convert.ToInt16(cbm_tipo_indice.SelectedValue.ToString());
 
 
@@ -300,20 +300,18 @@ namespace GestionXML
             txt_nombre_indice_detalle.Text = Convert.ToString(fila.Cells[1].Value);
             txt_min.Text = Convert.ToString(fila.Cells[2].Value);
             txt_max.Text = Convert.ToString(fila.Cells[3].Value);
-            comboBox1.Text = Convert.ToString(fila.Cells[4].Value);
-        }
-
-        private void cbm_proyectos_SelectedIndexChanged(object sender, EventArgs e)
+            txt_orden.Text = Convert.ToString(fila.Cells[3].Value);
+      }
+        private void txt_numeros_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!Char.IsNumber(e.KeyChar) && e.KeyChar != (char)8)
+            {
 
+                e.Handled = true;
+
+            }
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-     
-
-        }
-
+        
     }
     }
     

@@ -49,7 +49,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_orden = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIndice)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +60,6 @@
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(234, 21);
             this.cbm_proyectos.TabIndex = 0;
-            this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -138,6 +137,7 @@
             this.txt_min.Name = "txt_min";
             this.txt_min.Size = new System.Drawing.Size(57, 20);
             this.txt_min.TabIndex = 36;
+            this.txt_min.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numeros_KeyPress);
             // 
             // txt_max
             // 
@@ -145,6 +145,7 @@
             this.txt_max.Name = "txt_max";
             this.txt_max.Size = new System.Drawing.Size(57, 20);
             this.txt_max.TabIndex = 37;
+            this.txt_max.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numeros_KeyPress);
             // 
             // cbm_tipo_indice
             // 
@@ -261,14 +262,13 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // comboBox1
+            // txt_orden
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(687, 130);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(79, 21);
-            this.comboBox1.TabIndex = 43;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.txt_orden.Location = new System.Drawing.Point(686, 130);
+            this.txt_orden.Name = "txt_orden";
+            this.txt_orden.Size = new System.Drawing.Size(80, 20);
+            this.txt_orden.TabIndex = 43;
+            this.txt_orden.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numeros_KeyPress);
             // 
             // frmIndice
             // 
@@ -276,7 +276,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(868, 504);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txt_orden);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_nombre_indice_detalle);
             this.Controls.Add(this.label7);
@@ -334,6 +334,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_nombre_indice_detalle;
         private System.Windows.Forms.Button button1;
-        internal System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txt_orden;
     }
 }
