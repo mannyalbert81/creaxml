@@ -38,5 +38,15 @@ namespace GestionXML.reportes
             
 
         }
+
+        private void cbm_proyectos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbm_proyectos.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void cmb_Caminos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmb_Caminos.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
     }
 }

@@ -51,6 +51,7 @@
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(217, 21);
             this.cbm_proyectos.TabIndex = 4;
+            this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
             // 
             // cmb_Caminos
             // 
@@ -59,6 +60,7 @@
             this.cmb_Caminos.Name = "cmb_Caminos";
             this.cmb_Caminos.Size = new System.Drawing.Size(217, 21);
             this.cmb_Caminos.TabIndex = 7;
+            this.cmb_Caminos.SelectedIndexChanged += new System.EventHandler(this.cmb_Caminos_SelectedIndexChanged);
             // 
             // label2
             // 
