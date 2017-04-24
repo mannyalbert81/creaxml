@@ -39,7 +39,7 @@
             this.ReportViewerIndice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReportViewerIndice.Location = new System.Drawing.Point(0, 0);
             this.ReportViewerIndice.Name = "ReportViewerIndice";
-            this.ReportViewerIndice.Size = new System.Drawing.Size(839, 447);
+            this.ReportViewerIndice.Size = new System.Drawing.Size(971, 447);
             this.ReportViewerIndice.TabIndex = 0;
             this.ReportViewerIndice.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.ReportViewerIndice.Load += new System.EventHandler(this.ReportViewerIndice_Load);
@@ -48,9 +48,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 447);
+            this.ClientSize = new System.Drawing.Size(971, 447);
             this.Controls.Add(this.ReportViewerIndice);
             this.Name = "contIndice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "contIndice";
             this.ResumeLayout(false);
 

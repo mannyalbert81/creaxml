@@ -39,7 +39,7 @@
             this.ReportViewerEstado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReportViewerEstado.Location = new System.Drawing.Point(0, 0);
             this.ReportViewerEstado.Name = "ReportViewerEstado";
-            this.ReportViewerEstado.Size = new System.Drawing.Size(844, 375);
+            this.ReportViewerEstado.Size = new System.Drawing.Size(906, 375);
             this.ReportViewerEstado.TabIndex = 0;
             this.ReportViewerEstado.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.ReportViewerEstado.Load += new System.EventHandler(this.ReportViewerEstado_Load);
@@ -48,9 +48,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 375);
+            this.ClientSize = new System.Drawing.Size(906, 375);
             this.Controls.Add(this.ReportViewerEstado);
             this.Name = "contEstado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "contEstado";
             this.ResumeLayout(false);
 

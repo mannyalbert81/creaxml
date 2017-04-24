@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.cbm_proyectos = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.cmb_Caminos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -52,16 +52,6 @@
             this.cbm_proyectos.Size = new System.Drawing.Size(217, 21);
             this.cbm_proyectos.TabIndex = 4;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(200, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "GENERAR";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // cmb_Caminos
             // 
             this.cmb_Caminos.FormattingEnabled = true;
@@ -73,11 +63,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 95);
+            this.label2.Location = new System.Drawing.Point(82, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Caminos:";
+            this.label2.Text = "Subcategoría:";
+            // 
+            // button1
+            // 
+            this.button1.Image = global::GestionXML.Properties.Resources.Reporte_;
+            this.button1.Location = new System.Drawing.Point(176, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 80);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FiltroIndice
             // 
@@ -90,6 +90,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbm_proyectos);
             this.Name = "FiltroIndice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FiltroIndice";
             this.Load += new System.EventHandler(this.FiltroIndice_Load);
             this.ResumeLayout(false);
