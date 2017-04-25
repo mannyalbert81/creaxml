@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FiltroIndice));
             this.label1 = new System.Windows.Forms.Label();
             this.cbm_proyectos = new System.Windows.Forms.ComboBox();
             this.cmb_Caminos = new System.Windows.Forms.ComboBox();
@@ -38,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 56);
+            this.label1.Location = new System.Drawing.Point(82, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 5;
@@ -47,19 +48,19 @@
             // cbm_proyectos
             // 
             this.cbm_proyectos.FormattingEnabled = true;
-            this.cbm_proyectos.Location = new System.Drawing.Point(157, 53);
+            this.cbm_proyectos.Location = new System.Drawing.Point(181, 53);
             this.cbm_proyectos.Name = "cbm_proyectos";
-            this.cbm_proyectos.Size = new System.Drawing.Size(217, 21);
-            this.cbm_proyectos.TabIndex = 4;
+            this.cbm_proyectos.Size = new System.Drawing.Size(157, 21);
+            this.cbm_proyectos.TabIndex = 0;
             this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
             // 
             // cmb_Caminos
             // 
             this.cmb_Caminos.FormattingEnabled = true;
-            this.cmb_Caminos.Location = new System.Drawing.Point(157, 95);
+            this.cmb_Caminos.Location = new System.Drawing.Point(181, 98);
             this.cmb_Caminos.Name = "cmb_Caminos";
-            this.cmb_Caminos.Size = new System.Drawing.Size(217, 21);
-            this.cmb_Caminos.TabIndex = 7;
+            this.cmb_Caminos.Size = new System.Drawing.Size(157, 21);
+            this.cmb_Caminos.TabIndex = 1;
             this.cmb_Caminos.SelectedIndexChanged += new System.EventHandler(this.cmb_Caminos_SelectedIndexChanged);
             // 
             // label2
@@ -73,11 +74,14 @@
             // 
             // button1
             // 
-            this.button1.Image = global::GestionXML.Properties.Resources.Reporte_;
-            this.button1.Location = new System.Drawing.Point(176, 144);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::GestionXML.Properties.Resources.firma_del_contrato;
+            this.button1.Location = new System.Drawing.Point(200, 153);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 80);
-            this.button1.TabIndex = 6;
+            this.button1.Size = new System.Drawing.Size(76, 68);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Generar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -91,6 +95,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbm_proyectos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FiltroIndice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FiltroIndice";
