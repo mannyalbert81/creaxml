@@ -11,8 +11,6 @@ namespace Datos
     class MetodosDatos
     {
         public static string cadenaConexion = @"Server=186.4.241.148;Port=5432;User Id=postgres;Password=.Romina.2012;Database=xml;Preload Reader = true;";
-
-
         //DOS
         public static string cadenaConexion2 = @"Server=186.4.241.148;Port=5433;User Id=postgres;Password=.Romina.2012;Database=ad_territorial_cor;Preload Reader = true;";
         //186.65.24.196
@@ -62,13 +60,7 @@ namespace Datos
             }
         }
 
-
-
-
-
-
-
-        ///dos
+    //DOS
         /// 
 
 
@@ -77,7 +69,7 @@ namespace Datos
             DataTable data = new DataTable();
             try
             {
-                NpgsqlConnection conexion = new NpgsqlConnection(cadenaConexion);
+                NpgsqlConnection conexion = new NpgsqlConnection(cadenaConexion2);
                 conexion.Open();
                 NpgsqlDataAdapter consulta = new NpgsqlDataAdapter(comando, conexion);
                 conexion.Close();
@@ -85,7 +77,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                throw ex;
+                
             }
 
             return data;
@@ -93,7 +85,7 @@ namespace Datos
 
         public static NpgsqlCommand CrearComandoProc2(string nombre_proc)
         {
-            NpgsqlConnection conexion = new NpgsqlConnection(cadenaConexion);
+            NpgsqlConnection conexion = new NpgsqlConnection(cadenaConexion2);
             NpgsqlCommand comando = new NpgsqlCommand(nombre_proc, conexion);
             comando.CommandType = CommandType.StoredProcedure;
             return comando;
