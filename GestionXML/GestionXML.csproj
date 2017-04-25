@@ -564,6 +564,8 @@
     <Content Include="crea-xml.ico" />
     <Content Include="iconoGestor.ico" />
     <Content Include="indice.txt" />
+    <None Include="Resources\firma-del-contrato.png" />
+    <None Include="Resources\carpeta %284%29.png" />
     <None Include="Resources\logo-sudamericano.jpg" />
     <None Include="Resources\Reporte .jpg" />
     <None Include="Resources\Reporte I1.JPEG" />
