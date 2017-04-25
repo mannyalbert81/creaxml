@@ -160,5 +160,74 @@ namespace GestionXML
             reportes.FiltroIndice frm = new reportes.FiltroIndice();
             frm.Show();
         }
+
+        private void btn_Usuario_Click(object sender, EventArgs e)
+        {
+            frmUsuarios frm = new frmUsuarios();
+            frm.Show();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmProyectos frm = new frmProyectos();
+            frm.Show();
+        }
+
+        private void btn_TipoIndice_Click(object sender, EventArgs e)
+        {
+            frmTipoIndice frm = new frmTipoIndice();
+            frm.Show();
+        }
+
+        private void btn_Caminos_Click(object sender, EventArgs e)
+        {
+            frmCaminos frm = new frmCaminos();
+            frm.Show();
+        }
+
+        private void btn_Caminos_Click_1(object sender, EventArgs e)
+        {
+            frmCaminos frm = new frmCaminos();
+            frm.Show();
+        }
+
+        private void btn_Caminos_Click_2(object sender, EventArgs e)
+        {
+            frmCaminos frm = new frmCaminos();
+            frm.Show();
+        }
+
+        private void btn_CartonDocumentos_Click(object sender, EventArgs e)
+        {
+            frmCartonDocumentos frm = new frmCartonDocumentos();
+            frm.Show();
+        }
+
+        private void btn_Estado_Click(object sender, EventArgs e)
+        {
+            frmEstado frm = new frmEstado();
+            frm.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            frmIndice frm = new frmIndice();
+            frm.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            frmCarpetasCalidad frm = new frmCarpetasCalidad();
+            frm.Show();
+
+        }
+
+       
+
+        private void btn_control_calidad_Click(object sender, EventArgs e)
+        {
+            frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML();
+            frm.Show();
+        }
     }
 }
