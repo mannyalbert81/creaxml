@@ -58,6 +58,7 @@ namespace GestionXML
                 try
                 {
                     int resul = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_carton_documentos");
+                  
                     if (resul < 0)
                     {
                         MessageBox.Show("El Carton se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -172,6 +173,11 @@ namespace GestionXML
                 MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clases.ImportaCartones.Inserta();
         }
     }
 }
