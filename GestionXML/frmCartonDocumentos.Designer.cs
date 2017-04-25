@@ -39,6 +39,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dataGridViewCartonDocumentos = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCartonDocumentos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,12 +171,28 @@
             this.dataGridViewCartonDocumentos.TabIndex = 57;
             this.dataGridViewCartonDocumentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCartonDocumentos_CellContentClick);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(386, 84);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 67);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "Limpiar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmCartonDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(534, 459);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewCartonDocumentos);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
@@ -214,5 +231,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView dataGridViewCartonDocumentos;
+        private System.Windows.Forms.Button button1;
     }
 }
