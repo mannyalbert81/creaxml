@@ -160,5 +160,15 @@ namespace GestionXML
             reportes.FiltroIndice frm = new reportes.FiltroIndice();
             frm.Show();
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

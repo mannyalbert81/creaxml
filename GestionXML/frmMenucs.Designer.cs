@@ -86,7 +86,7 @@
             // 
             this.salirToolStripMenuItem.Image = global::GestionXML.Properties.Resources.salida;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -107,7 +107,7 @@
             // 
             this.usuariosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.grupo;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -115,7 +115,7 @@
             // 
             this.rolesToolStripMenuItem.Image = global::GestionXML.Properties.Resources.palabras_clave;
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.rolesToolStripMenuItem.Text = "Roles";
             this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click_1);
             // 
@@ -123,7 +123,7 @@
             // 
             this.controladoresToolStripMenuItem.Image = global::GestionXML.Properties.Resources.controlar;
             this.controladoresToolStripMenuItem.Name = "controladoresToolStripMenuItem";
-            this.controladoresToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.controladoresToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.controladoresToolStripMenuItem.Text = "Controladores";
             this.controladoresToolStripMenuItem.Click += new System.EventHandler(this.controladoresToolStripMenuItem_Click_1);
             // 
@@ -131,7 +131,7 @@
             // 
             this.permisosRolesToolStripMenuItem.Image = global::GestionXML.Properties.Resources.acceso;
             this.permisosRolesToolStripMenuItem.Name = "permisosRolesToolStripMenuItem";
-            this.permisosRolesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.permisosRolesToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.permisosRolesToolStripMenuItem.Text = "Permisos Roles";
             this.permisosRolesToolStripMenuItem.Click += new System.EventHandler(this.permisosRolesToolStripMenuItem_Click_1);
             // 
@@ -139,7 +139,7 @@
             // 
             this.formulariosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.formularios;
             this.formulariosToolStripMenuItem.Name = "formulariosToolStripMenuItem";
-            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.formulariosToolStripMenuItem.Text = "Formularios";
             this.formulariosToolStripMenuItem.Click += new System.EventHandler(this.formulariosToolStripMenuItem_Click);
             // 
@@ -161,7 +161,7 @@
             // 
             this.proyectosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.Proyectos;
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
             this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
             // 
@@ -169,7 +169,7 @@
             // 
             this.tipoIndiceToolStripMenuItem.Image = global::GestionXML.Properties.Resources.indice;
             this.tipoIndiceToolStripMenuItem.Name = "tipoIndiceToolStripMenuItem";
-            this.tipoIndiceToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.tipoIndiceToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.tipoIndiceToolStripMenuItem.Text = "Tipo Indice";
             this.tipoIndiceToolStripMenuItem.Click += new System.EventHandler(this.tipoIndiceToolStripMenuItem_Click);
             // 
@@ -177,7 +177,7 @@
             // 
             this.caminosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.conexiones;
             this.caminosToolStripMenuItem.Name = "caminosToolStripMenuItem";
-            this.caminosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.caminosToolStripMenuItem.Text = "Caminos";
             this.caminosToolStripMenuItem.Click += new System.EventHandler(this.caminosToolStripMenuItem_Click);
             // 
@@ -185,7 +185,7 @@
             // 
             this.cartonDocumentosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.carton;
             this.cartonDocumentosToolStripMenuItem.Name = "cartonDocumentosToolStripMenuItem";
-            this.cartonDocumentosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.cartonDocumentosToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.cartonDocumentosToolStripMenuItem.Text = "Carton Documentos";
             this.cartonDocumentosToolStripMenuItem.Click += new System.EventHandler(this.cartonDocumentosToolStripMenuItem_Click);
             // 
@@ -193,7 +193,7 @@
             // 
             this.estadoToolStripMenuItem.Image = global::GestionXML.Properties.Resources.Estado;
             this.estadoToolStripMenuItem.Name = "estadoToolStripMenuItem";
-            this.estadoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.estadoToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.estadoToolStripMenuItem.Text = "Estado";
             this.estadoToolStripMenuItem.Click += new System.EventHandler(this.estadoToolStripMenuItem_Click);
             // 
@@ -201,7 +201,7 @@
             // 
             this.indiceToolStripMenuItem.Image = global::GestionXML.Properties.Resources.hojas;
             this.indiceToolStripMenuItem.Name = "indiceToolStripMenuItem";
-            this.indiceToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.indiceToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.indiceToolStripMenuItem.Text = "Indice";
             this.indiceToolStripMenuItem.Click += new System.EventHandler(this.indiceToolStripMenuItem_Click);
             // 
@@ -219,7 +219,7 @@
             // 
             this.crearXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.nuevo_archivo;
             this.crearXMLToolStripMenuItem.Name = "crearXMLToolStripMenuItem";
-            this.crearXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.crearXMLToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.crearXMLToolStripMenuItem.Text = "Crear XML";
             this.crearXMLToolStripMenuItem.Click += new System.EventHandler(this.crearXMLToolStripMenuItem_Click);
             // 
@@ -227,7 +227,7 @@
             // 
             this.controlarCalidadXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.certificado;
             this.controlarCalidadXMLToolStripMenuItem.Name = "controlarCalidadXMLToolStripMenuItem";
-            this.controlarCalidadXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.controlarCalidadXMLToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
             this.controlarCalidadXMLToolStripMenuItem.Text = "Controlar Calidad XML";
             this.controlarCalidadXMLToolStripMenuItem.Click += new System.EventHandler(this.controlarCalidadXMLToolStripMenuItem_Click);
             // 
