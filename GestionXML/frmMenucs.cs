@@ -229,5 +229,10 @@ namespace GestionXML
             frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML();
             frm.Show();
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
