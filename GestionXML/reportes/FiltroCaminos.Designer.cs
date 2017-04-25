@@ -49,6 +49,7 @@
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(217, 21);
             this.cbm_proyectos.TabIndex = 2;
+            this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
             // 
             // button1
             // 
