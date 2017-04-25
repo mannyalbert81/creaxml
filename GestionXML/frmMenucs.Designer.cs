@@ -71,6 +71,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +106,7 @@
             // 
             this.salirToolStripMenuItem.Image = global::GestionXML.Properties.Resources.salida;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -124,7 +127,7 @@
             // 
             this.usuariosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.grupo;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -132,7 +135,7 @@
             // 
             this.rolesToolStripMenuItem.Image = global::GestionXML.Properties.Resources.palabras_clave;
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.rolesToolStripMenuItem.Text = "Roles";
             this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click_1);
             // 
@@ -140,7 +143,7 @@
             // 
             this.controladoresToolStripMenuItem.Image = global::GestionXML.Properties.Resources.controlar;
             this.controladoresToolStripMenuItem.Name = "controladoresToolStripMenuItem";
-            this.controladoresToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.controladoresToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.controladoresToolStripMenuItem.Text = "Controladores";
             this.controladoresToolStripMenuItem.Click += new System.EventHandler(this.controladoresToolStripMenuItem_Click_1);
             // 
@@ -148,7 +151,7 @@
             // 
             this.permisosRolesToolStripMenuItem.Image = global::GestionXML.Properties.Resources.acceso;
             this.permisosRolesToolStripMenuItem.Name = "permisosRolesToolStripMenuItem";
-            this.permisosRolesToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.permisosRolesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.permisosRolesToolStripMenuItem.Text = "Permisos Roles";
             this.permisosRolesToolStripMenuItem.Click += new System.EventHandler(this.permisosRolesToolStripMenuItem_Click_1);
             // 
@@ -156,7 +159,7 @@
             // 
             this.formulariosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.formularios;
             this.formulariosToolStripMenuItem.Name = "formulariosToolStripMenuItem";
-            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.formulariosToolStripMenuItem.Text = "Formularios";
             this.formulariosToolStripMenuItem.Click += new System.EventHandler(this.formulariosToolStripMenuItem_Click);
             // 
@@ -178,7 +181,7 @@
             // 
             this.proyectosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.Proyectos;
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.proyectosToolStripMenuItem.Text = "Proyectos";
             this.proyectosToolStripMenuItem.Click += new System.EventHandler(this.proyectosToolStripMenuItem_Click);
             // 
@@ -186,7 +189,7 @@
             // 
             this.tipoIndiceToolStripMenuItem.Image = global::GestionXML.Properties.Resources.indice;
             this.tipoIndiceToolStripMenuItem.Name = "tipoIndiceToolStripMenuItem";
-            this.tipoIndiceToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.tipoIndiceToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.tipoIndiceToolStripMenuItem.Text = "Tipo Indice";
             this.tipoIndiceToolStripMenuItem.Click += new System.EventHandler(this.tipoIndiceToolStripMenuItem_Click);
             // 
@@ -194,7 +197,7 @@
             // 
             this.caminosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.conexiones;
             this.caminosToolStripMenuItem.Name = "caminosToolStripMenuItem";
-            this.caminosToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.caminosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.caminosToolStripMenuItem.Text = "Caminos";
             this.caminosToolStripMenuItem.Click += new System.EventHandler(this.caminosToolStripMenuItem_Click);
             // 
@@ -202,7 +205,7 @@
             // 
             this.cartonDocumentosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.carton;
             this.cartonDocumentosToolStripMenuItem.Name = "cartonDocumentosToolStripMenuItem";
-            this.cartonDocumentosToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.cartonDocumentosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.cartonDocumentosToolStripMenuItem.Text = "Carton Documentos";
             this.cartonDocumentosToolStripMenuItem.Click += new System.EventHandler(this.cartonDocumentosToolStripMenuItem_Click);
             // 
@@ -210,7 +213,7 @@
             // 
             this.estadoToolStripMenuItem.Image = global::GestionXML.Properties.Resources.Estado;
             this.estadoToolStripMenuItem.Name = "estadoToolStripMenuItem";
-            this.estadoToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.estadoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.estadoToolStripMenuItem.Text = "Estado";
             this.estadoToolStripMenuItem.Click += new System.EventHandler(this.estadoToolStripMenuItem_Click);
             // 
@@ -218,7 +221,7 @@
             // 
             this.indiceToolStripMenuItem.Image = global::GestionXML.Properties.Resources.hojas;
             this.indiceToolStripMenuItem.Name = "indiceToolStripMenuItem";
-            this.indiceToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.indiceToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.indiceToolStripMenuItem.Text = "Indice";
             this.indiceToolStripMenuItem.Click += new System.EventHandler(this.indiceToolStripMenuItem_Click);
             // 
@@ -325,7 +328,7 @@
             this.btn_control_calidad});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(796, 112);
+            this.toolStrip1.Size = new System.Drawing.Size(796, 88);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -404,36 +407,43 @@
             // toolStripButton2
             // 
             this.toolStripButton2.AutoSize = false;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(59, 109);
+            this.toolStripButton2.Size = new System.Drawing.Size(70, 75);
             this.toolStripButton2.Text = "Indice";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
+            this.toolStripButton3.AutoSize = false;
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(82, 109);
+            this.toolStripButton3.Size = new System.Drawing.Size(70, 75);
             this.toolStripButton3.Text = "Crear XML";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // btn_control_calidad
             // 
+            this.btn_control_calidad.AutoSize = false;
+            this.btn_control_calidad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btn_control_calidad.Image = ((System.Drawing.Image)(resources.GetObject("btn_control_calidad.Image")));
+            this.btn_control_calidad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_control_calidad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_control_calidad.Name = "btn_control_calidad";
-            this.btn_control_calidad.Size = new System.Drawing.Size(137, 109);
+            this.btn_control_calidad.Size = new System.Drawing.Size(70, 75);
             this.btn_control_calidad.Text = "Control Calidad XML";
             this.btn_control_calidad.Click += new System.EventHandler(this.btn_control_calidad_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 116);
+            this.label1.Location = new System.Drawing.Point(21, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 5;
@@ -442,7 +452,7 @@
             // Proyectos
             // 
             this.Proyectos.AutoSize = true;
-            this.Proyectos.Location = new System.Drawing.Point(88, 116);
+            this.Proyectos.Location = new System.Drawing.Point(88, 103);
             this.Proyectos.Name = "Proyectos";
             this.Proyectos.Size = new System.Drawing.Size(54, 13);
             this.Proyectos.TabIndex = 6;
@@ -451,7 +461,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(157, 116);
+            this.label2.Location = new System.Drawing.Point(157, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 7;
@@ -460,7 +470,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(232, 116);
+            this.label3.Location = new System.Drawing.Point(232, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 8;
@@ -469,7 +479,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(295, 116);
+            this.label4.Location = new System.Drawing.Point(295, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 9;
@@ -478,11 +488,38 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(377, 116);
+            this.label5.Location = new System.Drawing.Point(377, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Estado";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(449, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Indice";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(502, 103);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Crear XML";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(565, 103);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Control Calidad XML";
             // 
             // frmMenucs
             // 
@@ -490,6 +527,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(796, 291);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -559,5 +599,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
