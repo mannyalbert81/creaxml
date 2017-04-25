@@ -106,7 +106,7 @@
             // 
             this.salirToolStripMenuItem.Image = global::GestionXML.Properties.Resources.salida;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -127,7 +127,7 @@
             // 
             this.usuariosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.grupo;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -135,7 +135,7 @@
             // 
             this.rolesToolStripMenuItem.Image = global::GestionXML.Properties.Resources.palabras_clave;
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.rolesToolStripMenuItem.Text = "Roles";
             this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click_1);
             // 
@@ -143,7 +143,7 @@
             // 
             this.controladoresToolStripMenuItem.Image = global::GestionXML.Properties.Resources.controlar;
             this.controladoresToolStripMenuItem.Name = "controladoresToolStripMenuItem";
-            this.controladoresToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.controladoresToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.controladoresToolStripMenuItem.Text = "Controladores";
             this.controladoresToolStripMenuItem.Click += new System.EventHandler(this.controladoresToolStripMenuItem_Click_1);
             // 
@@ -151,7 +151,7 @@
             // 
             this.permisosRolesToolStripMenuItem.Image = global::GestionXML.Properties.Resources.acceso;
             this.permisosRolesToolStripMenuItem.Name = "permisosRolesToolStripMenuItem";
-            this.permisosRolesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.permisosRolesToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.permisosRolesToolStripMenuItem.Text = "Permisos Roles";
             this.permisosRolesToolStripMenuItem.Click += new System.EventHandler(this.permisosRolesToolStripMenuItem_Click_1);
             // 
@@ -159,7 +159,7 @@
             // 
             this.formulariosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.formularios;
             this.formulariosToolStripMenuItem.Name = "formulariosToolStripMenuItem";
-            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.formulariosToolStripMenuItem.Text = "Formularios";
             this.formulariosToolStripMenuItem.Click += new System.EventHandler(this.formulariosToolStripMenuItem_Click);
             // 
@@ -328,7 +328,7 @@
             this.btn_control_calidad});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(796, 88);
+            this.toolStrip1.Size = new System.Drawing.Size(796, 82);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -340,7 +340,7 @@
             this.btn_Usuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_Usuario.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Usuario.Name = "btn_Usuario";
-            this.btn_Usuario.Size = new System.Drawing.Size(70, 75);
+            this.btn_Usuario.Size = new System.Drawing.Size(65, 65);
             this.btn_Usuario.Text = "Usuarios";
             this.btn_Usuario.Click += new System.EventHandler(this.btn_Usuario_Click);
             // 
@@ -352,7 +352,7 @@
             this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(70, 75);
+            this.toolStripButton1.Size = new System.Drawing.Size(65, 65);
             this.toolStripButton1.Text = "Proyectos";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -364,7 +364,7 @@
             this.btn_TipoIndice.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_TipoIndice.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_TipoIndice.Name = "btn_TipoIndice";
-            this.btn_TipoIndice.Size = new System.Drawing.Size(70, 75);
+            this.btn_TipoIndice.Size = new System.Drawing.Size(65, 65);
             this.btn_TipoIndice.Text = "Tipo Indice";
             this.btn_TipoIndice.Click += new System.EventHandler(this.btn_TipoIndice_Click);
             // 
@@ -376,7 +376,7 @@
             this.btn_Caminos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_Caminos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Caminos.Name = "btn_Caminos";
-            this.btn_Caminos.Size = new System.Drawing.Size(70, 75);
+            this.btn_Caminos.Size = new System.Drawing.Size(65, 60);
             this.btn_Caminos.Text = "Caminos";
             this.btn_Caminos.Click += new System.EventHandler(this.btn_Caminos_Click_2);
             // 
@@ -388,7 +388,7 @@
             this.btn_CartonDocumentos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_CartonDocumentos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_CartonDocumentos.Name = "btn_CartonDocumentos";
-            this.btn_CartonDocumentos.Size = new System.Drawing.Size(70, 75);
+            this.btn_CartonDocumentos.Size = new System.Drawing.Size(65, 65);
             this.btn_CartonDocumentos.Text = "Cartón Documentos";
             this.btn_CartonDocumentos.Click += new System.EventHandler(this.btn_CartonDocumentos_Click);
             // 
@@ -400,7 +400,7 @@
             this.btn_Estado.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_Estado.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Estado.Name = "btn_Estado";
-            this.btn_Estado.Size = new System.Drawing.Size(70, 75);
+            this.btn_Estado.Size = new System.Drawing.Size(65, 65);
             this.btn_Estado.Text = "Estado";
             this.btn_Estado.Click += new System.EventHandler(this.btn_Estado_Click);
             // 
@@ -424,7 +424,7 @@
             this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(70, 75);
+            this.toolStripButton3.Size = new System.Drawing.Size(65, 65);
             this.toolStripButton3.Text = "Crear XML";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -436,14 +436,14 @@
             this.btn_control_calidad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_control_calidad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_control_calidad.Name = "btn_control_calidad";
-            this.btn_control_calidad.Size = new System.Drawing.Size(70, 75);
+            this.btn_control_calidad.Size = new System.Drawing.Size(65, 65);
             this.btn_control_calidad.Text = "Control Calidad XML";
             this.btn_control_calidad.Click += new System.EventHandler(this.btn_control_calidad_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 103);
+            this.label1.Location = new System.Drawing.Point(12, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 5;
@@ -452,7 +452,7 @@
             // Proyectos
             // 
             this.Proyectos.AutoSize = true;
-            this.Proyectos.Location = new System.Drawing.Point(88, 103);
+            this.Proyectos.Location = new System.Drawing.Point(75, 97);
             this.Proyectos.Name = "Proyectos";
             this.Proyectos.Size = new System.Drawing.Size(54, 13);
             this.Proyectos.TabIndex = 6;
@@ -461,7 +461,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(157, 103);
+            this.label2.Location = new System.Drawing.Point(146, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 7;
@@ -470,7 +470,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(232, 103);
+            this.label3.Location = new System.Drawing.Point(212, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 8;
@@ -479,7 +479,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(295, 103);
+            this.label4.Location = new System.Drawing.Point(274, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 9;
@@ -488,7 +488,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(377, 103);
+            this.label5.Location = new System.Drawing.Point(347, 97);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 10;
@@ -497,7 +497,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(449, 103);
+            this.label6.Location = new System.Drawing.Point(408, 97);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 12;
@@ -506,7 +506,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(504, 103);
+            this.label7.Location = new System.Drawing.Point(475, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 13);
             this.label7.TabIndex = 13;
@@ -514,12 +514,11 @@
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(567, 103);
+            this.label8.Location = new System.Drawing.Point(538, 97);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 13);
+            this.label8.Size = new System.Drawing.Size(78, 13);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Controlar Calidad XML";
+            this.label8.Text = "Controlar XML";
             // 
             // frmMenucs
             // 
