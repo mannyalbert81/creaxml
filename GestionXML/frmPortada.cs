@@ -55,8 +55,9 @@ namespace GestionXML
 
         private void timer3_Tick(object sender, EventArgs e)
         {
+            //clases.ImportaCartones.Inserta();
             this.progressBar1.Increment(1);
-            
+         
         }
     }
 }

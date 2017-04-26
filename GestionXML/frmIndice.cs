@@ -22,7 +22,7 @@ namespace GestionXML
         private void frmIndice_Load(object sender, EventArgs e)
         {
             {
-                clases.Funciones.CargarCombo(cbm_proyectos, "id_proyectos", "nombre_proyectos", "proyectos");
+                clases.Funciones.CargarCombo(cbm_caminos, "id_caminos", "nombre_caminos", "caminos");
                 clases.Funciones.CargarCombo(cbm_tipo_indice, "id_tipo_indice", "nombre_tipo_indice", "tipo_indice");
 
                 llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
@@ -67,7 +67,7 @@ namespace GestionXML
 
                 string _error = "";
                 string _nombre_indice_cabeza = txt_nombre_indice.Text;
-                int _id_proyectos = Convert.ToInt16(cbm_proyectos.SelectedValue.ToString());
+                int _id_caminos = Convert.ToInt16(cbm_caminos.SelectedValue.ToString());
 
 
                 if (_nombre_indice_cabeza.Length == 0)
@@ -78,8 +78,8 @@ namespace GestionXML
                 if (_error.Length == 0)
 
                 {
-                    string datos = _nombre_indice_cabeza + "?" + _id_proyectos;
-                    string columnas = "_nombre_indice_cabeza?_id_proyectos";
+                    string datos = _nombre_indice_cabeza + "?" + _id_caminos;
+                    string columnas = "_nombre_indice_cabeza?_id_caminos";
                     string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Integer";
 
 
@@ -89,7 +89,7 @@ namespace GestionXML
 
                         string columnas3 = "indice_cabeza.id_indice_cabeza";
                         string tablas3 = "public.indice_cabeza";
-                        string where3 = "indice_cabeza.nombre_indice_cabeza = '" + _nombre_indice_cabeza + "' AND indice_cabeza.id_proyectos = '" + _id_proyectos + "'";
+                        string where3 = "indice_cabeza.nombre_indice_cabeza = '" + _nombre_indice_cabeza + "' AND indice_cabeza.id_caminos = '" + _id_caminos + "'";
 
                         DataTable dtCabeza = AccesoLogica.Select(columnas3, tablas3, where3);
 
@@ -302,22 +302,7 @@ namespace GestionXML
             txt_max.Text = Convert.ToString(fila.Cells[3].Value);
             comboBox1.Text = Convert.ToString(fila.Cells[4].Value);
         }
-
-        private void cbm_proyectos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void txt_nombre_indice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
     
