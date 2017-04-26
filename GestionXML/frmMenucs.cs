@@ -234,5 +234,59 @@ namespace GestionXML
         {
 
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            frmUsuarios frm = new frmUsuarios();
+            frm.Show();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            frmProyectos frm = new frmProyectos();
+            frm.Show();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            frmTipoIndice frm = new frmTipoIndice();
+            frm.Show();
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            frmCaminos frm = new frmCaminos();
+            frm.Show();
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            frmCartonDocumentos frm = new frmCartonDocumentos();
+            frm.Show();
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            frmEstado frm = new frmEstado();
+            frm.Show();
+        }
+
+        private void toolStripButton10_Click(object sender, EventArgs e)
+        {
+            frmIndice frm = new frmIndice();
+            frm.Show();
+        }
+
+        private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+            frmCarpetasCalidad frm = new frmCarpetasCalidad();
+            frm.Show();
+        }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+            frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML();
+            frm.Show();
+        }
     }
 }

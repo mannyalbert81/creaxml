@@ -136,9 +136,6 @@
   <data name="xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xml.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="primera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\primera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="reportes4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reportes4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,11 +184,8 @@
   <data name="reportesU" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reportesU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login gestor copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login gestor copia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Reporte I1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Reporte I1.JPEG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hojas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hojas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo-sudamericano" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-sudamericano.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,11 +193,14 @@
   <data name="Proyectos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Proyectos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Estado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Estado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="primera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\primera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="certificado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\certificado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reportesG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reportesG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Reportes_2014" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Reportes_2014.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,17 +220,23 @@
   <data name="nuevo-archivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevo-archivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="grupo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grupo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mantenimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reportes3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reportes3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hojas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hojas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Reporte I1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reporte I1.JPEG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reportesG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reportesG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login gestor copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login gestor copia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Estado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Estado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="grupo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grupo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,7 +244,7 @@
   <data name="carpeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carpeta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grupo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grupo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logoreport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoreport.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
