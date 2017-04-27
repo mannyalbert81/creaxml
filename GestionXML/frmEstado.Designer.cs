@@ -136,9 +136,9 @@
             // dataGridViewEstado
             // 
             this.dataGridViewEstado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEstado.Location = new System.Drawing.Point(22, 158);
+            this.dataGridViewEstado.Location = new System.Drawing.Point(96, 153);
             this.dataGridViewEstado.Name = "dataGridViewEstado";
-            this.dataGridViewEstado.Size = new System.Drawing.Size(580, 192);
+            this.dataGridViewEstado.Size = new System.Drawing.Size(435, 192);
             this.dataGridViewEstado.TabIndex = 53;
             this.dataGridViewEstado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEstado_CellContentClick);
             // 
