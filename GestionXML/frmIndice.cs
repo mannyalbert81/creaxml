@@ -320,7 +320,27 @@ namespace GestionXML
             txt_max.Text = Convert.ToString(fila.Cells[4].Value);
             comboBox1.Text = Convert.ToString(fila.Cells[5].Value);
         }
-       
+
+        private void min(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            e.Handled = true;
+            return;
+        }
+
+        private void max(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            e.Handled = true;
+            return;
+        }
+
+        private void orden(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            e.Handled = true;
+            return;
+        }
     }
 }
     
