@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIndice));
-            this.cbm_proyectos = new System.Windows.Forms.ComboBox();
+            this.cbm_caminos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_nombre_indice = new System.Windows.Forms.TextBox();
@@ -53,23 +53,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIndice)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbm_proyectos
+            // cbm_caminos
             // 
-            this.cbm_proyectos.FormattingEnabled = true;
-            this.cbm_proyectos.Location = new System.Drawing.Point(430, 33);
-            this.cbm_proyectos.Name = "cbm_proyectos";
-            this.cbm_proyectos.Size = new System.Drawing.Size(175, 21);
-            this.cbm_proyectos.TabIndex = 1;
-            this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
+            this.cbm_caminos.FormattingEnabled = true;
+            this.cbm_caminos.Location = new System.Drawing.Point(430, 33);
+            this.cbm_caminos.Name = "cbm_caminos";
+            this.cbm_caminos.Size = new System.Drawing.Size(175, 21);
+            this.cbm_caminos.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(345, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Proyectos:";
+            this.label1.Text = "Caminos:";
             // 
             // label2
             // 
@@ -86,7 +85,6 @@
             this.txt_nombre_indice.Name = "txt_nombre_indice";
             this.txt_nombre_indice.Size = new System.Drawing.Size(189, 20);
             this.txt_nombre_indice.TabIndex = 0;
-            this.txt_nombre_indice.TextChanged += new System.EventHandler(this.txt_nombre_indice_TextChanged);
             // 
             // label3
             // 
@@ -260,7 +258,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(91, 21);
             this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -297,7 +294,7 @@
             this.Controls.Add(this.txt_nombre_indice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbm_proyectos);
+            this.Controls.Add(this.cbm_caminos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -315,7 +312,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbm_proyectos;
+        private System.Windows.Forms.ComboBox cbm_caminos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_nombre_indice;

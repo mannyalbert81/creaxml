@@ -16,18 +16,17 @@ namespace GestionXML.clases
         public static void Inserta()
         {
 
-            DataTable dtCartonesOrigen = AccesoLogica.Select2(" * ", "carton_documentos", "id_carton_documentos > 0");
-
-            int id_carton_documentos = 0;
             string numero_carton_documentos = "";
-            bool estado_carton_documentos = true;
+            bool estado_carton_documentos = false;
+
+            DataTable dtCartonesOrigen = AccesoLogica.Select2(" * ", "carton_documentos", "id_carton_documentos > 0");
 
 
             foreach (DataRow renglon in dtCartonesOrigen.Rows)
             {
                 try
                 {
-                    id_carton_documentos = Convert.ToInt32(renglon["id_carton_documentos"].ToString());
+                 
                     numero_carton_documentos = Convert.ToString(renglon["numero_carton_documentos"].ToString());
                     estado_carton_documentos = Convert.ToBoolean(renglon["estado_carton_documentos"].ToString());
 
@@ -37,7 +36,6 @@ namespace GestionXML.clases
 
                     try
                     {
-
                         int result = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_carton_documentos");
                         {
                             
@@ -53,12 +51,11 @@ namespace GestionXML.clases
                     MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos2", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
+                MessageBox.Show("Se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-               
             }
 
-            MessageBox.Show("Se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
         }
+
     }
 }

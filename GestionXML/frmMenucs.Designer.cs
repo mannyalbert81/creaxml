@@ -55,18 +55,27 @@
             this.cartónDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.indiceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btn_Usuario = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.btn_TipoIndice = new System.Windows.Forms.ToolStripButton();
-            this.btn_Caminos = new System.Windows.Forms.ToolStripButton();
-            this.btn_CartonDocumentos = new System.Windows.Forms.ToolStripButton();
-            this.btn_Estado = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.btn_control_calidad = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -304,133 +313,187 @@
             this.indiceToolStripMenuItem1.Text = "Indice";
             this.indiceToolStripMenuItem1.Click += new System.EventHandler(this.indiceToolStripMenuItem1_Click);
             // 
-            // toolStrip1
+            // toolStrip2
             // 
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_Usuario,
-            this.toolStripButton1,
-            this.btn_TipoIndice,
-            this.btn_Caminos,
-            this.btn_CartonDocumentos,
-            this.btn_Estado,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.btn_control_calidad});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(796, 82);
-            this.toolStrip1.TabIndex = 3;
-            this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            this.toolStrip2.AutoSize = false;
+            this.toolStrip2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton4,
+            this.toolStripSeparator1,
+            this.toolStripButton5,
+            this.toolStripSeparator2,
+            this.toolStripButton6,
+            this.toolStripSeparator3,
+            this.toolStripButton7,
+            this.toolStripSeparator4,
+            this.toolStripButton8,
+            this.toolStripSeparator5,
+            this.toolStripButton9,
+            this.toolStripSeparator6,
+            this.toolStripButton10,
+            this.toolStripSeparator7,
+            this.toolStripButton11,
+            this.toolStripSeparator8,
+            this.toolStripButton12,
+            this.toolStripSeparator9});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(796, 59);
+            this.toolStrip2.TabIndex = 5;
+            this.toolStrip2.Text = "toolStrip2";
             // 
-            // btn_Usuario
+            // toolStripButton4
             // 
-            this.btn_Usuario.AutoSize = false;
-            this.btn_Usuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_Usuario.Image")));
-            this.btn_Usuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_Usuario.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Usuario.Name = "btn_Usuario";
-            this.btn_Usuario.Size = new System.Drawing.Size(65, 75);
-            this.btn_Usuario.Text = "Usuarios";
-            this.btn_Usuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_Usuario.Click += new System.EventHandler(this.btn_Usuario_Click);
+            this.toolStripButton4.AutoSize = false;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton4.Text = "Usuarios";
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // toolStripButton1
+            // toolStripSeparator1
             // 
-            this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(65, 75);
-            this.toolStripButton1.Text = "Proyectos";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 59);
             // 
-            // btn_TipoIndice
+            // toolStripButton5
             // 
-            this.btn_TipoIndice.AutoSize = false;
-            this.btn_TipoIndice.Image = ((System.Drawing.Image)(resources.GetObject("btn_TipoIndice.Image")));
-            this.btn_TipoIndice.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_TipoIndice.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_TipoIndice.Name = "btn_TipoIndice";
-            this.btn_TipoIndice.Size = new System.Drawing.Size(65, 75);
-            this.btn_TipoIndice.Text = "Tipo Indice";
-            this.btn_TipoIndice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_TipoIndice.Click += new System.EventHandler(this.btn_TipoIndice_Click);
+            this.toolStripButton5.AutoSize = false;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton5.Text = "Proyectos";
+            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
-            // btn_Caminos
+            // toolStripSeparator2
             // 
-            this.btn_Caminos.AutoSize = false;
-            this.btn_Caminos.Image = ((System.Drawing.Image)(resources.GetObject("btn_Caminos.Image")));
-            this.btn_Caminos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_Caminos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Caminos.Name = "btn_Caminos";
-            this.btn_Caminos.Size = new System.Drawing.Size(65, 75);
-            this.btn_Caminos.Text = "Caminos";
-            this.btn_Caminos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_Caminos.Click += new System.EventHandler(this.btn_Caminos_Click_2);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 59);
             // 
-            // btn_CartonDocumentos
+            // toolStripButton6
             // 
-            this.btn_CartonDocumentos.AutoSize = false;
-            this.btn_CartonDocumentos.Image = ((System.Drawing.Image)(resources.GetObject("btn_CartonDocumentos.Image")));
-            this.btn_CartonDocumentos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_CartonDocumentos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_CartonDocumentos.Name = "btn_CartonDocumentos";
-            this.btn_CartonDocumentos.Size = new System.Drawing.Size(67, 75);
-            this.btn_CartonDocumentos.Text = "Cartón Doc.";
-            this.btn_CartonDocumentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_CartonDocumentos.Click += new System.EventHandler(this.btn_CartonDocumentos_Click);
+            this.toolStripButton6.AutoSize = false;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(62, 55);
+            this.toolStripButton6.Text = "Tipo Indice";
+            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
-            // btn_Estado
+            // toolStripSeparator3
             // 
-            this.btn_Estado.AutoSize = false;
-            this.btn_Estado.Image = ((System.Drawing.Image)(resources.GetObject("btn_Estado.Image")));
-            this.btn_Estado.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_Estado.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_Estado.Name = "btn_Estado";
-            this.btn_Estado.Size = new System.Drawing.Size(67, 75);
-            this.btn_Estado.Text = "Estado";
-            this.btn_Estado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_Estado.Click += new System.EventHandler(this.btn_Estado_Click);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 59);
             // 
-            // toolStripButton2
+            // toolStripButton7
             // 
-            this.toolStripButton2.AutoSize = false;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(70, 75);
-            this.toolStripButton2.Text = "Indice";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.toolStripButton7.AutoSize = false;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton7.Text = "Caminos";
+            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
-            // toolStripButton3
+            // toolStripSeparator4
             // 
-            this.toolStripButton3.AutoSize = false;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(65, 75);
-            this.toolStripButton3.Text = "Crear XML";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 59);
             // 
-            // btn_control_calidad
+            // toolStripButton8
             // 
-            this.btn_control_calidad.AutoSize = false;
-            this.btn_control_calidad.Image = ((System.Drawing.Image)(resources.GetObject("btn_control_calidad.Image")));
-            this.btn_control_calidad.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_control_calidad.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_control_calidad.Name = "btn_control_calidad";
-            this.btn_control_calidad.Size = new System.Drawing.Size(70, 75);
-            this.btn_control_calidad.Text = "Control XML";
-            this.btn_control_calidad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_control_calidad.Click += new System.EventHandler(this.btn_control_calidad_Click);
+            this.toolStripButton8.AutoSize = false;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(67, 55);
+            this.toolStripButton8.Text = "Cartón Doc.";
+            this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 59);
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.AutoSize = false;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton9.Text = "Estado";
+            this.toolStripButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 59);
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.AutoSize = false;
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton10.Text = "Indice";
+            this.toolStripButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 59);
+            // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.AutoSize = false;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.Size = new System.Drawing.Size(59, 55);
+            this.toolStripButton11.Text = "Crear XML";
+            this.toolStripButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 59);
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.AutoSize = false;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(120, 55);
+            this.toolStripButton12.Text = "Control Calidad XML";
+            this.toolStripButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 59);
             // 
             // frmMenucs
             // 
@@ -438,7 +501,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(796, 291);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -450,8 +513,8 @@
             this.Load += new System.EventHandler(this.frmMenucs_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,15 +548,24 @@
         private System.Windows.Forms.ToolStripMenuItem cartónDocumentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem indiceToolStripMenuItem1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btn_Usuario;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton btn_TipoIndice;
-        private System.Windows.Forms.ToolStripButton btn_Caminos;
-        private System.Windows.Forms.ToolStripButton btn_CartonDocumentos;
-        private System.Windows.Forms.ToolStripButton btn_Estado;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton btn_control_calidad;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
     }
 }
