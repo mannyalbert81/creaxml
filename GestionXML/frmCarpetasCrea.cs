@@ -37,12 +37,16 @@ namespace GestionXML
             DataGridViewRow fila = dataGridView1.CurrentRow;
             string _camino = Convert.ToString(fila.Cells[2].Value); //obtengo el valor de la primer columna
 
+
+
+
             DialogResult result = MessageBox.Show("Deseas Crear XML en esta Carpeta?", "Crear nuevos XML", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             
             if (result == DialogResult.Yes)
             {
                 frmListaPendienteXML Crea = new frmListaPendienteXML();
-                Crea._camino = _camino;
+                Crea._path_camino = _camino;
+             
                 Crea.Show(); 
             }
             if (result == DialogResult.No)

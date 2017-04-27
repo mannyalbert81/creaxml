@@ -32,6 +32,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbm_proyectos = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,7 +40,6 @@
             this.PDF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.XML = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dif = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCargar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,21 @@
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Proyectos:";
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCargar.Image = global::GestionXML.Properties.Resources.carpeta__4_;
+            this.btnCargar.Location = new System.Drawing.Point(743, 41);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(108, 70);
+            this.btnCargar.TabIndex = 1;
+            this.btnCargar.Text = "Cargar Carpetas";
+            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // dataGridView1
             // 
@@ -130,21 +145,6 @@
             this.dif.HeaderText = "DIF";
             this.dif.Name = "dif";
             this.dif.Width = 40;
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCargar.Image = global::GestionXML.Properties.Resources.carpeta__4_;
-            this.btnCargar.Location = new System.Drawing.Point(743, 41);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(108, 70);
-            this.btnCargar.TabIndex = 1;
-            this.btnCargar.Text = "Cargar Carpetas";
-            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCargar.UseVisualStyleBackColor = false;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // frmCarpetasCalidad
             // 
