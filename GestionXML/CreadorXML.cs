@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace GestionXML
     public partial class CreadorXML : Form
     {
         public string nombre_pdf = "";
+        public int _id_indice_cabeza = 0;
         public Boolean _fecha1 = false;
         public Boolean _fecha2 = false;
         public Boolean _fecha3 = false;
@@ -71,612 +73,418 @@ namespace GestionXML
 
 
             int _contador = 1;
-            string _nombre_campo;
-
-            string _titulo_campo = "";
-            string _tipo_campo = "";
-            string _max_campo = "";
+            
+            ////aqui leo lo del detalle del indice
 
 
-            while ((_nombre_campo = file.ReadLine()) != null)
+            
+            string _nombre_indice_detalle = "";
+            string _nombre_tipo_indice = "";
+            int _min_indice_detalle = 0;
+            int _max_indice_detalle = 0;
+            int _orden_indice_detalle = 0;
+
+            string _parametros = " indice_detalle.id_indice_cabeza = indice_cabeza.id_indice_cabeza AND tipo_indice.id_tipo_indice = indice_detalle.id_tipo_indice AND  indice_detalle.id_indice_cabeza = '" + _id_indice_cabeza + "'  ORDER BY indice_detalle.orden_indice_detalle ";
+            int _id_caminos = 0;
+
+            DataTable dtIndice = AccesoLogica.Select("indice_cabeza.nombre_indice_cabeza, indice_detalle.nombre_indice_detalle, tipo_indice.nombre_tipo_indice,  indice_detalle.min_indice_detalle, indice_detalle.max_indice_detalle, indice_detalle.orden_indice_detalle", "  public.indice_cabeza, public.indice_detalle, public.tipo_indice", _parametros); 
+            int reg = dtIndice.Rows.Count;
+            if (reg > 0)
             {
-
-
-                if (_nombre_campo.Length > 0)
+                foreach (DataRow renglon in dtIndice.Rows)
                 {
-                    if (_contador == 1)
+                    _id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
+                    _nombre_indice_detalle = renglon["nombre_indice_detalle"].ToString();
+                    _nombre_tipo_indice = renglon["nombre_tipo_indice"].ToString();
+                    _min_indice_detalle = Convert.ToInt32(renglon["min_indice_detalle"].ToString());
+                    _max_indice_detalle = Convert.ToInt32(renglon["max_indice_detalle"].ToString());
+                    _orden_indice_detalle = Convert.ToInt32(renglon["orden_indice_detalle"].ToString());
+
+
+
+
+                    if (_nombre_indice_detalle.Length > 0)
                     {
-                        string[] vector1 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector1.Length; i++)
+                        if (_contador == 1)
                         {
-                            if (i == 0)
+                            
+                            label1.Text = _nombre_indice_detalle;
+                            label1.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
                             {
-                                _titulo_campo = vector1[i];
+
+                                dtFecha1.Location = new Point(1045, 46);
+                                this.Controls.Add(dtFecha1);
+                                dtFecha1.Format = DateTimePickerFormat.Custom;
+                                dtFecha1.CustomFormat = "yyyy-MM-dd";
+
+                                dtFecha1.Visible = true;
+                                _fecha1 = true;
                             }
-                            if (i == 1)
+                            else
                             {
-                                _tipo_campo = vector1[i];
+                                textBox1.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox1.MaxLength = _max_indice_detalle;
+                                }
+                                
                             }
-                            if (i == 2)
-                            {
-                                _max_campo = vector1[i];
-                            }
+
+
+
 
                         }
 
-                        label1.Text = _titulo_campo;
-                        label1.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
+                        if (_contador == 2)
                         {
+                            
 
-                            dtFecha1.Location = new Point(1045, 46);
-                            this.Controls.Add(dtFecha1);
-                            dtFecha1.Format = DateTimePickerFormat.Custom;
-                            dtFecha1.CustomFormat = "yyyy-MM-dd";
+                            label2.Text = _nombre_indice_detalle;
+                            label2.Visible = true;
 
-                            dtFecha1.Visible = true;
-                            _fecha1 = true;
-                        }
-                        else
-                        {
-                            textBox1.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
+                            if (_nombre_tipo_indice == "FECHA")
                             {
-                                textBox1.MaxLength = Convert.ToInt16(_max_campo);
+
+
+                                dtFecha2.Location = new Point(1045, 93);
+                                dtFecha2.Visible = true;
+                                this.Controls.Add(dtFecha2);
+                                dtFecha2.Format = DateTimePickerFormat.Custom;
+                                dtFecha2.CustomFormat = "dd-MM-yyyy";
+
+                                _fecha2 = true;
+
                             }
+                            else
+                            {
+                                textBox2.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox2.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+
+                        if (_contador == 3)
+                        {
+                            
+                            label3.Text = _nombre_indice_detalle;
+                            label3.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
+                            {
+
+
+                                dtFecha3.Location = new Point(1045, 140);
+                                _fecha3 = true;
+                                dtFecha3.Visible = true;
+                                dtFecha3.CustomFormat = "dd-MM-yyyy";
+
+                                this.Controls.Add(dtFecha3);
+                            }
+                            else
+                            {
+                                textBox3.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox3.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+
+                        if (_contador == 4)
+                        {
+                            
+                            label4.Text = _nombre_indice_detalle;
+                            label4.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
+                            {
+
+
+                                dtFecha4.Location = new Point(1045, 185);
+                                dtFecha4.Visible = true;
+                                this.Controls.Add(dtFecha4);
+
+                                _fecha4 = true;
+                            }
+                            else
+                            {
+                                textBox4.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox4.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+
+                        if (_contador == 5)
+                        {
+                            
+                            label5.Text = _nombre_indice_detalle;
+                            label5.Visible = true;
+
+                            if (_nombre_indice_detalle == "FECHA")
+                            {
+
+
+                                dtFecha5.Location = new Point(1045, 233);
+                                dtFecha5.Visible = true;
+                                dtFecha5.Format = DateTimePickerFormat.Custom;
+                                dtFecha5.CustomFormat = "dd-MM-yyyy";
+
+
+                                this.Controls.Add(dtFecha5);
+                                _fecha5 = true;
+
+
+                            }
+                            else
+                            {
+                                textBox5.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox5.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+
+                        if (_contador == 6)
+                        {
+                            
+                            label6.Text = _nombre_indice_detalle;
+                            label6.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
+                            {
+
+
+                                dtFecha6.Location = new Point(1045, 282);
+                                dtFecha6.Visible = true;
+                                dtFecha6.Format = DateTimePickerFormat.Custom;
+                                dtFecha6.CustomFormat = "dd-MM-yyyy";
+
+                                this.Controls.Add(dtFecha6);
+                                _fecha6 = true;
+                            }
+                            else
+                            {
+                                textBox6.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox6.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+                        if (_contador == 7)
+                        {
+                            
+                            label7.Text = _nombre_indice_detalle;
+                            label7.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
+                            {
+
+                                dtFecha7.Location = new Point(1045, 332);
+                                dtFecha7.Visible = true;
+                                dtFecha7.Format = DateTimePickerFormat.Custom;
+                                dtFecha7.CustomFormat = "dd-MM-yyyy";
+
+                                this.Controls.Add(dtFecha7);
+                                _fecha7 = true;
+                            }
+                            else
+                            {
+                                textBox7.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox7.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+
+                        if (_contador == 8)
+                        {
+                            
+                            label8.Text = _nombre_indice_detalle;
+                            label8.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
+                            {
+
+
+                                dtFecha8.Location = new Point(1045, 378);
+                                dtFecha8.Visible = true;
+                                this.Controls.Add(dtFecha8);
+                                _fecha8 = true;
+                            }
+                            else
+                            {
+                                textBox8.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox8.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+
+
+                        if (_contador == 9)
+                        {
+                            
+                            label9.Text = _nombre_indice_detalle;
+                            label9.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
+                            {
+
+
+                                dtFecha9.Location = new Point(1045, 425);
+                                dtFecha9.Visible = true;
+                                this.Controls.Add(dtFecha9);
+                                _fecha8 = true;
+                            }
+                            else
+                            {
+                                textBox9.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox9.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+
+
+                        if (_contador == 10)
+                        {
+                            
+                            label10.Text = _nombre_indice_detalle;
+                            label10.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
+                            {
+
+
+                                dtFecha10.Location = new Point(1045, 474);
+                                dtFecha10.Visible = true;
+                                this.Controls.Add(dtFecha10);
+                                _fecha8 = true;
+                            }
+                            else
+                            {
+                                textBox10.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox10.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+
+
+
+                        if (_contador == 11)
+                        {
+                            
+                            label11.Text = _nombre_indice_detalle;
+                            label11.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
+                            {
+
+
+                                dtFecha11.Location = new Point(1045, 522);
+                                dtFecha11.Visible = true;
+                                this.Controls.Add(dtFecha11);
+                                _fecha8 = true;
+                            }
+                            else
+                            {
+                                textBox11.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox11.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
                         }
 
 
 
 
+                        if (_contador == 12)
+                        {
+                            
+                            label12.Text = _nombre_indice_detalle;
+                            label12.Visible = true;
+
+                            if (_nombre_tipo_indice == "FECHA")
+                            {
+
+
+                                dtFecha12.Location = new Point(1045, 567);
+                                dtFecha12.Visible = true;
+                                this.Controls.Add(dtFecha12);
+                                _fecha8 = true;
+                            }
+                            else
+                            {
+                                textBox12.Visible = true;
+                                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                                {
+                                    textBox12.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                                }
+                            }
+
+
+
+                        }
+
+
+
+
+                        _contador++;
                     }
 
-                    if (_contador == 2)
-                    {
-                        string[] vector2 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector2.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector2[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector2[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector2[i];
-                            }
-
-                        }
-
-                        label2.Text = _titulo_campo;
-                        label2.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha2.Location = new Point(1045, 93);
-                            dtFecha2.Visible = true;
-                            this.Controls.Add(dtFecha2);
-                            dtFecha2.Format = DateTimePickerFormat.Custom;
-                            dtFecha2.CustomFormat = "dd-MM-yyyy";
-
-                            _fecha2 = true;
-
-                        }
-                        else
-                        {
-                            textBox2.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox2.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-                    if (_contador == 3)
-                    {
-                        string[] vector3 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector3.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector3[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector3[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector3[i];
-                            }
-
-                        }
-
-                        label3.Text = _titulo_campo;
-                        label3.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha3.Location = new Point(1045, 140);
-                            _fecha3 = true;
-                            dtFecha3.Visible = true;
-                            dtFecha3.CustomFormat = "dd-MM-yyyy";
-
-                            this.Controls.Add(dtFecha3);
-                        }
-                        else
-                        {
-                            textBox3.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox3.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-                    if (_contador == 4)
-                    {
-                        string[] vector4 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector4.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector4[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector4[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector4[i];
-                            }
-
-                        }
-
-                        label4.Text = _titulo_campo;
-                        label4.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha4.Location = new Point(1045, 185);
-                            dtFecha4.Visible = true;
-                            this.Controls.Add(dtFecha4);
-
-                            _fecha4 = true;
-                        }
-                        else
-                        {
-                            textBox4.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox4.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-                    if (_contador == 5)
-                    {
-                        string[] vector5 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector5.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector5[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector5[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector5[i];
-                            }
-
-                        }
-
-                        label5.Text = _titulo_campo;
-                        label5.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha5.Location = new Point(1045, 233);
-                            dtFecha5.Visible = true;
-                            dtFecha5.Format = DateTimePickerFormat.Custom;
-                            dtFecha5.CustomFormat = "dd-MM-yyyy";
-
-
-                            this.Controls.Add(dtFecha5);
-                            _fecha5 = true;
-
-
-                        }
-                        else
-                        {
-                            textBox5.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox5.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-                    if (_contador == 6)
-                    {
-                        string[] vector6 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector6.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector6[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector6[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector6[i];
-                            }
-
-                        }
-
-                        label6.Text = _titulo_campo;
-                        label6.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha6.Location = new Point(1045, 282);
-                            dtFecha6.Visible = true;
-                            dtFecha6.Format = DateTimePickerFormat.Custom;
-                            dtFecha6.CustomFormat = "dd-MM-yyyy";
-
-                            this.Controls.Add(dtFecha6);
-                            _fecha6 = true;
-                        }
-                        else
-                        {
-                            textBox6.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox6.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-                    if (_contador == 7)
-                    {
-                        string[] vector7 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector7.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector7[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector7[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector7[i];
-                            }
-
-                        }
-
-                        label7.Text = _titulo_campo;
-                        label7.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-                            dtFecha7.Location = new Point(1045, 332);
-                            dtFecha7.Visible = true;
-                            dtFecha7.Format = DateTimePickerFormat.Custom;
-                            dtFecha7.CustomFormat = "dd-MM-yyyy";
-
-                            this.Controls.Add(dtFecha7);
-                            _fecha7 = true;
-                        }
-                        else
-                        {
-                            textBox7.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox7.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-                    if (_contador == 8)
-                    {
-                        string[] vector8 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector8.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector8[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector8[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector8[i];
-                            }
-
-                        }
-
-                        label8.Text = _titulo_campo;
-                        label8.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha8.Location = new Point(1045, 378);
-                            dtFecha8.Visible = true;
-                            this.Controls.Add(dtFecha8);
-                            _fecha8 = true;
-                        }
-                        else
-                        {
-                            textBox8.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox8.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-
-                    if (_contador == 9)
-                    {
-                        string[] vector9 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector9.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector9[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector9[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector9[i];
-                            }
-
-                        }
-
-                        label9.Text = _titulo_campo;
-                        label9.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha9.Location = new Point(1045, 425);
-                            dtFecha9.Visible = true;
-                            this.Controls.Add(dtFecha9);
-                            _fecha8 = true;
-                        }
-                        else
-                        {
-                            textBox9.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox9.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-
-                    if (_contador == 10)
-                    {
-                        string[] vector10 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector10.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector10[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector10[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector10[i];
-                            }
-
-                        }
-
-                        label10.Text = _titulo_campo;
-                        label10.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha10.Location = new Point(1045, 474);
-                            dtFecha10.Visible = true;
-                            this.Controls.Add(dtFecha10);
-                            _fecha8 = true;
-                        }
-                        else
-                        {
-                            textBox10.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox10.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-
-
-                    if (_contador == 11)
-                    {
-                        string[] vector11 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector11.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector11[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector11[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector11[i];
-                            }
-
-                        }
-
-                        label11.Text = _titulo_campo;
-                        label11.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha11.Location = new Point(1045, 522);
-                            dtFecha11.Visible = true;
-                            this.Controls.Add(dtFecha11);
-                            _fecha8 = true;
-                        }
-                        else
-                        {
-                            textBox11.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox11.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-
-
-
-                    if (_contador == 12)
-                    {
-                        string[] vector12 = Vector(_nombre_campo);
-                        for (int i = 0; i < vector12.Length; i++)
-                        {
-                            if (i == 0)
-                            {
-                                _titulo_campo = vector12[i];
-                            }
-                            if (i == 1)
-                            {
-                                _tipo_campo = vector12[i];
-                            }
-                            if (i == 2)
-                            {
-                                _max_campo = vector12[i];
-                            }
-
-                        }
-
-                        label12.Text = _titulo_campo;
-                        label12.Visible = true;
-
-                        if (_tipo_campo == "FECHA")
-                        {
-
-
-                            dtFecha12.Location = new Point(1045, 567);
-                            dtFecha12.Visible = true;
-                            this.Controls.Add(dtFecha12);
-                            _fecha8 = true;
-                        }
-                        else
-                        {
-                            textBox12.Visible = true;
-                            if (Convert.ToInt16(_max_campo) > 0)
-                            {
-                                textBox12.MaxLength = Convert.ToInt16(_max_campo);
-                            }
-                        }
-
-
-
-                    }
-
-
-
-
-                    _contador++;
                 }
+
+            
             }
 
 
         }
 
-        public static string[] Vector(string cadena)
-        {
-            string[] vector;
-
-            if (cadena.Contains('?'))
-            {
-                vector = cadena.Split('?');
-            }
-            else
-            {
-                vector = new string[1];
-                vector[0] = cadena;
-            }
-            return vector;
-        }
-
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
