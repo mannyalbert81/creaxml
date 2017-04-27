@@ -54,6 +54,7 @@ namespace GestionXML
             int _orden_indice_detalle = 0;
             int _id_indice_cabeza = 0;
             int numeros = 0;
+            int registros = 0;
 
             string columnas1 = "temp_indice.id_temp_indice, tipo_indice.id_tipo_indice, tipo_indice.nombre_tipo_indice, temp_indice.nombre_indice_detalle, temp_indice.min_indice_detalle, temp_indice.max_indice_detalle, temp_indice.orden_indice_detalle";
             string tablas = "public.tipo_indice,  public.temp_indice";
@@ -61,8 +62,8 @@ namespace GestionXML
 
 
             DataTable dtTemporal = AccesoLogica.Select(columnas1, tablas, where);
-            int registros = dtTemporal.Rows.Count;
-            if (registros < 0)
+             registros = dtTemporal.Rows.Count;
+            if (registros <= 0)
             {
                 MessageBox.Show("No existe datos para Guardar", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -137,7 +138,7 @@ namespace GestionXML
                                 }
                                 catch (NpgsqlException)
                                 {
-                                    MessageBox.Show("No se Pudo Guardar en la Base de Datos " + numeros + " Registros", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("No se Pudo Guardar en la Base de Datos " + registros + " Registros", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                             catch
@@ -155,7 +156,7 @@ namespace GestionXML
                     }
                     catch (NpgsqlException)
                     {
-                        MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos " + numeros + " Registros", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos " + registros + " Registros", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
