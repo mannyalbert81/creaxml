@@ -35,18 +35,28 @@ namespace GestionXML
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dataGridView1.CurrentRow;
+
+            string _nombre_camino = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
             string _camino = Convert.ToString(fila.Cells[2].Value); //obtengo el valor de la primer columna
+            string _parametros = " nombre_camino = '" + _nombre_camino + "'  AND  path_camino = '" + _camino + "'    ";
+            int _id_caminos = 0;
 
-
-
-
+            DataTable dtCaminos = AccesoLogica.Select("id_caminos, nombre_caminos, path_caminos, id_usuarios, id_proyectos", "caminos", _parametros);
+            int reg = dtCaminos.Rows.Count;
+            if (reg > 0)
+            {
+                foreach (DataRow renglon in dtCaminos.Rows)
+                {
+                    _id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
+                }
+            }
             DialogResult result = MessageBox.Show("Deseas Crear XML en esta Carpeta?", "Crear nuevos XML", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             
             if (result == DialogResult.Yes)
             {
                 frmListaPendienteXML Crea = new frmListaPendienteXML();
                 Crea._path_camino = _camino;
-             
+                Crea._id_camino = _id_caminos;
                 Crea.Show(); 
             }
             if (result == DialogResult.No)
@@ -68,8 +78,7 @@ namespace GestionXML
 
             ///leer los caminos
             int _counter_caminos = 0;
-            string _nombre_camino;
-
+            
             int _counter_pdf = 0;
             int _counter_xml = 0;
             int _counter_dif = 0;
