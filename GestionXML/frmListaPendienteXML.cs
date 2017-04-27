@@ -13,9 +13,8 @@ namespace GestionXML
 {
     public partial class frmListaPendienteXML : Form
     {
-        public  string _camino = "";
-        public int _id_caminos = 0;
-
+        public  string _path_camino = "";
+        
         public frmListaPendienteXML()
         {
             InitializeComponent();
@@ -26,7 +25,7 @@ namespace GestionXML
             //cmbEquipos.SelectedIndex = 0;
 
 
-            lblCamino.Text = _camino;
+            lblCamino.Text = _path_camino;
 
 
             //cargo los pdf
@@ -39,6 +38,8 @@ namespace GestionXML
         {
             DataGridViewRow fila = dataGridView1.CurrentRow;
             string _camino = Convert.ToString(fila.Cells[2].Value); //obtengo el valor de la primer columna
+
+
 
             DialogResult result = MessageBox.Show("Deseas Crear XML de este PDF?", "Crear nuevo XML", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
@@ -65,7 +66,7 @@ namespace GestionXML
         {
             dataGridView1.Rows.Clear();
 
-            DirectoryInfo directory = new DirectoryInfo(@_camino);
+            DirectoryInfo directory = new DirectoryInfo(@_path_camino);
             FileInfo[] filesPDF = directory.GetFiles("*.PDF");
             FileInfo[] filesXML = directory.GetFiles("*.XML");
 
