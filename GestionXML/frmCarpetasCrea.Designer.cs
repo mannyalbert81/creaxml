@@ -65,14 +65,14 @@
             this.cbm_proyectos.Location = new System.Drawing.Point(84, 26);
             this.cbm_proyectos.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_proyectos.Name = "cbm_proyectos";
-            this.cbm_proyectos.Size = new System.Drawing.Size(271, 21);
+            this.cbm_proyectos.Size = new System.Drawing.Size(210, 21);
             this.cbm_proyectos.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(13, 29);
+            this.label4.Location = new System.Drawing.Point(15, 26);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
@@ -85,7 +85,7 @@
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCargar.Image = global::GestionXML.Properties.Resources.carpeta__4_;
-            this.btnCargar.Location = new System.Drawing.Point(375, 5);
+            this.btnCargar.Location = new System.Drawing.Point(743, 41);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(108, 70);
             this.btnCargar.TabIndex = 1;
@@ -104,9 +104,9 @@
             this.PDF,
             this.XML,
             this.dif});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 81);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 117);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(839, 373);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 337);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

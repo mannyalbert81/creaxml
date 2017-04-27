@@ -24,7 +24,7 @@ namespace GestionXML
             {
                 clases.Funciones.CargarCombo(cbm_caminos, "id_caminos", "nombre_caminos", "caminos");
                 clases.Funciones.CargarCombo(cbm_tipo_indice, "id_tipo_indice", "nombre_tipo_indice", "tipo_indice");
-
+                
                 llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
 
             }
@@ -53,6 +53,8 @@ namespace GestionXML
             int _max_indice_detalle = 0;
             int _orden_indice_detalle = 0;
             int _id_indice_cabeza = 0;
+            int numeros = 0;
+            int registros = 0;
 
             string columnas1 = "temp_indice.id_temp_indice, tipo_indice.id_tipo_indice, tipo_indice.nombre_tipo_indice, temp_indice.nombre_indice_detalle, temp_indice.min_indice_detalle, temp_indice.max_indice_detalle, temp_indice.orden_indice_detalle";
             string tablas = "public.tipo_indice,  public.temp_indice";
@@ -60,8 +62,13 @@ namespace GestionXML
 
 
             DataTable dtTemporal = AccesoLogica.Select(columnas1, tablas, where);
-            int registros = dtTemporal.Rows.Count;
-            if (registros > 0)
+             registros = dtTemporal.Rows.Count;
+            if (registros <= 0)
+            {
+                MessageBox.Show("No existe datos para Guardar", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (registros > 0)
             {
 
 
@@ -97,9 +104,12 @@ namespace GestionXML
                         {
                             _id_indice_cabeza = Convert.ToInt32(renglon["id_indice_cabeza"].ToString());
                         }
+
+
+
                         foreach (DataRow renglon in dtTemporal.Rows)
                         {
-
+                            
 
                             try
                             {
@@ -118,17 +128,17 @@ namespace GestionXML
                                 {
 
                                     int result = AccesoLogica.Insert(datos2, columnas2, tipodatos2, "ins_indice_detalle");
-                                    {
-                                        MessageBox.Show("Se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                        limpiar();
-                                        int resulT = AccesoLogica.Delete("nombre_indice_detalle = '" + _nombre_indice_detalle + "' ", "temp_indice");
-                                        llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
-                                    }
+                                    numeros = numeros + 1;
+                                    limpiar();
+                                    int resulT = AccesoLogica.Delete("nombre_indice_detalle = '" + _nombre_indice_detalle + "' ", "temp_indice");
+                                    llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
 
+                                   
+                                   
                                 }
                                 catch (NpgsqlException)
                                 {
-                                    MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("No se Pudo Guardar en la Base de Datos " + registros + " Registros", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                             catch
@@ -136,10 +146,17 @@ namespace GestionXML
 
                             }
                         }
+
+                       if(numeros>0) { 
+
+                        MessageBox.Show("Se ha Registrado Correctamente " + numeros + " Registros", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+
+
                     }
                     catch (NpgsqlException)
                     {
-                        MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos " + registros + " Registros", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -297,12 +314,33 @@ namespace GestionXML
         private void dataGridIndice_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dataGridIndice.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
-            txt_nombre_indice_detalle.Text = Convert.ToString(fila.Cells[1].Value);
-            txt_min.Text = Convert.ToString(fila.Cells[2].Value);
-            txt_max.Text = Convert.ToString(fila.Cells[3].Value);
-            comboBox1.Text = Convert.ToString(fila.Cells[4].Value);
+            txt_nombre_indice_detalle.Text = Convert.ToString(fila.Cells[2].Value);
+            cbm_tipo_indice.Text = Convert.ToString(fila.Cells[1].Value);
+            txt_min.Text = Convert.ToString(fila.Cells[3].Value);
+            txt_max.Text = Convert.ToString(fila.Cells[4].Value);
+            comboBox1.Text = Convert.ToString(fila.Cells[5].Value);
         }
-       
+
+        private void min(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            e.Handled = true;
+            return;
+        }
+
+        private void max(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            e.Handled = true;
+            return;
+        }
+
+        private void orden(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            e.Handled = true;
+            return;
+        }
     }
 }
     
