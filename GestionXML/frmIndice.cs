@@ -21,6 +21,9 @@ namespace GestionXML
 
         private void frmIndice_Load(object sender, EventArgs e)
         {
+
+           
+
             {
                 clases.Funciones.CargarCombo(cbm_caminos, "id_caminos", "nombre_caminos", "caminos");
                 clases.Funciones.CargarCombo(cbm_tipo_indice, "id_tipo_indice", "nombre_tipo_indice", "tipo_indice");
