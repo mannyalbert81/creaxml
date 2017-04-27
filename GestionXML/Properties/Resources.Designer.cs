@@ -283,6 +283,16 @@ namespace GestionXML.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoreport {
+            get {
+                object obj = ResourceManager.GetObject("logoreport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mantenimiento {
             get {
                 object obj = ResourceManager.GetObject("mantenimiento", resourceCulture);

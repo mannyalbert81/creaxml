@@ -111,7 +111,6 @@ C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\stdole.dll
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmCartonDocumentos.resources
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmEstado.resources
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmIndice.resources
-C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.conProyectos.resources
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contCaminos.resources
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\GestionXML.exe.config
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\Interop.AcroPDFLib.dll
@@ -284,3 +283,10 @@ C:\Users\User\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.ReportA
 C:\Users\User\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\User\Source\Repos\creaxml\GestionXML\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\User\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contCartonDocumentos.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contEstado.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contIndice.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contProyectos.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contTipoIndice.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroCaminos.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroIndice.resources
