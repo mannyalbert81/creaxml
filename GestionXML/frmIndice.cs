@@ -62,7 +62,12 @@ namespace GestionXML
 
             DataTable dtTemporal = AccesoLogica.Select(columnas1, tablas, where);
             int registros = dtTemporal.Rows.Count;
-            if (registros > 0)
+            if (registros < 0)
+            {
+                MessageBox.Show("No existe datos para Guardar", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (registros > 0)
             {
 
 
@@ -132,7 +137,7 @@ namespace GestionXML
                                 }
                                 catch (NpgsqlException)
                                 {
-                                    MessageBox.Show("No se Pudo Guardar en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("No se Pudo Guardar en la Base de Datos " + numeros + " Registros", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                             catch
@@ -150,7 +155,7 @@ namespace GestionXML
                     }
                     catch (NpgsqlException)
                     {
-                        MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos " + numeros + " Registros", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
