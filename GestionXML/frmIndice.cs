@@ -63,7 +63,7 @@ namespace GestionXML
             txt_nombre_indice_detalle.Text = "";
             txt_min.Text = "";
             txt_max.Text = "";
-            comboBox1.Text = "";
+            comboBox1.SelectedIndex = 0;
         }
 
         public void limpiar1()
@@ -267,7 +267,11 @@ namespace GestionXML
             }
             if (_error.Length == 0)
             {
-                try
+                DialogResult dialogo = MessageBox.Show("¿Seguro desea eliminar este registro?",
+                 "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.Yes)
+                {
+                    try
                 {
                     string _nombre_indice_detalle = txt_nombre_indice_detalle.Text;
                     int resul = AccesoLogica.Delete("nombre_indice_detalle = '" + _nombre_indice_detalle + "' ", "temp_indice");
@@ -286,7 +290,11 @@ namespace GestionXML
                 {
                     MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                }
+                else
+                {
+                    
+                }
             }
             else
             {

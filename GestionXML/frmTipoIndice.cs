@@ -125,7 +125,11 @@ namespace GestionXML
             }
             if (_error.Length == 0)
             {
-                try
+                DialogResult dialogo = MessageBox.Show("¿Seguro desea eliminar este registro?",
+                  "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.Yes)
+                {
+                    try
                 {
                     string _nombre_tipo_indice = txt_nombre_tipo_indice.Text;
                     int resul = AccesoLogica.Delete("nombre_tipo_indice = '" + _nombre_tipo_indice + "' ", "tipo_indice");
@@ -143,7 +147,11 @@ namespace GestionXML
                 {
                     MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                }
+                else
+                {
+                    
+                }
             }
             else
             {

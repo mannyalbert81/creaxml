@@ -118,7 +118,11 @@ namespace GestionXML
             }
             if (_error.Length == 0)
             {
-                try
+                DialogResult dialogo = MessageBox.Show("¿Seguro desea eliminar este registro?",
+                 "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.Yes)
+                {
+                    try
                 {
                     string _rol = txt_roles.Text;
                     int resul = AccesoLogica.Delete("nombre_rol = '" + _rol + "' ", "rol");
@@ -136,7 +140,11 @@ namespace GestionXML
                 {
                     MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                }
+                else
+                {
+                    
+                }
             }
             else
             {

@@ -125,7 +125,12 @@ namespace GestionXML
             }
             if (_error.Length == 0)
             {
-                try
+
+                DialogResult dialogo = MessageBox.Show("¿Seguro desea eliminar este registro?",
+                "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.Yes)
+                {
+                    try
                 {
                     string _formulario = txt_nombre_formulario.Text;
                     int resul = AccesoLogica.Delete("nombre_formularios = '" + _formulario + "' ", "formularios");
@@ -143,7 +148,11 @@ namespace GestionXML
                 {
                     MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                }
+                else
+                {
+                    
+                }
             }
             else
             {

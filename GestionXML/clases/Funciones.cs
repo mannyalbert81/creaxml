@@ -16,24 +16,22 @@ namespace GestionXML.clases
         public static void CargarCombo(System.Windows.Forms.ComboBox cmb, string id, string columna, string tabla)
         {
             
-
             try
             {
-                cmb.Items.Insert(0, "< Seleccione >");
-                cmb.DataSource = AccesoLogica.Select(id + ", " + columna, tabla);
-                cmb.DisplayMember = columna;
-                cmb.ValueMember = id;
-                cmb.SelectedIndex = 0;
-
+                    cmb.Items.Insert(0, "Seleccione..");
+                    cmb.DataSource = AccesoLogica.Select(id + ", " + columna, tabla);
+                    cmb.DisplayMember = columna;
+                    cmb.ValueMember = id;
+                    cmb.SelectedIndex = 0;
+                
             }
             catch
             {
 
             }
+           
         }
-
         
-
 
         public static void CargarCombo_inner(System.Windows.Forms.ComboBox cmb, string id, string columna, string tabla_uno, string tabla_dos, string parametro)
         {
@@ -51,9 +49,7 @@ namespace GestionXML.clases
 
             }
         }
-
-
-       
+        
 
 
         public static void CargarGridView(System.Windows.Forms.DataGridView gridView, string columnas, string tabla, string titulos)

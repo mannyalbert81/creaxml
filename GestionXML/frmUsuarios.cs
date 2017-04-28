@@ -203,23 +203,34 @@ namespace GestionXML
             }
             if (_error.Length == 0)
             {
-                try
+
+
+                DialogResult dialogo = MessageBox.Show("¿Seguro desea eliminar este registro?",
+                "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.Yes)
                 {
-                    string _usuario = txt_nombres_apellidos.Text;
-                    int resul = AccesoLogica.Delete("nombre_usuarios = '" + _usuario + "' ", "usuarios");
-
-                    if (resul == 1)
+                    try
                     {
-                        MessageBox.Show("El Usuario se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado AND usuarios.id_ciudad = ciudad.id_ciudad");
-                        limpiar();
+                        string _usuario = txt_nombres_apellidos.Text;
+                        int resul = AccesoLogica.Delete("nombre_usuarios = '" + _usuario + "' ", "usuarios");
+
+                        if (resul == 1)
+                        {
+                            MessageBox.Show("El Usuario se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            llenar_grid("usuarios.id_rol  = rol.id_rol AND usuarios.id_estado = estado.id_estado AND usuarios.id_ciudad = ciudad.id_ciudad");
+                            limpiar();
 
 
+                        }
+                    }
+                    catch (NpgsqlException)
+                    {
+                        MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (NpgsqlException)
+                else
                 {
-                    MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
 
             }
