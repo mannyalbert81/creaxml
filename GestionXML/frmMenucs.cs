@@ -288,5 +288,11 @@ namespace GestionXML
             frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML();
             frm.Show();
         }
+
+        private void producciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reportes.FiltroUsuarios frm = new reportes.FiltroUsuarios();
+            frm.Show();
+        }
     }
 }

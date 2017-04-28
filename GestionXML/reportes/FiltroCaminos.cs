@@ -19,16 +19,16 @@ namespace GestionXML.reportes
 
         private void FiltroCaminos_Load(object sender, EventArgs e)
         {
-            clases.Funciones.CargarCombo(cbm_proyectos, "id_caminos", "nombre_caminos", "caminos");
+            clases.Funciones.CargarCombo(cbm_proyectos, "id_proyectos", "nombre_proyectos", "proyectos");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int _id_caminos =  Convert.ToInt32( cbm_proyectos.SelectedValue.ToString());
+            int _id_proyectos =  Convert.ToInt32( cbm_proyectos.SelectedValue.ToString());
 
 
             reportes.contCaminos frm = new reportes.contCaminos();
-            frm._id_caminos = _id_caminos;
+            frm._id_proyectos = _id_proyectos;
             frm.Show();
             
 
