@@ -51,30 +51,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(28, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.Size = new System.Drawing.Size(155, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Controladores:";
             // 
             // dataGridViewControladores
             // 
             this.dataGridViewControladores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewControladores.Location = new System.Drawing.Point(86, 293);
-            this.dataGridViewControladores.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewControladores.Location = new System.Drawing.Point(115, 361);
+            this.dataGridViewControladores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewControladores.Name = "dataGridViewControladores";
             this.dataGridViewControladores.RowTemplate.Height = 24;
-            this.dataGridViewControladores.Size = new System.Drawing.Size(475, 182);
+            this.dataGridViewControladores.Size = new System.Drawing.Size(633, 224);
             this.dataGridViewControladores.TabIndex = 1;
             this.dataGridViewControladores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewControladores_CellContentClick);
             // 
             // txt_controladores
             // 
-            this.txt_controladores.Location = new System.Drawing.Point(162, 31);
-            this.txt_controladores.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_controladores.Location = new System.Drawing.Point(216, 38);
+            this.txt_controladores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_controladores.Name = "txt_controladores";
-            this.txt_controladores.Size = new System.Drawing.Size(344, 20);
+            this.txt_controladores.Size = new System.Drawing.Size(457, 22);
             this.txt_controladores.TabIndex = 0;
             // 
             // btnSalir
@@ -82,10 +81,10 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(443, 208);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(591, 256);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(77, 67);
+            this.btnSalir.Size = new System.Drawing.Size(103, 82);
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -97,10 +96,10 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(359, 208);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Location = new System.Drawing.Point(479, 256);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(80, 67);
+            this.btnEliminar.Size = new System.Drawing.Size(107, 82);
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -112,10 +111,10 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(280, 208);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.Location = new System.Drawing.Point(373, 256);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 82);
             this.btnLimpiar.TabIndex = 7;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -128,10 +127,10 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(203, 208);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(271, 256);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(74, 67);
+            this.btnBuscar.Size = new System.Drawing.Size(99, 82);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -144,10 +143,10 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(124, 208);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Location = new System.Drawing.Point(165, 256);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 67);
+            this.btnGuardar.Size = new System.Drawing.Size(100, 82);
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -157,9 +156,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 77);
+            this.label2.Location = new System.Drawing.Point(28, 95);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 13);
+            this.label2.Size = new System.Drawing.Size(179, 17);
             this.label2.TabIndex = 37;
             this.label2.Text = "Descripción Controladores:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -167,9 +167,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 107);
+            this.label3.Location = new System.Drawing.Point(28, 146);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.Size = new System.Drawing.Size(52, 17);
             this.label3.TabIndex = 38;
             this.label3.Text = "Orden:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -177,69 +178,65 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 143);
+            this.label4.Location = new System.Drawing.Point(423, 149);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.Size = new System.Drawing.Size(43, 17);
             this.label4.TabIndex = 39;
             this.label4.Text = "Nivel:";
             // 
             // txt_descripcion_controladores
             // 
-            this.txt_descripcion_controladores.Location = new System.Drawing.Point(162, 77);
+            this.txt_descripcion_controladores.Location = new System.Drawing.Point(216, 95);
+            this.txt_descripcion_controladores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_descripcion_controladores.Name = "txt_descripcion_controladores";
-            this.txt_descripcion_controladores.Size = new System.Drawing.Size(341, 20);
+            this.txt_descripcion_controladores.Size = new System.Drawing.Size(457, 22);
             this.txt_descripcion_controladores.TabIndex = 1;
             // 
             // cmb_nivel_controladores
             // 
             this.cmb_nivel_controladores.FormattingEnabled = true;
-            this.cmb_nivel_controladores.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cmb_nivel_controladores.Location = new System.Drawing.Point(162, 143);
+            this.cmb_nivel_controladores.Location = new System.Drawing.Point(502, 146);
+            this.cmb_nivel_controladores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_nivel_controladores.Name = "cmb_nivel_controladores";
-            this.cmb_nivel_controladores.Size = new System.Drawing.Size(56, 21);
+            this.cmb_nivel_controladores.Size = new System.Drawing.Size(171, 24);
             this.cmb_nivel_controladores.TabIndex = 3;
             // 
             // cmb_orden_controladores
             // 
             this.cmb_orden_controladores.FormattingEnabled = true;
-            this.cmb_orden_controladores.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cmb_orden_controladores.Location = new System.Drawing.Point(162, 107);
+            this.cmb_orden_controladores.Location = new System.Drawing.Point(216, 146);
+            this.cmb_orden_controladores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_orden_controladores.Name = "cmb_orden_controladores";
-            this.cmb_orden_controladores.Size = new System.Drawing.Size(56, 21);
+            this.cmb_orden_controladores.Size = new System.Drawing.Size(171, 24);
             this.cmb_orden_controladores.TabIndex = 2;
             this.cmb_orden_controladores.SelectedIndexChanged += new System.EventHandler(this.cmb_orden_controladores_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 173);
+            this.label5.Location = new System.Drawing.Point(28, 202);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.Size = new System.Drawing.Size(79, 17);
             this.label5.TabIndex = 47;
             this.label5.Text = "Formulario:";
             // 
             // cbm_formulario
             // 
             this.cbm_formulario.FormattingEnabled = true;
-            this.cbm_formulario.Location = new System.Drawing.Point(162, 170);
+            this.cbm_formulario.Location = new System.Drawing.Point(216, 198);
+            this.cbm_formulario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbm_formulario.Name = "cbm_formulario";
-            this.cbm_formulario.Size = new System.Drawing.Size(231, 21);
+            this.cbm_formulario.Size = new System.Drawing.Size(293, 24);
             this.cbm_formulario.TabIndex = 4;
             // 
             // frmControladores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(625, 486);
+            this.ClientSize = new System.Drawing.Size(833, 598);
             this.Controls.Add(this.cbm_formulario);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmb_orden_controladores);
@@ -257,7 +254,7 @@
             this.Controls.Add(this.dataGridViewControladores);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmControladores";

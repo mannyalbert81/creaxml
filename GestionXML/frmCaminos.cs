@@ -126,24 +126,37 @@ namespace GestionXML
             }
             if (_error.Length == 0)
             {
-                try
+
+                DialogResult dialogo = MessageBox.Show("¿Seguro desea eliminar este registro?",
+               "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.Yes)
                 {
-                    string _nombre_caminos = txt_nombre_caminos.Text;
-                    int resul = AccesoLogica.Delete("nombre_caminos = '" + _nombre_caminos + "' ", "caminos");
-
-                    if (resul == 1)
+                    try
                     {
-                        MessageBox.Show("El Camino se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("usuarios.id_usuarios = caminos.id_usuarios AND proyectos.id_proyectos = caminos.id_proyectos");
-                        limpiar();
+                        string _nombre_caminos = txt_nombre_caminos.Text;
+                        int resul = AccesoLogica.Delete("nombre_caminos = '" + _nombre_caminos + "' ", "caminos");
+
+                        if (resul == 1)
+                        {
+                            MessageBox.Show("El Camino se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            llenar_grid("usuarios.id_usuarios = caminos.id_usuarios AND proyectos.id_proyectos = caminos.id_proyectos");
+                            limpiar();
 
 
+                        }
+                    }
+                    catch (NpgsqlException)
+                    {
+                        MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (NpgsqlException)
+                else
                 {
-                    MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
+
+
+               
 
             }
             else

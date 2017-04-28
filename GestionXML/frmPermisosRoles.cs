@@ -26,8 +26,48 @@ namespace GestionXML
             clases.Funciones.CargarCombo(cbm_roles, "id_rol", "nombre_rol", "rol");
             clases.Funciones.CargarCombo(cbm_controladores, "id_controladores", "nombre_controladores", "controladores");
             llenar_grid("controladores.id_controladores = permisos_rol.id_controladores AND rol.id_rol = permisos_rol.id_rol");
+            llenar_combomanual();
+        }
+
+
+        private void llenar_combomanual()
+        {
+
+            int i = 0;
+
+            for (i = 0; i < 3; i++)
+            {
+                if (i == 0)
+                {
+                    cbm_ver.Items.Insert(i, "Seleccione ..");
+                    cbm_editar.Items.Insert(i, "Seleccione ..");
+                    cbm_borrar.Items.Insert(i, "Seleccione ..");
+
+                }
+                else if (i == 1)
+                {
+                    cbm_ver.Items.Insert(i, "True");
+                    cbm_editar.Items.Insert(i, "True");
+                    cbm_borrar.Items.Insert(i, "True");
+
+
+                }
+                else if (i == 2)
+                {
+                    cbm_ver.Items.Insert(i, "False");
+                    cbm_editar.Items.Insert(i, "False");
+                    cbm_borrar.Items.Insert(i, "False");
+
+                }
+
+            }
+            cbm_ver.SelectedIndex = 0;
+            cbm_editar.SelectedIndex = 0;
+            cbm_borrar.SelectedIndex = 0;
 
         }
+
+        
 
         private void llenar_grid(string _parametro)
         {
@@ -40,12 +80,16 @@ namespace GestionXML
         {
 
             txt_nombre_permisos_roles.Text = "";
-           
+            cbm_ver.SelectedIndex = 0;
+            cbm_editar.SelectedIndex = 0;
+            cbm_borrar.SelectedIndex = 0;
 
         }
 
         private void dataGridViewPermisosRoles_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+
             DataGridViewRow fila = dataGridViewPermisosRoles.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
             txt_nombre_permisos_roles.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
             cbm_controladores.Text = Convert.ToString(fila.Cells[2].Value);
@@ -53,6 +97,8 @@ namespace GestionXML
             cbm_ver.Text = Convert.ToString(fila.Cells[4].Value);
             cbm_editar.Text = Convert.ToString(fila.Cells[5].Value);
             cbm_borrar.Text = Convert.ToString(fila.Cells[6].Value);
+
+
            
         }
 
@@ -80,17 +126,31 @@ namespace GestionXML
 
             if (_ver_1.Length == 0)
             {
-                _error = "Debe seleecionar una opcion en Ver";
+                _error = "Debe seleccionar una opcion en Ver";
             }
 
             if (_editar_1.Length == 0)
             {
-                _error = "Debe seleecionar una opcion en Editar";
+                _error = "Debe seleccionar una opcion en Editar";
             }
 
             if (_borrar_1.Length == 0)
             {
-                _error = "Debe seleecionar una opcion en Borrar";
+                _error = "Debe seleccionar una opcion en Borrar";
+            }
+            if (_ver_1 == "Seleccione ..")
+            {
+                _error = "Debe seleccionar una opcion en Ver";
+            }
+
+            if (_editar_1 == "Seleccione ..")
+            {
+                _error = "Debe seleccionar una opcion en Editar";
+            }
+
+            if (_borrar_1 == "Seleccione ..")
+            {
+                _error = "Debe seleccionar una opcion en Borrar";
             }
 
 
@@ -174,24 +234,36 @@ namespace GestionXML
             }
             if (_error.Length == 0)
             {
-                try
+
+                DialogResult dialogo = MessageBox.Show("¿Seguro desea eliminar este registro?",
+               "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.Yes)
                 {
-                    string _nombre_permisos_rol = txt_nombre_permisos_roles.Text;
-                    int resul = AccesoLogica.Delete("nombre_permisos_rol = '" + _nombre_permisos_rol + "' ", "permisos_rol");
-
-                    if (resul == 1)
+                    try
                     {
-                        MessageBox.Show("El Permiso se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        llenar_grid("controladores.id_controladores = permisos_rol.id_controladores AND rol.id_rol = permisos_rol.id_rol");
-                        limpiar();
+                        string _nombre_permisos_rol = txt_nombre_permisos_roles.Text;
+                        int resul = AccesoLogica.Delete("nombre_permisos_rol = '" + _nombre_permisos_rol + "' ", "permisos_rol");
+
+                        if (resul == 1)
+                        {
+                            MessageBox.Show("El Permiso se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            llenar_grid("controladores.id_controladores = permisos_rol.id_controladores AND rol.id_rol = permisos_rol.id_rol");
+                            limpiar();
 
 
+                        }
+                    }
+                    catch (NpgsqlException)
+                    {
+                        MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (NpgsqlException)
+                else
                 {
-                    MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   
                 }
+
+
 
             }
             else
