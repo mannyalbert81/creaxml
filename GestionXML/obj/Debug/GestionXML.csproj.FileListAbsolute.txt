@@ -367,3 +367,5 @@ C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.exe
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.pdb
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contProduccion.resources
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarios.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contProduccion.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarios.resources
