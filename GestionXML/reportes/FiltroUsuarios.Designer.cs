@@ -37,7 +37,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::GestionXML.Properties.Resources.firma_del_contrato;
-            this.button1.Location = new System.Drawing.Point(174, 120);
+            this.button1.Location = new System.Drawing.Point(291, 68);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 68);
             this.button1.TabIndex = 5;
@@ -49,7 +49,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 75);
+            this.label1.Location = new System.Drawing.Point(8, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 6;
@@ -58,7 +58,7 @@
             // cbm_usuarios
             // 
             this.cbm_usuarios.FormattingEnabled = true;
-            this.cbm_usuarios.Location = new System.Drawing.Point(135, 72);
+            this.cbm_usuarios.Location = new System.Drawing.Point(65, 12);
             this.cbm_usuarios.Name = "cbm_usuarios";
             this.cbm_usuarios.Size = new System.Drawing.Size(157, 21);
             this.cbm_usuarios.TabIndex = 4;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 261);
+            this.ClientSize = new System.Drawing.Size(642, 148);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbm_usuarios);
