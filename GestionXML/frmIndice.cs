@@ -79,7 +79,9 @@ namespace GestionXML
             int _min_indice_detalle = 0;
             int _max_indice_detalle = 0;
             int _orden_indice_detalle = 0;
+            int _id_indice_cabeza1 = 0;
             int _id_indice_cabeza = 0;
+            int _id_cam = 0;
             int numeros = 0;
             int registros = 0;
             int _orden_temporal = 0;
@@ -98,7 +100,7 @@ namespace GestionXML
 
             foreach (DataRow renglon in dtCabeza.Rows)
             {
-                _id_indice_cabeza = Convert.ToInt32(renglon["id_indice_cabeza"].ToString());
+                _id_indice_cabeza1 = Convert.ToInt32(renglon["id_indice_cabeza"].ToString());
             }
 
 
@@ -120,13 +122,29 @@ namespace GestionXML
 
             string columnas8 = "indice_detalle.orden_indice_detalle";
             string tablas8 = " public.indice_detalle, public.tipo_indice";
-            string where8 = "tipo_indice.id_tipo_indice = indice_detalle.id_tipo_indice AND indice_detalle.id_indice_cabeza = '" + _id_indice_cabeza + "'";
+            string where8 = "tipo_indice.id_tipo_indice = indice_detalle.id_tipo_indice AND indice_detalle.id_indice_cabeza = '" + _id_indice_cabeza1 + "'";
             DataTable dtDetalle = AccesoLogica.Select(columnas8, tablas8, where8);
 
             foreach (DataRow renglon8 in dtDetalle.Rows)
             {
                 _orden_detalle = Convert.ToInt32(renglon8["orden_indice_detalle"].ToString());
             }
+
+            //CONSULTO INDICE CABEZA
+
+            string columnas50 = "indice_cabeza.nombre_indice_cabeza, caminos.id_caminos";
+            string tablas50 = " public.indice_cabeza, public.caminos";
+            string where50 = "caminos.id_caminos = indice_cabeza.id_caminos AND indice_cabeza.id_caminos = '" + _id_caminos + "'";
+            DataTable dtCabeza50 = AccesoLogica.Select(columnas50, tablas50, where50);
+
+            foreach (DataRow renglon50 in dtCabeza50.Rows)
+            {
+                _id_cam = Convert.ToInt32(renglon50["id_caminos"].ToString());
+            }
+
+
+
+
 
 
 
@@ -149,28 +167,40 @@ namespace GestionXML
 
                 {
 
-                   if (_orden_temporal == _orden_detalle) {
+                    if (_orden_temporal == _orden_detalle) {
 
                         MessageBox.Show("Ya existe un indice con el Orden " + _orden_detalle, " Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
-                    else { 
+                    else if (_id_cam == _id_caminos) {
 
-                    string datos = _nombre_indice_cabeza + "?" + _id_caminos;
-                    string columnas = "_nombre_indice_cabeza?_id_caminos";
-                    string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Integer";
+                        MessageBox.Show("Ya existe un indice con el Camino Seleccionado", " Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else {
+
+                        string datos = _nombre_indice_cabeza + "?" + _id_caminos;
+                        string columnas = "_nombre_indice_cabeza?_id_caminos";
+                        string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Integer";
 
 
-                    try
-                    {
-                        int resul = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_indice_cabeza");
+                        try
+                        {
+                            int resul = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_indice_cabeza");
 
+                            string columnas15 = "indice_cabeza.id_indice_cabeza";
+                            string tablas15 = "public.indice_cabeza";
+                            string where15 = "indice_cabeza.nombre_indice_cabeza = '" + _nombre_indice_cabeza + "' AND indice_cabeza.id_caminos = '" + _id_caminos + "'";
+
+                            DataTable dtCabeza15 = AccesoLogica.Select(columnas15, tablas15, where15);
+
+                            foreach (DataRow renglon in dtCabeza15.Rows)
+                            {
+                                _id_indice_cabeza = Convert.ToInt32(renglon["id_indice_cabeza"].ToString());
+                            }
 
                             foreach (DataRow renglon in dtTemporal1.Rows)
-                             {
-
-                                try
-                                {
+                            {
 
 
                                 _id_tipo_indice = Convert.ToInt32(renglon["id_tipo_indice"].ToString());
@@ -179,53 +209,56 @@ namespace GestionXML
                                 _max_indice_detalle = Convert.ToInt32(renglon["max_indice_detalle"].ToString());
                                 _orden_indice_detalle = Convert.ToInt32(renglon["orden_indice_detalle"].ToString());
 
-                                    string datos2 = _id_indice_cabeza + "?" + _id_tipo_indice + "?" + _nombre_indice_detalle + "?" + _min_indice_detalle + "?" + _max_indice_detalle + "?" + _orden_indice_detalle;
-                                    string columnas2 = "_id_indice_cabeza?_id_tipo_indice?_min_indice_detalle?_max_indice_detalle?_orden_indice_detalle?_nombre_indice_detalle";
-                                    string tipodatos2 = "NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Varchar";
+                                string datos2 = _id_indice_cabeza + "?" + _id_tipo_indice + "?" + _nombre_indice_detalle + "?" + _min_indice_detalle + "?" + _max_indice_detalle + "?" + _orden_indice_detalle;
+                                string columnas2 = "_id_indice_cabeza?_id_tipo_indice?_min_indice_detalle?_max_indice_detalle?_orden_indice_detalle?_nombre_indice_detalle";
+                                string tipodatos2 = "NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Varchar";
+
+
+                                try
+                                {
+
+                                    int result = AccesoLogica.Insert(datos2, columnas2, tipodatos2, "ins_indice_detalle");
 
                                     try
                                     {
-
-                                        int result = AccesoLogica.Insert(datos2, columnas2, tipodatos2, "ins_indice_detalle");
-                                       
-                                            numeros = numeros + 1;
-                                            int resulT = AccesoLogica.Delete("nombre_indice_detalle = '" + _nombre_indice_detalle + "' ", "temp_indice");
-                                            llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
-                                            limpiar();
-                                            limpiar1();
-
+                                        numeros = numeros + 1;
+                                        int resulT = AccesoLogica.Delete("nombre_indice_detalle = '" + _nombre_indice_detalle + "' ", "temp_indice");
+                                        llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
+                                        limpiar();
+                                        limpiar1();
                                     }
-                                catch (NpgsqlException ) {
+                                    catch (NpgsqlException)
+                                    {
 
-                                    MessageBox.Show("No se Pudo Guardar", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("No se Pudo Sumar", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+
+
+
+                                }
+                                catch (NpgsqlException errores) {
+
+                                    MessageBox.Show(errores.Message, "Error");
                                 }
 
 
-                                }
-                                catch (NpgsqlException)
-                                {
 
-                                   
-                                }
-
-                                
                             }
 
-                            
 
-                       if (numeros>0) { 
-
-                        MessageBox.Show("Se ha Registrado Correctamente " + numeros + " Registros", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
-                       
+                        catch (NpgsqlException)
+                        {
+                            MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
 
+                        if (numeros > 0)
+                        {
+
+                            MessageBox.Show("Se ha Registrado Correctamente " + numeros + " Registros", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
 
                     }
-                    catch (NpgsqlException)
-                    {
-                        MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
                 }
                 else
                 {
@@ -282,8 +315,6 @@ namespace GestionXML
                         llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
                         
                         limpiar();
-
-
                     }
                 }
                 catch (NpgsqlException)
@@ -308,8 +339,7 @@ namespace GestionXML
             this.Hide();
         }
 
-
-
+        
         private void frmIndice_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogo = MessageBox.Show("¿Desea cerrar el programa?",
@@ -337,9 +367,7 @@ namespace GestionXML
             int _id_tipo_indice = Convert.ToInt32(cbm_tipo_indice.SelectedValue.ToString());
             string _orden = "";
            
-
-
-
+            
 
             if (_nombre_indice_detalle.Length == 0)
             {
@@ -364,7 +392,6 @@ namespace GestionXML
                 _error = "Debe Seleccionar un Orden";
             }
 
-
             if (_error.Length == 0)
             {
 
@@ -388,7 +415,6 @@ namespace GestionXML
                 }
                 else {
 
-
                 string datos = _id_tipo_indice + "?" + _nombre_indice_detalle + "?" + _min_indice_detalle + "?" + _max_indice_detalle + "?" + _orden_indice_detalle;
                 string columnas = "_id_tipo_indice?_nombre_indice_detalle?_min_indice_detalle?_max_indice_detalle?_orden_indice_detalle";
                 string tipodatos = "NpgsqlDbType.Integer?NpgsqlDbType.Varchar?NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Integer";
@@ -402,8 +428,6 @@ namespace GestionXML
                         MessageBox.Show("El Detalle se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         llenar_grid("tipo_indice.id_tipo_indice = temp_indice.id_tipo_indice");
                         limpiar();
-
-
                     }
                 }
                 catch (NpgsqlException)
