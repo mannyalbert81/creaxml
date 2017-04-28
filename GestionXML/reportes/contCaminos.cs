@@ -31,9 +31,9 @@ namespace GestionXML.reportes
             datas.dtCaminos dtCaminos = new datas.dtCaminos();
 
             NpgsqlDataAdapter daCaminos = new NpgsqlDataAdapter();
-            daCaminos = AccesoLogica.Select_reporte("caminos.id_caminos, caminos.nombre_caminos, caminos.path_caminos, usuarios.nombre_usuarios, proyectos.nombre_proyectos, caminos.creado, caminos.modificado", "public.caminos, public.usuarios, public.proyectos", "usuarios.id_usuarios = caminos.id_usuarios AND   proyectos.id_proyectos = caminos.id_proyectos AND   caminos.id_caminos = '" + _id_caminos+"'  ");
+            daCaminos = AccesoLogica.Select_reporte("caminos.id_caminos, caminos.nombre_caminos, caminos.path_caminos, usuarios.nombre_usuarios, proyectos.nombre_proyectos, caminos.creado, caminos.modificado", "public.caminos, public.usuarios, public.proyectos", "usuarios.id_usuarios = caminos.id_usuarios AND   proyectos.id_proyectos = caminos.id_proyectos AND   proyectos.id_proyectos = '" + _id_proyectos+"'  ");
 
-            daCaminos.Fill(dtCaminos, "caminos");
+            daCaminos.Fill(dtCaminos, "proyectos");
             int reg = dtCaminos.Tables[1].Rows.Count;
             reportes.rptCaminos ObjRep = new reportes.rptCaminos();
             ObjRep.SetDataSource(dtCaminos.Tables[1]);

@@ -55,6 +55,7 @@
             this.cartónDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.indiceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.producciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -259,7 +260,8 @@
             this.caminosToolStripMenuItem3,
             this.cartónDocumentosToolStripMenuItem,
             this.estadoToolStripMenuItem1,
-            this.indiceToolStripMenuItem1});
+            this.indiceToolStripMenuItem1,
+            this.producciónToolStripMenuItem});
             this.reportesToolStripMenuItem.Image = global::GestionXML.Properties.Resources.reportesG;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
@@ -269,7 +271,7 @@
             // 
             this.caminosToolStripMenuItem1.Image = global::GestionXML.Properties.Resources.reportesU;
             this.caminosToolStripMenuItem1.Name = "caminosToolStripMenuItem1";
-            this.caminosToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem1.Size = new System.Drawing.Size(185, 26);
             this.caminosToolStripMenuItem1.Text = "Proyectos";
             this.caminosToolStripMenuItem1.Click += new System.EventHandler(this.caminosToolStripMenuItem1_Click);
             // 
@@ -277,7 +279,7 @@
             // 
             this.caminosToolStripMenuItem2.Image = global::GestionXML.Properties.Resources.reportes1;
             this.caminosToolStripMenuItem2.Name = "caminosToolStripMenuItem2";
-            this.caminosToolStripMenuItem2.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem2.Size = new System.Drawing.Size(185, 26);
             this.caminosToolStripMenuItem2.Text = "Tipo Indice";
             this.caminosToolStripMenuItem2.Click += new System.EventHandler(this.caminosToolStripMenuItem2_Click);
             // 
@@ -285,7 +287,7 @@
             // 
             this.caminosToolStripMenuItem3.Image = global::GestionXML.Properties.Resources.reportes2;
             this.caminosToolStripMenuItem3.Name = "caminosToolStripMenuItem3";
-            this.caminosToolStripMenuItem3.Size = new System.Drawing.Size(181, 22);
+            this.caminosToolStripMenuItem3.Size = new System.Drawing.Size(185, 26);
             this.caminosToolStripMenuItem3.Text = "Caminos";
             this.caminosToolStripMenuItem3.Click += new System.EventHandler(this.caminosToolStripMenuItem3_Click);
             // 
@@ -293,7 +295,7 @@
             // 
             this.cartónDocumentosToolStripMenuItem.Image = global::GestionXML.Properties.Resources.reportes3;
             this.cartónDocumentosToolStripMenuItem.Name = "cartónDocumentosToolStripMenuItem";
-            this.cartónDocumentosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.cartónDocumentosToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.cartónDocumentosToolStripMenuItem.Text = "Cartón Documentos";
             this.cartónDocumentosToolStripMenuItem.Click += new System.EventHandler(this.cartónDocumentosToolStripMenuItem_Click);
             // 
@@ -301,7 +303,7 @@
             // 
             this.estadoToolStripMenuItem1.Image = global::GestionXML.Properties.Resources.reportes4;
             this.estadoToolStripMenuItem1.Name = "estadoToolStripMenuItem1";
-            this.estadoToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.estadoToolStripMenuItem1.Size = new System.Drawing.Size(185, 26);
             this.estadoToolStripMenuItem1.Text = "Estado";
             this.estadoToolStripMenuItem1.Click += new System.EventHandler(this.estadoToolStripMenuItem1_Click);
             // 
@@ -309,9 +311,17 @@
             // 
             this.indiceToolStripMenuItem1.Image = global::GestionXML.Properties.Resources.reportes5;
             this.indiceToolStripMenuItem1.Name = "indiceToolStripMenuItem1";
-            this.indiceToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.indiceToolStripMenuItem1.Size = new System.Drawing.Size(185, 26);
             this.indiceToolStripMenuItem1.Text = "Indice";
             this.indiceToolStripMenuItem1.Click += new System.EventHandler(this.indiceToolStripMenuItem1_Click);
+            // 
+            // producciónToolStripMenuItem
+            // 
+            this.producciónToolStripMenuItem.Image = global::GestionXML.Properties.Resources.mantenimiento;
+            this.producciónToolStripMenuItem.Name = "producciónToolStripMenuItem";
+            this.producciónToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.producciónToolStripMenuItem.Text = "Producción";
+            this.producciónToolStripMenuItem.Click += new System.EventHandler(this.producciónToolStripMenuItem_Click);
             // 
             // toolStrip2
             // 
@@ -567,5 +577,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripButton toolStripButton12;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripMenuItem producciónToolStripMenuItem;
     }
 }
