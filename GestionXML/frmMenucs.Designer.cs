@@ -316,7 +316,7 @@
             // toolStrip2
             // 
             this.toolStrip2.AutoSize = false;
-            this.toolStrip2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStrip2.BackColor = System.Drawing.SystemColors.Control;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton4,
             this.toolStripSeparator1,
@@ -338,7 +338,7 @@
             this.toolStripSeparator9});
             this.toolStrip2.Location = new System.Drawing.Point(0, 28);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(796, 59);
+            this.toolStrip2.Size = new System.Drawing.Size(796, 49);
             this.toolStrip2.TabIndex = 5;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -349,7 +349,7 @@
             this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton4.Size = new System.Drawing.Size(55, 45);
             this.toolStripButton4.Text = "Usuarios";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
@@ -357,7 +357,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 59);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 49);
             // 
             // toolStripButton5
             // 
@@ -366,7 +366,7 @@
             this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton5.Size = new System.Drawing.Size(55, 45);
             this.toolStripButton5.Text = "Proyectos";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
@@ -374,7 +374,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 59);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 49);
             // 
             // toolStripButton6
             // 
@@ -383,7 +383,7 @@
             this.toolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(62, 55);
+            this.toolStripButton6.Size = new System.Drawing.Size(62, 45);
             this.toolStripButton6.Text = "Tipo Indice";
             this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
@@ -391,7 +391,7 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 59);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 49);
             // 
             // toolStripButton7
             // 
@@ -400,7 +400,7 @@
             this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton7.Size = new System.Drawing.Size(55, 45);
             this.toolStripButton7.Text = "Caminos";
             this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
@@ -408,7 +408,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 59);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 49);
             // 
             // toolStripButton8
             // 
@@ -417,7 +417,7 @@
             this.toolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(67, 55);
+            this.toolStripButton8.Size = new System.Drawing.Size(67, 45);
             this.toolStripButton8.Text = "Cartón Doc.";
             this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
@@ -425,7 +425,7 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 59);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 49);
             // 
             // toolStripButton9
             // 
@@ -434,7 +434,7 @@
             this.toolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton9.Size = new System.Drawing.Size(55, 45);
             this.toolStripButton9.Text = "Estado";
             this.toolStripButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
@@ -442,7 +442,7 @@
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 59);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 49);
             // 
             // toolStripButton10
             // 
@@ -451,7 +451,7 @@
             this.toolStripButton10.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(55, 55);
+            this.toolStripButton10.Size = new System.Drawing.Size(55, 45);
             this.toolStripButton10.Text = "Indice";
             this.toolStripButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
@@ -459,7 +459,7 @@
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 59);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 49);
             // 
             // toolStripButton11
             // 
@@ -468,7 +468,7 @@
             this.toolStripButton11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(59, 55);
+            this.toolStripButton11.Size = new System.Drawing.Size(59, 45);
             this.toolStripButton11.Text = "Crear XML";
             this.toolStripButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
@@ -476,7 +476,7 @@
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 59);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 49);
             // 
             // toolStripButton12
             // 
@@ -485,7 +485,7 @@
             this.toolStripButton12.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(120, 55);
+            this.toolStripButton12.Size = new System.Drawing.Size(120, 45);
             this.toolStripButton12.Text = "Control Calidad XML";
             this.toolStripButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
@@ -493,14 +493,14 @@
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 59);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 49);
             // 
             // frmMenucs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(796, 291);
+            this.ClientSize = new System.Drawing.Size(796, 303);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

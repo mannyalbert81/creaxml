@@ -55,6 +55,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.lblSubcategoria = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.acrobat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,10 +210,10 @@
             // acrobat
             // 
             this.acrobat.Enabled = true;
-            this.acrobat.Location = new System.Drawing.Point(13, 19);
+            this.acrobat.Location = new System.Drawing.Point(13, 38);
             this.acrobat.Name = "acrobat";
             this.acrobat.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("acrobat.OcxState")));
-            this.acrobat.Size = new System.Drawing.Size(727, 616);
+            this.acrobat.Size = new System.Drawing.Size(727, 597);
             this.acrobat.TabIndex = 18;
             // 
             // label9
@@ -283,11 +284,22 @@
             this.label12.TabIndex = 43;
             this.label12.Visible = false;
             // 
+            // lblSubcategoria
+            // 
+            this.lblSubcategoria.AutoSize = true;
+            this.lblSubcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubcategoria.Location = new System.Drawing.Point(13, 13);
+            this.lblSubcategoria.Name = "lblSubcategoria";
+            this.lblSubcategoria.Size = new System.Drawing.Size(17, 24);
+            this.lblSubcategoria.TabIndex = 44;
+            this.lblSubcategoria.Text = "-";
+            // 
             // CreadorTXT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1014, 647);
+            this.Controls.Add(this.lblSubcategoria);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -353,5 +365,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblSubcategoria;
     }
 }

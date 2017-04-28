@@ -8,14 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Negocio;
 namespace GestionXML
 {
     public partial class frmListaPendienteXML : Form
     {
-        public  string _camino = "";
-        public int _id_caminos = 0;
-
+        public  string _path_camino = "";
+        public int _id_camino = 0;
         public frmListaPendienteXML()
         {
             InitializeComponent();
@@ -26,7 +25,7 @@ namespace GestionXML
             //cmbEquipos.SelectedIndex = 0;
 
 
-            lblCamino.Text = _camino;
+            lblCamino.Text = _path_camino;
 
 
             //cargo los pdf
@@ -40,12 +39,30 @@ namespace GestionXML
             DataGridViewRow fila = dataGridView1.CurrentRow;
             string _camino = Convert.ToString(fila.Cells[2].Value); //obtengo el valor de la primer columna
 
+
+            ////busco el id del indice cabeza
+            string _parametros = " id_caminos = '" + _id_camino + "'   ";
+            
+            int _id_indice_cabeza = 0;
+
+            DataTable dtCaminos = AccesoLogica.Select("id_indice_cabeza", "indice_cabeza", _parametros);
+            int reg = dtCaminos.Rows.Count;
+            if (reg > 0)
+            {
+                foreach (DataRow renglon in dtCaminos.Rows)
+                {
+                    _id_indice_cabeza = Convert.ToInt32(renglon["id_indice_cabeza"].ToString());
+                }
+            }
+
+
             DialogResult result = MessageBox.Show("Deseas Crear XML de este PDF?", "Crear nuevo XML", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (result == DialogResult.Yes)
             {
                 CreadorXML Crea = new CreadorXML();   
                 Crea.nombre_pdf = _camino;
+                Crea._id_indice_cabeza = _id_indice_cabeza;
                 Crea.Show();
             }
             if (result == DialogResult.No)
@@ -65,7 +82,7 @@ namespace GestionXML
         {
             dataGridView1.Rows.Clear();
 
-            DirectoryInfo directory = new DirectoryInfo(@_camino);
+            DirectoryInfo directory = new DirectoryInfo(@_path_camino);
             FileInfo[] filesPDF = directory.GetFiles("*.PDF");
             FileInfo[] filesXML = directory.GetFiles("*.XML");
 
