@@ -38,19 +38,28 @@ namespace GestionXML
 
             if (_descripcion_controladores.Length == 0)
             {
-                _error = "Debe Indicar una Descricion de Controladores";
+                _error = "Debe Indicar una Descripción de Controladores";
             }
 
             if (_orden_controladores.Length == 0)
             {
-                _error = "Debe Indicar un orden de controladores";
+                _error = "Debe Seleccionar un orden de controladores";
             }
 
             if (_nivel_controladores.Length == 0)
             {
-                _error = "Debe Indicar un nivel de controladores";
+                _error = "Debe Seleccionar un nivel de controladores";
             }
-            
+            if (_orden_controladores == "Seleccione ..")
+            {
+                _error = "Debe Seleccionar un orden de controladores";
+            }
+
+            if (_nivel_controladores == "Seleccione ..")
+            {
+                _error = "Debe Seleccionar un nivel de controladores";
+            }
+
 
 
 
@@ -90,9 +99,33 @@ namespace GestionXML
         {
             clases.Funciones.CargarCombo(cbm_formulario, "id_formularios", "nombre_formularios", "formularios");
             llenar_grid("formularios.id_formularios = controladores.id_formularios");
-            
-            
+            llenar_combomanual();
+
+
         }
+
+        private void llenar_combomanual()
+        {
+
+            int valor = 0;
+            for (valor = 0; valor < 6; valor++)
+            {
+                if (valor == 0)
+                {
+                    cmb_nivel_controladores.Items.Insert(valor, "Seleccione ..");
+                    cmb_orden_controladores.Items.Insert(valor, "Seleccione ..");
+                }
+                else
+                {
+                    cmb_nivel_controladores.Items.Insert(valor, valor);
+                    cmb_orden_controladores.Items.Insert(valor, valor);
+                }
+
+            }
+            cmb_nivel_controladores.SelectedIndex = 0;
+            cmb_orden_controladores.SelectedIndex = 0;
+        }
+
 
 
         private void llenar_grid(string _parametro)
@@ -105,6 +138,8 @@ namespace GestionXML
         {
             txt_controladores.Text = "";
             txt_descripcion_controladores.Text = "";
+            cmb_nivel_controladores.SelectedIndex = 0;
+            cmb_orden_controladores.SelectedIndex = 0;
 
 
         }
@@ -142,7 +177,12 @@ namespace GestionXML
             }
             if (_error.Length == 0)
             {
-                try
+
+                DialogResult dialogo = MessageBox.Show("¿Seguro desea eliminar este registro?",
+                "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.Yes)
+                {
+                    try
                 {
                     string _controladores = txt_controladores.Text;
                     int resul = AccesoLogica.Delete("nombre_controladores = '" + _controladores + "' ", "controladores");
@@ -152,15 +192,17 @@ namespace GestionXML
                         MessageBox.Show("El Controlador se ha Eliminado Correctamente", "Eliminado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         llenar_grid("formularios.id_formularios = controladores.id_formularios");
                         limpiar();
-
-
                     }
                 }
                 catch (NpgsqlException)
                 {
                     MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                }
+                else
+                {
+                   
+                }
             }
             else
             {

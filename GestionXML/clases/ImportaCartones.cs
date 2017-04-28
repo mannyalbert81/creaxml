@@ -26,7 +26,7 @@ namespace GestionXML.clases
             {
                 try
                 {
-                 
+
                     numero_carton_documentos = Convert.ToString(renglon["numero_carton_documentos"].ToString());
                     estado_carton_documentos = Convert.ToBoolean(renglon["estado_carton_documentos"].ToString());
 
@@ -38,14 +38,14 @@ namespace GestionXML.clases
                     {
                         int result = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_carton_documentos");
                         {
-                            
+
                         }
                     }
                     catch (NpgsqlException)
                     {
                         MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                   }
+                }
                 catch
                 {
                     MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos2", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);

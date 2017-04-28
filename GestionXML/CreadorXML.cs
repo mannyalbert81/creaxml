@@ -69,7 +69,7 @@ namespace GestionXML
         {
             acrobat.src = nombre_pdf;
 
-            System.IO.StreamReader file = new System.IO.StreamReader(@"indice.txt");
+            //System.IO.StreamReader file = new System.IO.StreamReader(@"indice.txt");
 
 
             int _contador = 1;
@@ -85,15 +85,16 @@ namespace GestionXML
             int _orden_indice_detalle = 0;
 
             string _parametros = " indice_detalle.id_indice_cabeza = indice_cabeza.id_indice_cabeza AND tipo_indice.id_tipo_indice = indice_detalle.id_tipo_indice AND  indice_detalle.id_indice_cabeza = '" + _id_indice_cabeza + "'  ORDER BY indice_detalle.orden_indice_detalle ";
-            int _id_caminos = 0;
+            MessageBox.Show("id indice cabeza" +   _id_indice_cabeza+"") ;
+            
+            DataTable dtIndice = AccesoLogica.Select("indice_cabeza.id_caminos, indice_cabeza.nombre_indice_cabeza, indice_detalle.nombre_indice_detalle, tipo_indice.nombre_tipo_indice,  indice_detalle.min_indice_detalle, indice_detalle.max_indice_detalle, indice_detalle.orden_indice_detalle", "  public.indice_cabeza, public.indice_detalle, public.tipo_indice", _parametros);
 
-            DataTable dtIndice = AccesoLogica.Select("indice_cabeza.nombre_indice_cabeza, indice_detalle.nombre_indice_detalle, tipo_indice.nombre_tipo_indice,  indice_detalle.min_indice_detalle, indice_detalle.max_indice_detalle, indice_detalle.orden_indice_detalle", "  public.indice_cabeza, public.indice_detalle, public.tipo_indice", _parametros); 
             int reg = dtIndice.Rows.Count;
+            MessageBox.Show("Registros->" + reg + "");
             if (reg > 0)
             {
                 foreach (DataRow renglon in dtIndice.Rows)
                 {
-                    _id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
                     _nombre_indice_detalle = renglon["nombre_indice_detalle"].ToString();
                     _nombre_tipo_indice = renglon["nombre_tipo_indice"].ToString();
                     _min_indice_detalle = Convert.ToInt32(renglon["min_indice_detalle"].ToString());
@@ -122,8 +123,9 @@ namespace GestionXML
                                 dtFecha1.Visible = true;
                                 _fecha1 = true;
                             }
-                            else
+                            else 
                             {
+                               // if (_nombre_indice_detalle)
                                 textBox1.Visible = true;
                                 if (Convert.ToInt16(_max_indice_detalle) > 0)
                                 {
@@ -131,9 +133,7 @@ namespace GestionXML
                                 }
                                 
                             }
-
-
-
+                            
 
                         }
 
