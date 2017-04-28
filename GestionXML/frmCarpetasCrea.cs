@@ -38,18 +38,34 @@ namespace GestionXML
 
             string _nombre_camino = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
             string _camino = Convert.ToString(fila.Cells[2].Value); //obtengo el valor de la primer columna
-            string _parametros = " nombre_camino = '" + _nombre_camino + "'  AND  path_camino = '" + _camino + "'    ";
+            string _parametros = " nombre_caminos = '" + _nombre_camino + "'     ";
             int _id_caminos = 0;
+            DataTable dtCaminos = null;
 
-            DataTable dtCaminos = AccesoLogica.Select("id_caminos, nombre_caminos, path_caminos, id_usuarios, id_proyectos", "caminos", _parametros);
-            int reg = dtCaminos.Rows.Count;
-            if (reg > 0)
+
+            try
             {
+                dtCaminos = AccesoLogica.Select("id_caminos, nombre_caminos, path_caminos, id_usuarios, id_proyectos", "caminos", _parametros);
+            }
+            catch (Exception Ex)
+            {
+
+                MessageBox.Show("Error Al Consultar Camino->" + Ex.Message);
+            }
+
+            
+            int reg2 = dtCaminos.Rows.Count;
+            if (reg2 > 0)
+            {
+                
                 foreach (DataRow renglon in dtCaminos.Rows)
                 {
                     _id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
+                   
                 }
             }
+
+            
             DialogResult result = MessageBox.Show("Deseas Crear XML en esta Carpeta?", "Crear nuevos XML", MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             
             if (result == DialogResult.Yes)

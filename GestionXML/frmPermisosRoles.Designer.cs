@@ -53,68 +53,65 @@
             // dataGridViewPermisosRoles
             // 
             this.dataGridViewPermisosRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPermisosRoles.Location = new System.Drawing.Point(14, 332);
-            this.dataGridViewPermisosRoles.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewPermisosRoles.Location = new System.Drawing.Point(41, 383);
+            this.dataGridViewPermisosRoles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewPermisosRoles.Name = "dataGridViewPermisosRoles";
             this.dataGridViewPermisosRoles.RowTemplate.Height = 24;
-            this.dataGridViewPermisosRoles.Size = new System.Drawing.Size(562, 188);
+            this.dataGridViewPermisosRoles.Size = new System.Drawing.Size(749, 249);
             this.dataGridViewPermisosRoles.TabIndex = 11;
             this.dataGridViewPermisosRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPermisosRoles_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 81);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(103, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(48, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Roles:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 118);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(394, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(101, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Controladores:";
             // 
             // cbm_roles
             // 
             this.cbm_roles.FormattingEnabled = true;
-            this.cbm_roles.Location = new System.Drawing.Point(168, 81);
-            this.cbm_roles.Margin = new System.Windows.Forms.Padding(2);
+            this.cbm_roles.Location = new System.Drawing.Point(159, 117);
+            this.cbm_roles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbm_roles.Name = "cbm_roles";
-            this.cbm_roles.Size = new System.Drawing.Size(210, 21);
+            this.cbm_roles.Size = new System.Drawing.Size(214, 24);
             this.cbm_roles.TabIndex = 1;
             // 
             // cbm_controladores
             // 
             this.cbm_controladores.FormattingEnabled = true;
-            this.cbm_controladores.Location = new System.Drawing.Point(168, 118);
-            this.cbm_controladores.Margin = new System.Windows.Forms.Padding(2);
+            this.cbm_controladores.Location = new System.Drawing.Point(507, 117);
+            this.cbm_controladores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbm_controladores.Name = "cbm_controladores";
-            this.cbm_controladores.Size = new System.Drawing.Size(210, 21);
+            this.cbm_controladores.Size = new System.Drawing.Size(200, 24);
             this.cbm_controladores.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 47);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(29, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 13);
+            this.label3.Size = new System.Drawing.Size(124, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Nombre Permisos Roles:";
+            this.label3.Text = "Nombre Permisos:";
             // 
             // txt_nombre_permisos_roles
             // 
-            this.txt_nombre_permisos_roles.Location = new System.Drawing.Point(168, 47);
-            this.txt_nombre_permisos_roles.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_nombre_permisos_roles.Location = new System.Drawing.Point(159, 58);
+            this.txt_nombre_permisos_roles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_nombre_permisos_roles.Name = "txt_nombre_permisos_roles";
-            this.txt_nombre_permisos_roles.Size = new System.Drawing.Size(210, 20);
+            this.txt_nombre_permisos_roles.Size = new System.Drawing.Size(548, 22);
             this.txt_nombre_permisos_roles.TabIndex = 0;
             this.txt_nombre_permisos_roles.TextChanged += new System.EventHandler(this.txt_nombre_permisos_roles_TextChanged);
             // 
@@ -123,10 +120,10 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(428, 246);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(589, 266);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(77, 67);
+            this.btnSalir.Size = new System.Drawing.Size(103, 82);
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -138,10 +135,10 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(341, 246);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Location = new System.Drawing.Point(473, 266);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(80, 67);
+            this.btnEliminar.Size = new System.Drawing.Size(107, 82);
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -153,10 +150,10 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(258, 246);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpiar.Location = new System.Drawing.Point(362, 266);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 82);
             this.btnLimpiar.TabIndex = 8;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -169,10 +166,10 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(174, 246);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(250, 266);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(74, 67);
+            this.btnBuscar.Size = new System.Drawing.Size(99, 82);
             this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -185,10 +182,10 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(90, 246);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Location = new System.Drawing.Point(138, 266);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 67);
+            this.btnGuardar.Size = new System.Drawing.Size(100, 82);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -198,75 +195,63 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 197);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(114, 189);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(34, 17);
             this.label4.TabIndex = 47;
             this.label4.Text = "Ver:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(174, 197);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(311, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(49, 17);
             this.label5.TabIndex = 48;
             this.label5.Text = "Editar:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(332, 197);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(528, 190);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.Size = new System.Drawing.Size(52, 17);
             this.label6.TabIndex = 49;
             this.label6.Text = "Borrar:";
             // 
             // cbm_ver
             // 
             this.cbm_ver.FormattingEnabled = true;
-            this.cbm_ver.Items.AddRange(new object[] {
-            "True",
-            "False"});
-            this.cbm_ver.Location = new System.Drawing.Point(51, 197);
-            this.cbm_ver.Margin = new System.Windows.Forms.Padding(2);
+            this.cbm_ver.Location = new System.Drawing.Point(159, 186);
+            this.cbm_ver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbm_ver.Name = "cbm_ver";
-            this.cbm_ver.Size = new System.Drawing.Size(92, 21);
+            this.cbm_ver.Size = new System.Drawing.Size(121, 24);
             this.cbm_ver.TabIndex = 3;
             // 
             // cbm_editar
             // 
             this.cbm_editar.FormattingEnabled = true;
-            this.cbm_editar.Items.AddRange(new object[] {
-            "False",
-            "True"});
-            this.cbm_editar.Location = new System.Drawing.Point(216, 197);
-            this.cbm_editar.Margin = new System.Windows.Forms.Padding(2);
+            this.cbm_editar.Location = new System.Drawing.Point(367, 186);
+            this.cbm_editar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbm_editar.Name = "cbm_editar";
-            this.cbm_editar.Size = new System.Drawing.Size(92, 21);
+            this.cbm_editar.Size = new System.Drawing.Size(121, 24);
             this.cbm_editar.TabIndex = 4;
             // 
             // cbm_borrar
             // 
             this.cbm_borrar.FormattingEnabled = true;
-            this.cbm_borrar.Items.AddRange(new object[] {
-            "True",
-            "False"});
-            this.cbm_borrar.Location = new System.Drawing.Point(376, 197);
-            this.cbm_borrar.Margin = new System.Windows.Forms.Padding(2);
+            this.cbm_borrar.Location = new System.Drawing.Point(586, 186);
+            this.cbm_borrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbm_borrar.Name = "cbm_borrar";
-            this.cbm_borrar.Size = new System.Drawing.Size(92, 21);
+            this.cbm_borrar.Size = new System.Drawing.Size(121, 24);
             this.cbm_borrar.TabIndex = 5;
             // 
             // frmPermisosRoles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(623, 548);
+            this.ClientSize = new System.Drawing.Size(831, 674);
             this.Controls.Add(this.cbm_borrar);
             this.Controls.Add(this.cbm_editar);
             this.Controls.Add(this.cbm_ver);
@@ -286,7 +271,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewPermisosRoles);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPermisosRoles";

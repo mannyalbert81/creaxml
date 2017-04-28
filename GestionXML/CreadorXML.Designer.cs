@@ -319,6 +319,7 @@
             this.Name = "CreadorXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creador de Archivos XML";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.CreadorXML_Load);
             ((System.ComponentModel.ISupportInitialize)(this.acrobat)).EndInit();
             this.ResumeLayout(false);
