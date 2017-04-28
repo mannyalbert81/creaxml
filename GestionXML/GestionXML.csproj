@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="clases\Funciones.cs" />
     <Compile Include="clases\ImportaCartones.cs" />
+    <Compile Include="clases\Produccion.cs" />
     <Compile Include="clases\Variables.cs" />
     <Compile Include="CreadorTXT.cs">
       <SubType>Form</SubType>
