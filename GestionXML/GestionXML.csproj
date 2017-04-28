@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="clases\Funciones.cs" />
     <Compile Include="clases\ImportaCartones.cs" />
+    <Compile Include="clases\ProduccionCabeza.cs" />
     <Compile Include="clases\Variables.cs" />
     <Compile Include="CreadorTXT.cs">
       <SubType>Form</SubType>
@@ -142,6 +143,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dtTipoIndice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datas\ProduccionXml.cs">
+      <DependentUpon>ProduccionXml.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datas\ProduccionXml.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProduccionXml.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmCaminos.cs">
       <SubType>Form</SubType>
@@ -271,6 +280,12 @@
     <Compile Include="reportes\contIndice.Designer.cs">
       <DependentUpon>contIndice.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\contProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\contProduccion.Designer.cs">
+      <DependentUpon>contProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\contProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +316,12 @@
     <Compile Include="reportes\FiltroIndice.Designer.cs">
       <DependentUpon>FiltroIndice.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\FiltroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\FiltroUsuarios.Designer.cs">
+      <DependentUpon>FiltroUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\rptCaminos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -323,6 +344,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptIndice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rptProduccion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProduccion.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="reportes\rptProyectos.cs">
@@ -416,6 +443,9 @@
     <EmbeddedResource Include="reportes\contIndice.resx">
       <DependentUpon>contIndice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\contProduccion.resx">
+      <DependentUpon>contProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\contProyectos.resx">
       <DependentUpon>contProyectos.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\FiltroIndice.resx">
       <DependentUpon>FiltroIndice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\FiltroUsuarios.resx">
+      <DependentUpon>FiltroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptCaminos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -446,6 +479,10 @@
     <EmbeddedResource Include="reportes\rptIndice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptIndice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptProduccion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProduccion.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptProyectos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -520,6 +557,17 @@
     </None>
     <None Include="datas\dtTipoIndice.xss">
       <DependentUpon>dtTipoIndice.xsd</DependentUpon>
+    </None>
+    <None Include="datas\ProduccionXml.xsc">
+      <DependentUpon>ProduccionXml.xsd</DependentUpon>
+    </None>
+    <None Include="datas\ProduccionXml.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProduccionXml.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datas\ProduccionXml.xss">
+      <DependentUpon>ProduccionXml.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
