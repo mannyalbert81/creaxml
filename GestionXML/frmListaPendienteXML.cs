@@ -42,7 +42,7 @@ namespace GestionXML
 
             ////busco el id del indice cabeza
             string _parametros = " id_caminos = '" + _id_camino + "'   ";
-            
+            MessageBox.Show(_id_camino + "");
             int _id_indice_cabeza = 0;
 
             DataTable dtCaminos = AccesoLogica.Select("id_indice_cabeza", "indice_cabeza", _parametros);
