@@ -1,4 +1,5 @@
 ﻿using Negocio;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,7 +70,7 @@ namespace GestionXML
         {
             acrobat.src = nombre_pdf;
 
-            System.IO.StreamReader file = new System.IO.StreamReader(@"indice.txt");
+            //System.IO.StreamReader file = new System.IO.StreamReader(@"indice.txt");
 
 
             int _contador = 1;
@@ -83,31 +84,36 @@ namespace GestionXML
             int _min_indice_detalle = 0;
             int _max_indice_detalle = 0;
             int _orden_indice_detalle = 0;
+            int _id_indice_detalle = 0;
+            string _nombre_campo_indice_detalle;
+            string _nombre_tabla_indice_detalle;
+            bool _relacionado_indice_detalle;
 
             string _parametros = " indice_detalle.id_indice_cabeza = indice_cabeza.id_indice_cabeza AND tipo_indice.id_tipo_indice = indice_detalle.id_tipo_indice AND  indice_detalle.id_indice_cabeza = '" + _id_indice_cabeza + "'  ORDER BY indice_detalle.orden_indice_detalle ";
-            int _id_caminos = 0;
+            
+            DataTable dtIndice = AccesoLogica.Select("indice_detalle.id_indice_detalle, indice_cabeza.id_caminos, indice_cabeza.nombre_indice_cabeza, indice_detalle.nombre_indice_detalle, tipo_indice.nombre_tipo_indice,  indice_detalle.min_indice_detalle, indice_detalle.max_indice_detalle, indice_detalle.orden_indice_detalle, indice_detalle.nombre_campo_indice_detalle, indice_detalle.nombre_tabla_indice_detalle, indice_detalle.relacionado_indice_detalle", "  public.indice_cabeza, public.indice_detalle, public.tipo_indice", _parametros);
 
-            DataTable dtIndice = AccesoLogica.Select("indice_cabeza.nombre_indice_cabeza, indice_detalle.nombre_indice_detalle, tipo_indice.nombre_tipo_indice,  indice_detalle.min_indice_detalle, indice_detalle.max_indice_detalle, indice_detalle.orden_indice_detalle", "  public.indice_cabeza, public.indice_detalle, public.tipo_indice", _parametros); 
             int reg = dtIndice.Rows.Count;
             if (reg > 0)
             {
                 foreach (DataRow renglon in dtIndice.Rows)
                 {
-                    _id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
+                    _id_indice_detalle = Convert.ToInt32(renglon["id_indice_detalle"].ToString());
                     _nombre_indice_detalle = renglon["nombre_indice_detalle"].ToString();
                     _nombre_tipo_indice = renglon["nombre_tipo_indice"].ToString();
                     _min_indice_detalle = Convert.ToInt32(renglon["min_indice_detalle"].ToString());
                     _max_indice_detalle = Convert.ToInt32(renglon["max_indice_detalle"].ToString());
                     _orden_indice_detalle = Convert.ToInt32(renglon["orden_indice_detalle"].ToString());
-
-
+                    _nombre_campo_indice_detalle = renglon["nombre_campo_indice_detalle"].ToString();
+                    _nombre_tabla_indice_detalle = renglon["nombre_tabla_indice_detalle"].ToString();
+                    _relacionado_indice_detalle = Convert.ToBoolean(renglon["relacionado_indice_detalle"].ToString());
 
 
                     if (_nombre_indice_detalle.Length > 0)
                     {
                         if (_contador == 1)
                         {
-                            
+
                             label1.Text = _nombre_indice_detalle;
                             label1.Visible = true;
 
@@ -127,12 +133,52 @@ namespace GestionXML
                                 textBox1.Visible = true;
                                 if (Convert.ToInt16(_max_indice_detalle) > 0)
                                 {
-                                    textBox1.MaxLength = _max_indice_detalle;
+                                    textBox1.MaxLength = Convert.ToInt16(_max_indice_detalle);
                                 }
-                                
+
+                                if (_relacionado_indice_detalle)
+                                {
+
+
+
+                                    textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                    textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+
+                                    DataSet dtText1 = new DataSet();
+
+                                    NpgsqlDataAdapter daText1 = new NpgsqlDataAdapter();
+                                    try
+                                    {
+
+                                        daText1 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
+
+                                    }
+                                    catch (Exception Ex)
+                                    {
+                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
+                                    }
+
+                                    daText1.Fill(dtText1, _nombre_tabla_indice_detalle);
+
+                                    int i = 0;
+                                    for (i = 0; i <= dtText1.Tables[0].Rows.Count - 1; i++)
+                                    {
+                                        col.Add(dtText1.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
+
+                                    }
+
+                                    textBox1.AutoCompleteCustomSource = col;
+
+                                }
+                                else
+                                {
+
+
+                                }
+
                             }
-
-
 
 
                         }
@@ -164,6 +210,52 @@ namespace GestionXML
                                 {
                                     textBox2.MaxLength = Convert.ToInt16(_max_indice_detalle);
                                 }
+
+                                if (_relacionado_indice_detalle)
+                                {
+
+
+
+                                    textBox2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                    textBox2.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+
+                                    DataSet dtText2 = new DataSet();
+
+                                    NpgsqlDataAdapter daText2 = new NpgsqlDataAdapter();
+                                    try
+                                    {
+
+                                        daText2 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
+
+                                    }
+                                    catch (Exception Ex)
+                                    {
+                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
+                                    }
+
+                                    daText2.Fill(dtText2, _nombre_tabla_indice_detalle);
+
+                                    int i = 0;
+                                    for (i = 0; i <= dtText2.Tables[0].Rows.Count - 1; i++)
+                                    {
+                                        col.Add(dtText2.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
+
+                                    }
+
+                                    textBox2.AutoCompleteCustomSource = col;
+
+                                }
+                                else
+                                {
+
+
+                                }
+
+
+
+
                             }
 
 
@@ -194,6 +286,49 @@ namespace GestionXML
                                 {
                                     textBox3.MaxLength = Convert.ToInt16(_max_indice_detalle);
                                 }
+
+                                if (_relacionado_indice_detalle)
+                                {
+
+
+
+                                    textBox3.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                    textBox3.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+
+                                    DataSet dtText3 = new DataSet();
+
+                                    NpgsqlDataAdapter daText3 = new NpgsqlDataAdapter();
+                                    try
+                                    {
+
+                                        daText3 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
+
+                                    }
+                                    catch (Exception Ex)
+                                    {
+                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
+                                    }
+
+                                    daText3.Fill(dtText3, _nombre_tabla_indice_detalle);
+
+                                    int i = 0;
+                                    for (i = 0; i <= dtText3.Tables[0].Rows.Count - 1; i++)
+                                    {
+                                        col.Add(dtText3.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
+
+                                    }
+
+                                    textBox3.AutoCompleteCustomSource = col;
+
+                                }
+                                else
+                                {
+
+
+                                }
+
                             }
 
 
@@ -223,6 +358,49 @@ namespace GestionXML
                                 {
                                     textBox4.MaxLength = Convert.ToInt16(_max_indice_detalle);
                                 }
+
+                                if (_relacionado_indice_detalle)
+                                {
+
+
+
+                                    textBox4.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                    textBox4.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+
+                                    DataSet dtText4 = new DataSet();
+
+                                    NpgsqlDataAdapter daText4 = new NpgsqlDataAdapter();
+                                    try
+                                    {
+
+                                        daText4 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
+
+                                    }
+                                    catch (Exception Ex)
+                                    {
+                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
+                                    }
+
+                                    daText4.Fill(dtText4, _nombre_tabla_indice_detalle);
+
+                                    int i = 0;
+                                    for (i = 0; i <= dtText4.Tables[0].Rows.Count - 1; i++)
+                                    {
+                                        col.Add(dtText4.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
+
+                                    }
+
+                                    textBox4.AutoCompleteCustomSource = col;
+
+                                }
+                                else
+                                {
+
+
+                                }
+
                             }
 
 
@@ -257,6 +435,50 @@ namespace GestionXML
                                 {
                                     textBox5.MaxLength = Convert.ToInt16(_max_indice_detalle);
                                 }
+
+                                if (_relacionado_indice_detalle)
+                                {
+
+                                    
+                                    
+                                    textBox5.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                                    textBox5.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                      
+                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+
+                                    DataSet dtText5 = new DataSet();
+
+                                    NpgsqlDataAdapter daText5 = new NpgsqlDataAdapter();
+                                    try
+                                    {
+
+                                        daText5 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle  );
+                                     
+                                    }
+                                    catch (Exception Ex)
+                                    {
+                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
+                                    }
+
+                                    daText5.Fill(dtText5, _nombre_tabla_indice_detalle);
+
+                                    int i = 0;
+                                    for (i = 0; i <= dtText5.Tables[0].Rows.Count - 1; i++)
+                                    {
+                                        col.Add(dtText5.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
+
+                                    }
+                                    
+                                    textBox5.AutoCompleteCustomSource = col;
+
+                                }
+                                else
+                                {
+
+                                    
+                                }
+
+
                             }
 
 

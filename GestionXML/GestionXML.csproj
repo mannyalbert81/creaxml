@@ -86,6 +86,7 @@
     <Compile Include="clases\Funciones.cs" />
     <Compile Include="clases\ImportaCartones.cs" />
     <Compile Include="clases\ProduccionCabeza.cs" />
+    <Compile Include="clases\ProduccionDetalle.cs" />
     <Compile Include="clases\Variables.cs" />
     <Compile Include="CreadorTXT.cs">
       <SubType>Form</SubType>

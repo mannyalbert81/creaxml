@@ -85,7 +85,7 @@
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCargar.Image = global::GestionXML.Properties.Resources.carpeta__4_;
-            this.btnCargar.Location = new System.Drawing.Point(743, 41);
+            this.btnCargar.Location = new System.Drawing.Point(747, 0);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(108, 70);
             this.btnCargar.TabIndex = 1;
@@ -104,9 +104,9 @@
             this.PDF,
             this.XML,
             this.dif});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 117);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 76);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(839, 337);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 378);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -155,12 +155,10 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmCarpetasCalidad";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creador de XML";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -110,7 +110,6 @@
             this.Name = "frmListaPendienteXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Archivos XML Pendientes";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmCreaXML_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
