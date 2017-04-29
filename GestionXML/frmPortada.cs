@@ -19,8 +19,9 @@ namespace GestionXML
 
             timer2.Interval = 10000;
             timer2.Start();
+            
             timer2.Tick += (s, e) => {
-
+                clases.ImportaCartones.Inserta();
                 frmLogin frm = new frmLogin();
                 frm.Show();
                 this.Hide();
@@ -28,36 +29,12 @@ namespace GestionXML
             };
         }
 
-        private void frmPortada_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void timer3_Tick(object sender, EventArgs e)
         {
-            //clases.ImportaCartones.Inserta();
+            
             this.progressBar1.Increment(1);
-         
+
         }
+
     }
 }
