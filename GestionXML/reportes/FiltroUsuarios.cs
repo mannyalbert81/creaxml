@@ -20,16 +20,36 @@ namespace GestionXML.reportes
         private void FiltroProduccion_Load(object sender, EventArgs e)
         {
             clases.Funciones.CargarCombo(cbm_usuarios, "id_usuarios", "nombre_usuarios", "usuarios");
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int _id_usuario = Convert.ToInt32(cbm_usuarios.SelectedValue.ToString());
+            if (dateTimePicker1.Value > dateTimePicker2.Value)
 
 
-            reportes.contProduccion frm = new reportes.contProduccion();
-            frm._id_usuario = _id_usuario;
-            frm.Show();
+            {
+
+                MessageBox.Show("Fecha incorrecta");
+            }
+            else
+            {
+
+                int _id_usuario = Convert.ToInt32(cbm_usuarios.SelectedValue.ToString());
+               
+
+
+                reportes.contProduccion frm = new reportes.contProduccion();
+                frm._id_usuario = _id_usuario;
+                frm.Show();
+
+            }
+        }
+
+        private void cbm_usuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbm_usuarios.DropDownStyle = ComboBoxStyle.DropDownList;
         }
     }
 }

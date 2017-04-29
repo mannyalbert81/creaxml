@@ -13,6 +13,9 @@ namespace GestionXML
     public partial class frmMenucs : Form
     {
         public static frmMenucs mdiobj;
+
+        public string _nombre_usuarios = "";
+
         public frmMenucs()
         {
             InitializeComponent();
@@ -21,7 +24,7 @@ namespace GestionXML
 
         private void frmMenucs_Load(object sender, EventArgs e)
         {
-   
+            label1.Text = _nombre_usuarios;
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -292,6 +295,12 @@ namespace GestionXML
         private void producciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             reportes.FiltroUsuarios frm = new reportes.FiltroUsuarios();
+            frm.Show();
+        }
+
+        private void asignarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAsignar frm = new frmAsignar();
             frm.Show();
         }
     }

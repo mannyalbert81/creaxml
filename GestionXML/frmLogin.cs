@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 
@@ -27,15 +28,26 @@ namespace GestionXML
         {
             string _usuario_usuarios = txt_usuario.Text;
             string _clave_usuarios = txt_password.Text;
-
+            string _nombre_usuarios = "";
+          
             DataTable dtUsuario = AccesoLogica.Select("nombre_usuarios", "usuarios", "usuario_usuarios = '" + _usuario_usuarios + "' AND clave_usuarios = '" + _clave_usuarios + "'  ");
+            foreach (DataRow renglon in dtUsuario.Rows)
+            {
+                _nombre_usuarios = Convert.ToString(renglon["nombre_usuarios"].ToString());
+               
+            }
+
             int registro = dtUsuario.Rows.Count;
             if (registro > 0)
             {
 
+                MessageBox.Show("Bienvenido " + _nombre_usuarios, "Ingreso Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 frmMenucs frm = new frmMenucs();
+               
+                frm._nombre_usuarios = _nombre_usuarios;
                 frm.Show();
-                this.Hide();
+               this.Hide();
 
             }
             else
