@@ -369,3 +369,4 @@ C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.repo
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarios.resources
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contProduccion.resources
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarios.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmAsignar.resources

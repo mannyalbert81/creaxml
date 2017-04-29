@@ -152,6 +152,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProduccionXml.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAsignar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignar.Designer.cs">
+      <DependentUpon>frmAsignar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCaminos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreadorXML.resx">
       <DependentUpon>CreadorXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignar.resx">
+      <DependentUpon>frmAsignar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCaminos.resx">
       <DependentUpon>frmCaminos.cs</DependentUpon>

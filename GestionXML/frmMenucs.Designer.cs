@@ -45,6 +45,7 @@
             this.cartonDocumentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlarCalidadXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +76,8 @@
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -173,7 +176,8 @@
             this.caminosToolStripMenuItem,
             this.cartonDocumentosToolStripMenuItem,
             this.estadoToolStripMenuItem,
-            this.indiceToolStripMenuItem});
+            this.indiceToolStripMenuItem,
+            this.asignarToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Image = global::GestionXML.Properties.Resources.mantenimiento;
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
@@ -226,6 +230,13 @@
             this.indiceToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.indiceToolStripMenuItem.Text = "Indice";
             this.indiceToolStripMenuItem.Click += new System.EventHandler(this.indiceToolStripMenuItem_Click);
+            // 
+            // asignarToolStripMenuItem
+            // 
+            this.asignarToolStripMenuItem.Name = "asignarToolStripMenuItem";
+            this.asignarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.asignarToolStripMenuItem.Text = "Asignar";
+            this.asignarToolStripMenuItem.Click += new System.EventHandler(this.asignarToolStripMenuItem_Click);
             // 
             // gestionXMLToolStripMenuItem
             // 
@@ -507,18 +518,37 @@
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(6, 60);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(917, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(714, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Bienvenido:";
+            // 
             // frmMenucs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1061, 373);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenucs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestor de Archivos XML";
@@ -581,5 +611,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton12;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.ToolStripMenuItem producciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
