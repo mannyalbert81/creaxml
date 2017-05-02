@@ -368,3 +368,6 @@ C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.Fil
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroIndice.resources
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarios.resources
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.GenerateResource.Cache
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmAsignar.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contProduccion.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarios.resources
