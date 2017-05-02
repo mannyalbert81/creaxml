@@ -64,7 +64,7 @@
             this.cbm_usuarios.FormattingEnabled = true;
             this.cbm_usuarios.Location = new System.Drawing.Point(65, 12);
             this.cbm_usuarios.Name = "cbm_usuarios";
-            this.cbm_usuarios.Size = new System.Drawing.Size(157, 21);
+            this.cbm_usuarios.Size = new System.Drawing.Size(522, 21);
             this.cbm_usuarios.TabIndex = 4;
             this.cbm_usuarios.SelectedIndexChanged += new System.EventHandler(this.cbm_usuarios_SelectedIndexChanged);
             // 
