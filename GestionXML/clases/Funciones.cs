@@ -31,7 +31,27 @@ namespace GestionXML.clases
             }
            
         }
-        
+
+
+        public static void CargarComboWhere(System.Windows.Forms.ComboBox cmb, string id, string columna, string tabla, string where)
+        {
+
+            try
+            {
+                cmb.Items.Insert(0, "Seleccione..");
+                cmb.DataSource = AccesoLogica.Select(id + ", " + columna, tabla, where);
+                cmb.DisplayMember = columna;
+                cmb.ValueMember = id;
+                cmb.SelectedIndex = 0;
+
+            }
+            catch
+            {
+
+            }
+
+        }
+
 
         public static void CargarCombo_inner(System.Windows.Forms.ComboBox cmb, string id, string columna, string tabla_uno, string tabla_dos, string parametro)
         {

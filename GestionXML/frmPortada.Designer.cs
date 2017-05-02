@@ -40,7 +40,6 @@
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // pictureBox2
             // 
@@ -51,7 +50,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(602, 409);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // progressBar1
             // 
@@ -66,7 +64,6 @@
             this.progressBar1.TabIndex = 1;
             this.progressBar1.UseWaitCursor = true;
             this.progressBar1.Value = 5;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // timer3
             // 
