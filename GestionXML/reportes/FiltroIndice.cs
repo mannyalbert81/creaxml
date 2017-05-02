@@ -22,6 +22,10 @@ namespace GestionXML.reportes
             clases.Funciones.CargarCombo(cbm_proyectos, "id_proyectos", "nombre_proyectos", "proyectos");
             
             clases.Funciones.CargarCombo(cmb_Caminos, "id_caminos", "nombre_caminos", "caminos");
+
+
+        
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,6 +46,8 @@ namespace GestionXML.reportes
         private void cbm_proyectos_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbm_proyectos.DropDownStyle = ComboBoxStyle.DropDownList;
+
+           
         }
 
         private void cmb_Caminos_SelectedIndexChanged(object sender, EventArgs e)
