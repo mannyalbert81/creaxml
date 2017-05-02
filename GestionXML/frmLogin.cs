@@ -62,7 +62,7 @@ namespace GestionXML
 
 
             ///consulto licencias detalle
-            DataTable dtLicencias_detalle1 = AccesoLogica.Select("mac_adres_maquina", "licencias_detalle", "licencias_detalle.id_licencias_detalle > 0");
+            DataTable dtLicencias_detalle1 = AccesoLogica.Select("mac_adres_maquina", "licencias_detalle", "licencias_detalle.mac_adres_maquina= '" + _mac1 + "'");
             foreach (DataRow renglon_de1 in dtLicencias_detalle1.Rows)
             {
                 _mac = Convert.ToString(renglon_de1["mac_adres_maquina"].ToString());
@@ -104,7 +104,7 @@ namespace GestionXML
 
 
 
-                            DataTable dtLicencias_detalle = AccesoLogica.Select("mac_adres_maquina", "licencias_detalle", "licencias_detalle.id_licencias= '" + _id_licencias + "'");
+                            DataTable dtLicencias_detalle = AccesoLogica.Select("mac_adres_maquina", "licencias_detalle", "licencias_detalle.mac_adres_maquina= '" + _mac_adres_maquina + "'");
                             foreach (DataRow renglon_de in dtLicencias_detalle.Rows)
                             {
                                 _mac = Convert.ToString(renglon_de["mac_adres_maquina"].ToString());
