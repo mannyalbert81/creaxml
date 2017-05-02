@@ -77,7 +77,7 @@ namespace GestionXML
                 frm.Show();
                 this.Hide();
             }
-            else if (registro <= 0)
+             if (registro <= 0)
             {
 
                 MessageBox.Show("Usuario o Clave Incorrecta", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -86,7 +86,7 @@ namespace GestionXML
                 txt_password.Text = "";
             }
 
-            else if (_cantidad_licencias > 0 && registro > 0)
+             if (_cantidad_licencias > 0 && registro > 0)
             {
 
                 _mac_adres_maquina = HardwareInfo.GetMACAddress();
@@ -124,7 +124,7 @@ namespace GestionXML
                     }
                     else
                     {
-                        MessageBox.Show("Maquina No Registrada", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Maquina No Registrada1", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         txt_usuario.Text = "";
                         txt_password.Text = "";
@@ -140,7 +140,7 @@ namespace GestionXML
 
 
             }
-            else if (registro > 0 && _mac == _mac1)
+            if (registro > 0 && _mac == _mac1)
             {
 
                 frmMenucs frm = new frmMenucs();
@@ -148,14 +148,14 @@ namespace GestionXML
                 frm.Show();
                 this.Hide();
             }
-            else if (registro <= 0) {
+             if (registro <= 0) {
 
                 MessageBox.Show("Usuario o Clave Incorrecta", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 txt_usuario.Text = "";
                 txt_password.Text = "";
             }
-            else if (registro > 0 && _mac != _mac1)
+            if (registro > 0 && _mac != _mac1)
             {
                 MessageBox.Show("Maquina No Registrada", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
