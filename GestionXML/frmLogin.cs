@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
 using Npgsql;
+using System.Net;
+using System.Net.NetworkInformation;
 
 
 
@@ -37,8 +39,22 @@ namespace GestionXML
             string _ip_maquina = "";
             string _mac = "";
             string _mac1 = "";
+            
 
             _mac1 = HardwareInfo.GetMACAddress();
+            _nombre_sesion_maquina = HardwareInfo.GetComputerName();
+
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    _ip_maquina = ip.ToString();
+                }
+            }
+
+
             // CONSULTO USUARIO Y CLAVE
 
 
