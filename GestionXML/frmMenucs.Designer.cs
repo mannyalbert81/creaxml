@@ -78,6 +78,7 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -101,7 +102,8 @@
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirToolStripMenuItem});
+            this.salirToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
             this.archivoToolStripMenuItem.Image = global::GestionXML.Properties.Resources.carpeta;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
@@ -111,7 +113,7 @@
             // 
             this.salirToolStripMenuItem.Image = global::GestionXML.Properties.Resources.salida;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -535,6 +537,13 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Bienvenido:";
             // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
             // frmMenucs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -614,5 +623,6 @@
         private System.Windows.Forms.ToolStripMenuItem asignarToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
     }
 }

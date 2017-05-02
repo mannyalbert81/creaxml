@@ -50,32 +50,29 @@ namespace GestionXML
             }
             int registro = dtUsuario.Rows.Count;
 
-            
+            // CONSULTO NUMERO DE LICENCIAS
 
-             if (registro > 0)
+            DataTable dtLicencias = AccesoLogica.Select("licencias.id_licencias, licencias.numero_licencias_registradas, licencias.cantidad_licencias", "licencias", "licencias.id_licencias > 0");
+            foreach (DataRow renglon_li in dtLicencias.Rows)
             {
-
-                // CONSULTO NUMERO DE LICENCIAS
-
-                DataTable dtLicencias = AccesoLogica.Select("licencias.id_licencias, licencias.numero_licencias_registradas, licencias.cantidad_licencias", "licencias", "licencias.id_licencias > 0");
-                foreach (DataRow renglon_li in dtLicencias.Rows)
-                {
-                    _id_licencias = Convert.ToInt32(renglon_li["id_licencias"].ToString());
-                    _numero_licencias_registradas = Convert.ToInt32(renglon_li["numero_licencias_registradas"].ToString());
-                    _cantidad_licencias = Convert.ToInt32(renglon_li["cantidad_licencias"].ToString());
-                }
+                _id_licencias = Convert.ToInt32(renglon_li["id_licencias"].ToString());
+                _numero_licencias_registradas = Convert.ToInt32(renglon_li["numero_licencias_registradas"].ToString());
+                _cantidad_licencias = Convert.ToInt32(renglon_li["cantidad_licencias"].ToString());
+            }
 
 
-                ///consulto licencias detalle
-                DataTable dtLicencias_detalle1 = AccesoLogica.Select("mac_adres_maquina", "licencias_detalle", "licencias_detalle.id_licencias_detalle > 0");
-                foreach (DataRow renglon_de1 in dtLicencias_detalle1.Rows)
-                {
-                    _mac = Convert.ToString(renglon_de1["mac_adres_maquina"].ToString());
+            ///consulto licencias detalle
+            DataTable dtLicencias_detalle1 = AccesoLogica.Select("mac_adres_maquina", "licencias_detalle", "licencias_detalle.mac_adres_maquina= '" + _mac1 + "'");
+            foreach (DataRow renglon_de1 in dtLicencias_detalle1.Rows)
+            {
+                _mac = Convert.ToString(renglon_de1["mac_adres_maquina"].ToString());
 
-                }
+            }
 
+
+            if (registro > 0)
+            {
                 
-
                 if (_cantidad_licencias > 0 )
                 {
 
@@ -107,7 +104,7 @@ namespace GestionXML
 
 
 
-                            DataTable dtLicencias_detalle = AccesoLogica.Select("mac_adres_maquina", "licencias_detalle", "licencias_detalle.id_licencias= '" + _id_licencias + "'");
+                            DataTable dtLicencias_detalle = AccesoLogica.Select("mac_adres_maquina", "licencias_detalle", "licencias_detalle.mac_adres_maquina= '" + _mac_adres_maquina + "'");
                             foreach (DataRow renglon_de in dtLicencias_detalle.Rows)
                             {
                                 _mac = Convert.ToString(renglon_de["mac_adres_maquina"].ToString());
