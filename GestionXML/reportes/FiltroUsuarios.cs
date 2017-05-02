@@ -37,8 +37,7 @@ namespace GestionXML.reportes
             {
 
                 int _id_usuario = Convert.ToInt32(cbm_usuarios.SelectedValue.ToString());
-               
-
+       
 
                 reportes.contProduccion frm = new reportes.contProduccion();
                 frm._id_usuario = _id_usuario;
