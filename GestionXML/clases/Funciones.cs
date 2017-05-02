@@ -35,7 +35,7 @@ namespace GestionXML.clases
 
         public static void CargarComboWhere(System.Windows.Forms.ComboBox cmb, string id, string columna, string tabla, string where)
         {
-           
+         
             try
             {
                 cmb.Items.Insert(0, "Seleccione..");

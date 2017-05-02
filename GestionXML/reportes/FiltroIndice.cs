@@ -18,6 +18,8 @@ namespace GestionXML.reportes
         }
 
         private void FiltroIndice_Load(object sender, EventArgs e)
+     
+
         {
             clases.Funciones.CargarCombo(cbm_proyectos, "id_proyectos", "nombre_proyectos", "proyectos");
 
