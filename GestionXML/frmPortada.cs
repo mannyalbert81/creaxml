@@ -21,7 +21,7 @@ namespace GestionXML
             timer2.Start();
             
             timer2.Tick += (s, e) => {
-                clases.ImportaCartones.Inserta();
+                //clases.ImportaCartones.Inserta();
                 frmLogin frm = new frmLogin();
                 frm.Show();
                 this.Hide();
