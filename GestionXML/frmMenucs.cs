@@ -326,5 +326,6 @@ namespace GestionXML
             InstalarLicencias frm = new InstalarLicencias();
             frm.Show();
         }
+        
     }
 }
