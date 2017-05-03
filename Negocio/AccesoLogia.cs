@@ -13,6 +13,8 @@ namespace Negocio
     public class AccesoLogica
     {
 
+
+
        public static string clavesita = ".Romina.2012"; // Clave de cifrado. NOTA: Puede ser cualquier combinación de carácteres.
 
        

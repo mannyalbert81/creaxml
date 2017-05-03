@@ -117,47 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="numero.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NOMBRE.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="camino.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PDF.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="XML.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dif.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAHAAAABwAAAAAAAAAAAA
-        AAD///8A////AP///wD///8A////AP///wBrXkd3a2BIWE5BLEtNQCtg////AP///wD///8A////AP//
-        /wD///8A////AP///wD///8AVVVVA21fSSNrXkedbF9H/2xfR85NQSvDTUEr/0xBLIZVQCsM////AP//
-        /wD///8A////AP///wD///8AbF9GcWxfR/lsX0f/bF9H/2xfR/9sX0f/VUky/01BK/9NQSv/TUEr/01B
-        K+RNQCxj////AP///wD///8A////AG1bSRxsX0f6bF9H/2xfR/9ofXj/aXRp/2JtYv9SaWX/TUEr/01B
-        K/9NQSv7SkIpH////wD///8A////AP///wD///8AbV5Homh/e/9kl6L/Xsfu/17H7/9ex+//Xsbu/1aK
-        lv9SbGr/TEIrp////wD///8A////AP///wD///8A////AGeSmE1ex+//Xsbu/1q+5P9Xut//V7rf/1q+
-        5P9exu7/Xsfv/1eFkVj///8A////AP///wD///8A////AGLL8CJex+/EXMTr/1a43f9awOb/XcXt/13F
-        7f9awOb/Vrjd/1zE6/9ex+/JXsnyJv///wD///8A////AP///wBfx++MXsfv/1e43f9dxOz/XcTs/1m8
-        4v9ZvOL/XcTs/13F7P9XuN3/Xsfv/13H75H///8A////AP///wD///8AXsbvkFvC6f9ZveP/Xsbu/1W0
-        2f9Wttv/Vrbb/1W02P9exu7/Wb3j/1vC6f9exu+Q////AP///wD///8AYMrqGF7H7/ZavuT/W8Ho/1rA
-        5v9UtNj/Xsbu/17G7v9UtNj/WsDm/1vB6P9avuT/Xsfv9mDK6hj///8A////AAD//wFex+7IWsDn/1q/
-        5v9cw+r/VLPX/1q/5v9av+b/VLPX/1zD6v9av+b/WsDn/17H7sgA//8B////AP///wD///8AX8fwhF3F
-        7P9Xud7/Xsfv/1i84f9UtNj/VLTY/1i84f9ex+//V7ne/13F7P9exu+C////AP///wD///8A////AF7H
-        73Jex+//Wb3j/1m84v9ex+//Xcbt/13G7f9ex+//Wbzi/1m94/9ex+/+Xcjua////wD///8A////AP//
-        /wD///8AXcjua17H7/9av+b/Vrfc/1i74P9Yu+D/Vrfc/1q/5v9ex+//XcbwY////wD///8A////AP//
-        /wD///8A////AGbM5gpdx+/KXsfv8V7H7/9dxOz/XcTs/17H7/9ex+/xXsfwx222/wf///8A////AP//
-        /wD///8A////AP///wD///8A////AGPG8RJex+/JXsfvrV7H765ex/DHY8bxEv///wD///8A////AP//
-        /wD///8A/D8AAOAPAADAAwAAwAMAAOAHAADgBwAAwAMAAMADAADAAwAAgAEAAIABAADAAwAAwAMAAOAH
-        AADgBwAA+B8AAA==
-</value>
-  </data>
 </root>

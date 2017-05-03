@@ -8,23 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
+using Negocio;
 
 namespace GestionXML
 {
     public partial class frmListaPendienteTXT : Form
     {
-        public string _camino = "";
-
-        
-        DataSet ds;
-        DataTable dtSource;
-        int PageCount;
-        int maxRec;
-        int pageSize;
-        int currentPage;
-        int recNo;
-
+        public string _path_camino = "";
+        public int _id_camino = 0;
 
         public frmListaPendienteTXT()
         {
@@ -33,51 +24,23 @@ namespace GestionXML
 
         private void frmListaPendienteTXT_Load(object sender, EventArgs e)
         {
-          lblCamino.Text = _camino;
+            //cmbEquipos.SelectedIndex = 0;
+
+
+            //lblCamino.Text = _path_camino;
 
 
             //cargo los pdf
-            CargaGrid("");
+            CargaGrid(0);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+
+        public void CargaGrid(int _tipo)
         {
-            DataGridViewRow fila = dataGridView1.CurrentRow;
-            string _camino = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
-
-            DialogResult result = MessageBox.Show("Deseas Crear XML de este PDF?", "Crear nuevo XML", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-            if (result == DialogResult.Yes)
-            {
-                CreadorTXT Crea = new CreadorTXT();
-                Crea.nombre_pdf = _camino;
-                Crea.Show();
-            }
-            if (result == DialogResult.No)
-            {
-            }
-        }
-
-        private void btnRecargar_Click(object sender, EventArgs e)
-        {
-
-            CargaGrid("");
-        }
-
-        public void CargaGrid(string _parametro)
-        {
-            int i;
-            int startRec;
-            int endRec;
-            
-            DataTable dtTemp = new DataTable();
-            dtTemp.Columns.Add("nombre");
-
             dataGridView1.Rows.Clear();
 
-            DirectoryInfo directory = new DirectoryInfo(@_camino);
-
-
+            DirectoryInfo directory = new DirectoryInfo(@_path_camino);
             FileInfo[] filesPDF = directory.GetFiles("*.PDF");
             FileInfo[] filesXML = directory.GetFiles("*.XML");
 
@@ -90,259 +53,145 @@ namespace GestionXML
             for (int ii = 0; ii < filesXML.Length; ii++)
             {
                 _nombre_xml = ((FileInfo)filesXML[ii]).FullName;
+
                 dtXML.Rows.Add(_nombre_xml);
                 _cantidadXMLCrear++;
 
             }
 
-
-
-            if (_parametro == "")
+            DirectoryInfo[] directories = directory.GetDirectories();
+            string _nombre_pdf = "";
+            DateTime _date_creado_pdf = DateTime.Now;
+            string _nombre_pdf_name = "";
+            int _agregados = 0;
+            string _equipo = "";
+            for (int i = 0; i < filesPDF.Length; i++)
             {
-                DirectoryInfo[] directories = directory.GetDirectories();
-                string _nombre_pdf = "";
-                int _agregados = 0;
-                for (int ii = 0; ii < filesPDF.Length; ii++)
+
+                _nombre_pdf = ((FileInfo)filesPDF[i]).FullName;
+                _date_creado_pdf = File.GetLastWriteTime(filesPDF[i].FullName);
+                _nombre_pdf_name = ((FileInfo)filesPDF[i]).Name;
+
+                DataRow[] foundRows = null;
+                try
                 {
-                    _nombre_pdf = ((FileInfo)filesPDF[ii]).FullName;
+                    foundRows = dtXML.Select("nombre = '" + _nombre_pdf.Replace(".XML", ".pdf") + "'   ");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Archivo: ----  " + _nombre_pdf);
+                }
 
 
-                    DataRow[] foundRows;
-                    foundRows = dtXML.Select("nombre = '" + _nombre_pdf.Replace(".pdf", ".XML") + "'   ");
-                    if (foundRows.Length == 0) //no lo encontre 
+                if (foundRows.Length == 0)
+                {
+
+
+                    if (_tipo == 0)
                     {
-                        dtTemp.Rows.Add(_nombre_pdf);
-                        //dataGridView1.Rows.Insert(_agregados, _agregados + 1, _nombre_pdf);
+
+                        dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf, _nombre_pdf);
                         _agregados++;
+
                     }
-                    else // lo encontre pero debo rrevisarlo
+
+
+
+
+                    /* 
+                    if (_tipo == 1)
                     {
+                    
+                        _equipo = cmbEquipos.SelectedItem.ToString();
 
-                        if (BuscarEstadoXML(_nombre_pdf.Replace(".pdf", ".XML")))
+                        if (_equipo == "TODOS")
                         {
 
-                        }
-                        else
-                        {
-                            dtTemp.Rows.Add(_nombre_pdf);
-                            //dataGridView1.Rows.Insert(_agregados, _agregados + 1, _nombre_pdf);
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf , _nombre_pdf);
                             _agregados++;
                         }
+                        else if (_equipo == _nombre_pdf_name.Substring(0, 7))
+                        {
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf , _nombre_pdf);
+                            _agregados++;
+                        }
+
+                    }
+                    */
+
+                    if (_tipo == 2)
+                    {
+                        
+                        _equipo = txtTextoBuscar.Text.ToString();
+
+                        bool b = _nombre_pdf_name.Contains(_equipo);
+
+                        if (_equipo == "TODOS")
+                        {
+
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf, _nombre_pdf);
+                            _agregados++;
+                        }
+                        else if (b)
+                        {
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf, _nombre_pdf);
+                            _agregados++;
+
+                        }
                     }
 
 
                 }
-            }
-            else
-            {
-                dtTemp.Rows.Add(_parametro.Replace(".XML", ".pdf"));
-                //dataGridView1.Rows.Insert(0, 1, );
-                
-            }
 
 
-          
-            //Clone the source table to create a temporary table.
-            //dtTemp = dtSource.Clone();
 
-            if (currentPage == PageCount)
-            {
-                endRec = maxRec;
             }
-            else
-            {
-                endRec = pageSize * currentPage;
-            }
-            startRec = recNo;
-
-            //Copy rows from the source table to fill the temporary table.
-            for (i = startRec; i < endRec; i++)
-            {
-                dtTemp.ImportRow(dtSource.Rows[i]);
-                recNo += 1;
-            }
-            dataGridView1.DataSource = dtTemp;
-            DisplayPageInfo();
 
             //_path_completo.Replace(".XML", ".pdf")
 
 
-            //_path_completo.Replace(".XML", ".pdf")
-
-
         }
 
-        private void DisplayPageInfo()
+        private void txtTextoBuscar_TextChanged(object sender, EventArgs e)
         {
-            txtDisplayPageNo.Text = "Page " + currentPage.ToString() + "/ " + PageCount.ToString();
-            
+            CargaGrid(2);
         }
 
-        private bool CheckFillButton()
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            // Check if the user clicks the "Fill Grid" button.
-            if (pageSize == 0)
+            DataGridViewRow fila = dataGridView1.CurrentRow;
+            string _camino = Convert.ToString(fila.Cells[2].Value); //obtengo el valor de la primer columna
+
+
+            ////busco el id del indice cabeza
+            string _parametros = " id_caminos = '" + _id_camino + "'   ";
+
+            int _id_indice_cabeza = 0;
+
+            DataTable dtCaminos = AccesoLogica.Select("id_indice_cabeza", "indice_cabeza", _parametros);
+            int reg = dtCaminos.Rows.Count;
+            if (reg > 0)
             {
-                MessageBox.Show("Set the Page Size, and then click the Fill Grid button!");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        public static bool BuscarEstadoXML(string _path)
-        {
-            Boolean _estado = false;
-
-            string _campo_estado = "";
-            
-            try
-            {
-                var xdoc = XDocument.Load(@_path);
-
-                var items = from i in xdoc.Descendants("field")
-                            select new
-                            {
-                                _name = (string)i.Attribute("name"),
-                                _value = (string)i.Attribute("value")
-                            };
-
-                
-                foreach (var item in items)
+                foreach (DataRow renglon in dtCaminos.Rows)
                 {
-
-                    // use item.Action or item.FileName
-                    if (item._name.ToString() != "VALIDADO")
-                    {
-                        _campo_estado = item._value.ToString().Trim();
-                    }
-
-                    if (_campo_estado == "1")
-                    {
-                        _estado = true;
-
-                    }
-
+                    _id_indice_cabeza = Convert.ToInt32(renglon["id_indice_cabeza"].ToString());
                 }
             }
-            catch (Exception Ex)
-            {
 
-                
+
+            DialogResult result = MessageBox.Show("Deseas Crear XML de este PDF?", "Crear nuevo XML", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                CreadorXML Crea = new CreadorXML();
+                Crea.nombre_pdf = _camino;
+                Crea._id_indice_cabeza = _id_indice_cabeza;
+                Crea.Show();
+            }
+            if (result == DialogResult.No)
+            {
             }
 
-            return _estado;
-        }
-
-        private void btnFiltrar_Click(object sender, EventArgs e)
-        {
-            if (txtTextoBuscar.Text.Length > 0)
-            {
-
-                CargaGrid(txtTextoBuscar.Text.Trim());
-            }
-            else
-            {
-                MessageBox.Show("Introduzca el nombre completo de ubicacion del archivo XML", "Filtro Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-        }
-
-        private void btnFirstPage_Click(object sender, EventArgs e)
-        {
-            if (CheckFillButton() == false)
-            {
-                return;
-            }
-
-            //Check if you are already at the first page.
-            if (currentPage == 1)
-            {
-                MessageBox.Show("You are at the First Page!");
-                return;
-            }
-
-            currentPage = 1;
-            recNo = 0;
-            CargaGrid("");
-        }
-
-        private void btnNextPage_Click(object sender, EventArgs e)
-        {
-            //If the user did not click the "Fill Grid" button, then return.
-            if (CheckFillButton() == false)
-            {
-                return;
-            }
-
-            //Check if the user clicks the "Fill Grid" button.
-            if (pageSize == 0)
-            {
-                MessageBox.Show("Set the Page Size, and then click the Fill Grid button!");
-                return;
-            }
-
-            currentPage += 1;
-            if (currentPage > PageCount)
-            {
-                currentPage = PageCount;
-                //Check if you are already at the last page.
-                if (recNo == maxRec)
-                {
-                    MessageBox.Show("You are at the Last Page!");
-                    return;
-                }
-            }
-            CargaGrid("");
-        }
-
-        private void btnPreviousPage_Click(object sender, EventArgs e)
-        {
-            if (CheckFillButton() == false)
-            {
-                return;
-            }
-
-            if (currentPage == PageCount)
-            {
-                recNo = pageSize * (currentPage - 2);
-            }
-
-            currentPage -= 1;
-            //Check if you are already at the first page.
-            if (currentPage < 1)
-            {
-                MessageBox.Show("You are at the First Page!");
-                currentPage = 1;
-                return;
-            }
-            else
-            {
-                recNo = pageSize * (currentPage - 1);
-            }
-            CargaGrid("");
-
-        }
-
-        private void btnLastPage_Click(object sender, EventArgs e)
-        {
-
-            if (CheckFillButton() == false)
-            {
-                return;
-            }
-
-            //Check if you are already at the last page.
-            if (recNo == maxRec)
-            {
-                MessageBox.Show("You are at the Last Page!");
-                return;
-            }
-            currentPage = PageCount;
-            recNo = pageSize * (currentPage - 1);
-            CargaGrid(""); 
         }
     }
 }
