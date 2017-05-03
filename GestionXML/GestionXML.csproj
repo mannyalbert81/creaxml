@@ -341,6 +341,12 @@
     <Compile Include="reportes\FiltroIndice.Designer.cs">
       <DependentUpon>FiltroIndice.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\FiltroUsuarioEdita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\FiltroUsuarioEdita.Designer.cs">
+      <DependentUpon>FiltroUsuarioEdita.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\FiltroUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -500,6 +506,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\FiltroIndice.resx">
       <DependentUpon>FiltroIndice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\FiltroUsuarioEdita.resx">
+      <DependentUpon>FiltroUsuarioEdita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\FiltroUsuarios.resx">
       <DependentUpon>FiltroUsuarios.cs</DependentUpon>
