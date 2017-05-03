@@ -42,9 +42,10 @@ namespace GestionXML
 
              if (registro > 0)
                 {
+                    if (_nombre_controladores =="Usuarios") {
+                        usuariosToolStripMenuItem.Visible= true;
+                    }
 
-                    administraciónToolStripMenuItem.Visible= false;
-                    
                 }
              
             }
