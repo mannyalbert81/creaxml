@@ -13,6 +13,8 @@ namespace GestionXML.reportes
     public partial class FiltroIndice : Form
     {
 
+        public event EventHandler SelectionChangeCommitted; 
+
         public FiltroIndice()
         {
             InitializeComponent();
@@ -22,7 +24,16 @@ namespace GestionXML.reportes
      
 
         {
+            ComboBox senderComboBox = (ComboBox)sender;
 
+            
+            if (senderComboBox.SelectionLength > 0)
+            {
+                cbm_proyectos.Width =
+                    senderComboBox.SelectedItem.ToString().Length *
+                    ((int)this.cbm_proyectos.Font.SizeInPoints);
+                cbm_proyectos.Text = senderComboBox.SelectedItem.ToString();
+            }
 
             clases.Funciones.CargarCombo(cbm_proyectos, "id_proyectos", "nombre_proyectos", "proyectos");
 
@@ -30,16 +41,12 @@ namespace GestionXML.reportes
             
             clases.Funciones.CargarComboWhere(cmb_Caminos, "id_caminos", "nombre_caminos", "public.proyectos, public.caminos", "caminos.id_proyectos = proyectos.id_proyectos AND proyectos.id_proyectos = '" + _id_proyectos + "' ");
 
-           
-            
-
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-          
 
             int _id_proyectos = Convert.ToInt32(cbm_proyectos.SelectedValue.ToString());
             int _id_caminos = Convert.ToInt32(cmb_Caminos.SelectedValue.ToString());
@@ -58,6 +65,7 @@ namespace GestionXML.reportes
         {
       
         }
+        
 
         private void cmb_Caminos_SelectedIndexChanged(object sender, EventArgs e)
         {
