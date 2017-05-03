@@ -42,6 +42,7 @@ namespace GestionXML
         DateTimePicker dtFecha10 = new DateTimePicker();
         DateTimePicker dtFecha11 = new DateTimePicker();
         DateTimePicker dtFecha12 = new DateTimePicker();
+        
         public CreadorXML()
         {
             InitializeComponent();
@@ -61,14 +62,47 @@ namespace GestionXML
             dtFecha10.Visible = false;
             dtFecha11.Visible = false;
             dtFecha12.Visible = false;
+
+            button1.Visible = false;
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+            button7.Visible = false;
+            button8.Visible = false;
+            button9.Visible = false;
+            button10.Visible = false;
+            button11.Visible = false;
+            button12.Visible = false;
+
+
+            button21.Visible = false;
+            button22.Visible = false;
+            button23.Visible = false;
+            button24.Visible = false;
+            button25.Visible = false;
+            button26.Visible = false;
+            button27.Visible = false;
+            button28.Visible = false;
+            button29.Visible = false;
+
             CreaXML("", "", "", "", "", "", "", "", "", "", "", "");
-            LeeIndice();
+            LeeIndice(1);
 
         }
 
-        public void LeeIndice()
+        public void LeeIndice(int _tipo_carga)
         {
-            acrobat.src = nombre_pdf;
+
+            if (_tipo_carga == 1)
+            {
+                acrobat.src = nombre_pdf;
+            }
+            else
+            {
+
+            }
 
             //System.IO.StreamReader file = new System.IO.StreamReader(@"indice.txt");
 
@@ -113,9 +147,11 @@ namespace GestionXML
                     {
                         if (_contador == 1)
                         {
-
-                            label1.Text = _nombre_indice_detalle;
-                            label1.Visible = true;
+                            if (_tipo_carga == 1)
+                            {
+                                label1.Text = _nombre_indice_detalle;
+                                label1.Visible = true;
+                            }
 
                             if (_nombre_tipo_indice == "FECHA")
                             {
@@ -130,54 +166,11 @@ namespace GestionXML
                             }
                             else
                             {
-                                textBox1.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox1.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
+                                button1.Visible = true;
 
-                                if (_relacionado_indice_detalle)
-                                {
-
-
-
-                                    textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                                    textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
-
-                                    DataSet dtText1 = new DataSet();
-
-                                    NpgsqlDataAdapter daText1 = new NpgsqlDataAdapter();
-                                    try
-                                    {
-
-                                        daText1 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
-
-                                    }
-                                    catch (Exception Ex)
-                                    {
-                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
-                                    }
-
-                                    daText1.Fill(dtText1, _nombre_tabla_indice_detalle);
-
-                                    int i = 0;
-                                    for (i = 0; i <= dtText1.Tables[0].Rows.Count - 1; i++)
-                                    {
-                                        col.Add(dtText1.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
-
-                                    }
-
-                                    textBox1.AutoCompleteCustomSource = col;
-
-                                }
-                                else
-                                {
-
-
-                                }
-
+                                Autocompletar(_tipo_carga,  textBox1, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
+                                
+                                
                             }
 
 
@@ -205,54 +198,8 @@ namespace GestionXML
                             }
                             else
                             {
-                                textBox2.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox2.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
-
-                                if (_relacionado_indice_detalle)
-                                {
-
-
-
-                                    textBox2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                                    textBox2.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
-
-                                    DataSet dtText2 = new DataSet();
-
-                                    NpgsqlDataAdapter daText2 = new NpgsqlDataAdapter();
-                                    try
-                                    {
-
-                                        daText2 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
-
-                                    }
-                                    catch (Exception Ex)
-                                    {
-                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
-                                    }
-
-                                    daText2.Fill(dtText2, _nombre_tabla_indice_detalle);
-
-                                    int i = 0;
-                                    for (i = 0; i <= dtText2.Tables[0].Rows.Count - 1; i++)
-                                    {
-                                        col.Add(dtText2.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
-
-                                    }
-
-                                    textBox2.AutoCompleteCustomSource = col;
-
-                                }
-                                else
-                                {
-
-
-                                }
-
+                                button2.Visible = true;
+                                Autocompletar(_tipo_carga,textBox2, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
 
 
 
@@ -281,53 +228,8 @@ namespace GestionXML
                             }
                             else
                             {
-                                textBox3.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox3.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
-
-                                if (_relacionado_indice_detalle)
-                                {
-
-
-
-                                    textBox3.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                                    textBox3.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
-
-                                    DataSet dtText3 = new DataSet();
-
-                                    NpgsqlDataAdapter daText3 = new NpgsqlDataAdapter();
-                                    try
-                                    {
-
-                                        daText3 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
-
-                                    }
-                                    catch (Exception Ex)
-                                    {
-                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
-                                    }
-
-                                    daText3.Fill(dtText3, _nombre_tabla_indice_detalle);
-
-                                    int i = 0;
-                                    for (i = 0; i <= dtText3.Tables[0].Rows.Count - 1; i++)
-                                    {
-                                        col.Add(dtText3.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
-
-                                    }
-
-                                    textBox3.AutoCompleteCustomSource = col;
-
-                                }
-                                else
-                                {
-
-
-                                }
+                                button3.Visible = true;
+                                Autocompletar(_tipo_carga, textBox3, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
 
                             }
 
@@ -353,53 +255,9 @@ namespace GestionXML
                             }
                             else
                             {
-                                textBox4.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox4.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
+                                button4.Visible = true;
+                                Autocompletar(_tipo_carga, textBox4, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
 
-                                if (_relacionado_indice_detalle)
-                                {
-
-
-
-                                    textBox4.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                                    textBox4.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
-
-                                    DataSet dtText4 = new DataSet();
-
-                                    NpgsqlDataAdapter daText4 = new NpgsqlDataAdapter();
-                                    try
-                                    {
-
-                                        daText4 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
-
-                                    }
-                                    catch (Exception Ex)
-                                    {
-                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
-                                    }
-
-                                    daText4.Fill(dtText4, _nombre_tabla_indice_detalle);
-
-                                    int i = 0;
-                                    for (i = 0; i <= dtText4.Tables[0].Rows.Count - 1; i++)
-                                    {
-                                        col.Add(dtText4.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
-
-                                    }
-
-                                    textBox4.AutoCompleteCustomSource = col;
-
-                                }
-                                else
-                                {
-
-
-                                }
 
                             }
 
@@ -430,54 +288,8 @@ namespace GestionXML
                             }
                             else
                             {
-                                textBox5.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox5.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
-
-                                if (_relacionado_indice_detalle)
-                                {
-
-                                    
-                                    
-                                    textBox5.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                                    textBox5.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                      
-                                    AutoCompleteStringCollection col = new AutoCompleteStringCollection();
-
-                                    DataSet dtText5 = new DataSet();
-
-                                    NpgsqlDataAdapter daText5 = new NpgsqlDataAdapter();
-                                    try
-                                    {
-
-                                        daText5 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle  );
-                                     
-                                    }
-                                    catch (Exception Ex)
-                                    {
-                                        MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
-                                    }
-
-                                    daText5.Fill(dtText5, _nombre_tabla_indice_detalle);
-
-                                    int i = 0;
-                                    for (i = 0; i <= dtText5.Tables[0].Rows.Count - 1; i++)
-                                    {
-                                        col.Add(dtText5.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
-
-                                    }
-                                    
-                                    textBox5.AutoCompleteCustomSource = col;
-
-                                }
-                                else
-                                {
-
-                                    
-                                }
-
+                                button5.Visible = true;
+                                Autocompletar(_tipo_carga, textBox5, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
 
                             }
 
@@ -505,11 +317,9 @@ namespace GestionXML
                             }
                             else
                             {
-                                textBox6.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox6.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
+                                button6.Visible = true;
+                                Autocompletar(_tipo_carga, textBox6, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
+
                             }
 
 
@@ -534,11 +344,9 @@ namespace GestionXML
                             }
                             else
                             {
-                                textBox7.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox7.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
+                                button7.Visible = true;
+                                Autocompletar(_tipo_carga, textBox7, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
+
                             }
 
 
@@ -562,11 +370,9 @@ namespace GestionXML
                             }
                             else
                             {
-                                textBox8.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox8.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
+                                button8.Visible = true;
+                                Autocompletar(_tipo_carga, textBox8, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
+
                             }
 
 
@@ -587,15 +393,12 @@ namespace GestionXML
                                 dtFecha9.Location = new Point(1045, 425);
                                 dtFecha9.Visible = true;
                                 this.Controls.Add(dtFecha9);
-                                _fecha8 = true;
+                                _fecha9 = true;
                             }
                             else
                             {
-                                textBox9.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox9.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
+                                button9.Visible = true;
+                                Autocompletar(_tipo_carga, textBox9, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
                             }
 
 
@@ -616,15 +419,13 @@ namespace GestionXML
                                 dtFecha10.Location = new Point(1045, 474);
                                 dtFecha10.Visible = true;
                                 this.Controls.Add(dtFecha10);
-                                _fecha8 = true;
+                                _fecha10= true;
                             }
                             else
                             {
-                                textBox10.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox10.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
+                                button10.Visible = true;
+                                Autocompletar(_tipo_carga, textBox10, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
+
                             }
 
 
@@ -646,15 +447,13 @@ namespace GestionXML
                                 dtFecha11.Location = new Point(1045, 522);
                                 dtFecha11.Visible = true;
                                 this.Controls.Add(dtFecha11);
-                                _fecha8 = true;
+                                _fecha11 = true;
                             }
                             else
                             {
-                                textBox11.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox11.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
+                                button11.Visible = true;
+                                Autocompletar(_tipo_carga, textBox11, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
+
                             }
 
 
@@ -681,11 +480,9 @@ namespace GestionXML
                             }
                             else
                             {
-                                textBox12.Visible = true;
-                                if (Convert.ToInt16(_max_indice_detalle) > 0)
-                                {
-                                    textBox12.MaxLength = Convert.ToInt16(_max_indice_detalle);
-                                }
+                                button12.Visible = true;
+                                Autocompletar(_tipo_carga, textBox12, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
+
                             }
 
 
@@ -706,10 +503,24 @@ namespace GestionXML
 
         }
 
+
         
+
+
+
+
+
+
+
+
+
+
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+           
+            
+    
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -1042,9 +853,371 @@ namespace GestionXML
 
         }
 
+
+
+
+        public void Autocompletar(int _tipo_carga, TextBox _textBox,   int _max_indice_detalle, bool _relacionado_indice_detalle, string _nombre_campo_indice_detalle, string _nombre_tabla_indice_detalle)
+        {
+            
+
+
+
+            if (_tipo_carga == 1)
+            {
+                
+                if (Convert.ToInt16(_max_indice_detalle) > 0)
+                {
+                    _textBox.MaxLength = Convert.ToInt16(_max_indice_detalle);
+                }
+
+            }
+            
+
+            if (_relacionado_indice_detalle)
+            {
+
+                _textBox.AccessibleName = _nombre_campo_indice_detalle;
+                if (_textBox.Name == "textBox1")
+                {
+                    button21.Visible = true;
+                }
+                if (_textBox.Name == "textBox2")
+                {
+                    button22.Visible = true;
+                }
+                if (_textBox.Name == "textBox3")
+                {
+                    button23.Visible = true;
+                }
+                if (_textBox.Name == "textBox4")
+                {
+                    button24.Visible = true;
+                }
+                if (_textBox.Name == "textBox5")
+                {
+                    button25.Visible = true;
+                }
+                if (_textBox.Name == "textBox6")
+                {
+                    button26.Visible = true;
+                }
+                if (_textBox.Name == "textBox7")
+                {
+                    button27.Visible = true;
+                }
+                if (_textBox.Name == "textBox8")
+                {
+                    button28.Visible = true;
+                }
+                if (_textBox.Name == "textBox9")
+                {
+                    button29.Visible = true;
+                }
+                _textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                _textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                AutoCompleteStringCollection col = new AutoCompleteStringCollection();
+
+                DataSet dtText1 = new DataSet();
+
+                NpgsqlDataAdapter daText1 = new NpgsqlDataAdapter();
+                daText1 = null;
+
+                try
+                {
+                    if (_nombre_tabla_indice_detalle == "banco_tarjetas")
+                    {
+
+                        if (_textBox.Text.ToString().Length > 3)
+                        {
+                            daText1 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '" + _textBox.Text.ToString() + "%' " + "  GROUP BY  " + _nombre_campo_indice_detalle + "   ORDER BY  " + _nombre_campo_indice_detalle + "  ");
+                        }
+                        else
+                        {
+                            daText1 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " = '12345' " + "  GROUP BY  " + _nombre_campo_indice_detalle + "   ORDER BY  " + _nombre_campo_indice_detalle + "  ");
+                        }
+                            
+                        
+                    }
+                    else
+                    {
+
+                        daText1 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
+                    }
+                    
+
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("No se conecto a este  Campo-> " + _nombre_campo_indice_detalle + "Error->" + Ex.Message);
+                }
+
+
+                try
+                {
+                    daText1.Fill(dtText1, _nombre_tabla_indice_detalle);
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Error al llenar Dataset",Ex.Message);
+                }
+
+                if (dtText1.Tables[0].Rows.Count > 0)
+                {
+                    
+                    int i = 0;
+                    for (i = 0; i <= dtText1.Tables[0].Rows.Count - 1; i++)
+                    {
+                        col.Add(dtText1.Tables[0].Rows[i][_nombre_campo_indice_detalle].ToString());
+
+                    }
+
+                }
+                else
+                {
+                                    }
+                _textBox.AutoCompleteCustomSource = col;
+                
+            }
+            else
+            {
+
+
+            }
+            _textBox.Visible = true;
+            
+
+        }
+
+        
+
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+            
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            LeeIndice(2);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            
+                llenaTextbox(textBox1, textBox2);
+                llenaTextbox(textBox1, textBox3);
+                llenaTextbox(textBox1, textBox4);
+                llenaTextbox(textBox1, textBox5);
+                llenaTextbox(textBox1, textBox6);
+                llenaTextbox(textBox1, textBox7);
+                llenaTextbox(textBox1, textBox8);
+                llenaTextbox(textBox1, textBox9);
+                llenaTextbox(textBox1, textBox10);
+
+            
+        }
+
+
+
+        public void llenaTextbox(TextBox _textBoxOrigen,   TextBox _textBox)
+        {
+
+            string _parametros = "";
+
+            if (_textBoxOrigen.AccessibleName == "numero_banco_tarjetas") //buscamos por tarjeta
+            {
+                string _valor = _textBoxOrigen.Text.ToString();
+                _parametros = " numero_banco_tarjetas =   '" + _valor + "'    ";
+            }
+            if (_textBoxOrigen.AccessibleName == "identificacion_banco_tarjetas") //buscamos por cedula
+            {
+                string _valor = _textBoxOrigen.Text.ToString();
+                _parametros = " identificacion_banco_tarjetas =   '" + _valor + "'    ";
+            }
+            if (_parametros.Length > 0)
+            {
+
+
+
+                string _numero_banco_tarjetas = "";
+                string _tipo_banco_tarjetas = "";
+                string _identificacion_banco_tarjetas = "";
+                string _nombres_banco_tarjetas = "";
+                DataTable dtBanco = AccesoLogica.Select("numero_banco_tarjetas, tipo_banco_tarjetas, identificacion_banco_tarjetas, nombres_banco_tarjetas", "banco_tarjetas", _parametros);
+                int reg = dtBanco.Rows.Count;
+                if (reg > 0)
+                {
+
+                    _textBoxOrigen.BackColor = Color.White;
+                    foreach (DataRow renglon in dtBanco.Rows)
+                    {
+                        _numero_banco_tarjetas = renglon["numero_banco_tarjetas"].ToString();
+                        _tipo_banco_tarjetas = renglon["tipo_banco_tarjetas"].ToString();
+                        _identificacion_banco_tarjetas = renglon["identificacion_banco_tarjetas"].ToString();
+                        _nombres_banco_tarjetas = renglon["nombres_banco_tarjetas"].ToString();
+
+                    }
+                }
+                else
+                {
+
+                    
+                }
+
+
+                if (_textBox.AccessibleName == "identificacion_banco_tarjetas")
+                {
+                    _textBox.Text = _identificacion_banco_tarjetas;
+                }
+                if (_textBox.AccessibleName == "nombres_banco_tarjetas")
+                {
+                    _textBox.Text = _nombres_banco_tarjetas;
+                }
+                if (_textBox.AccessibleName == "tipo_banco_tarjetas")
+                {
+                    _textBox.Text = _tipo_banco_tarjetas;
+                }
+
+
+            }
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            llenaTextbox(textBox2, textBox1);
+            llenaTextbox(textBox2, textBox3);
+            llenaTextbox(textBox2, textBox4);
+            llenaTextbox(textBox2, textBox5);
+            llenaTextbox(textBox2, textBox6);
+            llenaTextbox(textBox2, textBox7);
+            llenaTextbox(textBox2, textBox8);
+            llenaTextbox(textBox2, textBox9);
+            llenaTextbox(textBox2, textBox10);
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            llenaTextbox(textBox3, textBox1);
+            llenaTextbox(textBox3, textBox2);
+            llenaTextbox(textBox3, textBox4);
+            llenaTextbox(textBox3, textBox5);
+            llenaTextbox(textBox3, textBox6);
+            llenaTextbox(textBox3, textBox7);
+            llenaTextbox(textBox3, textBox8);
+            llenaTextbox(textBox3, textBox9);
+            llenaTextbox(textBox3, textBox10);
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
+
 }
