@@ -26,15 +26,12 @@ namespace GestionXML
 
             DataTable dtLicencias = AccesoLogica.Select("*", "licencias", "id_licencias > 0");
             int registro = dtLicencias.Rows.Count;
-
             
-
             string _error = "";
             string _descripcion_licencias = txt_entidad.Text;
             string _cantidad_licencias = txt_cantidad_licencias.Text;
             string _licencias_disponibles = txt_disponibles.Text;
             string _numero_licencias_registradas = txt_licencias_asignadas.Text; 
-            
             
 
             if (_descripcion_licencias.Length == 0)
@@ -43,15 +40,15 @@ namespace GestionXML
             }
             if (_cantidad_licencias.Length == 0)
             {
-                _error = "Debe Indicar una Cantidad de Licencias";
+                _error = "Debe Indicar # de Licencias Compradas";
             }
             if (_numero_licencias_registradas.Length == 0)
             {
-                _error = "Debe Indicar un serial de Inicio";
+                _error = "Debe Indicar # de Licencias Registradas";
             }
             if (_licencias_disponibles.Length == 0)
             {
-                _error = "Debe Indicar Licencias Disponibles";
+                _error = "Debe Indicar # Licencias Disponibles";
             }
             
                 if (_error.Length == 0)
