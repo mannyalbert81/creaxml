@@ -19,24 +19,21 @@ namespace GestionXML
             InitializeComponent();
         }
 
+       
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
             DataTable dtLicencias = AccesoLogica.Select("*", "licencias", "id_licencias > 0");
             int registro = dtLicencias.Rows.Count;
 
-            if (registro > 0)
-            {
-
-                MessageBox.Show("Ya existe una licencia registrada", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else { 
+            
 
             string _error = "";
             string _descripcion_licencias = txt_entidad.Text;
             string _cantidad_licencias = txt_cantidad_licencias.Text;
-            string _numero_licencias_registradas = txt_serial_inicio.Text;
+            string _licencias_disponibles = txt_disponibles.Text;
+            string _numero_licencias_registradas = txt_licencias_asignadas.Text; 
             
             
 
@@ -52,18 +49,22 @@ namespace GestionXML
             {
                 _error = "Debe Indicar un serial de Inicio";
             }
-
+            if (_licencias_disponibles.Length == 0)
+            {
+                _error = "Debe Indicar Licencias Disponibles";
+            }
             
-
-            if (_error.Length == 0)
+                if (_error.Length == 0)
             {
                 string descripcion = AccesoLogica.cifrar(_descripcion_licencias);
                 string cantidad = AccesoLogica.cifrar(_cantidad_licencias);
                 string numero = AccesoLogica.cifrar(_numero_licencias_registradas);
+                string disponibilidad = AccesoLogica.cifrar(_licencias_disponibles);
 
-                string datos = descripcion + "?" + cantidad + "?" + numero;
-                string columnas = "descripcion?cantidad?numero";
-                string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Varchar?NpgsqlDbType.Varchar";
+
+                string datos = descripcion + "?" + disponibilidad + "?" + numero + "?" + cantidad;
+                string columnas = "descripcion?disponibilidad?numero?cantidad";
+                string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Varchar?NpgsqlDbType.Varchar?NpgsqlDbType.Varchar";
 
 
                 try
@@ -73,11 +74,7 @@ namespace GestionXML
                     {
                         MessageBox.Show("La Licencia se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         limpiar();
-                            txt_entidad.Enabled = false;
-                            txt_serial_inicio.Enabled = false;
-                            txt_cantidad_licencias.Enabled = false;
-                            btnGuardar.Enabled = false;
-                            btnLimpiar.Enabled = false;
+                            llenar_grid("id_licencias > 0");
 
                         }
                 }
@@ -90,7 +87,7 @@ namespace GestionXML
             {
                 MessageBox.Show(_error, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            }
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -102,8 +99,9 @@ namespace GestionXML
 
             txt_entidad.Text = "";
             txt_cantidad_licencias.Text = "";
-            txt_serial_inicio.Text = "";
-           
+            txt_disponibles.Text = "";
+            txt_licencias_asignadas.Text = "";
+
 
         }
 
@@ -130,29 +128,44 @@ namespace GestionXML
         {
 
 
-            DataTable dtLicencias = AccesoLogica.Select("*", "licencias", "id_licencias > 0");
-            int registro = dtLicencias.Rows.Count;
+            llenar_grid("id_licencias > 0");
+            
 
-            if (registro > 0)
+            }
+
+        private void dataGridViewLicencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataGridViewRow fila = dataGridViewLicencias.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
+            txt_entidad.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
+            txt_cantidad_licencias.Text = Convert.ToString(fila.Cells[2].Value);
+            txt_disponibles.Text = Convert.ToString(fila.Cells[3].Value);
+            txt_licencias_asignadas.Text = Convert.ToString(fila.Cells[4].Value);
+
+        }
+
+        private void llenar_grid(string _parametro)
+        {
+            int _id_licencias = 0;
+            string _numero_licencias_registradas = "";
+            string _cantidad_licencias = "";
+            string _entidad = "";
+            string _total_licencias_compradas = "";
+
+
+            DataTable dtLicencias = AccesoLogica.Select("licencias.id_licencias, licencias.numero_licencias_registradas, licencias.total_licencias_compradas, licencias.cantidad_licencias, licencias.descripcion_licencias", "licencias", "licencias.id_licencias > 0");
+            foreach (DataRow renglon_li in dtLicencias.Rows)
             {
-                txt_entidad.Enabled = false;
-                txt_serial_inicio.Enabled = false;
-                txt_cantidad_licencias.Enabled = false;
-                btnGuardar.Enabled = false;
-                btnLimpiar.Enabled = false;
-               
+                _id_licencias = Convert.ToInt32(renglon_li["id_licencias"].ToString());
+                _numero_licencias_registradas = AccesoLogica.descifrar(Convert.ToString(renglon_li["numero_licencias_registradas"].ToString()));
+                _cantidad_licencias = AccesoLogica.descifrar(Convert.ToString(renglon_li["cantidad_licencias"].ToString()));
+                _entidad = AccesoLogica.descifrar(Convert.ToString(renglon_li["descripcion_licencias"].ToString()));
+                _total_licencias_compradas = AccesoLogica.descifrar(Convert.ToString(renglon_li["total_licencias_compradas"].ToString()));
 
             }
-            else {
 
-                txt_entidad.Enabled = true;
-                txt_serial_inicio.Enabled = true;
-                txt_cantidad_licencias.Enabled = true;
-                btnGuardar.Enabled = true;
-                btnLimpiar.Enabled = true;
-            }
+            clases.Funciones.CargarGridView(dataGridViewLicencias, "'" + _id_licencias + "' AS Id, '" + _entidad + "', '" + _total_licencias_compradas + "', '" + _cantidad_licencias + "', '" + _numero_licencias_registradas + "'", "licencias", _parametro, "Id?Nombre Entidad?Licencias Compradas?Disponibles?Licencias Asignadas");
 
-
-            }
+        }
     }
 }

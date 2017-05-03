@@ -82,7 +82,6 @@ namespace GestionXML
             foreach (DataRow renglon_de1 in dtLicencias_detalle1.Rows)
             {
                 _mac = Convert.ToString(renglon_de1["mac_adres_maquina"].ToString());
-
             }
 
 
@@ -98,13 +97,16 @@ namespace GestionXML
                         frm._nombre_usuarios = _nombre_usuarios;
                         frm.Show();
                         this.Hide();
-
                     }
                     else
                     {
                         _mac_adres_maquina = AccesoLogica.cifrar(HardwareInfo.GetMACAddress());
+                        string numero = AccesoLogica.descifrar(_numero_licencias_registradas);
+                        int nu = Convert.ToInt32(numero) + 1;
+                        string nume_cifrado = AccesoLogica.cifrar(Convert.ToString(nu));
 
-                        string datos = _id_licencias + "?" + _mac_adres_maquina + "?" + _nombre_sesion_maquina + "?" + _ip_maquina + "?" + _numero_licencias_registradas;
+
+                        string datos = _id_licencias + "?" + _mac_adres_maquina + "?" + _nombre_sesion_maquina + "?" + _ip_maquina + "?" + nume_cifrado;
                         string columnas = "_id_licencias?_mac_adres_maquina?_nombre_sesion_maquina?_ip_maquina?_numero_licencias_registradas";
                         string tipodatos = "NpgsqlDbType.Integer?NpgsqlDbType.Varchar?NpgsqlDbType.Varchar? NpgsqlDbType.Varchar?NpgsqlDbType.Varchar";
 
@@ -117,14 +119,9 @@ namespace GestionXML
                             int can_nu = Convert.ToInt32(can_numero) - 1;
                             string can_nu_cifrado = AccesoLogica.cifrar(Convert.ToString(can_nu));
 
-                            string numero = AccesoLogica.descifrar(_numero_licencias_registradas);
-                            int nu = Convert.ToInt32(numero) + 1;
-                            string nume_cifrado = AccesoLogica.cifrar(Convert.ToString(nu));
+                            
 
                             int result = AccesoLogica.Update("licencias", "cantidad_licencias = '" + can_nu_cifrado + "', numero_licencias_registradas = '" + nume_cifrado + "'", "id_licencias= '" + _id_licencias + "'");
-
-
-
 
                             DataTable dtLicencias_detalle = AccesoLogica.Select("mac_adres_maquina", "licencias_detalle", "licencias_detalle.mac_adres_maquina= '" + _mac_adres_maquina + "'");
                             foreach (DataRow renglon_de in dtLicencias_detalle.Rows)
@@ -178,9 +175,7 @@ namespace GestionXML
                         txt_password.Text = "";
 
                     }
-                    
-
-
+                 
                 }
                 
             }
@@ -193,47 +188,24 @@ namespace GestionXML
                 txt_usuario.Text = "";
                 txt_password.Text = "";
             }
-
- 
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-           
-            
-
         }
-
-
-
+        
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
 
-
-           
-            Application.Exit();
+            DialogResult dialogo = MessageBox.Show("¿Desea cerrar el programa?",
+             "Cerrar el programa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.No)
+            {
+               
+            }
+            else
+            {
+                Application.Exit();
+            }
+            
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
@@ -249,9 +221,5 @@ namespace GestionXML
                 e.Cancel = false;
             }
         }
-
-       
-
-        
     }
 }
