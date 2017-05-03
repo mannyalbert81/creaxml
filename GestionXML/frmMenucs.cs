@@ -320,5 +320,11 @@ namespace GestionXML
 
             }
         }
+
+        private void licenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InstalarLicencias frm = new InstalarLicencias();
+            frm.Show();
+        }
     }
 }

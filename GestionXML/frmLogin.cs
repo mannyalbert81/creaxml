@@ -29,11 +29,11 @@ namespace GestionXML
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             string _usuario_usuarios = txt_usuario.Text;
-            string _clave_usuarios = txt_password.Text;
+            string _clave_usuarios =  txt_password.Text;
             string _nombre_usuarios = "";
             int _id_licencias = 0;
-            int _numero_licencias_registradas = 0;
-            int _cantidad_licencias = 0;
+            string _numero_licencias_registradas = "";
+            string _cantidad_licencias = "";
             string _mac_adres_maquina = "";
             string _nombre_sesion_maquina = "";
             string _ip_maquina = "";
@@ -41,8 +41,8 @@ namespace GestionXML
             string _mac1 = "";
             
 
-            _mac1 = HardwareInfo.GetMACAddress();
-            _nombre_sesion_maquina = HardwareInfo.GetComputerName();
+            _mac1 = AccesoLogica.cifrar(HardwareInfo.GetMACAddress());
+            _nombre_sesion_maquina = AccesoLogica.cifrar(HardwareInfo.GetComputerName());
 
             IPHostEntry host;
             host = Dns.GetHostEntry(Dns.GetHostName());
@@ -50,15 +50,15 @@ namespace GestionXML
             {
                 if (ip.AddressFamily.ToString() == "InterNetwork")
                 {
-                    _ip_maquina = ip.ToString();
+                    _ip_maquina = AccesoLogica.cifrar(ip.ToString());
                 }
             }
 
 
             // CONSULTO USUARIO Y CLAVE
 
-
-            DataTable dtUsuario = AccesoLogica.Select("nombre_usuarios", "usuarios", "usuario_usuarios = '" + _usuario_usuarios + "' AND clave_usuarios = '" + _clave_usuarios + "'  ");
+            string clave = AccesoLogica.cifrar(_clave_usuarios);
+            DataTable dtUsuario = AccesoLogica.Select("nombre_usuarios", "usuarios", "usuario_usuarios = '" + _usuario_usuarios + "' AND clave_usuarios = '" + clave + "'  ");
             foreach (DataRow renglon in dtUsuario.Rows)
             {
                 _nombre_usuarios = Convert.ToString(renglon["nombre_usuarios"].ToString());
@@ -72,8 +72,8 @@ namespace GestionXML
             foreach (DataRow renglon_li in dtLicencias.Rows)
             {
                 _id_licencias = Convert.ToInt32(renglon_li["id_licencias"].ToString());
-                _numero_licencias_registradas = Convert.ToInt32(renglon_li["numero_licencias_registradas"].ToString());
-                _cantidad_licencias = Convert.ToInt32(renglon_li["cantidad_licencias"].ToString());
+                _numero_licencias_registradas = Convert.ToString(renglon_li["numero_licencias_registradas"].ToString());
+                _cantidad_licencias = AccesoLogica.descifrar(Convert.ToString(renglon_li["cantidad_licencias"].ToString()));
             }
 
 
@@ -89,7 +89,7 @@ namespace GestionXML
             if (registro > 0)
             {
                 
-                if (_cantidad_licencias > 0 )
+                if (Convert.ToInt32(_cantidad_licencias) > 0 )
                 {
 
                     if (_mac == _mac1)
@@ -102,20 +102,26 @@ namespace GestionXML
                     }
                     else
                     {
-                        _mac_adres_maquina = HardwareInfo.GetMACAddress();
+                        _mac_adres_maquina = AccesoLogica.cifrar(HardwareInfo.GetMACAddress());
 
-                        string datos = _id_licencias + "?" + _numero_licencias_registradas + "?" + _mac_adres_maquina + "?" + _nombre_sesion_maquina + "?" + _ip_maquina;
-                        string columnas = "_id_licencias?_numero_licencias_registradas?_mac_adres_maquina?_nombre_sesion_maquina?_ip_maquina";
-                        string tipodatos = "NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Varchar? NpgsqlDbType.Varchar?NpgsqlDbType.Varchar";
+                        string datos = _id_licencias + "?" + _mac_adres_maquina + "?" + _nombre_sesion_maquina + "?" + _ip_maquina + "?" + _numero_licencias_registradas;
+                        string columnas = "_id_licencias?_mac_adres_maquina?_nombre_sesion_maquina?_ip_maquina?_numero_licencias_registradas";
+                        string tipodatos = "NpgsqlDbType.Integer?NpgsqlDbType.Varchar?NpgsqlDbType.Varchar? NpgsqlDbType.Varchar?NpgsqlDbType.Varchar";
 
                         int resul = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_licencias_detalle");
 
 
                         try
                         {
-                            int can_numero = _cantidad_licencias - 1;
-                            int numero = _numero_licencias_registradas + 1;
-                            int result = AccesoLogica.Update("licencias", "cantidad_licencias = '" + can_numero + "', numero_licencias_registradas = '" + numero + "'", "id_licencias= '" + _id_licencias + "'");
+                            string can_numero = _cantidad_licencias;
+                            int can_nu = Convert.ToInt32(can_numero) - 1;
+                            string can_nu_cifrado = AccesoLogica.cifrar(Convert.ToString(can_nu));
+
+                            string numero = AccesoLogica.descifrar(_numero_licencias_registradas);
+                            int nu = Convert.ToInt32(numero) + 1;
+                            string nume_cifrado = AccesoLogica.cifrar(Convert.ToString(nu));
+
+                            int result = AccesoLogica.Update("licencias", "cantidad_licencias = '" + can_nu_cifrado + "', numero_licencias_registradas = '" + nume_cifrado + "'", "id_licencias= '" + _id_licencias + "'");
 
 
 
@@ -154,7 +160,7 @@ namespace GestionXML
                     }
 
                     
-              } else if (_cantidad_licencias <= 0 )
+              } else if (Convert.ToInt32(_cantidad_licencias) <= 0 )
                 {
 
                     if (_mac == _mac1)
