@@ -146,6 +146,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtTipoIndice.xsd</DependentUpon>
     </Compile>
+    <Compile Include="datas\dtUsuarioEdita.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtUsuarioEdita.xsd</DependentUpon>
+    </Compile>
     <Compile Include="datas\ProduccionXml.cs">
       <DependentUpon>ProduccionXml.xsd</DependentUpon>
     </Compile>
@@ -318,6 +323,12 @@
     <Compile Include="reportes\contTipoIndice.Designer.cs">
       <DependentUpon>contTipoIndice.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\contUsuariosEdita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\contUsuariosEdita.Designer.cs">
+      <DependentUpon>contUsuariosEdita.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\FiltroCaminos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,6 +370,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptIndice.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rptUsuarioEdita.cs">
+      <DependentUpon>rptUsuarioEdita.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="reportes\rptProduccion.cs">
       <AutoGen>True</AutoGen>
@@ -475,6 +492,9 @@
     <EmbeddedResource Include="reportes\contTipoIndice.resx">
       <DependentUpon>contTipoIndice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\contUsuariosEdita.resx">
+      <DependentUpon>contUsuariosEdita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\FiltroCaminos.resx">
       <DependentUpon>FiltroCaminos.cs</DependentUpon>
     </EmbeddedResource>
@@ -499,6 +519,10 @@
     <EmbeddedResource Include="reportes\rptIndice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptIndice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptUsuarioEdita.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUsuarioEdita.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptProduccion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -577,6 +601,17 @@
     </None>
     <None Include="datas\dtTipoIndice.xss">
       <DependentUpon>dtTipoIndice.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtUsuarioEdita.xsc">
+      <DependentUpon>dtUsuarioEdita.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtUsuarioEdita.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtUsuarioEdita.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datas\dtUsuarioEdita.xss">
+      <DependentUpon>dtUsuarioEdita.xsd</DependentUpon>
     </None>
     <None Include="datas\ProduccionXml.xsc">
       <DependentUpon>ProduccionXml.xsd</DependentUpon>

@@ -35,14 +35,11 @@ namespace GestionXML
             while ((_nombre_camino = file.ReadLine()) != null)
             {
                 System.Console.WriteLine(_nombre_camino);
-
-
-
+                
                 ///leo los camino
                 DirectoryInfo directory = new DirectoryInfo(@_nombre_camino);
                 FileInfo[] filesPDF = directory.GetFiles("*.PDF");
                 FileInfo[] filesXML = directory.GetFiles("*.XML");
-
                 DirectoryInfo[] directories = directory.GetDirectories();
 
                 for (int i = 0; i < filesPDF.Length; i++)
@@ -59,9 +56,7 @@ namespace GestionXML
 
                 _counter_dif = _counter_pdf - _counter_xml;
                 dataGridView1.Rows.Insert(_counter_caminos, _counter_caminos + 1, _nombre_camino, _counter_pdf, _counter_xml, _counter_dif);
-
                 _counter_caminos++;
-
                 _counter_pdf = 0;
                 _counter_xml = 0;
                 _counter_dif = 0;
@@ -69,9 +64,7 @@ namespace GestionXML
             }
 
             file.Close();
-
-
-        }
+           }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -89,9 +82,9 @@ namespace GestionXML
             }
             if (result == DialogResult.No)
             {
+
             }
-
-
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
