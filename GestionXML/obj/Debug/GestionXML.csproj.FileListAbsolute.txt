@@ -374,3 +374,4 @@ C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.Fi
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmAsignar.resources
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contProduccion.resources
 C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarios.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.InstalarLicencias.resources
