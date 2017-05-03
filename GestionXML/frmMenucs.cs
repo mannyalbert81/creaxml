@@ -353,6 +353,12 @@ namespace GestionXML
             InstalarLicencias frm = new InstalarLicencias();
             frm.Show();
         }
-        
+
+        private void edicionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reportes.FiltroUsuarioEdita frm = new reportes.FiltroUsuarioEdita();
+            frm.Show();
+
+        }
     }
 }

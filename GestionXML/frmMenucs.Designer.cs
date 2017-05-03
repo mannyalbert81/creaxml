@@ -59,6 +59,7 @@
             this.estadoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.indiceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.producciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edicionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -80,7 +81,6 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.edicionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -270,7 +270,7 @@
             // 
             this.crearXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.nuevo_archivo;
             this.crearXMLToolStripMenuItem.Name = "crearXMLToolStripMenuItem";
-            this.crearXMLToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.crearXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.crearXMLToolStripMenuItem.Text = "Crear XML";
             this.crearXMLToolStripMenuItem.Click += new System.EventHandler(this.crearXMLToolStripMenuItem_Click);
             // 
@@ -278,7 +278,7 @@
             // 
             this.controlarCalidadXMLToolStripMenuItem.Image = global::GestionXML.Properties.Resources.certificado;
             this.controlarCalidadXMLToolStripMenuItem.Name = "controlarCalidadXMLToolStripMenuItem";
-            this.controlarCalidadXMLToolStripMenuItem.Size = new System.Drawing.Size(198, 26);
+            this.controlarCalidadXMLToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.controlarCalidadXMLToolStripMenuItem.Text = "Controlar Calidad XML";
             this.controlarCalidadXMLToolStripMenuItem.Click += new System.EventHandler(this.controlarCalidadXMLToolStripMenuItem_Click);
             // 
@@ -353,6 +353,13 @@
             this.producciónToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.producciónToolStripMenuItem.Text = "Producción";
             this.producciónToolStripMenuItem.Click += new System.EventHandler(this.producciónToolStripMenuItem_Click);
+            // 
+            // edicionesToolStripMenuItem
+            // 
+            this.edicionesToolStripMenuItem.Name = "edicionesToolStripMenuItem";
+            this.edicionesToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.edicionesToolStripMenuItem.Text = "Ediciones";
+            this.edicionesToolStripMenuItem.Click += new System.EventHandler(this.edicionesToolStripMenuItem_Click);
             // 
             // toolStrip2
             // 
@@ -555,12 +562,6 @@
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Bienvenido:";
-            // 
-            // edicionesToolStripMenuItem
-            // 
-            this.edicionesToolStripMenuItem.Name = "edicionesToolStripMenuItem";
-            this.edicionesToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.edicionesToolStripMenuItem.Text = "Ediciones";
             // 
             // frmMenucs
             // 
