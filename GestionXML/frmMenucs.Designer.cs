@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +79,7 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.licenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -113,9 +114,16 @@
             // 
             this.salirToolStripMenuItem.Image = global::GestionXML.Properties.Resources.salida;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // administraciónToolStripMenuItem
             // 
@@ -124,7 +132,8 @@
             this.rolesToolStripMenuItem,
             this.controladoresToolStripMenuItem,
             this.permisosRolesToolStripMenuItem,
-            this.formulariosToolStripMenuItem});
+            this.formulariosToolStripMenuItem,
+            this.licenciasToolStripMenuItem});
             this.administraciónToolStripMenuItem.Image = global::GestionXML.Properties.Resources.contactos;
             this.administraciónToolStripMenuItem.Name = "administraciónToolStripMenuItem";
             this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
@@ -537,12 +546,12 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Bienvenido:";
             // 
-            // cerrarSesionToolStripMenuItem
+            // licenciasToolStripMenuItem
             // 
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
-            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            this.licenciasToolStripMenuItem.Name = "licenciasToolStripMenuItem";
+            this.licenciasToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.licenciasToolStripMenuItem.Text = "Licencias";
+            this.licenciasToolStripMenuItem.Click += new System.EventHandler(this.licenciasToolStripMenuItem_Click);
             // 
             // frmMenucs
             // 
@@ -624,5 +633,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem licenciasToolStripMenuItem;
     }
 }
