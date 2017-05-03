@@ -303,5 +303,29 @@ namespace GestionXML
             frmAsignar frm = new frmAsignar();
             frm.Show();
         }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogo = MessageBox.Show("¿Seguro desea cerrar la sesion?",
+                "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.Yes)
+            {
+                frmLogin frm = new frmLogin();
+                frm.Show();
+                this.Hide();
+            }
+            else
+            {
+
+
+            }
+        }
+
+        private void licenciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InstalarLicencias frm = new InstalarLicencias();
+            frm.Show();
+        }
+        
     }
 }

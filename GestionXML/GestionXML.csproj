@@ -70,6 +70,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -144,6 +145,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dtTipoIndice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datas\dtUsuarioEdita.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtUsuarioEdita.xsd</DependentUpon>
     </Compile>
     <Compile Include="datas\ProduccionXml.cs">
       <DependentUpon>ProduccionXml.xsd</DependentUpon>
@@ -267,6 +273,12 @@
     <Compile Include="frmPermisosRoles.Designer.cs">
       <DependentUpon>frmPermisosRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstalarLicencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstalarLicencias.Designer.cs">
+      <DependentUpon>InstalarLicencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reportes\contCartonDocumentos.cs">
@@ -311,6 +323,12 @@
     <Compile Include="reportes\contTipoIndice.Designer.cs">
       <DependentUpon>contTipoIndice.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\contUsuariosEdita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\contUsuariosEdita.Designer.cs">
+      <DependentUpon>contUsuariosEdita.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\FiltroCaminos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +370,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptIndice.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rptUsuarioEdita.cs">
+      <DependentUpon>rptUsuarioEdita.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="reportes\rptProduccion.cs">
       <AutoGen>True</AutoGen>
@@ -434,6 +458,9 @@
     <EmbeddedResource Include="frmPermisosRoles.resx">
       <DependentUpon>frmPermisosRoles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstalarLicencias.resx">
+      <DependentUpon>InstalarLicencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -465,6 +492,9 @@
     <EmbeddedResource Include="reportes\contTipoIndice.resx">
       <DependentUpon>contTipoIndice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\contUsuariosEdita.resx">
+      <DependentUpon>contUsuariosEdita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\FiltroCaminos.resx">
       <DependentUpon>FiltroCaminos.cs</DependentUpon>
     </EmbeddedResource>
@@ -489,6 +519,10 @@
     <EmbeddedResource Include="reportes\rptIndice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptIndice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptUsuarioEdita.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUsuarioEdita.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptProduccion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -567,6 +601,17 @@
     </None>
     <None Include="datas\dtTipoIndice.xss">
       <DependentUpon>dtTipoIndice.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtUsuarioEdita.xsc">
+      <DependentUpon>dtUsuarioEdita.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtUsuarioEdita.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtUsuarioEdita.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datas\dtUsuarioEdita.xss">
+      <DependentUpon>dtUsuarioEdita.xsd</DependentUpon>
     </None>
     <None Include="datas\ProduccionXml.xsc">
       <DependentUpon>ProduccionXml.xsd</DependentUpon>

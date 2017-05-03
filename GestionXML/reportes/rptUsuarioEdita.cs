@@ -16,14 +16,14 @@ namespace GestionXML.reportes {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptProduccion : ReportClass {
+    public class rptUsuarioEdita : ReportClass {
         
-        public rptProduccion() {
+        public rptUsuarioEdita() {
         }
         
         public override string ResourceName {
             get {
-                return "rptProduccion.rpt";
+                return "rptUsuarioEdita.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace GestionXML.reportes {
         
         public override string FullResourceName {
             get {
-                return "GestionXML.reportes.rptProduccion.rpt";
+                return "GestionXML.reportes.rptUsuarioEdita.rpt";
             }
             set {
                 // Do nothing
@@ -106,9 +106,9 @@ namespace GestionXML.reportes {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptProduccion : Component, ICachedReport {
+    public class CachedrptUsuarioEdita : Component, ICachedReport {
         
-        public CachedrptProduccion() {
+        public CachedrptUsuarioEdita() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace GestionXML.reportes {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptProduccion rpt = new rptProduccion();
+            rptUsuarioEdita rpt = new rptUsuarioEdita();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -83,7 +83,7 @@ namespace GestionXML
             int _id_estado = Convert.ToInt16(cbm_estado.SelectedValue.ToString());
             int _id_ciudad = Convert.ToInt16(cbm_ciudad.SelectedValue.ToString());
 
-
+           
 
             Boolean valida_email = false;
 
@@ -133,8 +133,10 @@ namespace GestionXML
 
             if (_error.Length == 0)
             {
-                string datos = _nombre_usuarios + "?" + _clave_usuarios + "?" + _telefono_usuarios + "?" + _celular_usuarios + "?" + _correo_usuarios + "?" + _id_rol + "?" + _id_estado + "?" + _usuario_usuarios + "?" + _id_ciudad;
-                string columnas = "_nombre_usuarios?_clave_usuarios?_telefono_usuarios?_celular_usuarios?_correo_usuarios?_id_rol?_id_estado?_usuario_usuarios?_id_ciudad";
+                string clave = AccesoLogica.cifrar(_clave_usuarios);
+              
+                string datos = _nombre_usuarios + "?" + clave + "?" + _telefono_usuarios + "?" + _celular_usuarios + "?" + _correo_usuarios + "?" + _id_rol + "?" + _id_estado + "?" + _usuario_usuarios + "?" + _id_ciudad;
+                string columnas = "_nombre_usuarios?clave?_telefono_usuarios?_celular_usuarios?_correo_usuarios?_id_rol?_id_estado?_usuario_usuarios?_id_ciudad";
                 string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Varchar?NpgsqlDbType.Varchar? NpgsqlDbType.Varchar?NpgsqlDbType.Varchar?NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Varchar?NpgsqlDbType.Integer";
 
 

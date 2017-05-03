@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace GestionXML.clases
 {
@@ -31,11 +32,11 @@ namespace GestionXML.clases
             }
            
         }
-
+        
 
         public static void CargarComboWhere(System.Windows.Forms.ComboBox cmb, string id, string columna, string tabla, string where)
         {
-
+         
             try
             {
                 cmb.Items.Insert(0, "Seleccione..");
