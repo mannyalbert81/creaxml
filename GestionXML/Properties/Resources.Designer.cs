@@ -63,6 +63,16 @@ namespace GestionXML.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1493865098_license_key {
+            get {
+                object obj = ResourceManager.GetObject("1493865098_license_key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap acceso {
             get {
                 object obj = ResourceManager.GetObject("acceso", resourceCulture);
@@ -146,16 +156,6 @@ namespace GestionXML.Properties {
         internal static System.Drawing.Bitmap certificado {
             get {
                 object obj = ResourceManager.GetObject("certificado", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap clipboard {
-            get {
-                object obj = ResourceManager.GetObject("clipboard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,16 +506,6 @@ namespace GestionXML.Properties {
         internal static System.Drawing.Bitmap salida {
             get {
                 object obj = ResourceManager.GetObject("salida", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap vision {
-            get {
-                object obj = ResourceManager.GetObject("vision", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

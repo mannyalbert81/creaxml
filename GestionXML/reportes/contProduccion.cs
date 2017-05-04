@@ -28,7 +28,7 @@ namespace GestionXML.reportes
             datas.ProduccionXml ProduccionXml = new datas.ProduccionXml();
 
             NpgsqlDataAdapter daProduccion = new NpgsqlDataAdapter();
-            daProduccion = AccesoLogica.Select_reporte("  produccion_detalle.id_produccion_detalle, produccion_detalle.nombre_produccion_detalle, produccion_detalle.inicio_produccion_detalle, produccion_detalle.fin_produccion_detalle, usuarios.id_usuarios, usuarios.nombre_usuarios, caminos.id_caminos, caminos.nombre_caminos, produccion_detalle.creado, produccion_detalle.modificado ", " public.produccion_detalle, public.usuarios, public.caminos", " usuarios.id_usuarios = produccion_detalle.id_usuarios_crea AND caminos.id_caminos = produccion_detalle.id_caminos AND usuarios.id_usuarios = '" + _id_usuario + "' AND inicio_produccion_detalle= '" + _inicio + "' AND fin_produccion_detalle= '" + _final + "'");
+            daProduccion = AccesoLogica.Select_reporte("  produccion_detalle.id_produccion_detalle, produccion_detalle.nombre_produccion_detalle, produccion_detalle.inicio_produccion_detalle, produccion_detalle.fin_produccion_detalle, usuarios.id_usuarios, usuarios.nombre_usuarios, caminos.id_caminos, caminos.nombre_caminos, produccion_detalle.creado, produccion_detalle.modificado ", " public.produccion_detalle, public.usuarios, public.caminos", " usuarios.id_usuarios = produccion_detalle.id_usuarios_crea AND caminos.id_caminos = produccion_detalle.id_caminos AND usuarios.id_usuarios = '" + _id_usuario + "' AND produccion_detalle.creado BETWEEN '" + _inicio + "' AND '" + _final + "'");
 
             daProduccion.Fill(ProduccionXml, "produccion_detalle");
             int reg = ProduccionXml.Tables[1].Rows.Count;

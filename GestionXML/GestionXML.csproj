@@ -130,6 +130,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dtIndice.xsd</DependentUpon>
     </Compile>
+    <Compile Include="datas\dtLicencias.cs">
+      <DependentUpon>dtLicencias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="datas\dtLicencias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dtLicencias.xsd</DependentUpon>
+    </Compile>
     <Compile Include="datas\dtProyectos.cs">
       <DependentUpon>dtProyectos.xsd</DependentUpon>
     </Compile>
@@ -299,6 +307,12 @@
     <Compile Include="reportes\contIndice.Designer.cs">
       <DependentUpon>contIndice.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\contLicencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\contLicencias.Designer.cs">
+      <DependentUpon>contLicencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\contProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +355,12 @@
     <Compile Include="reportes\FiltroIndice.Designer.cs">
       <DependentUpon>FiltroIndice.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\FiltroLicencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\FiltroLicencias.Designer.cs">
+      <DependentUpon>FiltroLicencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\FiltroUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,6 +389,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptIndice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rptLicencias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLicencias.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="reportes\rptUsuarioEdita.cs">
@@ -480,6 +506,9 @@
     <EmbeddedResource Include="reportes\contIndice.resx">
       <DependentUpon>contIndice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\contLicencias.resx">
+      <DependentUpon>contLicencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\contProduccion.resx">
       <DependentUpon>contProduccion.cs</DependentUpon>
     </EmbeddedResource>
@@ -501,6 +530,9 @@
     <EmbeddedResource Include="reportes\FiltroIndice.resx">
       <DependentUpon>FiltroIndice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\FiltroLicencias.resx">
+      <DependentUpon>FiltroLicencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\FiltroUsuarios.resx">
       <DependentUpon>FiltroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -519,6 +551,10 @@
     <EmbeddedResource Include="reportes\rptIndice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptIndice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptLicencias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLicencias.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptUsuarioEdita.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -579,6 +615,17 @@
     </None>
     <None Include="datas\dtIndice.xss">
       <DependentUpon>dtIndice.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtLicencias.xsc">
+      <DependentUpon>dtLicencias.xsd</DependentUpon>
+    </None>
+    <None Include="datas\dtLicencias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dtLicencias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="datas\dtLicencias.xss">
+      <DependentUpon>dtLicencias.xsd</DependentUpon>
     </None>
     <None Include="datas\dtProyectos.xsc">
       <DependentUpon>dtProyectos.xsd</DependentUpon>
@@ -668,8 +715,7 @@
     <Content Include="crea-xml.ico" />
     <Content Include="iconoGestor.ico" />
     <Content Include="indice.txt" />
-    <None Include="Resources\clipboard.png" />
-    <None Include="Resources\vision.png" />
+    <None Include="Resources\1493865098_license_key.png" />
     <None Include="Resources\firma-del-contrato1.png" />
     <None Include="Resources\carpeta %284%291.png" />
     <None Include="Resources\logoreport.jpg" />
