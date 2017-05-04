@@ -26,9 +26,9 @@ namespace GestionXML.clases
             {
                 try
                 {
-                    _id_usuarios = Convert.ToInt32(renglon["id_usuarios"].ToString());
+                   // _id_usuarios = Convert.ToInt32(renglon["id_usuarios"].ToString());
                     xml_creados_produccion_cabeza = Convert.ToInt32(renglon["xml_creados_produccion_cabeza"].ToString());
-                    _id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
+                   // _id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
                     
                 }
                 catch
@@ -47,6 +47,9 @@ namespace GestionXML.clases
             {
                  int result = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_produccion_cabeza");
                 
+                ////
+
+
             }
             catch (NpgsqlException)
             {
