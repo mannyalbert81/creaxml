@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarpetasCalidadXML));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.camino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PDF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XML = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dif = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbm_proyectos = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.camino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CREADOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CONTROL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dif = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,11 +51,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnCargar);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox1.Location = new System.Drawing.Point(12, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(9, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1148, 570);
+            this.groupBox1.Size = new System.Drawing.Size(861, 463);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Archivos por Carpetas";
@@ -68,15 +66,50 @@
             this.numero,
             this.NOMBRE,
             this.camino,
-            this.PDF,
-            this.XML,
+            this.CREADOS,
+            this.CONTROL,
             this.dif});
-            this.dataGridView1.Location = new System.Drawing.Point(20, 97);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 79);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1119, 465);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 378);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // cbm_proyectos
+            // 
+            this.cbm_proyectos.FormattingEnabled = true;
+            this.cbm_proyectos.Location = new System.Drawing.Point(82, 31);
+            this.cbm_proyectos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbm_proyectos.Name = "cbm_proyectos";
+            this.cbm_proyectos.Size = new System.Drawing.Size(210, 21);
+            this.cbm_proyectos.TabIndex = 15;
+            this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label4.Location = new System.Drawing.Point(13, 31);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Proyectos:";
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCargar.Image = global::GestionXML.Properties.Resources.carpeta__4_;
+            this.btnCargar.Location = new System.Drawing.Point(747, 11);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(108, 65);
+            this.btnCargar.TabIndex = 0;
+            this.btnCargar.Text = "Cargar Carpetas";
+            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // numero
             // 
@@ -88,76 +121,40 @@
             // 
             this.NOMBRE.HeaderText = "NOMBRE";
             this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.Width = 250;
+            this.NOMBRE.Width = 200;
             // 
             // camino
             // 
             this.camino.HeaderText = "CAMINO";
             this.camino.Name = "camino";
-            this.camino.Width = 400;
+            this.camino.Width = 320;
             // 
-            // PDF
+            // CREADOS
             // 
-            this.PDF.HeaderText = "PDF";
-            this.PDF.Name = "PDF";
-            this.PDF.Width = 40;
+            this.CREADOS.HeaderText = "CREADOS";
+            this.CREADOS.Name = "CREADOS";
+            this.CREADOS.Width = 65;
             // 
-            // XML
+            // CONTROL
             // 
-            this.XML.HeaderText = "XML";
-            this.XML.Name = "XML";
-            this.XML.Width = 40;
+            this.CONTROL.HeaderText = "CONTROL";
+            this.CONTROL.Name = "CONTROL";
+            this.CONTROL.Width = 65;
             // 
             // dif
             // 
             this.dif.HeaderText = "DIF";
             this.dif.Name = "dif";
-            this.dif.Width = 40;
-            // 
-            // cbm_proyectos
-            // 
-            this.cbm_proyectos.FormattingEnabled = true;
-            this.cbm_proyectos.Location = new System.Drawing.Point(109, 38);
-            this.cbm_proyectos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbm_proyectos.Name = "cbm_proyectos";
-            this.cbm_proyectos.Size = new System.Drawing.Size(279, 24);
-            this.cbm_proyectos.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(17, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Proyectos:";
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCargar.Image = global::GestionXML.Properties.Resources.carpeta__4_;
-            this.btnCargar.Location = new System.Drawing.Point(996, 14);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(144, 80);
-            this.btnCargar.TabIndex = 0;
-            this.btnCargar.Text = "Cargar Carpetas";
-            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCargar.UseVisualStyleBackColor = false;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.dif.Width = 65;
             // 
             // frmCarpetasCalidadXML
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1177, 591);
+            this.ClientSize = new System.Drawing.Size(883, 480);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCarpetasCalidadXML";
@@ -183,8 +180,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn camino;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PDF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn XML;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CREADOS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CONTROL;
         private System.Windows.Forms.DataGridViewTextBoxColumn dif;
     }
 }

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Negocio;
 
 namespace GestionXML
 {
@@ -16,7 +15,6 @@ namespace GestionXML
         public static frmMenucs mdiobj;
 
         public string _nombre_usuarios = "";
-        public int _id_rol;
 
         public frmMenucs()
         {
@@ -24,224 +22,9 @@ namespace GestionXML
             
         }
 
-
-       
-
-
         private void frmMenucs_Load(object sender, EventArgs e)
         {
-            //MENU ADMINISTRACION
-
-            administraciónToolStripMenuItem.Visible = false;
-            usuariosToolStripMenuItem.Visible = false;
-            rolesToolStripMenuItem.Visible = false;
-            controladoresToolStripMenuItem.Visible = false;
-            permisosRolesToolStripMenuItem.Visible = false;
-            formulariosToolStripMenuItem.Visible = false;
-            licenciasToolStripMenuItem.Visible = false;
-
-            // MENU MANTENIMIENTO
-            mantenimientoToolStripMenuItem.Visible = false;
-            proyectosToolStripMenuItem.Visible = false;
-            tipoIndiceToolStripMenuItem.Visible = false;
-            caminosToolStripMenuItem.Visible = false;
-            cartonDocumentosToolStripMenuItem.Visible = false;
-            estadoToolStripMenuItem.Visible = false;
-            indiceToolStripMenuItem.Visible = false;
-            asignarToolStripMenuItem.Visible = false;
-
-            // MENU GESTION XML
-
-            gestionXMLToolStripMenuItem.Visible = false;
-            crearXMLToolStripMenuItem.Visible = false;
-            controlarCalidadXMLToolStripMenuItem.Visible = false;
-
-            // ACCESOS RAPIDOS
-            toolStripButton4.Visible = false;
-            toolStripButton5.Visible = false;
-            toolStripButton6.Visible = false;
-            toolStripButton7.Visible = false;
-            toolStripButton8.Visible = false;
-            toolStripButton10.Visible = false;
-            toolStripButton11.Visible = false;
-            toolStripButton12.Visible = false;
-
-
             label1.Text = _nombre_usuarios;
-            string _nombre_controladores = "";
-
-            DataTable dtPermisos = AccesoLogica.Select("permisos_rol.nombre_permisos_rol, rol.id_rol, rol.nombre_rol, controladores.id_controladores, controladores.nombre_controladores, permisos_rol.id_permisos_rol", "public.permisos_rol, public.controladores, public.rol", "controladores.id_controladores = permisos_rol.id_controladores AND rol.id_rol = permisos_rol.id_rol AND permisos_rol.id_rol= '" + _id_rol + "'");
-            int registro = dtPermisos.Rows.Count;
-            foreach (DataRow renglon in dtPermisos.Rows)
-            {
-                _nombre_controladores = Convert.ToString(renglon["nombre_controladores"].ToString());
-
-
-             if (registro > 0)
-                {
-                    //MENU ADMINISTRACION
-
-                    if (_nombre_controladores =="MenuAdministracion") {
-                        administraciónToolStripMenuItem.Visible= true;
-                    }
-                     if (_nombre_controladores == "frmUsuarios")
-                    {
-                        usuariosToolStripMenuItem.Visible = true;
-                    }
-                     if (_nombre_controladores == "frmRoles")
-                    {
-                        rolesToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmControladores")
-                    {
-                        controladoresToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmPermisosRoles")
-                    {
-                        permisosRolesToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmFormularios")
-                    {
-                        formulariosToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "InstalarLicencias")
-                    {
-                        licenciasToolStripMenuItem.Visible = true;
-                    }
-
-                    // MENU MANTENIMIENTO
-                    if (_nombre_controladores == "MenuMantenimiento")
-                    {
-                        mantenimientoToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmProyectos")
-                    {
-                        proyectosToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmTipoIndice")
-                    {
-                        tipoIndiceToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmCaminos")
-                    {
-                        caminosToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmCartonDocumentos")
-                    {
-                        cartonDocumentosToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmEstado")
-                    {
-                        estadoToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmIndice")
-                    {
-                        indiceToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmAsignar")
-                    {
-                        asignarToolStripMenuItem.Visible = true;
-                    }
-
-                    // MENU GESTION XML
-
-                    if (_nombre_controladores == "GestionXML")
-                    {
-                        gestionXMLToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmCarpetasCrea")
-                    {
-                        crearXMLToolStripMenuItem.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmCarpetasCalidadXML")
-                    {
-                        controlarCalidadXMLToolStripMenuItem.Visible = true;
-                    }
-
-                    // ACCESOS RAPIDOS
-
-                    if (_nombre_controladores == "frmUsuarios")
-                    {
-                        toolStripButton4.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmProyectos")
-                    {
-                        toolStripButton5.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmTipoIndice")
-                    {
-                        toolStripButton6.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmCaminos")
-                    {
-                        toolStripButton7.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmCartonDocumentos")
-                    {
-                        toolStripButton8.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmIndice")
-                    {
-                        toolStripButton10.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmCarpetasCrea")
-                    {
-                        toolStripButton11.Visible = true;
-                    }
-                    if (_nombre_controladores == "frmCarpetasCalidadXML")
-                    {
-                        toolStripButton12.Visible = true;
-                    }
-
-
-
-                   
-
-                }
-                else
-                {
-
-                    //MENU ADMINISTRACION
-
-                        administraciónToolStripMenuItem.Visible = false;
-                        usuariosToolStripMenuItem.Visible = false;
-                        rolesToolStripMenuItem.Visible = false;
-                        controladoresToolStripMenuItem.Visible = false;
-                        permisosRolesToolStripMenuItem.Visible = false;
-                        formulariosToolStripMenuItem.Visible = false;
-                        licenciasToolStripMenuItem.Visible = false;
-                    
-                    // MENU MANTENIMIENTO
-                        mantenimientoToolStripMenuItem.Visible = false;
-                        proyectosToolStripMenuItem.Visible = false;
-                        tipoIndiceToolStripMenuItem.Visible = false;
-                        caminosToolStripMenuItem.Visible = false;
-                        cartonDocumentosToolStripMenuItem.Visible = false;
-                        estadoToolStripMenuItem.Visible = false;
-                        indiceToolStripMenuItem.Visible = false;
-                        asignarToolStripMenuItem.Visible = false;
-                    
-                    // MENU GESTION XML
-
-                        gestionXMLToolStripMenuItem.Visible = false;
-                        crearXMLToolStripMenuItem.Visible = false;
-                        controlarCalidadXMLToolStripMenuItem.Visible = false;
-
-                    // ACCESOS RAPIDOS
-
-                    toolStripButton4.Visible = false;
-                    toolStripButton5.Visible = false;
-                    toolStripButton6.Visible = false;
-                    toolStripButton7.Visible = false;
-                    toolStripButton8.Visible = false;
-                    toolStripButton10.Visible = false;
-                    toolStripButton11.Visible = false;
-                    toolStripButton12.Visible = false;
-
-                }
-
-            }
-            
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -262,8 +45,6 @@ namespace GestionXML
             frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML(); 
             frm.Show();
         }
-
-        
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -546,11 +327,10 @@ namespace GestionXML
             frm.Show();
         }
 
-        private void edicionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void licenciasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            reportes.FiltroUsuarioEdita frm = new reportes.FiltroUsuarioEdita();
+            reportes.FiltroLicencias frm = new reportes.FiltroLicencias();
             frm.Show();
-
         }
     }
 }

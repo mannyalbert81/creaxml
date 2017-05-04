@@ -19,6 +19,16 @@ namespace GestionXML
             InitializeComponent();
         }
 
+
+
+        private void frmCarpetasCalidadXML_Load(object sender, EventArgs e)
+        {
+            clases.Funciones.CargarCombo(cbm_proyectos, "id_proyectos", "nombre_proyectos", "proyectos");
+        }
+
+
+
+
         private void btnCargar_Click(object sender, EventArgs e)
         {
             int _id_proyectos = Convert.ToInt32(cbm_proyectos.SelectedValue.ToString());
@@ -90,11 +100,7 @@ namespace GestionXML
 
         }
 
-        private void frmCarpetasCalidadXML_Load(object sender, EventArgs e)
-        {
-            clases.Funciones.CargarCombo(cbm_proyectos, "id_proyectos", "nombre_proyectos", "proyectos");
-        }
-
+        
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow fila = dataGridView1.CurrentRow;
@@ -132,6 +138,8 @@ namespace GestionXML
 
             if (result == DialogResult.Yes)
             {
+                
+
                 frmListaPendienteTXT Crea = new frmListaPendienteTXT();
                 Crea._path_camino = _camino;
                 Crea._id_camino = _id_caminos;
@@ -140,6 +148,11 @@ namespace GestionXML
             if (result == DialogResult.No)
             {
             }
+        }
+
+        private void cbm_proyectos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

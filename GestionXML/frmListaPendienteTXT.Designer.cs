@@ -41,19 +41,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(25, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 17);
+            this.label1.Size = new System.Drawing.Size(141, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Camino de Archivo a Buscar";
             // 
             // txtTextoBuscar
             // 
-            this.txtTextoBuscar.Location = new System.Drawing.Point(229, 20);
-            this.txtTextoBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTextoBuscar.Location = new System.Drawing.Point(172, 16);
             this.txtTextoBuscar.Name = "txtTextoBuscar";
-            this.txtTextoBuscar.Size = new System.Drawing.Size(708, 22);
+            this.txtTextoBuscar.Size = new System.Drawing.Size(532, 20);
             this.txtTextoBuscar.TabIndex = 8;
             this.txtTextoBuscar.TextChanged += new System.EventHandler(this.txtTextoBuscar_TextChanged);
             // 
@@ -64,10 +62,9 @@
             this.numero,
             this.fecha,
             this.ARCHIVO});
-            this.dataGridView1.Location = new System.Drawing.Point(22, 57);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 46);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(909, 479);
+            this.dataGridView1.Size = new System.Drawing.Size(682, 389);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -91,17 +88,17 @@
             // 
             // frmListaPendienteTXT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 593);
+            this.ClientSize = new System.Drawing.Size(715, 482);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtTextoBuscar);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmListaPendienteTXT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Archivos Pendientes de Revisar";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmListaPendienteTXT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
