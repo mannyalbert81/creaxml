@@ -378,3 +378,7 @@ C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\Interop.AcroPDF
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.exe
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.pdb
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.InstalarLicencias.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contLicencias.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contUsuariosEdita.resources
+C:\Users\mflores\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroLicencias.resources
