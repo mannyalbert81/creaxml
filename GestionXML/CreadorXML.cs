@@ -15,6 +15,9 @@ namespace GestionXML
 {
     public partial class CreadorXML : Form
     {
+        public DateTime _inicio_produccion_detalle;
+        public DateTime _fin_produccion_detalle;
+
         public string nombre_pdf = "";
         public int _id_indice_cabeza = 0;
         public Boolean _fecha1 = false;
@@ -89,6 +92,8 @@ namespace GestionXML
 
             CreaXML("", "", "", "", "", "", "", "", "", "", "", "");
             LeeIndice(1);
+
+            _inicio_produccion_detalle = DateTime.Now;
 
         }
 
@@ -738,9 +743,36 @@ namespace GestionXML
 
 
 
+                try
+                {
+                    CreaXML(_valor1, _valor2, _valor3, _valor4, _valor5, _valor6, _valor7, _valor8, _valor9, _valor10, _valor11, _valor12);
 
 
-                CreaXML(_valor1, _valor2, _valor3, _valor4, _valor5, _valor6, _valor7, _valor8, _valor9, _valor10, _valor11, _valor12);
+                    try
+                    {
+                        ////inserte cabeza   y luego detalle
+                        ///nombre XML = @nombre_pdf.Replace(".pdf", ".XML")
+                        _fin_produccion_detalle = DateTime.Now;
+
+
+
+
+                    }
+                    catch (Exception Ex)
+                    {
+
+                        MessageBox.Show(Ex.Message, "Insertar la Produccion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+                }
+                catch (Exception Ex)
+                {
+
+                    MessageBox.Show(Ex.Message, "No se Pudo General el XML", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            
             }
             else
             {
