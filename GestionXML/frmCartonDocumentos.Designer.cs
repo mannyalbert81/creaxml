@@ -40,7 +40,6 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.dataGridViewCartonDocumentos = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCartonDocumentos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +69,7 @@
             this.txt_numero_carton_documentos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_numero_carton_documentos.Name = "txt_numero_carton_documentos";
             this.txt_numero_carton_documentos.Size = new System.Drawing.Size(210, 20);
-            this.txt_numero_carton_documentos.TabIndex = 9;
+            this.txt_numero_carton_documentos.TabIndex = 1;
             // 
             // cbm_estado_carton_documentos
             // 
@@ -82,7 +81,7 @@
             this.cbm_estado_carton_documentos.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_estado_carton_documentos.Name = "cbm_estado_carton_documentos";
             this.cbm_estado_carton_documentos.Size = new System.Drawing.Size(99, 21);
-            this.cbm_estado_carton_documentos.TabIndex = 51;
+            this.cbm_estado_carton_documentos.TabIndex = 2;
             // 
             // btnGuardar
             // 
@@ -110,7 +109,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
-            this.btnBuscar.TabIndex = 53;
+            this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -125,7 +124,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
-            this.btnLimpiar.TabIndex = 54;
+            this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -140,7 +139,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
-            this.btnEliminar.TabIndex = 55;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -155,7 +154,7 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
-            this.btnSalir.TabIndex = 56;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -181,26 +180,10 @@
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 67);
-            this.button1.TabIndex = 58;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Limpiar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
-
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(386, 78);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 67);
-            this.button2.TabIndex = 59;
-            this.button2.Text = "Limpiar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmCartonDocumentos
             // 
@@ -208,7 +191,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(534, 511);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewCartonDocumentos);
             this.Controls.Add(this.btnSalir);
@@ -249,6 +231,5 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView dataGridViewCartonDocumentos;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }
