@@ -97,7 +97,7 @@ namespace GestionXML
                     {
                         frmMenucs frm = new frmMenucs();
                         frm._nombre_usuarios = _nombre_usuarios;
-                        //frm._id_rol = _id_rol;
+                        frm._id_rol = _id_rol;
                         frm.Show();
                         this.Hide();
                     }
@@ -138,7 +138,7 @@ namespace GestionXML
 
                                 frmMenucs frm = new frmMenucs();
                                 frm._nombre_usuarios = _nombre_usuarios;
-                                //frm._id_rol = _id_rol;
+                                frm._id_rol = _id_rol;
                                 frm.Show();
                                 this.Hide();
 
@@ -169,7 +169,7 @@ namespace GestionXML
 
                         frmMenucs frm = new frmMenucs();
                         frm._nombre_usuarios = _nombre_usuarios;
-                        //frm._id_rol = _id_rol;
+                        frm._id_rol = _id_rol;
                         frm.Show();
                         this.Hide();
                     }else
