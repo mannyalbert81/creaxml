@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Negocio;
 
 namespace GestionXML
 {
@@ -16,7 +15,6 @@ namespace GestionXML
         public static frmMenucs mdiobj;
 
         public string _nombre_usuarios = "";
-        public int _id_rol;
 
         public frmMenucs()
         {
@@ -24,32 +22,9 @@ namespace GestionXML
             
         }
 
-
-       
-
-
         private void frmMenucs_Load(object sender, EventArgs e)
         {
             label1.Text = _nombre_usuarios;
-            string _nombre_controladores = "";
-
-            DataTable dtPermisos = AccesoLogica.Select("permisos_rol.nombre_permisos_rol, rol.id_rol, rol.nombre_rol, controladores.id_controladores, controladores.nombre_controladores, permisos_rol.id_permisos_rol", "public.permisos_rol, public.controladores, public.rol", "controladores.id_controladores = permisos_rol.id_controladores AND rol.id_rol = permisos_rol.id_rol AND permisos_rol.id_rol= '" + _id_rol + "'");
-            int registro = dtPermisos.Rows.Count;
-            foreach (DataRow renglon in dtPermisos.Rows)
-            {
-                _nombre_controladores = Convert.ToString(renglon["nombre_controladores"].ToString());
-
-
-             if (registro > 0)
-                {
-                    if (_nombre_controladores =="Usuarios") {
-                        usuariosToolStripMenuItem.Visible= true;
-                    }
-
-                }
-             
-            }
-            
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,8 +45,6 @@ namespace GestionXML
             frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML(); 
             frm.Show();
         }
-
-        
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -354,11 +327,10 @@ namespace GestionXML
             frm.Show();
         }
 
-        private void edicionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void licenciasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            reportes.FiltroUsuarioEdita frm = new reportes.FiltroUsuarioEdita();
+            reportes.FiltroLicencias frm = new reportes.FiltroLicencias();
             frm.Show();
-
         }
     }
 }
