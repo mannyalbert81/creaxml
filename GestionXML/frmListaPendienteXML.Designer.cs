@@ -46,11 +46,10 @@
             this.numero,
             this.fecha,
             this.ARCHIVO});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 73);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(909, 479);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Size = new System.Drawing.Size(682, 389);
+            this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // numero
@@ -76,42 +75,38 @@
             this.lblCamino.AutoSize = true;
             this.lblCamino.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCamino.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblCamino.Location = new System.Drawing.Point(23, 28);
-            this.lblCamino.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCamino.Location = new System.Drawing.Point(17, 23);
             this.lblCamino.Name = "lblCamino";
-            this.lblCamino.Size = new System.Drawing.Size(0, 17);
+            this.lblCamino.Size = new System.Drawing.Size(0, 13);
             this.lblCamino.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 28);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(15, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 17);
+            this.label2.Size = new System.Drawing.Size(101, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Nombre de Archivo:";
             // 
             // txtNombreArchivo
             // 
-            this.txtNombreArchivo.Location = new System.Drawing.Point(161, 23);
-            this.txtNombreArchivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreArchivo.Location = new System.Drawing.Point(121, 19);
             this.txtNombreArchivo.Name = "txtNombreArchivo";
-            this.txtNombreArchivo.Size = new System.Drawing.Size(760, 22);
-            this.txtNombreArchivo.TabIndex = 7;
+            this.txtNombreArchivo.Size = new System.Drawing.Size(571, 20);
+            this.txtNombreArchivo.TabIndex = 1;
             this.txtNombreArchivo.TextChanged += new System.EventHandler(this.txtNombreArchivo_TextChanged);
             // 
             // frmListaPendienteXML
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 587);
+            this.ClientSize = new System.Drawing.Size(706, 477);
             this.Controls.Add(this.txtNombreArchivo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCamino);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmListaPendienteXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Archivos XML Pendientes";

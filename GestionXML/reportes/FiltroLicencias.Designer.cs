@@ -61,7 +61,7 @@
             this.cmb_licencias.Location = new System.Drawing.Point(164, 53);
             this.cmb_licencias.Name = "cmb_licencias";
             this.cmb_licencias.Size = new System.Drawing.Size(121, 21);
-            this.cmb_licencias.TabIndex = 4;
+            this.cmb_licencias.TabIndex = 1;
             // 
             // FiltroLicencias
             // 
