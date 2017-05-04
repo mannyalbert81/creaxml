@@ -66,7 +66,7 @@
             this.cbm_proyectos.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(210, 21);
-            this.cbm_proyectos.TabIndex = 0;
+            this.cbm_proyectos.TabIndex = 1;
             // 
             // label4
             // 
