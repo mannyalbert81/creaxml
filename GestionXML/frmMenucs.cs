@@ -332,5 +332,10 @@ namespace GestionXML
             reportes.FiltroLicencias frm = new reportes.FiltroLicencias();
             frm.Show();
         }
+
+        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
