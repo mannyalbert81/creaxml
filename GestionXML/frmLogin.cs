@@ -33,6 +33,7 @@ namespace GestionXML
             string _nombre_usuarios = "";
             int _id_rol = 0;
             int _id_licencias = 0;
+            int _id_usuarios = 0;
             string _numero_licencias_registradas = "";
             string _cantidad_licencias = "";
             string _mac_adres_maquina = "";
@@ -59,9 +60,10 @@ namespace GestionXML
             // CONSULTO USUARIO Y CLAVE
 
             string clave = AccesoLogica.cifrar(_clave_usuarios);
-            DataTable dtUsuario = AccesoLogica.Select("nombre_usuarios, id_rol", "usuarios", "usuario_usuarios = '" + _usuario_usuarios + "' AND clave_usuarios = '" + clave + "'  ");
+            DataTable dtUsuario = AccesoLogica.Select("nombre_usuarios, id_rol, id_usuarios", "usuarios", "usuario_usuarios = '" + _usuario_usuarios + "' AND clave_usuarios = '" + clave + "'  ");
             foreach (DataRow renglon in dtUsuario.Rows)
             {
+                _id_usuarios = Convert.ToInt32(renglon["id_usuarios"].ToString());
                 _nombre_usuarios = Convert.ToString(renglon["nombre_usuarios"].ToString());
                 _id_rol = Convert.ToInt32(renglon["id_rol"].ToString());
 
@@ -98,6 +100,8 @@ namespace GestionXML
                         frmMenucs frm = new frmMenucs();
                         frm._nombre_usuarios = _nombre_usuarios;
                         frm._id_rol = _id_rol;
+                        frm._id_usuarios = _id_usuarios;
+                        
                         frm.Show();
                         this.Hide();
                     }
@@ -139,6 +143,8 @@ namespace GestionXML
                                 frmMenucs frm = new frmMenucs();
                                 frm._nombre_usuarios = _nombre_usuarios;
                                 frm._id_rol = _id_rol;
+                                frm._id_usuarios = _id_usuarios;
+                               
                                 frm.Show();
                                 this.Hide();
 
@@ -170,6 +176,8 @@ namespace GestionXML
                         frmMenucs frm = new frmMenucs();
                         frm._nombre_usuarios = _nombre_usuarios;
                         frm._id_rol = _id_rol;
+                        frm._id_usuarios = _id_usuarios;
+                       
                         frm.Show();
                         this.Hide();
                     }else

@@ -15,6 +15,8 @@ namespace GestionXML
     {
         public  string _path_camino = "";
         public int _id_camino = 0;
+        public int _id_usuarios;
+
         public frmListaPendienteXML()
         {
             InitializeComponent();
@@ -63,6 +65,8 @@ namespace GestionXML
                 CreadorXML Crea = new CreadorXML();   
                 Crea.nombre_pdf = _camino;
                 Crea._id_indice_cabeza = _id_indice_cabeza;
+                Crea._id_usuarios = _id_usuarios;
+                Crea._id_camino = _id_camino;
                 Crea.Show();
             }
             if (result == DialogResult.No)

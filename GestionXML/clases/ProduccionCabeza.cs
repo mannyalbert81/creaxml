@@ -11,50 +11,84 @@ using Npgsql;
 
 namespace GestionXML.clases
 {
-    class ProduccionCabeza
+    public class ProduccionCabeza
     {
-        public static int InsertaProduccionCabeza(int _id_usuarios, int _id_caminos)
+        public static void InsertaProduccionCabeza(int _id_usuarios, int _id_caminos, string _nombre_produccion_detalle, DateTime _inicio_produccion_detalle, DateTime _fin_produccion_detalle)
         {
+            if (_id_usuarios>0)
+            {
+
+                MessageBox.Show(""+_id_usuarios+"", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                MessageBox.Show("Esta vacio", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+
             int _id_produccion_cabeza = 0;
             
             int xml_creados_produccion_cabeza = 0;
             int _xml_creados_produccion_cabeza = 0;
 
-            DataTable dtProduccion = AccesoLogica.Select2(" * ", "produccion_cabeza", "id_usuarios = '"+_id_usuarios+"' AND id_caminos = '"+ _id_caminos+"'    ");
+            DataTable dtProduccion = AccesoLogica.Select2(" * ", "produccion_cabeza", "id_usuarios = '"+ _id_usuarios +"' AND id_caminos = '"+ _id_caminos+"'    ");
 
             foreach (DataRow renglon in dtProduccion.Rows)
             {
                 try
                 {
-                    _id_usuarios = Convert.ToInt32(renglon["id_usuarios"].ToString());
+                    //_id_usuarios = Convert.ToInt32(renglon["id_usuarios"].ToString());
                     xml_creados_produccion_cabeza = Convert.ToInt32(renglon["xml_creados_produccion_cabeza"].ToString());
-                    _id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
-                    
+                    //_id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
+
+                   
                 }
                 catch
                 {
-                    MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos2", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No reccorrio foreach", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
             _xml_creados_produccion_cabeza = xml_creados_produccion_cabeza + 1;
 
             string datos = _id_usuarios + "?" + _xml_creados_produccion_cabeza  + "?" + _id_caminos;
-            string columnas = "id_usuarios?xml_creados_produccion_cabeza?id_caminos";
+            string columnas = "_id_usuarios?_xml_creados_produccion_cabeza?_id_caminos";
             string tipodatos = "NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Integer";
 
             try
             {
                  int result = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_produccion_cabeza");
-                
+
+                DataTable dtProduccion1 = AccesoLogica.Select("id_produccion_cabeza", "produccion_cabeza", "id_usuarios = '" + _id_usuarios + "' AND id_caminos = '" + _id_caminos + "' AND xml_creados_produccion_cabeza = '" + _xml_creados_produccion_cabeza + "'  ");
+
+                foreach (DataRow renglon1 in dtProduccion1.Rows)
+                {
+
+                    _id_produccion_cabeza = Convert.ToInt32(renglon1["id_produccion_cabeza"].ToString());
+                }
+                try
+                {
+                    ProduccionDetalle.InsertaProduccionDetalle(_id_produccion_cabeza, _id_caminos, _nombre_produccion_detalle, _inicio_produccion_detalle, _fin_produccion_detalle, _id_usuarios);
+                }
+                catch (NpgsqlException Ex)
+                {
+                    MessageBox.Show(Ex.Message, "No se Pudo Guardar el registro en la Base de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
             }
-            catch (NpgsqlException)
+            catch (NpgsqlException Ex)
             {
-                MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Ex.Message, "No se Pudo Guardar el registro en la Base de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
 
-            return _id_produccion_cabeza;
+
+
         }
     }
 }

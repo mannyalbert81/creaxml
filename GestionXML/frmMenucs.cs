@@ -17,6 +17,7 @@ namespace GestionXML
 
         public string _nombre_usuarios = "";
         public int _id_rol;
+        public int _id_usuarios;
 
         public frmMenucs()
         {
@@ -276,6 +277,7 @@ namespace GestionXML
         private void crearXMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCarpetasCalidad frm = new frmCarpetasCalidad();
+            frm._id_usuarios = _id_usuarios;
             frm.Show();
 
 
@@ -283,7 +285,8 @@ namespace GestionXML
 
         private void controlarCalidadXMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML(); 
+            frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML();
+           // frm._id_usuarios = _id_usuarios;
             frm.Show();
         }
 
@@ -462,6 +465,7 @@ namespace GestionXML
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             frmCarpetasCalidad frm = new frmCarpetasCalidad();
+            frm._id_usuarios = _id_usuarios;
             frm.Show();
 
         }

@@ -10,6 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.IO;
+
+
 
 namespace GestionXML
 {
@@ -45,7 +48,11 @@ namespace GestionXML
         DateTimePicker dtFecha10 = new DateTimePicker();
         DateTimePicker dtFecha11 = new DateTimePicker();
         DateTimePicker dtFecha12 = new DateTimePicker();
-        
+
+        public int _id_usuarios;
+        public int  _id_camino;
+        string _nombre_produccion_detalle = "";
+
         public CreadorXML()
         {
             InitializeComponent();
@@ -53,6 +60,8 @@ namespace GestionXML
 
         private void CreadorXML_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("Bienvenido " + _id_usuarios + "", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             dtFecha1.Visible = false;
             dtFecha2.Visible = false;
             dtFecha3.Visible = false;
@@ -750,11 +759,14 @@ namespace GestionXML
 
                     try
                     {
-                        ////inserte cabeza   y luego detalle
-                        ///nombre XML = @nombre_pdf.Replace(".pdf", ".XML")
+                      
+                      
+                        _nombre_produccion_detalle = @nombre_pdf.Replace(".pdf", ".XML");
                         _fin_produccion_detalle = DateTime.Now;
 
+                        int id_usu = _id_usuarios;
 
+                        clases.ProduccionCabeza.InsertaProduccionCabeza(id_usu, _id_camino, _nombre_produccion_detalle, _inicio_produccion_detalle, _fin_produccion_detalle);
 
 
                     }
