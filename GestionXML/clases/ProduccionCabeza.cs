@@ -13,8 +13,9 @@ namespace GestionXML.clases
 {
     class ProduccionCabeza
     {
-        public static void InsertaProduccionCabeza(int _id_usuarios, int _id_caminos)
+        public static int InsertaProduccionCabeza(int _id_usuarios, int _id_caminos)
         {
+            int _id_produccion_cabeza = 0;
             
             int xml_creados_produccion_cabeza = 0;
             int _xml_creados_produccion_cabeza = 0;
@@ -44,14 +45,16 @@ namespace GestionXML.clases
 
             try
             {
-                int result = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_produccion_cabeza");
+                 int result = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_produccion_cabeza");
                 
             }
             catch (NpgsqlException)
             {
                 MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            MessageBox.Show("Se ha Registrado Correctamente", "Guardado Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+            return _id_produccion_cabeza;
         }
     }
 }
