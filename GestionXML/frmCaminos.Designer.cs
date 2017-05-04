@@ -63,7 +63,7 @@
             this.txt_nombre_caminos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombre_caminos.Name = "txt_nombre_caminos";
             this.txt_nombre_caminos.Size = new System.Drawing.Size(210, 20);
-            this.txt_nombre_caminos.TabIndex = 0;
+            this.txt_nombre_caminos.TabIndex = 1;
             // 
             // label1
             // 
@@ -81,7 +81,7 @@
             this.txt_path_caminos.Margin = new System.Windows.Forms.Padding(2);
             this.txt_path_caminos.Name = "txt_path_caminos";
             this.txt_path_caminos.Size = new System.Drawing.Size(210, 20);
-            this.txt_path_caminos.TabIndex = 1;
+            this.txt_path_caminos.TabIndex = 2;
             // 
             // label2
             // 
@@ -110,7 +110,7 @@
             this.cbm_usuarios.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_usuarios.Name = "cbm_usuarios";
             this.cbm_usuarios.Size = new System.Drawing.Size(210, 21);
-            this.cbm_usuarios.TabIndex = 2;
+            this.cbm_usuarios.TabIndex = 3;
             // 
             // cbm_proyectos
             // 
@@ -119,7 +119,7 @@
             this.cbm_proyectos.Margin = new System.Windows.Forms.Padding(2);
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(210, 21);
-            this.cbm_proyectos.TabIndex = 3;
+            this.cbm_proyectos.TabIndex = 4;
             // 
             // btnGuardar
             // 
@@ -131,7 +131,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);
-            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
-            this.btnLimpiar.TabIndex = 6;
+            this.btnLimpiar.TabIndex = 7;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -161,7 +161,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
-            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -176,7 +176,7 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
-            this.btnSalir.TabIndex = 8;
+            this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
-            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;

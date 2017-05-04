@@ -49,82 +49,92 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 157);
+            this.label1.Location = new System.Drawing.Point(31, 128);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 17);
+            this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Campo:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 100);
+            this.label2.Location = new System.Drawing.Point(32, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 17);
+            this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre Tabla:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 229);
+            this.label3.Location = new System.Drawing.Point(24, 186);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 17);
+            this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 4;
             // 
             // dataGridViewAsignar
             // 
             this.dataGridViewAsignar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAsignar.Location = new System.Drawing.Point(41, 344);
+            this.dataGridViewAsignar.Location = new System.Drawing.Point(31, 280);
+            this.dataGridViewAsignar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewAsignar.Name = "dataGridViewAsignar";
             this.dataGridViewAsignar.RowTemplate.Height = 24;
-            this.dataGridViewAsignar.Size = new System.Drawing.Size(627, 232);
+            this.dataGridViewAsignar.Size = new System.Drawing.Size(470, 188);
             this.dataGridViewAsignar.TabIndex = 5;
             // 
             // txt_nombre_indice
             // 
-            this.txt_nombre_indice.Location = new System.Drawing.Point(172, 42);
+            this.txt_nombre_indice.Location = new System.Drawing.Point(129, 34);
+            this.txt_nombre_indice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_nombre_indice.Name = "txt_nombre_indice";
-            this.txt_nombre_indice.Size = new System.Drawing.Size(262, 22);
-            this.txt_nombre_indice.TabIndex = 6;
+            this.txt_nombre_indice.Size = new System.Drawing.Size(198, 20);
+            this.txt_nombre_indice.TabIndex = 1;
             // 
             // cbm_caminos
             // 
             this.cbm_caminos.FormattingEnabled = true;
-            this.cbm_caminos.Location = new System.Drawing.Point(506, 42);
+            this.cbm_caminos.Location = new System.Drawing.Point(380, 34);
+            this.cbm_caminos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbm_caminos.Name = "cbm_caminos";
-            this.cbm_caminos.Size = new System.Drawing.Size(162, 24);
-            this.cbm_caminos.TabIndex = 7;
+            this.cbm_caminos.Size = new System.Drawing.Size(122, 21);
+            this.cbm_caminos.TabIndex = 2;
             // 
             // txt_nombre_campo
             // 
-            this.txt_nombre_campo.Location = new System.Drawing.Point(172, 152);
+            this.txt_nombre_campo.Location = new System.Drawing.Point(129, 124);
+            this.txt_nombre_campo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_nombre_campo.Name = "txt_nombre_campo";
-            this.txt_nombre_campo.Size = new System.Drawing.Size(496, 22);
-            this.txt_nombre_campo.TabIndex = 8;
+            this.txt_nombre_campo.Size = new System.Drawing.Size(373, 20);
+            this.txt_nombre_campo.TabIndex = 4;
             // 
             // txt_nombre_tabla
             // 
-            this.txt_nombre_tabla.Location = new System.Drawing.Point(173, 97);
+            this.txt_nombre_tabla.Location = new System.Drawing.Point(130, 79);
+            this.txt_nombre_tabla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_nombre_tabla.Name = "txt_nombre_tabla";
-            this.txt_nombre_tabla.Size = new System.Drawing.Size(496, 22);
-            this.txt_nombre_tabla.TabIndex = 9;
+            this.txt_nombre_tabla.Size = new System.Drawing.Size(373, 20);
+            this.txt_nombre_tabla.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 45);
+            this.label4.Location = new System.Drawing.Point(31, 37);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 17);
+            this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Nombre Indice:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(440, 45);
+            this.label5.Location = new System.Drawing.Point(330, 37);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Detalle:";
             // 
@@ -133,11 +143,11 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(461, 229);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Location = new System.Drawing.Point(346, 186);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(103, 82);
-            this.btnSalir.TabIndex = 16;
+            this.btnSalir.Size = new System.Drawing.Size(77, 67);
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -148,11 +158,11 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(356, 229);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLimpiar.Location = new System.Drawing.Point(267, 186);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 82);
-            this.btnLimpiar.TabIndex = 14;
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
+            this.btnLimpiar.TabIndex = 7;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -164,11 +174,11 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(252, 229);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(189, 186);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(99, 82);
-            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.Size = new System.Drawing.Size(74, 67);
+            this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -180,11 +190,11 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(148, 229);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(111, 186);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 82);
-            this.btnGuardar.TabIndex = 12;
+            this.btnGuardar.Size = new System.Drawing.Size(75, 67);
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Asignar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -192,9 +202,9 @@
             // 
             // frmAsignar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 600);
+            this.ClientSize = new System.Drawing.Size(536, 488);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnBuscar);
@@ -209,6 +219,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAsignar";
             this.Text = "frmAsignar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAsignar_FormClosing);
