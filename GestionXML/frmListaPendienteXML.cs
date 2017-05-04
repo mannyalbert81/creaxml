@@ -25,7 +25,7 @@ namespace GestionXML
         private void frmCreaXML_Load(object sender, EventArgs e)
         {
             //cmbEquipos.SelectedIndex = 0;
-
+            
 
             lblCamino.Text = _path_camino;
 
