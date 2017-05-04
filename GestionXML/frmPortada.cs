@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace GestionXML
 {
-
     public partial class frmPortada : Form
     {
         public frmPortada()
@@ -28,17 +27,10 @@ namespace GestionXML
                 timer2.Stop();
             };
         }
-
         private void timer3_Tick(object sender, EventArgs e)
         {
-            
-            this.progressBar1.Increment(1);
-
+            //this.progressBar1.Increment(1);
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
