@@ -63,13 +63,11 @@
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 1;
             this.progressBar1.UseWaitCursor = true;
-            this.progressBar1.Value = 5;
             // 
             // timer3
             // 
             this.timer3.Enabled = true;
             this.timer3.Interval = 85;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // frmPortada
             // 
