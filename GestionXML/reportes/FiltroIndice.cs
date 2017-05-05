@@ -24,8 +24,8 @@ namespace GestionXML.reportes
      
 
         {
-  
 
+            
             clases.Funciones.CargarCombo(cbm_proyectos, "id_proyectos", "nombre_proyectos", "proyectos");
 
             int _id_proyectos = Convert.ToInt32(cbm_proyectos.SelectedValue.ToString());
@@ -38,7 +38,7 @@ namespace GestionXML.reportes
         private void button1_Click(object sender, EventArgs e)
         {
 
-            this.cmb_Caminos.Items.Clear();
+            
 
             int _id_proyectos = Convert.ToInt32(cbm_proyectos.SelectedValue.ToString());
             int _id_caminos = Convert.ToInt32(cmb_Caminos.SelectedValue.ToString());

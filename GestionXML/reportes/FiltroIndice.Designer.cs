@@ -51,7 +51,7 @@
             this.cbm_proyectos.Location = new System.Drawing.Point(181, 53);
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(157, 21);
-            this.cbm_proyectos.TabIndex = 0;
+            this.cbm_proyectos.TabIndex = 1;
             this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
             // 
             // cmb_Caminos
@@ -60,7 +60,7 @@
             this.cmb_Caminos.Location = new System.Drawing.Point(181, 98);
             this.cmb_Caminos.Name = "cmb_Caminos";
             this.cmb_Caminos.Size = new System.Drawing.Size(157, 21);
-            this.cmb_Caminos.TabIndex = 1;
+            this.cmb_Caminos.TabIndex = 2;
             this.cmb_Caminos.SelectedIndexChanged += new System.EventHandler(this.cmb_Caminos_SelectedIndexChanged);
             // 
             // label2
@@ -79,7 +79,7 @@
             this.button1.Location = new System.Drawing.Point(200, 153);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 68);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Generar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;

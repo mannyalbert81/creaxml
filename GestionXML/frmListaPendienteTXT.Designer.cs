@@ -52,7 +52,7 @@
             this.txtTextoBuscar.Location = new System.Drawing.Point(172, 16);
             this.txtTextoBuscar.Name = "txtTextoBuscar";
             this.txtTextoBuscar.Size = new System.Drawing.Size(532, 20);
-            this.txtTextoBuscar.TabIndex = 8;
+            this.txtTextoBuscar.TabIndex = 2;
             this.txtTextoBuscar.TextChanged += new System.EventHandler(this.txtTextoBuscar_TextChanged);
             // 
             // dataGridView1

@@ -72,7 +72,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(15, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(839, 378);
-            this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // numero

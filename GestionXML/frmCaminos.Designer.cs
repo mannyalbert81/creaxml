@@ -206,7 +206,7 @@
             this.dataGridViewCaminos.Name = "dataGridViewCaminos";
             this.dataGridViewCaminos.RowTemplate.Height = 24;
             this.dataGridViewCaminos.Size = new System.Drawing.Size(562, 178);
-            this.dataGridViewCaminos.TabIndex = 49;
+            this.dataGridViewCaminos.TabIndex = 10;
             this.dataGridViewCaminos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCaminos_CellContentClick);
             // 
             // frmCaminos
