@@ -353,6 +353,16 @@ namespace GestionXML.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pasted_image_970x391 {
+            get {
+                object obj = ResourceManager.GetObject("pasted image 970x391", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap portada {
             get {
                 object obj = ResourceManager.GetObject("portada", resourceCulture);

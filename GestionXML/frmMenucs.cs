@@ -568,8 +568,7 @@ namespace GestionXML
 
             }
         }
-
-        private void licenciasToolStripMenuItem_Click(object sender, EventArgs e)
+     private void licenciasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             InstalarLicencias frm = new InstalarLicencias();
             frm.Show();
@@ -580,10 +579,10 @@ namespace GestionXML
             reportes.FiltroLicencias frm = new reportes.FiltroLicencias();
             frm.Show();
         }
-
-        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+      private void edicionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            reportes.FiltroUsuarioEdita frm = new reportes.FiltroUsuarioEdita();
+            frm.Show();
         }
     }
 }

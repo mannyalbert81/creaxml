@@ -113,7 +113,7 @@
             this.Controls.Add(this.cbm_usuario);
             this.Controls.Add(this.label1);
             this.Name = "FiltroUsuarioEdita";
-            this.Text = "FiltroUsuarioEdita";
+            this.Text = "Ediciones";
             this.Load += new System.EventHandler(this.FiltroUsuarioEdita_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
