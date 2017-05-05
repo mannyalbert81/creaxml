@@ -76,7 +76,7 @@ namespace GestionXML
 
 
             label1.Text = "Bienvenido: "+ _nombre_usuarios + "";
-            label1.Left= 1300;
+            //label1. ;
             string _nombre_controladores = "";
 
             DataTable dtPermisos = AccesoLogica.Select("permisos_rol.nombre_permisos_rol, rol.id_rol, rol.nombre_rol, controladores.id_controladores, controladores.nombre_controladores, permisos_rol.id_permisos_rol", "public.permisos_rol, public.controladores, public.rol", "controladores.id_controladores = permisos_rol.id_controladores AND rol.id_rol = permisos_rol.id_rol AND permisos_rol.id_rol= '" + _id_rol + "'");
