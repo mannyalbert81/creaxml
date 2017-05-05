@@ -54,9 +54,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.progressBar1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.progressBar1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.progressBar1.ForeColor = System.Drawing.Color.Olive;
+            this.progressBar1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.progressBar1.Location = new System.Drawing.Point(23, 372);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.RightToLeftLayout = true;
@@ -74,16 +74,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightGreen;
+            this.label1.BackColor = System.Drawing.Color.GhostWhite;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label1.Image = global::GestionXML.Properties.Resources.portada2;
-            this.label1.Location = new System.Drawing.Point(334, 372);
+            this.label1.Location = new System.Drawing.Point(334, 370);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 18);
+            this.label1.Size = new System.Drawing.Size(39, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "0 %";
+            this.label1.Text = "0.%";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPortada
