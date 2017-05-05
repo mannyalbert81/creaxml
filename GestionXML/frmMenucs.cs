@@ -418,6 +418,8 @@ namespace GestionXML
         {
             frmProyectos frm = new frmProyectos();
             frm.Show();
+
+            
         }
 
         private void btn_TipoIndice_Click(object sender, EventArgs e)
@@ -528,6 +530,7 @@ namespace GestionXML
         private void toolStripButton11_Click(object sender, EventArgs e)
         {
             frmCarpetasCalidad frm = new frmCarpetasCalidad();
+            frm._id_usuarios = _id_usuarios;
             frm.Show();
         }
 

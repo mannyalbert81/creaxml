@@ -44,7 +44,7 @@
             this.button1.Location = new System.Drawing.Point(275, 106);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 68);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Generar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.cbm_usuarios.Location = new System.Drawing.Point(65, 12);
             this.cbm_usuarios.Name = "cbm_usuarios";
             this.cbm_usuarios.Size = new System.Drawing.Size(522, 21);
-            this.cbm_usuarios.TabIndex = 4;
+            this.cbm_usuarios.TabIndex = 1;
             this.cbm_usuarios.SelectedIndexChanged += new System.EventHandler(this.cbm_usuarios_SelectedIndexChanged);
             // 
             // dateTimePicker1
@@ -76,7 +76,7 @@
             this.dateTimePicker1.MinDate = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.Value = new System.DateTime(2017, 4, 28, 0, 0, 0, 0);
             // 
             // dateTimePicker2
@@ -87,7 +87,7 @@
             this.dateTimePicker2.MinDate = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 8;
+            this.dateTimePicker2.TabIndex = 3;
             this.dateTimePicker2.Value = new System.DateTime(2017, 4, 28, 0, 0, 0, 0);
             // 
             // label2

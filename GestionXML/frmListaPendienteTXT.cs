@@ -50,104 +50,76 @@ namespace GestionXML
             string _nombre_xml = "";
             int _cantidadXMLCrear = 0;
 
-            for (int ii = 0; ii < filesXML.Length; ii++)
-            {
-                _nombre_xml = ((FileInfo)filesXML[ii]).FullName;
 
-                dtXML.Rows.Add(_nombre_xml);
-                _cantidadXMLCrear++;
-
-            }
-
-            DirectoryInfo[] directories = directory.GetDirectories();
-            string _nombre_pdf = "";
-            DateTime _date_creado_pdf = DateTime.Now;
-            string _nombre_pdf_name = "";
-            int _agregados = 0;
+            int id_caminos;
+            string nombre_produccion_detalle = "";
+            DateTime inicio_produccion_detalle;
+            DateTime fin_produccion_detalle;
+            int id_usuarios_crea;
+            string nombre_sustituir = "";
             string _equipo = "";
-            for (int i = 0; i < filesPDF.Length; i++)
+            DateTime _date_creado_xml = DateTime.Now;
+            int _agregados = 0;
+
+            ///busco los xml segun la base de datos
+            /// 
+            string _parametros = "usuarios.id_usuarios = produccion_detalle.id_usuarios_crea";
+            DataTable dtCaminos = AccesoLogica.Select("produccion_detalle.id_caminos, produccion_detalle.nombre_produccion_detalle,produccion_detalle.inicio_produccion_detalle, produccion_detalle.fin_produccion_detalle, produccion_detalle.id_usuarios_crea", "public.produccion_detalle, public.usuarios", _parametros);
+            int reg = dtCaminos.Rows.Count;
+            if (reg > 0)
             {
-
-                _nombre_pdf = ((FileInfo)filesPDF[i]).FullName;
-                _date_creado_pdf = File.GetLastWriteTime(filesPDF[i].FullName);
-                _nombre_pdf_name = ((FileInfo)filesPDF[i]).Name;
-
-                DataRow[] foundRows = null;
-                try
+                foreach (DataRow renglon in dtCaminos.Rows)
                 {
-                    foundRows = dtXML.Select("nombre = '" + _nombre_pdf.Replace(".XML", ".pdf") + "'   ");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error Archivo: ----  " + _nombre_pdf);
-                }
+                    id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
+                    nombre_produccion_detalle = Convert.ToString(renglon["nombre_produccion_detalle"].ToString());
+                    inicio_produccion_detalle = Convert.ToDateTime(renglon["inicio_produccion_detalle"].ToString());
+                    MessageBox.Show("Nombre del XML BASE->" + nombre_produccion_detalle);
 
 
-                if (foundRows.Length == 0)
-                {
 
+
+
+                    for (int ii = 0; ii < filesXML.Length; ii++)
+                    {
+                        _nombre_xml = ((FileInfo)filesXML[ii]).FullName;
+                        MessageBox.Show("Nombre del XML ->" + _nombre_xml);
+                        dtXML.Rows.Add(_nombre_xml);
+                        _cantidadXMLCrear++;
+                        _date_creado_xml = File.GetLastWriteTime(filesXML[ii].FullName);
+
+
+                    }
 
                     if (_tipo == 0)
                     {
 
-                        dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf, _nombre_pdf);
+                        dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
                         _agregados++;
 
                     }
 
 
-
-
-                    /* 
-                    if (_tipo == 1)
-                    {
-                    
-                        _equipo = cmbEquipos.SelectedItem.ToString();
-
-                        if (_equipo == "TODOS")
-                        {
-
-                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf , _nombre_pdf);
-                            _agregados++;
-                        }
-                        else if (_equipo == _nombre_pdf_name.Substring(0, 7))
-                        {
-                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf , _nombre_pdf);
-                            _agregados++;
-                        }
-
-                    }
-                    */
-
                     if (_tipo == 2)
                     {
-                        
                         _equipo = txtTextoBuscar.Text.ToString();
-
-                        bool b = _nombre_pdf_name.Contains(_equipo);
+                        bool b = nombre_produccion_detalle.Contains(_equipo);
 
                         if (_equipo == "TODOS")
                         {
 
-                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf, _nombre_pdf);
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
                             _agregados++;
                         }
                         else if (b)
                         {
-                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_pdf, _nombre_pdf);
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
                             _agregados++;
 
                         }
                     }
 
-
                 }
-
-
-
             }
-
-            //_path_completo.Replace(".XML", ".pdf")
 
 
         }
