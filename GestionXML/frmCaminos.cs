@@ -41,7 +41,7 @@ namespace GestionXML
 
         }
         private void btnGuardar_Click(object sender, EventArgs e)
-        {
+        {//hj
             string _error = "";
             string _nombre_caminos = txt_nombre_caminos.Text;
             string _path_caminos = txt_path_caminos.Text;
