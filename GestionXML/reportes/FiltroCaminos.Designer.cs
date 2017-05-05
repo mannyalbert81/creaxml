@@ -49,7 +49,7 @@
             this.cbm_proyectos.Location = new System.Drawing.Point(137, 37);
             this.cbm_proyectos.Name = "cbm_proyectos";
             this.cbm_proyectos.Size = new System.Drawing.Size(157, 21);
-            this.cbm_proyectos.TabIndex = 0;
+            this.cbm_proyectos.TabIndex = 1;
             this.cbm_proyectos.SelectedIndexChanged += new System.EventHandler(this.cbm_proyectos_SelectedIndexChanged);
             // 
             // button1
@@ -59,7 +59,7 @@
             this.button1.Location = new System.Drawing.Point(176, 85);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 68);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Generar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;

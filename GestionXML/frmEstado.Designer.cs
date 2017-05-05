@@ -43,31 +43,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 43);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(17, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 17);
+            this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Estado:";
             // 
             // txt_estado
             // 
-            this.txt_estado.Location = new System.Drawing.Point(140, 43);
-            this.txt_estado.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_estado.Location = new System.Drawing.Point(105, 35);
             this.txt_estado.Name = "txt_estado";
-            this.txt_estado.Size = new System.Drawing.Size(495, 22);
-            this.txt_estado.TabIndex = 0;
+            this.txt_estado.Size = new System.Drawing.Size(372, 20);
+            this.txt_estado.TabIndex = 1;
             // 
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(537, 100);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Location = new System.Drawing.Point(403, 81);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(103, 82);
-            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Size = new System.Drawing.Size(77, 67);
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -78,11 +76,11 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(426, 100);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(320, 81);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(107, 82);
-            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Size = new System.Drawing.Size(80, 67);
+            this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -93,11 +91,11 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(321, 100);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLimpiar.Location = new System.Drawing.Point(241, 81);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 82);
-            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
+            this.btnLimpiar.TabIndex = 4;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -109,11 +107,11 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(217, 100);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(163, 81);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(99, 82);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Size = new System.Drawing.Size(74, 67);
+            this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -125,11 +123,11 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(113, 100);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(85, 81);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 82);
-            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.Size = new System.Drawing.Size(75, 67);
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -138,19 +136,18 @@
             // dataGridViewEstado
             // 
             this.dataGridViewEstado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEstado.Location = new System.Drawing.Point(69, 208);
-            this.dataGridViewEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewEstado.Location = new System.Drawing.Point(52, 169);
             this.dataGridViewEstado.Name = "dataGridViewEstado";
-            this.dataGridViewEstado.Size = new System.Drawing.Size(607, 216);
-            this.dataGridViewEstado.TabIndex = 53;
+            this.dataGridViewEstado.Size = new System.Drawing.Size(455, 176);
+            this.dataGridViewEstado.TabIndex = 7;
             this.dataGridViewEstado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEstado_CellContentClick);
             // 
             // frmEstado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(772, 446);
+            this.ClientSize = new System.Drawing.Size(579, 362);
             this.Controls.Add(this.dataGridViewEstado);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
@@ -160,7 +157,6 @@
             this.Controls.Add(this.txt_estado);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEstado";

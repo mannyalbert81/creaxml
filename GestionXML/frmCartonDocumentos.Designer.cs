@@ -168,7 +168,7 @@
             this.dataGridViewCartonDocumentos.Name = "dataGridViewCartonDocumentos";
             this.dataGridViewCartonDocumentos.RowTemplate.Height = 24;
             this.dataGridViewCartonDocumentos.Size = new System.Drawing.Size(471, 161);
-            this.dataGridViewCartonDocumentos.TabIndex = 57;
+            this.dataGridViewCartonDocumentos.TabIndex = 8;
             this.dataGridViewCartonDocumentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCartonDocumentos_CellContentClick);
             // 
             // button1

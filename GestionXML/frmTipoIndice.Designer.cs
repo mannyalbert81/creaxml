@@ -56,7 +56,7 @@
             this.txt_nombre_tipo_indice.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombre_tipo_indice.Name = "txt_nombre_tipo_indice";
             this.txt_nombre_tipo_indice.Size = new System.Drawing.Size(332, 20);
-            this.txt_nombre_tipo_indice.TabIndex = 0;
+            this.txt_nombre_tipo_indice.TabIndex = 1;
             // 
             // dataGridViewTipoIndice
             // 
@@ -66,7 +66,7 @@
             this.dataGridViewTipoIndice.Name = "dataGridViewTipoIndice";
             this.dataGridViewTipoIndice.RowTemplate.Height = 24;
             this.dataGridViewTipoIndice.Size = new System.Drawing.Size(437, 196);
-            this.dataGridViewTipoIndice.TabIndex = 6;
+            this.dataGridViewTipoIndice.TabIndex = 7;
             this.dataGridViewTipoIndice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTipoIndice_CellContentClick);
             // 
             // btnSalir
@@ -78,7 +78,7 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(77, 67);
-            this.btnSalir.TabIndex = 5;
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -93,7 +93,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(80, 67);
-            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 67);
-            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.TabIndex = 4;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(74, 67);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 67);
-            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
