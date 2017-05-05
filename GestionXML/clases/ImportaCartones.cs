@@ -36,6 +36,7 @@ namespace GestionXML.clases
                     {
                         int result = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_carton_documentos");
                         {
+                            MessageBox.Show("No se Pudo Guardar el registro en la Base de Datos", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         }
                     }
