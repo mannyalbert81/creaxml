@@ -161,7 +161,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carpetas Calidad XML";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmCarpetasCalidadXML_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
