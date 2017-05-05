@@ -30,7 +30,7 @@ namespace GestionXML
         {
             //clases.ImportaCartones.Inserta();
             this.progressBar1.Increment(1);
-            label1.Text = progressBar1.Value.ToString();
+            label1.Text = progressBar1.Value.ToString() + ".%";
         }
     }
 }
