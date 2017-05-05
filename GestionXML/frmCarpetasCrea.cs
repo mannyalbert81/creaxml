@@ -14,6 +14,8 @@ namespace GestionXML
 {
     public partial class frmCarpetasCalidad : Form
     {
+        public int _id_usuarios;
+
         public frmCarpetasCalidad()
         {
             InitializeComponent();
@@ -73,6 +75,8 @@ namespace GestionXML
                 frmListaPendienteXML Crea = new frmListaPendienteXML();
                 Crea._path_camino = _camino;
                 Crea._id_camino = _id_caminos;
+                Crea._id_usuarios = _id_usuarios;
+                
                 Crea.Show(); 
             }
             if (result == DialogResult.No)
@@ -102,7 +106,7 @@ namespace GestionXML
             int _id_caminos = 0;
             string _nombre_caminos = "";
             string _path_caminos = "";
-            int _id_usuarios = 0;
+           
             
             
             dataGridView1.Rows.Clear();

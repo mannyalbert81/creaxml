@@ -142,11 +142,7 @@ namespace GestionXML
                 _id_cam = Convert.ToInt32(renglon50["id_caminos"].ToString());
             }
 
-
-
-
-
-
+            
 
             if (registros <= 0)
             {
