@@ -81,9 +81,9 @@
             this.label1.Image = global::GestionXML.Properties.Resources.portada2;
             this.label1.Location = new System.Drawing.Point(334, 372);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 18);
+            this.label1.Size = new System.Drawing.Size(36, 18);
             this.label1.TabIndex = 2;
-            this.label1.Text = "0";
+            this.label1.Text = "0 %";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPortada
