@@ -42,7 +42,7 @@ namespace GestionXML
             string _mac = "";
             string _mac1 = "";
             
-
+            //maycol
             _mac1 = AccesoLogica.cifrar(HardwareInfo.GetMACAddress());
             _nombre_sesion_maquina = AccesoLogica.cifrar(HardwareInfo.GetComputerName());
 

@@ -325,6 +325,7 @@ C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecision
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\FlashControlV71.dll
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\Mono.Security.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\Negocio.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\Npgsql.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\System.Threading.Tasks.Extensions.dll
@@ -342,7 +343,6 @@ C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecision
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\ShockwaveFlashObjects.dll
-C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\Mono.Security.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\stdole.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\Negocio.pdb
@@ -351,6 +351,12 @@ C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\Npgsql.xml
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\WinFormAnimation.xml
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\Datos.pdb
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\de\Npgsql.resources.dll
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\es\Npgsql.resources.dll
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\zh-CN\Npgsql.resources.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\Interop.AcroPDFLib.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csprojResolveAssemblyReference.cache
