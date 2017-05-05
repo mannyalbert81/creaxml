@@ -295,7 +295,7 @@ namespace GestionXML.datas {
             
             private global::System.Data.DataColumn columnnombre_caminos;
             
-            private global::System.Data.DataColumn columncredo;
+            private global::System.Data.DataColumn columncreado;
             
             private global::System.Data.DataColumn columnmodificado;
             
@@ -398,9 +398,9 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn credoColumn {
+            public global::System.Data.DataColumn creadoColumn {
                 get {
-                    return this.columncredo;
+                    return this.columncreado;
                 }
             }
             
@@ -449,7 +449,7 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(int id_produccion_detalle, string nombre_produccion_detalle, System.DateTime inicio_produccion_detalle, System.DateTime fin_produccion_detalle, int id_usuarios, string nombre_usuarios, int id_caminos, string nombre_caminos, System.DateTime credo, System.DateTime modificado) {
+            public DataTable1Row AddDataTable1Row(int id_produccion_detalle, string nombre_produccion_detalle, System.DateTime inicio_produccion_detalle, System.DateTime fin_produccion_detalle, int id_usuarios, string nombre_usuarios, int id_caminos, string nombre_caminos, System.DateTime creado, System.DateTime modificado) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_produccion_detalle,
@@ -460,7 +460,7 @@ namespace GestionXML.datas {
                         nombre_usuarios,
                         id_caminos,
                         nombre_caminos,
-                        credo,
+                        creado,
                         modificado};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
@@ -492,7 +492,7 @@ namespace GestionXML.datas {
                 this.columnnombre_usuarios = base.Columns["nombre_usuarios"];
                 this.columnid_caminos = base.Columns["id_caminos"];
                 this.columnnombre_caminos = base.Columns["nombre_caminos"];
-                this.columncredo = base.Columns["credo"];
+                this.columncreado = base.Columns["creado"];
                 this.columnmodificado = base.Columns["modificado"];
             }
             
@@ -515,8 +515,8 @@ namespace GestionXML.datas {
                 base.Columns.Add(this.columnid_caminos);
                 this.columnnombre_caminos = new global::System.Data.DataColumn("nombre_caminos", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre_caminos);
-                this.columncredo = new global::System.Data.DataColumn("credo", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncredo);
+                this.columncreado = new global::System.Data.DataColumn("creado", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncreado);
                 this.columnmodificado = new global::System.Data.DataColumn("modificado", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmodificado);
             }
@@ -791,17 +791,17 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime credo {
+            public System.DateTime creado {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.credoColumn]));
+                        return ((global::System.DateTime)(this[this.tableDataTable1.creadoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'credo\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'creado\' in table \'DataTable1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.credoColumn] = value;
+                    this[this.tableDataTable1.creadoColumn] = value;
                 }
             }
             
@@ -919,14 +919,14 @@ namespace GestionXML.datas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscredoNull() {
-                return this.IsNull(this.tableDataTable1.credoColumn);
+            public bool IscreadoNull() {
+                return this.IsNull(this.tableDataTable1.creadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcredoNull() {
-                this[this.tableDataTable1.credoColumn] = global::System.Convert.DBNull;
+            public void SetcreadoNull() {
+                this[this.tableDataTable1.creadoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

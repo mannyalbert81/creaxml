@@ -32,7 +32,7 @@ namespace GestionXML.reportes
 
             daProduccion.Fill(ProduccionXml, "produccion_detalle");
             int reg = ProduccionXml.Tables[1].Rows.Count;
-            reportes.rptProduccion ObjRep = new reportes.rptProduccion();
+            reportes.rptProduccion2 ObjRep = new reportes.rptProduccion2();
             ObjRep.SetDataSource(ProduccionXml.Tables[1]);
             crystalReportViewer1.ReportSource = ObjRep;
             // llena_documento.Dispose();

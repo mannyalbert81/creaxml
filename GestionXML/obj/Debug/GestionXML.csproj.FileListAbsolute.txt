@@ -397,3 +397,9 @@ C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\CircularProgressBar.xml
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\WinFormAnimation.xml
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarioEdita.resources
+C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\zh-CN\Npgsql.resources.dll
