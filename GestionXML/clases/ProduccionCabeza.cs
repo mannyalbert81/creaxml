@@ -15,19 +15,7 @@ namespace GestionXML.clases
     {
         public static void InsertaProduccionCabeza(int _id_usuarios, int _id_caminos, string _nombre_produccion_detalle, DateTime _inicio_produccion_detalle, DateTime _fin_produccion_detalle)
         {
-            if (_id_usuarios>0)
-            {
-
-                MessageBox.Show(""+_id_usuarios+"", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-                MessageBox.Show("Esta vacio", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-
-
+           
 
             int _id_produccion_cabeza = 0;
             

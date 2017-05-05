@@ -60,8 +60,7 @@ namespace GestionXML
 
         private void CreadorXML_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenido " + _id_usuarios + "", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+           
             dtFecha1.Visible = false;
             dtFecha2.Visible = false;
             dtFecha3.Visible = false;

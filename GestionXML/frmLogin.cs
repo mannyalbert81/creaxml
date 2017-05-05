@@ -144,7 +144,6 @@ namespace GestionXML
                                 frm._nombre_usuarios = _nombre_usuarios;
                                 frm._id_rol = _id_rol;
                                 frm._id_usuarios = _id_usuarios;
-                               
                                 frm.Show();
                                 this.Hide();
 
@@ -177,7 +176,6 @@ namespace GestionXML
                         frm._nombre_usuarios = _nombre_usuarios;
                         frm._id_rol = _id_rol;
                         frm._id_usuarios = _id_usuarios;
-                       
                         frm.Show();
                         this.Hide();
                     }else
