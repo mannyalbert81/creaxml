@@ -201,7 +201,7 @@ namespace GestionXML
             }
             
         }
-        
+        //maycol
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
