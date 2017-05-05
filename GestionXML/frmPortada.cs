@@ -15,10 +15,11 @@ namespace GestionXML
         public frmPortada()
         {
             InitializeComponent();
-
+            
             timer2.Interval = 10000;
             timer2.Start();
             timer2.Tick += (s, e) => {
+                
                 frmLogin frm = new frmLogin();
                 frm.Show();
                 this.Hide();
@@ -31,6 +32,7 @@ namespace GestionXML
             //clases.ImportaCartones.Inserta();
             this.progressBar1.Increment(1);
             label1.Text = progressBar1.Value.ToString() + ".%";
+
         }
     }
 }

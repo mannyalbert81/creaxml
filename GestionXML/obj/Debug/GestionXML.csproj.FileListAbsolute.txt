@@ -13,12 +13,6 @@ C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\Datos.dll
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\Negocio.pdb
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\Npgsql.xml
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\Datos.pdb
-C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\de\Npgsql.resources.dll
-C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\es\Npgsql.resources.dll
-C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\fi\Npgsql.resources.dll
-C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\fr\Npgsql.resources.dll
-C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\ja\Npgsql.resources.dll
-C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\zh-CN\Npgsql.resources.dll
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\Interop.AcroPDFLib.dll
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csprojResolveAssemblyReference.cache
@@ -386,9 +380,7 @@ C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.co
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.contUsuariosEdita.resources
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroLicencias.resources
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarioEdita.resources
-C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\CircularProgressBar.dll
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\WinFormAnimation.dll
-C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\CircularProgressBar.xml
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\WinFormAnimation.xml
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\CircularProgressBar.dll
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\System.Threading.Tasks.Extensions.dll
@@ -397,3 +389,11 @@ C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\CircularProgressBar.xml
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\bin\Debug\WinFormAnimation.xml
 C:\Users\Oscar\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.reportes.FiltroUsuarioEdita.resources
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\de\Npgsql.resources.dll
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\es\Npgsql.resources.dll
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\zh-CN\Npgsql.resources.dll

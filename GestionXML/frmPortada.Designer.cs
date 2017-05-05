@@ -33,8 +33,8 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,12 +65,6 @@
             this.progressBar1.TabIndex = 1;
             this.progressBar1.UseWaitCursor = true;
             // 
-            // timer3
-            // 
-            this.timer3.Enabled = true;
-            this.timer3.Interval = 85;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -85,6 +79,11 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "0.%";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // frmPortada
             // 
@@ -113,7 +112,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer3;
     }
 }
