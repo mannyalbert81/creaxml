@@ -73,19 +73,21 @@ namespace GestionXML
                     id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
                     nombre_produccion_detalle = Convert.ToString(renglon["nombre_produccion_detalle"].ToString());
                     inicio_produccion_detalle = Convert.ToDateTime(renglon["inicio_produccion_detalle"].ToString());
-                    MessageBox.Show("Nombre del XML BASE->" + nombre_produccion_detalle);
-
-
-
-
+            
 
                     for (int ii = 0; ii < filesXML.Length; ii++)
                     {
                         _nombre_xml = ((FileInfo)filesXML[ii]).FullName;
-                        MessageBox.Show("Nombre del XML ->" + _nombre_xml);
-                        dtXML.Rows.Add(_nombre_xml);
-                        _cantidadXMLCrear++;
-                        _date_creado_xml = File.GetLastWriteTime(filesXML[ii].FullName);
+
+                        if (_nombre_xml == nombre_produccion_detalle)
+                        {
+                            MessageBox.Show("Nombre del XML ->" + _nombre_xml);
+                            dtXML.Rows.Add(_nombre_xml);
+                            _cantidadXMLCrear++;
+                            _date_creado_xml = File.GetLastWriteTime(filesXML[ii].FullName);
+
+
+                        }
 
 
                     }
@@ -155,8 +157,9 @@ namespace GestionXML
 
             if (result == DialogResult.Yes)
             {
-                CreadorXML Crea = new CreadorXML();
-                Crea.nombre_pdf = _camino;
+
+                EditorXML Crea = new EditorXML();
+                Crea.nombre_pdf = _camino.Replace(".XML", ".pdf");
                 Crea._id_indice_cabeza = _id_indice_cabeza;
                 Crea.Show();
             }

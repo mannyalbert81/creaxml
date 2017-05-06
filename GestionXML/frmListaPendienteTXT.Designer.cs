@@ -98,7 +98,6 @@
             this.Name = "frmListaPendienteTXT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Archivos Pendientes de Revisar";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmListaPendienteTXT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -799,12 +799,11 @@ namespace GestionXML
         }
 
         public void CreaXML(string _valor1, string _valor2, string _valor3, string _valor4, string _valor5, string _valor6, string _valor7, string _valor8, string _valor9, string _valor10, string _valor11, string _valor12)
-
         {
-
+            
             XDocument miXML = new XDocument(
                new XDeclaration("1.0", "utf-8", "yes"),
-               new XComment("xml gernerado por utilitarios www.masoft.net"),
+               new XComment("xml gernerado por GestorXML 2017  -  www.masoft.net"),
                new XElement("root",
                   new XElement("document",
 
@@ -868,14 +867,7 @@ namespace GestionXML
                                                new XAttribute("name", label12.Text),
                                                new XAttribute("value", _valor12)
                                            )
-
-
-
-
-
-
-
-
+                                           
                       )
                   )
               );
