@@ -33,8 +33,8 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,9 +54,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.progressBar1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.progressBar1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.progressBar1.ForeColor = System.Drawing.Color.Olive;
+            this.progressBar1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.progressBar1.Location = new System.Drawing.Point(23, 372);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.RightToLeftLayout = true;
@@ -65,26 +65,25 @@
             this.progressBar1.TabIndex = 1;
             this.progressBar1.UseWaitCursor = true;
             // 
-            // timer3
-            // 
-            this.timer3.Enabled = true;
-            this.timer3.Interval = 85;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightGreen;
+            this.label1.BackColor = System.Drawing.Color.GhostWhite;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label1.Image = global::GestionXML.Properties.Resources.portada2;
-            this.label1.Location = new System.Drawing.Point(334, 372);
+            this.label1.Location = new System.Drawing.Point(334, 370);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 18);
+            this.label1.Size = new System.Drawing.Size(39, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "0";
+            this.label1.Text = "0.%";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // frmPortada
             // 
@@ -113,7 +112,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer3;
     }
 }

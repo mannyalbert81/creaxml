@@ -59,7 +59,7 @@ namespace GestionXML
 
         private void EditorXML_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show(_id_camino+"");
             dtFecha1.Visible = false;
             dtFecha2.Visible = false;
             dtFecha3.Visible = false;
@@ -1288,8 +1288,7 @@ namespace GestionXML
                 }
                 else
                 {
-                    MessageBox.Show(item._name.ToString());
-                    MessageBox.Show(textBox1.AccessibleDescription);
+                    
                     if (item._name.ToString() == textBox1.AccessibleDescription)
                     {
                         textBox1.Text = item._value.ToString().Trim().Replace("'", "");

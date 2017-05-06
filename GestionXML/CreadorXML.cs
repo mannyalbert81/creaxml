@@ -20,7 +20,6 @@ namespace GestionXML
     {
         public DateTime _inicio_produccion_detalle;
         public DateTime _fin_produccion_detalle;
-
         public string nombre_pdf = "";
         public int _id_indice_cabeza = 0;
         public Boolean _fecha1 = false;

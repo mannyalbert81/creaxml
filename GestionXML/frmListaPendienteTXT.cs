@@ -73,7 +73,7 @@ namespace GestionXML
                     id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
                     nombre_produccion_detalle = Convert.ToString(renglon["nombre_produccion_detalle"].ToString());
                     inicio_produccion_detalle = Convert.ToDateTime(renglon["inicio_produccion_detalle"].ToString());
-            
+
 
                     for (int ii = 0; ii < filesXML.Length; ii++)
                     {
@@ -87,39 +87,40 @@ namespace GestionXML
                             _date_creado_xml = File.GetLastWriteTime(filesXML[ii].FullName);
 
 
+
+
+
                         }
 
-
-                    }
-
-                    if (_tipo == 0)
-                    {
-
-                        dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
-                        _agregados++;
-
-                    }
-
-
-                    if (_tipo == 2)
-                    {
-                        _equipo = txtTextoBuscar.Text.ToString();
-                        bool b = nombre_produccion_detalle.Contains(_equipo);
-
-                        if (_equipo == "TODOS")
+                        if (_tipo == 0)
                         {
 
-                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
-                            _agregados++;
-                        }
-                        else if (b)
-                        {
-                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle);
                             _agregados++;
 
                         }
-                    }
 
+
+                        if (_tipo == 2)
+                        {
+                            _equipo = txtTextoBuscar.Text.ToString();
+                            bool b = nombre_produccion_detalle.Contains(_equipo);
+
+                            if (_equipo == "TODOS")
+                            {
+
+                                dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
+                                _agregados++;
+                            }
+                            else if (b)
+                            {
+                                dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
+                                _agregados++;
+
+                            }
+                        }
+
+                    }
                 }
             }
 

@@ -76,7 +76,7 @@ namespace GestionXML
 
 
             label1.Text = "Bienvenido: "+ _nombre_usuarios + "";
-            label1.Left= 1300;
+            //label1. ;
             string _nombre_controladores = "";
 
             DataTable dtPermisos = AccesoLogica.Select("permisos_rol.nombre_permisos_rol, rol.id_rol, rol.nombre_rol, controladores.id_controladores, controladores.nombre_controladores, permisos_rol.id_permisos_rol", "public.permisos_rol, public.controladores, public.rol", "controladores.id_controladores = permisos_rol.id_controladores AND rol.id_rol = permisos_rol.id_rol AND permisos_rol.id_rol= '" + _id_rol + "'");
@@ -374,14 +374,44 @@ namespace GestionXML
 
         private void caminosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            reportes.contProyectos frm = new reportes.contProyectos();
-            frm.Show();
+            DataTable daProyectos = AccesoLogica.Select("proyectos.id_proyectos, proyectos.nombre_proyectos, proyectos.observaciones_proyectos, proyectos.creado, proyectos.modificado ", "public.proyectos", "proyectos.id_proyectos>0");
+            int registro = daProyectos.Rows.Count;
+
+            if (registro > 0)
+            {
+                reportes.contProyectos frm = new reportes.contProyectos();
+                frm.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("No existe datos en el sistema", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+            
         }
 
         private void caminosToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            reportes.contTipoIndice frm = new reportes.contTipoIndice();
-            frm.Show();
+
+
+            DataTable daTipoIndice = AccesoLogica.Select("tipo_indice.id_tipo_indice, tipo_indice.nombre_tipo_indice, tipo_indice.creado, tipo_indice.modificado ", "public.tipo_indice", "tipo_indice.id_tipo_indice>0");
+            int registro = daTipoIndice.Rows.Count;
+
+            if (registro > 0)
+            {
+                reportes.contTipoIndice frm = new reportes.contTipoIndice();
+                frm.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("No existe datos en el sistema", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
 
         private void caminosToolStripMenuItem3_Click(object sender, EventArgs e)
@@ -392,14 +422,41 @@ namespace GestionXML
 
         private void cartónDocumentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            reportes.contCartonDocumentos frm = new reportes.contCartonDocumentos();
-            frm.Show();
+
+
+            DataTable daCartonDocumentos = AccesoLogica.Select("carton_documentos.id_carton_documentos, carton_documentos.numero_carton_documentos, carton_documentos.estado_carton_documentos, carton_documentos.creado, carton_documentos.modificado ", "public.carton_documentos", "carton_documentos.id_carton_documentos>0");
+            int registro = daCartonDocumentos.Rows.Count;
+
+            if (registro > 0)
+            {
+                reportes.contCartonDocumentos frm = new reportes.contCartonDocumentos();
+                frm.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("No existe datos en el sistema", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
 
         private void estadoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            reportes.contEstado frm = new reportes.contEstado();
-            frm.Show();
+            DataTable daEstado = AccesoLogica.Select("estado.id_estado, estado.nombre_estado, estado.creado, estado.modificado ", "public.estado", "estado.id_estado>0");
+            int registro = daEstado.Rows.Count;
+
+            if (registro > 0)
+            {
+                reportes.contEstado frm = new reportes.contEstado();
+                frm.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("No existe datos en el sistema", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void indiceToolStripMenuItem1_Click(object sender, EventArgs e)
