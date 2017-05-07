@@ -77,7 +77,6 @@
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.acrobat = new AxAcroPDFLib.AxAcroPDF();
-            this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.acrobat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -543,22 +542,11 @@
             this.acrobat.Size = new System.Drawing.Size(994, 702);
             this.acrobat.TabIndex = 0;
             // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(1238, 611);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 59);
-            this.button13.TabIndex = 49;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
             // EditorXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1325, 733);
-            this.Controls.Add(this.button13);
             this.Controls.Add(this.button29);
             this.Controls.Add(this.button28);
             this.Controls.Add(this.button27);
@@ -668,6 +656,5 @@
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button13;
     }
 }

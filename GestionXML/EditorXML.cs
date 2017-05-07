@@ -50,6 +50,7 @@ namespace GestionXML
 
         public int _id_usuarios;
         public int _id_camino;
+        public int _id_produccion_detalle;
         string _nombre_produccion_detalle = "";
 
         public EditorXML()
@@ -59,7 +60,6 @@ namespace GestionXML
 
         private void EditorXML_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(_id_camino+"");
             dtFecha1.Visible = false;
             dtFecha2.Visible = false;
             dtFecha3.Visible = false;
@@ -767,8 +767,35 @@ namespace GestionXML
 
                         int id_usu = _id_usuarios;
 
-                        clases.ProduccionCabeza.InsertaProduccionCabeza(id_usu, _id_camino, _nombre_produccion_detalle, _inicio_produccion_detalle, _fin_produccion_detalle);
 
+                        //// update los eidtorir
+
+                        try
+                        {
+                            AccesoLogica.Update("produccion_cabeza", " xml_editados_produccion_cabeza = xml_editados_produccion_cabeza + 1 ", " id_usuarios = '" + id_usu + "' AND id_caminos = '" + _id_camino + "'    ");
+
+                        }
+                        catch (Exception Ex)
+                        {
+                            MessageBox.Show(Ex.Message, "No se Pudo Actualizar la Edicion en la Produccion Cabeza", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+
+                        try
+                        {
+                            string mensa = "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = '" + _nombre_produccion_detalle + "' ";
+                            MessageBox.Show(mensa);
+
+                            AccesoLogica.Update("produccion_detalle", " id_usuarios_edita = '"+id_usu+"'   ", "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = '"+ _nombre_produccion_detalle+"'    ");
+                        }
+                        catch (Exception Ex)
+                        {
+                            MessageBox.Show(Ex.Message, "No se Pudo Actualizar la Edicion en la Produccion Detalle", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+
+
+                        ///
 
                     }
                     catch (Exception Ex)
@@ -878,7 +905,7 @@ namespace GestionXML
             try
             {
                 miXML.Save(@nombre_pdf.Replace(".pdf", ".XML"));
-                MessageBox.Show("XML Generado Correctamente", "XML Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("XML Editado Correctamente", "XML Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
             }
             catch (Exception)
@@ -1206,7 +1233,10 @@ namespace GestionXML
 
 
                 }
-
+                if (_textBox.AccessibleName == "numero_banco_tarjetas")
+                {
+                    _textBox.Text = _numero_banco_tarjetas;
+                }
 
                 if (_textBox.AccessibleName == "identificacion_banco_tarjetas")
                 {

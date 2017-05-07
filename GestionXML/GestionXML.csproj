@@ -742,6 +742,10 @@
     <Content Include="crea-xml.ico" />
     <Content Include="iconoGestor.ico" />
     <Content Include="indice.txt" />
+    <None Include="Resources\salir21.png" />
+    <None Include="Resources\salir2.png" />
+    <None Include="Resources\salir1.png" />
+    <None Include="Resources\salir.png" />
     <None Include="Resources\portada21.jpg" />
     <None Include="Resources\pasted image 970x391.jpg" />
     <None Include="Resources\clipboard.png" />

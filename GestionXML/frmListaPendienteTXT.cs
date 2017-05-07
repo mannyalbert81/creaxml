@@ -16,6 +16,7 @@ namespace GestionXML
     {
         public string _path_camino = "";
         public int _id_camino = 0;
+        public int _id_usuarios;
 
         public frmListaPendienteTXT()
         {
@@ -54,17 +55,16 @@ namespace GestionXML
             int id_caminos;
             string nombre_produccion_detalle = "";
             DateTime inicio_produccion_detalle;
-            DateTime fin_produccion_detalle;
-            int id_usuarios_crea;
-            string nombre_sustituir = "";
             string _equipo = "";
             DateTime _date_creado_xml = DateTime.Now;
             int _agregados = 0;
-
+            int id_usuarios_edita;
+            string estado_edicion = "NO";
+            bool estado_produccion_detalle;
             ///busco los xml segun la base de datos
             /// 
             string _parametros = "usuarios.id_usuarios = produccion_detalle.id_usuarios_crea";
-            DataTable dtCaminos = AccesoLogica.Select("produccion_detalle.id_caminos, produccion_detalle.nombre_produccion_detalle,produccion_detalle.inicio_produccion_detalle, produccion_detalle.fin_produccion_detalle, produccion_detalle.id_usuarios_crea", "public.produccion_detalle, public.usuarios", _parametros);
+            DataTable dtCaminos = AccesoLogica.Select("produccion_detalle.id_caminos, produccion_detalle.nombre_produccion_detalle,produccion_detalle.inicio_produccion_detalle, produccion_detalle.fin_produccion_detalle, produccion_detalle.id_usuarios_crea , produccion_detalle.id_usuarios_edita , produccion_detalle.estado_produccion_detalle", "public.produccion_detalle, public.usuarios", _parametros);
             int reg = dtCaminos.Rows.Count;
             if (reg > 0)
             {
@@ -73,7 +73,9 @@ namespace GestionXML
                     id_caminos = Convert.ToInt32(renglon["id_caminos"].ToString());
                     nombre_produccion_detalle = Convert.ToString(renglon["nombre_produccion_detalle"].ToString());
                     inicio_produccion_detalle = Convert.ToDateTime(renglon["inicio_produccion_detalle"].ToString());
+                    estado_produccion_detalle = Convert.ToBoolean(renglon["estado_produccion_detalle"].ToString());
 
+                    
 
                     for (int ii = 0; ii < filesXML.Length; ii++)
                     {
@@ -81,21 +83,18 @@ namespace GestionXML
 
                         if (_nombre_xml == nombre_produccion_detalle)
                         {
-                            MessageBox.Show("Nombre del XML ->" + _nombre_xml);
+                            //MessageBox.Show("Nombre del XML ->" + _nombre_xml);
                             dtXML.Rows.Add(_nombre_xml);
                             _cantidadXMLCrear++;
                             _date_creado_xml = File.GetLastWriteTime(filesXML[ii].FullName);
-
-
-
-
-
+                            
                         }
-
-                        if (_tipo == 0)
+                    }
+                    if (_tipo == 0)
                         {
 
-                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle);
+                            
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle, estado_produccion_detalle);
                             _agregados++;
 
                         }
@@ -109,16 +108,16 @@ namespace GestionXML
                             if (_equipo == "TODOS")
                             {
 
-                                dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
+                                dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle, estado_produccion_detalle);
                                 _agregados++;
                             }
                             else if (b)
                             {
-                                dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, _nombre_xml);
+                                dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle, estado_produccion_detalle);
                                 _agregados++;
 
                             }
-                        }
+                        
 
                     }
                 }
@@ -154,7 +153,7 @@ namespace GestionXML
             }
 
 
-            DialogResult result = MessageBox.Show("Deseas Crear XML de este PDF?", "Crear nuevo XML", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Deseas Editar este XML?", "Crear nuevo XML", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (result == DialogResult.Yes)
             {
@@ -162,12 +161,29 @@ namespace GestionXML
                 EditorXML Crea = new EditorXML();
                 Crea.nombre_pdf = _camino.Replace(".XML", ".pdf");
                 Crea._id_indice_cabeza = _id_indice_cabeza;
+                Crea._id_usuarios = _id_usuarios;
+                Crea._id_camino = _id_camino;
                 Crea.Show();
             }
             if (result == DialogResult.No)
             {
             }
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            CargaGrid(0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -97,7 +97,7 @@ namespace GestionXML
             button28.Visible = false;
             button29.Visible = false;
 
-            CreaXML("", "", "", "", "", "", "", "", "", "", "", "");
+            //CreaXML("", "", "", "", "", "", "", "", "", "", "", "");
             LeeIndice(1);
 
             _inicio_produccion_detalle = DateTime.Now;
@@ -1204,6 +1204,10 @@ namespace GestionXML
                 }
 
 
+                if (_textBox.AccessibleName == "numero_banco_tarjetas")
+                {
+                    _textBox.Text = _numero_banco_tarjetas;
+                }
                 if (_textBox.AccessibleName == "identificacion_banco_tarjetas")
                 {
                     _textBox.Text = _identificacion_banco_tarjetas;

@@ -32,26 +32,32 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTextoBuscar = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ARCHIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EDITADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 20);
+            this.label1.Location = new System.Drawing.Point(26, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Camino de Archivo a Buscar";
+            this.label1.Text = "Archivo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtTextoBuscar
             // 
-            this.txtTextoBuscar.Location = new System.Drawing.Point(172, 16);
+            this.txtTextoBuscar.Location = new System.Drawing.Point(75, 4);
             this.txtTextoBuscar.Name = "txtTextoBuscar";
-            this.txtTextoBuscar.Size = new System.Drawing.Size(532, 20);
+            this.txtTextoBuscar.Size = new System.Drawing.Size(385, 20);
             this.txtTextoBuscar.TabIndex = 2;
             this.txtTextoBuscar.TextChanged += new System.EventHandler(this.txtTextoBuscar_TextChanged);
             // 
@@ -61,12 +67,63 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numero,
             this.fecha,
-            this.ARCHIVO});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 46);
+            this.ARCHIVO,
+            this.EDITADO});
+            this.dataGridView1.Location = new System.Drawing.Point(16, 75);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(682, 389);
+            this.dataGridView1.Size = new System.Drawing.Size(682, 360);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = global::GestionXML.Properties.Resources.salir21;
+            this.button1.Location = new System.Drawing.Point(591, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 65);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Salir";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCargar.Image = global::GestionXML.Properties.Resources.carpeta__4_;
+            this.btnCargar.Location = new System.Drawing.Point(477, 4);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(108, 65);
+            this.btnCargar.TabIndex = 19;
+            this.btnCargar.Text = "Recargar";
+            this.btnCargar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Estado";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "EDITADO",
+            "NO EDITADO"});
+            this.comboBox1.Location = new System.Drawing.Point(75, 40);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(196, 21);
+            this.comboBox1.TabIndex = 22;
             // 
             // numero
             // 
@@ -78,19 +135,29 @@
             // 
             this.fecha.HeaderText = "CREADO";
             this.fecha.Name = "fecha";
-            this.fecha.Width = 200;
+            this.fecha.Width = 150;
             // 
             // ARCHIVO
             // 
             this.ARCHIVO.HeaderText = "ARCHIVO";
             this.ARCHIVO.Name = "ARCHIVO";
-            this.ARCHIVO.Width = 450;
+            this.ARCHIVO.Width = 350;
+            // 
+            // EDITADO
+            // 
+            this.EDITADO.HeaderText = "EDITADO";
+            this.EDITADO.Name = "EDITADO";
+            this.EDITADO.Width = 110;
             // 
             // frmListaPendienteTXT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 482);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtTextoBuscar);
             this.Controls.Add(this.label1);
@@ -109,8 +176,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTextoBuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn ARCHIVO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EDITADO;
     }
 }

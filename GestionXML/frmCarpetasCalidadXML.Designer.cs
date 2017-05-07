@@ -39,6 +39,7 @@
             this.dif = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbm_proyectos = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -46,6 +47,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.cbm_proyectos);
             this.groupBox1.Controls.Add(this.label4);
@@ -69,9 +71,9 @@
             this.CREADOS,
             this.CONTROL,
             this.dif});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 75);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(839, 378);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 382);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -132,13 +134,28 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Proyectos:";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = global::GestionXML.Properties.Resources.salir21;
+            this.button1.Location = new System.Drawing.Point(746, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 65);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Salir";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnCargar
             // 
             this.btnCargar.BackColor = System.Drawing.SystemColors.Control;
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCargar.Image = global::GestionXML.Properties.Resources.carpeta__4_;
-            this.btnCargar.Location = new System.Drawing.Point(747, 11);
+            this.btnCargar.Location = new System.Drawing.Point(632, 4);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(108, 65);
             this.btnCargar.TabIndex = 0;
@@ -182,5 +199,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CREADOS;
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTROL;
         private System.Windows.Forms.DataGridViewTextBoxColumn dif;
+        private System.Windows.Forms.Button button1;
     }
 }
