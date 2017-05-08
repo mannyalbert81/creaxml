@@ -97,11 +97,11 @@
     <Compile Include="clases\ProduccionCabeza.cs" />
     <Compile Include="clases\ProduccionDetalle.cs" />
     <Compile Include="clases\Variables.cs" />
-    <Compile Include="CreadorTXT.cs">
+    <Compile Include="EditorXML.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreadorTXT.Designer.cs">
-      <DependentUpon>CreadorTXT.cs</DependentUpon>
+    <Compile Include="EditorXML.Designer.cs">
+      <DependentUpon>EditorXML.cs</DependentUpon>
     </Compile>
     <Compile Include="CreadorXML.cs">
       <SubType>Form</SubType>
@@ -441,8 +441,8 @@
       <DependentUpon>rptTipoIndice.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="CreadorTXT.resx">
-      <DependentUpon>CreadorTXT.cs</DependentUpon>
+    <EmbeddedResource Include="EditorXML.resx">
+      <DependentUpon>EditorXML.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreadorXML.resx">
       <DependentUpon>CreadorXML.cs</DependentUpon>
@@ -742,6 +742,10 @@
     <Content Include="crea-xml.ico" />
     <Content Include="iconoGestor.ico" />
     <Content Include="indice.txt" />
+    <None Include="Resources\salir21.png" />
+    <None Include="Resources\salir2.png" />
+    <None Include="Resources\salir1.png" />
+    <None Include="Resources\salir.png" />
     <None Include="Resources\portada21.jpg" />
     <None Include="Resources\pasted image 970x391.jpg" />
     <None Include="Resources\clipboard.png" />

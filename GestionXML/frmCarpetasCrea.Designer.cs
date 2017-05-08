@@ -40,12 +40,14 @@
             this.PDF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.XML = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dif = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.cbm_proyectos);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnCargar);
@@ -85,9 +87,9 @@
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCargar.Image = global::GestionXML.Properties.Resources.carpeta__4_;
-            this.btnCargar.Location = new System.Drawing.Point(747, 0);
+            this.btnCargar.Location = new System.Drawing.Point(625, 5);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(108, 70);
+            this.btnCargar.Size = new System.Drawing.Size(108, 65);
             this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "Cargar Carpetas";
             this.btnCargar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -146,6 +148,21 @@
             this.dif.Name = "dif";
             this.dif.Width = 40;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = global::GestionXML.Properties.Resources.salir21;
+            this.button1.Location = new System.Drawing.Point(739, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 65);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Salir";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmCarpetasCalidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +196,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PDF;
         private System.Windows.Forms.DataGridViewTextBoxColumn XML;
         private System.Windows.Forms.DataGridViewTextBoxColumn dif;
+        private System.Windows.Forms.Button button1;
     }
 }
 

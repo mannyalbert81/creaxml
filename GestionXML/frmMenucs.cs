@@ -594,6 +594,7 @@ namespace GestionXML
         private void toolStripButton12_Click(object sender, EventArgs e)
         {
             frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML();
+            frm._id_usuarios = _id_usuarios;
             frm.Show();
         }
 
