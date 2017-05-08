@@ -104,6 +104,9 @@ namespace GestionXML
 
             LeerXML(@nombre_pdf.Replace(".pdf", ".XML"));
 
+
+
+
         }
 
         public void LeeIndice(int _tipo_carga)
@@ -783,10 +786,10 @@ namespace GestionXML
 
                         try
                         {
-                            string mensa = "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = '" + _nombre_produccion_detalle + "' ";
-                            MessageBox.Show(mensa);
-
-                            AccesoLogica.Update("produccion_detalle", " id_usuarios_edita = '"+id_usu+"'   ", "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = '"+ _nombre_produccion_detalle+"'    ");
+                            string escaped = _nombre_produccion_detalle.Replace(@"\",@"\\");
+                            AccesoLogica.Update("produccion_detalle", " id_usuarios_edita = '"+id_usu+"' , estado_produccion_detalle = 'TRUE'   ", "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = E'"+ escaped +"'    ");
+                            textBox12.Visible = true;
+                            textBox12.Text = "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = 'E" + escaped + "'    ";
                         }
                         catch (Exception Ex)
                         {
@@ -906,7 +909,7 @@ namespace GestionXML
             {
                 miXML.Save(@nombre_pdf.Replace(".pdf", ".XML"));
                 MessageBox.Show("XML Editado Correctamente", "XML Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
+                //this.Hide();
             }
             catch (Exception)
             {

@@ -35,7 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbEstados = new System.Windows.Forms.ComboBox();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ARCHIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -114,16 +114,17 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "Estado";
             // 
-            // comboBox1
+            // cmbEstados
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbEstados.FormattingEnabled = true;
+            this.cmbEstados.Items.AddRange(new object[] {
             "EDITADO",
             "NO EDITADO"});
-            this.comboBox1.Location = new System.Drawing.Point(75, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 21);
-            this.comboBox1.TabIndex = 22;
+            this.cmbEstados.Location = new System.Drawing.Point(75, 40);
+            this.cmbEstados.Name = "cmbEstados";
+            this.cmbEstados.Size = new System.Drawing.Size(196, 21);
+            this.cmbEstados.TabIndex = 22;
+            this.cmbEstados.SelectedIndexChanged += new System.EventHandler(this.cmbEstados_SelectedIndexChanged);
             // 
             // numero
             // 
@@ -154,7 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 482);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbEstados);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCargar);
@@ -179,7 +180,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEstados;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn ARCHIVO;

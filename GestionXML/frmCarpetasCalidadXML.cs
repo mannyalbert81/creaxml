@@ -74,7 +74,6 @@ namespace GestionXML
                     
                     ///leo los camino
                     DirectoryInfo directory = new DirectoryInfo(@_path_caminos);
-                    //FileInfo[] filesPDF = directory.GetFiles("*.PDF");
                     FileInfo[] filesXML = directory.GetFiles("*.XML");
                     DirectoryInfo[] directories = directory.GetDirectories();
 

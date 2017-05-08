@@ -32,7 +32,9 @@ namespace GestionXML
 
 
             //cargo los pdf
+            cmbEstados.SelectedIndex = 1;
             CargaGrid(0);
+            
         }
 
        
@@ -40,7 +42,7 @@ namespace GestionXML
         public void CargaGrid(int _tipo)
         {
             dataGridView1.Rows.Clear();
-
+            
             DirectoryInfo directory = new DirectoryInfo(@_path_camino);
             FileInfo[] filesPDF = directory.GetFiles("*.PDF");
             FileInfo[] filesXML = directory.GetFiles("*.XML");
@@ -50,7 +52,7 @@ namespace GestionXML
 
             string _nombre_xml = "";
             int _cantidadXMLCrear = 0;
-
+            string _estado = "FALSE";
 
             int id_caminos;
             string nombre_produccion_detalle = "";
@@ -75,7 +77,7 @@ namespace GestionXML
                     inicio_produccion_detalle = Convert.ToDateTime(renglon["inicio_produccion_detalle"].ToString());
                     estado_produccion_detalle = Convert.ToBoolean(renglon["estado_produccion_detalle"].ToString());
 
-                    
+
 
                     for (int ii = 0; ii < filesXML.Length; ii++)
                     {
@@ -87,39 +89,72 @@ namespace GestionXML
                             dtXML.Rows.Add(_nombre_xml);
                             _cantidadXMLCrear++;
                             _date_creado_xml = File.GetLastWriteTime(filesXML[ii].FullName);
-                            
+
                         }
                     }
+
                     if (_tipo == 0)
+                    {
+
+
+                        dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle, estado_produccion_detalle);
+                        _agregados++;
+
+                    }
+
+
+
+
+                    if (_tipo == 2)
+                    {
+                        _equipo = txtTextoBuscar.Text.ToString();
+                        bool b = nombre_produccion_detalle.Contains(_equipo);
+
+                        if (_equipo == "TODOS")
                         {
 
-                            
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle, estado_produccion_detalle);
+                            _agregados++;
+                        }
+                        else if (b)
+                        {
                             dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle, estado_produccion_detalle);
                             _agregados++;
 
                         }
 
 
-                        if (_tipo == 2)
-                        {
-                            _equipo = txtTextoBuscar.Text.ToString();
-                            bool b = nombre_produccion_detalle.Contains(_equipo);
-
-                            if (_equipo == "TODOS")
-                            {
-
-                                dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle, estado_produccion_detalle);
-                                _agregados++;
-                            }
-                            else if (b)
-                            {
-                                dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle, estado_produccion_detalle);
-                                _agregados++;
-
-                            }
-                        
 
                     }
+
+
+
+
+                    if (_tipo == 3)
+                    {
+
+                        
+                        string _estado_combo = cmbEstados.SelectedText.ToString();
+                        
+                        bool _estado_archivo = false;
+                        if (cmbEstados.SelectedText.ToString() == "EDITADO")
+                        {
+                            _estado_archivo = true;
+                        }
+
+                        if (estado_produccion_detalle == _estado_archivo)
+                        {
+                            dataGridView1.Rows.Insert(_agregados, _agregados + 1, _date_creado_xml, nombre_produccion_detalle, estado_produccion_detalle);
+                            _agregados++;
+
+
+                        }
+
+
+
+
+                    }
+
                 }
             }
 
@@ -184,6 +219,11 @@ namespace GestionXML
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void cmbEstados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargaGrid(3);
         }
     }
 }
