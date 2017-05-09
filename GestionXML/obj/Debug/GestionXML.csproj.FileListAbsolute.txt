@@ -361,6 +361,7 @@ C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.cspr
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\Interop.AcroPDFLib.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.ResolveComReference.cache
+C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.EditorXML.resources
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.CreadorXML.resources
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmAsignar.resources
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmCaminos.resources
@@ -400,4 +401,3 @@ C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.repo
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csproj.GenerateResource.Cache
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.exe
 C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.pdb
-C:\Users\ManuelAlberto\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.EditorXML.resources
