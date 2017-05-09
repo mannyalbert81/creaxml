@@ -17,7 +17,7 @@ namespace GestionXML.clases
             string datos = _id_produccion_cabeza + "?" + _id_caminos + "?" + _nombre_produccion_detalle + "?" + _inicio_produccion_detalle + "?" + _fin_produccion_detalle + "?" + _id_usuarios_crea;
             string columnas = "_id_produccion_cabeza?_id_caminos?_nombre_produccion_detalle?_inicio_produccion_detalle?_fin_produccion_detalle?_id_usuarios_crea";
             string tipodatos = "NpgsqlDbType.Integer?NpgsqlDbType.Integer?NpgsqlDbType.Varchar?NpgsqlDbType.DateTime?NpgsqlDbType.DateTime?NpgsqlDbType.Integer";
-
+            //hola
             try
             {
                 int result = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_produccion_detalle");
