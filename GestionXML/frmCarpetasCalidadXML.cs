@@ -14,6 +14,8 @@ namespace GestionXML
 {
     public partial class frmCarpetasCalidadXML : Form
     {
+        public int _id_usuarios;
+
         public frmCarpetasCalidadXML()
         {
             InitializeComponent();
@@ -45,14 +47,9 @@ namespace GestionXML
             ///leer los caminos
             int _counter_caminos = 0;
 
-            int _counter_pdf = 0;
             int _counter_xml = 0;
             int _counter_dif = 0;
-
-            int _id_caminos = 0;
             
-            int _id_usuarios = 0;
-
 
             string _nombre_caminos;
             string _path_caminos;
@@ -77,7 +74,6 @@ namespace GestionXML
                     
                     ///leo los camino
                     DirectoryInfo directory = new DirectoryInfo(@_path_caminos);
-                    //FileInfo[] filesPDF = directory.GetFiles("*.PDF");
                     FileInfo[] filesXML = directory.GetFiles("*.XML");
                     DirectoryInfo[] directories = directory.GetDirectories();
 
@@ -147,6 +143,8 @@ namespace GestionXML
                 frmListaPendienteTXT Crea = new frmListaPendienteTXT();
                 Crea._path_camino = _camino;
                 Crea._id_camino = _id_caminos;
+                Crea._id_usuarios = _id_usuarios;
+
                 Crea.Show();
             }
             if (result == DialogResult.No)
@@ -157,6 +155,11 @@ namespace GestionXML
         private void cbm_proyectos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

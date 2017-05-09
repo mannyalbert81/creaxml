@@ -14,7 +14,7 @@ namespace GestionXML
     public partial class frmListaPendienteXML : Form
     {
         public  string _path_camino = "";
-        public int _id_camino = 0;
+        public int _id_camino;
         public int _id_usuarios;
 
         public frmListaPendienteXML()
@@ -228,6 +228,18 @@ namespace GestionXML
         {
             
            CargaGrid(2);
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            //cargo los pdf
+            CargaGrid(0);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

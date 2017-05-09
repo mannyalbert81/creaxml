@@ -16,14 +16,14 @@ namespace GestionXML.reportes {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptTipoIndice : ReportClass {
+    public class rptProduccion2 : ReportClass {
         
-        public rptTipoIndice() {
+        public rptProduccion2() {
         }
         
         public override string ResourceName {
             get {
-                return "rptTipoIndice.rpt";
+                return "rptProduccion2.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace GestionXML.reportes {
         
         public override string FullResourceName {
             get {
-                return "GestionXML.reportes.rptTipoIndice.rpt";
+                return "GestionXML.reportes.rptProduccion2.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace GestionXML.reportes {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace GestionXML.reportes {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,17 +82,33 @@ namespace GestionXML.reportes {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[4];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+            get {
+                return this.ReportDefinition.Sections[5];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
+            get {
+                return this.ReportDefinition.Sections[6];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptTipoIndice : Component, ICachedReport {
+    public class CachedrptProduccion2 : Component, ICachedReport {
         
-        public CachedrptTipoIndice() {
+        public CachedrptProduccion2() {
         }
         
         [Browsable(false)]
@@ -129,7 +145,7 @@ namespace GestionXML.reportes {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptTipoIndice rpt = new rptTipoIndice();
+            rptProduccion2 rpt = new rptProduccion2();
             rpt.Site = this.Site;
             return rpt;
         }

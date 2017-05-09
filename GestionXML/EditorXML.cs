@@ -11,15 +11,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
-
-
+using System.Xml;
 
 namespace GestionXML
 {
-    public partial class CreadorXML : Form
+    public partial class EditorXML : Form
     {
         public DateTime _inicio_produccion_detalle;
         public DateTime _fin_produccion_detalle;
+
         public string nombre_pdf = "";
         public int _id_indice_cabeza = 0;
         public Boolean _fecha1 = false;
@@ -49,17 +49,17 @@ namespace GestionXML
         DateTimePicker dtFecha12 = new DateTimePicker();
 
         public int _id_usuarios;
-        public int  _id_camino;
+        public int _id_camino;
+        public int _id_produccion_detalle;
         string _nombre_produccion_detalle = "";
 
-        public CreadorXML()
+        public EditorXML()
         {
             InitializeComponent();
         }
 
-        private void CreadorXML_Load(object sender, EventArgs e)
+        private void EditorXML_Load(object sender, EventArgs e)
         {
-           
             dtFecha1.Visible = false;
             dtFecha2.Visible = false;
             dtFecha3.Visible = false;
@@ -98,9 +98,14 @@ namespace GestionXML
             button29.Visible = false;
 
             //CreaXML("", "", "", "", "", "", "", "", "", "", "", "");
+            _inicio_produccion_detalle = DateTime.Now;
             LeeIndice(1);
 
-            _inicio_produccion_detalle = DateTime.Now;
+
+            LeerXML(@nombre_pdf.Replace(".pdf", ".XML"));
+
+
+
 
         }
 
@@ -120,11 +125,11 @@ namespace GestionXML
 
 
             int _contador = 1;
-            
+
             ////aqui leo lo del detalle del indice
 
 
-            
+
             string _nombre_indice_detalle = "";
             string _nombre_tipo_indice = "";
             int _min_indice_detalle = 0;
@@ -136,7 +141,7 @@ namespace GestionXML
             bool _relacionado_indice_detalle;
 
             string _parametros = " indice_detalle.id_indice_cabeza = indice_cabeza.id_indice_cabeza AND tipo_indice.id_tipo_indice = indice_detalle.id_tipo_indice AND  indice_detalle.id_indice_cabeza = '" + _id_indice_cabeza + "'  ORDER BY indice_detalle.orden_indice_detalle ";
-            
+
             DataTable dtIndice = AccesoLogica.Select("indice_detalle.id_indice_detalle, indice_cabeza.id_caminos, indice_cabeza.nombre_indice_cabeza, indice_detalle.nombre_indice_detalle, tipo_indice.nombre_tipo_indice,  indice_detalle.min_indice_detalle, indice_detalle.max_indice_detalle, indice_detalle.orden_indice_detalle, indice_detalle.nombre_campo_indice_detalle, indice_detalle.nombre_tabla_indice_detalle, indice_detalle.relacionado_indice_detalle", "  public.indice_cabeza, public.indice_detalle, public.tipo_indice", _parametros);
 
             int reg = dtIndice.Rows.Count;
@@ -163,11 +168,12 @@ namespace GestionXML
                             {
                                 label1.Text = _nombre_indice_detalle;
                                 label1.Visible = true;
+                                textBox1.AccessibleDescription = _nombre_indice_detalle;
                             }
 
                             if (_nombre_tipo_indice == "FECHA")
                             {
-
+                                dtFecha1.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha1.Location = new Point(1045, 46);
                                 this.Controls.Add(dtFecha1);
                                 dtFecha1.Format = DateTimePickerFormat.Custom;
@@ -180,9 +186,9 @@ namespace GestionXML
                             {
                                 button1.Visible = true;
 
-                                Autocompletar(_tipo_carga,  textBox1, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
-                                
-                                
+                                Autocompletar(_tipo_carga, textBox1, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
+
+
                             }
 
 
@@ -190,15 +196,15 @@ namespace GestionXML
 
                         if (_contador == 2)
                         {
-                            
+
 
                             label2.Text = _nombre_indice_detalle;
                             label2.Visible = true;
-
+                            textBox2.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
 
-
+                                dtFecha2.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha2.Location = new Point(1045, 93);
                                 dtFecha2.Visible = true;
                                 this.Controls.Add(dtFecha2);
@@ -211,7 +217,7 @@ namespace GestionXML
                             else
                             {
                                 button2.Visible = true;
-                                Autocompletar(_tipo_carga,textBox2, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
+                                Autocompletar(_tipo_carga, textBox2, _max_indice_detalle, _relacionado_indice_detalle, _nombre_campo_indice_detalle, _nombre_tabla_indice_detalle);
 
 
 
@@ -223,14 +229,14 @@ namespace GestionXML
 
                         if (_contador == 3)
                         {
-                            
+
                             label3.Text = _nombre_indice_detalle;
                             label3.Visible = true;
-
+                            textBox3.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
 
-
+                                dtFecha3.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha3.Location = new Point(1045, 140);
                                 _fecha3 = true;
                                 dtFecha3.Visible = true;
@@ -251,14 +257,14 @@ namespace GestionXML
 
                         if (_contador == 4)
                         {
-                            
+
                             label4.Text = _nombre_indice_detalle;
                             label4.Visible = true;
-
+                            textBox4.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
 
-
+                                dtFecha4.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha4.Location = new Point(1045, 185);
                                 dtFecha4.Visible = true;
                                 this.Controls.Add(dtFecha4);
@@ -279,14 +285,14 @@ namespace GestionXML
 
                         if (_contador == 5)
                         {
-                            
+
                             label5.Text = _nombre_indice_detalle;
                             label5.Visible = true;
-
+                            textBox5.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_indice_detalle == "FECHA")
                             {
 
-
+                                dtFecha5.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha5.Location = new Point(1045, 233);
                                 dtFecha5.Visible = true;
                                 dtFecha5.Format = DateTimePickerFormat.Custom;
@@ -311,14 +317,14 @@ namespace GestionXML
 
                         if (_contador == 6)
                         {
-                            
+
                             label6.Text = _nombre_indice_detalle;
                             label6.Visible = true;
-
+                            textBox6.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
 
-
+                                dtFecha6.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha6.Location = new Point(1045, 282);
                                 dtFecha6.Visible = true;
                                 dtFecha6.Format = DateTimePickerFormat.Custom;
@@ -339,13 +345,13 @@ namespace GestionXML
                         }
                         if (_contador == 7)
                         {
-                            
+
                             label7.Text = _nombre_indice_detalle;
                             label7.Visible = true;
-
+                            textBox7.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
-
+                                dtFecha7.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha7.Location = new Point(1045, 332);
                                 dtFecha7.Visible = true;
                                 dtFecha7.Format = DateTimePickerFormat.Custom;
@@ -367,14 +373,14 @@ namespace GestionXML
 
                         if (_contador == 8)
                         {
-                            
+
                             label8.Text = _nombre_indice_detalle;
                             label8.Visible = true;
-
+                            textBox8.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
 
-
+                                dtFecha8.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha8.Location = new Point(1045, 378);
                                 dtFecha8.Visible = true;
                                 this.Controls.Add(dtFecha8);
@@ -394,14 +400,14 @@ namespace GestionXML
 
                         if (_contador == 9)
                         {
-                            
+
                             label9.Text = _nombre_indice_detalle;
                             label9.Visible = true;
-
+                            textBox9.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
 
-
+                                dtFecha9.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha9.Location = new Point(1045, 425);
                                 dtFecha9.Visible = true;
                                 this.Controls.Add(dtFecha9);
@@ -420,18 +426,18 @@ namespace GestionXML
 
                         if (_contador == 10)
                         {
-                            
+
                             label10.Text = _nombre_indice_detalle;
                             label10.Visible = true;
-
+                            textBox10.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
 
-
+                                dtFecha10.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha10.Location = new Point(1045, 474);
                                 dtFecha10.Visible = true;
                                 this.Controls.Add(dtFecha10);
-                                _fecha10= true;
+                                _fecha10 = true;
                             }
                             else
                             {
@@ -448,14 +454,14 @@ namespace GestionXML
 
                         if (_contador == 11)
                         {
-                            
+
                             label11.Text = _nombre_indice_detalle;
                             label11.Visible = true;
-
+                            textBox11.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
 
-
+                                dtFecha11.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha11.Location = new Point(1045, 522);
                                 dtFecha11.Visible = true;
                                 this.Controls.Add(dtFecha11);
@@ -477,14 +483,14 @@ namespace GestionXML
 
                         if (_contador == 12)
                         {
-                            
+
                             label12.Text = _nombre_indice_detalle;
                             label12.Visible = true;
-
+                            textBox12.AccessibleDescription = _nombre_indice_detalle;
                             if (_nombre_tipo_indice == "FECHA")
                             {
 
-
+                                dtFecha12.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha12.Location = new Point(1045, 567);
                                 dtFecha12.Visible = true;
                                 this.Controls.Add(dtFecha12);
@@ -509,14 +515,14 @@ namespace GestionXML
 
                 }
 
-            
+
             }
 
 
         }
 
 
-        
+
 
 
 
@@ -530,9 +536,9 @@ namespace GestionXML
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
-            
-    
+
+
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -648,7 +654,7 @@ namespace GestionXML
 
                 if (_fecha1)
                 {
-                    _valor1 = dtFecha1.Value.ToString("yyyy.MM.dd"); 
+                    _valor1 = dtFecha1.Value.ToString("yyyy.MM.dd");
                 }
                 else
                 {
@@ -757,15 +763,42 @@ namespace GestionXML
 
                     try
                     {
-                      
-                      
+
+
                         _nombre_produccion_detalle = @nombre_pdf.Replace(".pdf", ".XML");
                         _fin_produccion_detalle = DateTime.Now;
 
                         int id_usu = _id_usuarios;
 
-                        clases.ProduccionCabeza.InsertaProduccionCabeza(id_usu, _id_camino, _nombre_produccion_detalle, _inicio_produccion_detalle, _fin_produccion_detalle);
 
+                        //// update los eidtorir
+
+                        try
+                        {
+                            AccesoLogica.Update("produccion_cabeza", " xml_editados_produccion_cabeza = xml_editados_produccion_cabeza + 1 ", " id_usuarios = '" + id_usu + "' AND id_caminos = '" + _id_camino + "'    ");
+
+                        }
+                        catch (Exception Ex)
+                        {
+                            MessageBox.Show(Ex.Message, "No se Pudo Actualizar la Edicion en la Produccion Cabeza", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+
+                        try
+                        {
+                            string escaped = _nombre_produccion_detalle.Replace(@"\",@"\\");
+                            AccesoLogica.Update("produccion_detalle", " id_usuarios_edita = '"+id_usu+"' , estado_produccion_detalle = 'TRUE'   ", "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = E'"+ escaped +"'    ");
+                            textBox12.Visible = true;
+                            textBox12.Text = "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = 'E" + escaped + "'    ";
+                        }
+                        catch (Exception Ex)
+                        {
+                            MessageBox.Show(Ex.Message, "No se Pudo Actualizar la Edicion en la Produccion Detalle", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+
+
+                        ///
 
                     }
                     catch (Exception Ex)
@@ -782,7 +815,7 @@ namespace GestionXML
                     MessageBox.Show(Ex.Message, "No se Pudo General el XML", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-            
+
             }
             else
             {
@@ -794,12 +827,13 @@ namespace GestionXML
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         public void CreaXML(string _valor1, string _valor2, string _valor3, string _valor4, string _valor5, string _valor6, string _valor7, string _valor8, string _valor9, string _valor10, string _valor11, string _valor12)
+
         {
-            
+
             XDocument miXML = new XDocument(
                new XDeclaration("1.0", "utf-8", "yes"),
                new XComment("xml gernerado por GestorXML 2017  -  www.masoft.net"),
@@ -866,7 +900,7 @@ namespace GestionXML
                                                new XAttribute("name", label12.Text),
                                                new XAttribute("value", _valor12)
                                            )
-                                           
+
                       )
                   )
               );
@@ -874,8 +908,8 @@ namespace GestionXML
             try
             {
                 miXML.Save(@nombre_pdf.Replace(".pdf", ".XML"));
-                MessageBox.Show("XML Generado Correctamente", "XML Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
+                MessageBox.Show("XML Editado Correctamente", "XML Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //this.Hide();
             }
             catch (Exception)
             {
@@ -890,22 +924,22 @@ namespace GestionXML
 
 
 
-        public void Autocompletar(int _tipo_carga, TextBox _textBox,   int _max_indice_detalle, bool _relacionado_indice_detalle, string _nombre_campo_indice_detalle, string _nombre_tabla_indice_detalle)
+        public void Autocompletar(int _tipo_carga, TextBox _textBox, int _max_indice_detalle, bool _relacionado_indice_detalle, string _nombre_campo_indice_detalle, string _nombre_tabla_indice_detalle)
         {
-            
+
 
 
 
             if (_tipo_carga == 1)
             {
-                
+
                 if (Convert.ToInt16(_max_indice_detalle) > 0)
                 {
                     _textBox.MaxLength = Convert.ToInt16(_max_indice_detalle);
                 }
 
             }
-            
+
 
             if (_relacionado_indice_detalle)
             {
@@ -970,15 +1004,15 @@ namespace GestionXML
                         {
                             daText1 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " = '12345' " + "  GROUP BY  " + _nombre_campo_indice_detalle + "   ORDER BY  " + _nombre_campo_indice_detalle + "  ");
                         }
-                            
-                        
+
+
                     }
                     else
                     {
 
                         daText1 = AccesoLogica.Select_reporte(_nombre_campo_indice_detalle, _nombre_tabla_indice_detalle, _nombre_campo_indice_detalle + " LIKE '%%' ORDER BY  " + _nombre_campo_indice_detalle);
                     }
-                    
+
 
                 }
                 catch (Exception Ex)
@@ -993,12 +1027,12 @@ namespace GestionXML
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show("Error al llenar Dataset",Ex.Message);
+                    MessageBox.Show("Error al llenar Dataset", Ex.Message);
                 }
 
                 if (dtText1.Tables[0].Rows.Count > 0)
                 {
-                    
+
                     int i = 0;
                     for (i = 0; i <= dtText1.Tables[0].Rows.Count - 1; i++)
                     {
@@ -1009,9 +1043,9 @@ namespace GestionXML
                 }
                 else
                 {
-                                    }
+                }
                 _textBox.AutoCompleteCustomSource = col;
-                
+
             }
             else
             {
@@ -1019,11 +1053,11 @@ namespace GestionXML
 
             }
             _textBox.Visible = true;
-            
+
 
         }
 
-        
+
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1033,32 +1067,32 @@ namespace GestionXML
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -1068,14 +1102,14 @@ namespace GestionXML
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             LeeIndice(2);
-            
+
 
         }
 
@@ -1142,23 +1176,23 @@ namespace GestionXML
 
         private void button21_Click(object sender, EventArgs e)
         {
-            
-                llenaTextbox(textBox1, textBox2);
-                llenaTextbox(textBox1, textBox3);
-                llenaTextbox(textBox1, textBox4);
-                llenaTextbox(textBox1, textBox5);
-                llenaTextbox(textBox1, textBox6);
-                llenaTextbox(textBox1, textBox7);
-                llenaTextbox(textBox1, textBox8);
-                llenaTextbox(textBox1, textBox9);
-                llenaTextbox(textBox1, textBox10);
 
-            
+            llenaTextbox(textBox1, textBox2);
+            llenaTextbox(textBox1, textBox3);
+            llenaTextbox(textBox1, textBox4);
+            llenaTextbox(textBox1, textBox5);
+            llenaTextbox(textBox1, textBox6);
+            llenaTextbox(textBox1, textBox7);
+            llenaTextbox(textBox1, textBox8);
+            llenaTextbox(textBox1, textBox9);
+            llenaTextbox(textBox1, textBox10);
+
+
         }
 
 
 
-        public void llenaTextbox(TextBox _textBoxOrigen,   TextBox _textBox)
+        public void llenaTextbox(TextBox _textBoxOrigen, TextBox _textBox)
         {
 
             string _parametros = "";
@@ -1200,14 +1234,13 @@ namespace GestionXML
                 else
                 {
 
-                    
+
                 }
-
-
                 if (_textBox.AccessibleName == "numero_banco_tarjetas")
                 {
                     _textBox.Text = _numero_banco_tarjetas;
                 }
+
                 if (_textBox.AccessibleName == "identificacion_banco_tarjetas")
                 {
                     _textBox.Text = _identificacion_banco_tarjetas;
@@ -1255,7 +1288,247 @@ namespace GestionXML
         {
 
         }
+
+
+
+
+        public void LeerXML(string _nombre_produccion_detalle)
+        {
+
+            var xdoc = XDocument.Load(_nombre_produccion_detalle);
+
+
+            var items = from i in xdoc.Descendants("field")
+                        select new
+                        {
+                            _name = (string)i.Attribute("name"),
+                            _value = (string)i.Attribute("value")
+                        };
+
+            int _contador = 1;
+            
+
+            foreach (var item in items)
+            {
+                
+                // use item.Action or item.FileName
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha1.AccessibleDescription)
+                    {
+                         dtFecha1.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+                    
+                    if (item._name.ToString() == textBox1.AccessibleDescription)
+                    {
+                        textBox1.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha2.AccessibleDescription)
+                    {
+                        dtFecha2.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox2.AccessibleDescription)
+                    {
+                        textBox2.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha3.AccessibleDescription)
+                    {
+                        dtFecha3.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox3.AccessibleDescription)
+                    {
+                        textBox3.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha4.AccessibleDescription)
+                    {
+                        dtFecha4.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox4.AccessibleDescription)
+                    {
+                        textBox4.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha5.AccessibleDescription)
+                    {
+                        dtFecha5.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox5.AccessibleDescription)
+                    {
+                        textBox5.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha6.AccessibleDescription)
+                    {
+                        dtFecha6.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox6.AccessibleDescription)
+                    {
+                        textBox6.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha7.AccessibleDescription)
+                    {
+                        dtFecha7.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox7.AccessibleDescription)
+                    {
+                        textBox7.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha8.AccessibleDescription)
+                    {
+                        dtFecha8.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox8.AccessibleDescription)
+                    {
+                        textBox8.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha9.AccessibleDescription)
+                    {
+                        dtFecha9.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox9.AccessibleDescription)
+                    {
+                        textBox9.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha10.AccessibleDescription)
+                    {
+                        dtFecha10.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox10.AccessibleDescription)
+                    {
+                        textBox10.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha11.AccessibleDescription)
+                    {
+                        dtFecha11.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox11.AccessibleDescription)
+                    {
+                        textBox11.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+
+                if (item._name.ToString() == "FACHA")
+                {
+                    if (item._name.ToString() == dtFecha12.AccessibleDescription)
+                    {
+                        dtFecha12.Text = item._value.ToString().Trim();
+                    }
+                }
+                else
+                {
+
+                    if (item._name.ToString() == textBox12.AccessibleDescription)
+                    {
+                        textBox12.Text = item._value.ToString().Trim().Replace("'", "");
+                    }
+                }
+
+
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 
-
-}
+    }
