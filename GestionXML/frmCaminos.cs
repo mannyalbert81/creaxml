@@ -193,7 +193,7 @@ namespace GestionXML
                 e.Cancel = false;
             }
         }
-
+        //manuel
         private void label3_Click(object sender, EventArgs e)
         {
 

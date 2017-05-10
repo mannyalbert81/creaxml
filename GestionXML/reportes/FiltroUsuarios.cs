@@ -31,8 +31,8 @@ namespace GestionXML.reportes
             DateTime _inicio = dateTimePicker1.Value;
             DateTime _final = dateTimePicker2.Value;
 
-            DataTable daProduccion = AccesoLogica.Select("  produccion_detalle.id_produccion_detalle, produccion_detalle.nombre_produccion_detalle, produccion_detalle.inicio_produccion_detalle, produccion_detalle.fin_produccion_detalle, usuarios.id_usuarios, usuarios.nombre_usuarios, caminos.id_caminos, caminos.nombre_caminos, produccion_detalle.creado, produccion_detalle.modificado ", " public.produccion_detalle, public.usuarios, public.caminos", " usuarios.id_usuarios = produccion_detalle.id_usuarios_crea AND caminos.id_caminos = produccion_detalle.id_caminos AND usuarios.id_usuarios = '" + _id_usuario + "' AND produccion_detalle.creado BETWEEN '" + _inicio + "' AND '" + _final + "'");
-             int registro = daProduccion.Rows.Count;
+            DataTable daProduccion = AccesoLogica.Select("produccion_detalle.id_produccion_detalle, produccion_cabeza.id_produccion_cabeza, produccion_cabeza.xml_editados_produccion_cabeza, caminos.id_caminos, caminos.nombre_caminos, caminos.path_caminos, proyectos.id_proyectos, proyectos.nombre_proyectos, produccion_detalle.nombre_produccion_detalle, produccion_detalle.inicio_produccion_detalle, produccion_detalle.fin_produccion_detalle, usuarios.id_usuarios, usuarios.nombre_usuarios, usuarios.telefono_usuarios, produccion_detalle.creado, produccion_detalle.modificado", "  public.produccion_detalle, public.usuarios, public.produccion_cabeza, public.caminos, public.proyectos", "  produccion_detalle.id_produccion_cabeza = produccion_cabeza.id_produccion_cabeza AND usuarios.id_usuarios = produccion_detalle.id_usuarios_edita AND caminos.id_caminos = produccion_detalle.id_caminos AND proyectos.id_proyectos = caminos.id_proyectos AND produccion_detalle.id_usuarios_crea = '" + _id_usuario + "' AND produccion_detalle.creado BETWEEN '" + _inicio + "' AND '" + _final + "'");
+            int registro = daProduccion.Rows.Count;
 
             if (registro > 0)
             {
@@ -60,6 +60,9 @@ namespace GestionXML.reportes
             cbm_usuarios.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-       
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
