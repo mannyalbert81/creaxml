@@ -16,7 +16,6 @@ C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\Datos.pdb
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\Interop.AcroPDFLib.dll
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.csprojResolveAssemblyReference.cache
-C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.CreadorTXT.resources
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.CreadorXML.resources
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmCaminos.resources
 C:\Users\Steven\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.frmCarpetasCalidadXML.resources
@@ -397,3 +396,4 @@ C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\fi\Npgsql.resources.dl
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\fr\Npgsql.resources.dll
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\ja\Npgsql.resources.dll
 C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\STEVEN\Source\Repos\creaxml\GestionXML\obj\Debug\GestionXML.EditorXML.resources
