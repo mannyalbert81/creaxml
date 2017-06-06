@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaPendienteXML));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ARCHIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCamino = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreArchivo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ARCHIVO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,27 +50,9 @@
             this.ARCHIVO});
             this.dataGridView1.Location = new System.Drawing.Point(11, 83);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(682, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(1048, 365);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "#";
-            this.numero.Name = "numero";
-            this.numero.Width = 30;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "CREADO";
-            this.fecha.Name = "fecha";
-            this.fecha.Width = 200;
-            // 
-            // ARCHIVO
-            // 
-            this.ARCHIVO.HeaderText = "ARCHIVO";
-            this.ARCHIVO.Name = "ARCHIVO";
-            this.ARCHIVO.Width = 450;
             // 
             // lblCamino
             // 
@@ -129,11 +111,29 @@
             this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
+            // numero
+            // 
+            this.numero.HeaderText = "#";
+            this.numero.Name = "numero";
+            this.numero.Width = 30;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "CREADO";
+            this.fecha.Name = "fecha";
+            this.fecha.Width = 160;
+            // 
+            // ARCHIVO
+            // 
+            this.ARCHIVO.HeaderText = "ARCHIVO";
+            this.ARCHIVO.Name = "ARCHIVO";
+            this.ARCHIVO.Width = 900;
+            // 
             // frmListaPendienteXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 477);
+            this.ClientSize = new System.Drawing.Size(1083, 477);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.txtNombreArchivo);
@@ -157,10 +157,10 @@
         private System.Windows.Forms.Label lblCamino;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreArchivo;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn ARCHIVO;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnCargar;
     }
 }
