@@ -15,11 +15,11 @@ namespace GestionXML
         public frmPortada()
         {
             InitializeComponent();
-            //clases.ImportaCartones.Inserta();
+            
             timer2.Interval = 10000;
             timer2.Start();
             timer2.Tick += (s, e) => {
-                clases.ImportaCartones.Inserta();
+               clases.ImportaCartones.Inserta();
                 frmLogin frm = new frmLogin();
                 frm.Show();
                 this.Hide();
