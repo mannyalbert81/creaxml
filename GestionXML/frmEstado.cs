@@ -151,5 +151,7 @@ namespace GestionXML
             DataGridViewRow fila = dataGridViewEstado.CurrentRow; // obtengo la fila actualmente seleccionada en el dataGridView
             txt_estado.Text = Convert.ToString(fila.Cells[1].Value); //obtengo el valor de la primer columna
         }
+
+    
     }
 }
