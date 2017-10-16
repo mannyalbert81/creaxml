@@ -65,6 +65,9 @@ namespace GestionXML.clases
                     try
                     {
                         ProduccionDetalle.InsertaProduccionDetalle(_id_produccion_cabeza, _id_caminos, _nombre_produccion_detalle, _inicio_produccion_detalle, _fin_produccion_detalle, _id_usuarios);
+                       
+                        
+
                     }
                     catch (NpgsqlException Ex)
                     {
