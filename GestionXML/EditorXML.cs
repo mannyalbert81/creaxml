@@ -52,11 +52,12 @@ namespace GestionXML
         public int _id_camino;
         public int _id_produccion_detalle;
         string _nombre_produccion_detalle = "";
-
+        public string _path_camino = "";
         public EditorXML()
         {
             InitializeComponent();
         }
+
 
         private void EditorXML_Load(object sender, EventArgs e)
         {
@@ -209,7 +210,7 @@ namespace GestionXML
                                 dtFecha2.Visible = true;
                                 this.Controls.Add(dtFecha2);
                                 dtFecha2.Format = DateTimePickerFormat.Custom;
-                                dtFecha2.CustomFormat = "dd-MM-yyyy";
+                                dtFecha2.CustomFormat = "yyyy-MM-dd";
 
                                 _fecha2 = true;
 
@@ -238,11 +239,13 @@ namespace GestionXML
 
                                 dtFecha3.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha3.Location = new Point(1045, 140);
-                                _fecha3 = true;
+                               
                                 dtFecha3.Visible = true;
-                                dtFecha3.CustomFormat = "dd-MM-yyyy";
+                                dtFecha3.CustomFormat = "yyyy-MM-dd";
 
                                 this.Controls.Add(dtFecha3);
+
+                                _fecha3 = true;
                             }
                             else
                             {
@@ -267,6 +270,7 @@ namespace GestionXML
                                 dtFecha4.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha4.Location = new Point(1045, 185);
                                 dtFecha4.Visible = true;
+                                dtFecha4.CustomFormat = "yyyy-MM-dd";
                                 this.Controls.Add(dtFecha4);
 
                                 _fecha4 = true;
@@ -296,7 +300,7 @@ namespace GestionXML
                                 dtFecha5.Location = new Point(1045, 233);
                                 dtFecha5.Visible = true;
                                 dtFecha5.Format = DateTimePickerFormat.Custom;
-                                dtFecha5.CustomFormat = "dd-MM-yyyy";
+                                dtFecha5.CustomFormat = "yyyy-MM-dd";
 
 
                                 this.Controls.Add(dtFecha5);
@@ -328,7 +332,7 @@ namespace GestionXML
                                 dtFecha6.Location = new Point(1045, 282);
                                 dtFecha6.Visible = true;
                                 dtFecha6.Format = DateTimePickerFormat.Custom;
-                                dtFecha6.CustomFormat = "dd-MM-yyyy";
+                                dtFecha6.CustomFormat = "yyyy-MM-dd";
 
                                 this.Controls.Add(dtFecha6);
                                 _fecha6 = true;
@@ -355,7 +359,7 @@ namespace GestionXML
                                 dtFecha7.Location = new Point(1045, 332);
                                 dtFecha7.Visible = true;
                                 dtFecha7.Format = DateTimePickerFormat.Custom;
-                                dtFecha7.CustomFormat = "dd-MM-yyyy";
+                                dtFecha7.CustomFormat = "yyyy-MM-dd";
 
                                 this.Controls.Add(dtFecha7);
                                 _fecha7 = true;
@@ -383,6 +387,7 @@ namespace GestionXML
                                 dtFecha8.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha8.Location = new Point(1045, 378);
                                 dtFecha8.Visible = true;
+                                dtFecha8.CustomFormat = "yyyy-MM-dd";
                                 this.Controls.Add(dtFecha8);
                                 _fecha8 = true;
                             }
@@ -410,6 +415,7 @@ namespace GestionXML
                                 dtFecha9.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha9.Location = new Point(1045, 425);
                                 dtFecha9.Visible = true;
+                                dtFecha9.CustomFormat = "yyyy-MM-dd";
                                 this.Controls.Add(dtFecha9);
                                 _fecha9 = true;
                             }
@@ -436,6 +442,7 @@ namespace GestionXML
                                 dtFecha10.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha10.Location = new Point(1045, 474);
                                 dtFecha10.Visible = true;
+                                dtFecha10.CustomFormat = "yyyy-MM-dd";
                                 this.Controls.Add(dtFecha10);
                                 _fecha10 = true;
                             }
@@ -464,6 +471,7 @@ namespace GestionXML
                                 dtFecha11.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha11.Location = new Point(1045, 522);
                                 dtFecha11.Visible = true;
+                                dtFecha11.CustomFormat = "yyyy-MM-dd";
                                 this.Controls.Add(dtFecha11);
                                 _fecha11 = true;
                             }
@@ -493,6 +501,7 @@ namespace GestionXML
                                 dtFecha12.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha12.Location = new Point(1045, 567);
                                 dtFecha12.Visible = true;
+                                dtFecha12.CustomFormat = "yyyy-MM-dd";
                                 this.Controls.Add(dtFecha12);
                                 _fecha8 = true;
                             }
@@ -788,8 +797,20 @@ namespace GestionXML
                         {
                             string escaped = _nombre_produccion_detalle.Replace(@"\",@"\\");
                             AccesoLogica.Update("produccion_detalle", " id_usuarios_edita = '"+id_usu+"' , estado_produccion_detalle = 'TRUE'   ", "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = E'"+ escaped +"'    ");
-                           // textBox12.Visible = true;
+                            // textBox12.Visible = true;
                             //textBox12.Text = "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = 'E" + escaped + "'    ";
+
+                            frmCarpetasCalidadXML frm = new frmCarpetasCalidadXML();
+
+
+                            frmListaPendienteTXT FRM = new frmListaPendienteTXT();
+                            FRM._path_camino = _path_camino;
+                            FRM._id_usuarios = _id_usuarios;
+                            FRM._id_camino = _id_camino;
+                            FRM.CargaGrid(2);
+                            FRM.Show();
+
+
                         }
                         catch (Exception Ex)
                         {
@@ -909,7 +930,7 @@ namespace GestionXML
             {
                 miXML.Save(@nombre_pdf.Replace(".pdf", ".XML"));
                 MessageBox.Show("XML Editado Correctamente", "XML Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //this.Hide();
+                this.Hide();
             }
             catch (Exception)
             {

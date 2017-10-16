@@ -138,7 +138,7 @@ namespace GestionXML
 
             if (result == DialogResult.Yes)
             {
-                
+               
 
                 frmListaPendienteTXT Crea = new frmListaPendienteTXT();
                 Crea._path_camino = _camino;
@@ -146,6 +146,7 @@ namespace GestionXML
                 Crea._id_usuarios = _id_usuarios;
 
                 Crea.Show();
+                this.Hide();
             }
             if (result == DialogResult.No)
             {
@@ -160,6 +161,11 @@ namespace GestionXML
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

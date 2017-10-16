@@ -77,7 +77,8 @@ namespace GestionXML
                 Crea._id_camino = _id_caminos;
                 Crea._id_usuarios = _id_usuarios;
                 
-                Crea.Show(); 
+                Crea.Show();
+                this.Hide();
             }
             if (result == DialogResult.No)
             {

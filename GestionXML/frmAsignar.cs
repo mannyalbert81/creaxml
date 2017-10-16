@@ -22,7 +22,7 @@ namespace GestionXML
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string _error = "";
-            string _nombre_indice_cabeza = txt_nombre_indice.Text;
+            string _nombre_indice_cabeza =  Convert.ToString(cbm_nombre_indice.SelectedValue.ToString());
             string _nombre_campo_indice_detalle = txt_nombre_campo.Text;
             string _nombre_tabla_indice_detalle = txt_nombre_tabla.Text;
             int _id_indice_detalle = Convert.ToInt16(cbm_caminos.SelectedValue.ToString());
@@ -76,6 +76,9 @@ namespace GestionXML
         {
             btnGuardar.Enabled = false;
             cbm_caminos.Enabled = false;
+
+
+            clases.Funciones.CargarCombo(cbm_nombre_indice, "nombre_indice_cabeza", "nombre_indice_cabeza", "indice_cabeza");
         }
 
         private void llenar_grid(string _parametro)
@@ -90,15 +93,15 @@ namespace GestionXML
         {
 
             string _error = "";
-            if (txt_nombre_indice.Text.Length == 0)
+          /*  if (txt_nombre_indice.Text.Length == 0)
             {
                 _error = "EL nombre indice no puede estar vacio.";
-            }
+            }*/
             if (_error.Length == 0)
             {
 
-             
-               string _nombre_indice_cabeza = txt_nombre_indice.Text;
+                string _nombre_indice_cabeza = Convert.ToString(cbm_nombre_indice.SelectedValue.ToString());
+                //string _nombre_indice_cabeza = txt_nombre_indice.Text;
 
            
 
@@ -141,7 +144,7 @@ namespace GestionXML
         public void limpiar()
         {
 
-            txt_nombre_indice.Text = "";
+            
             txt_nombre_campo.Text = "";
             txt_nombre_tabla.Text = "";
             cbm_caminos.DataSource = null;
