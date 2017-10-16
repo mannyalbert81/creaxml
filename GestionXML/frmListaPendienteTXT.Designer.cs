@@ -71,7 +71,7 @@
             this.EDITADO});
             this.dataGridView1.Location = new System.Drawing.Point(16, 75);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(682, 360);
+            this.dataGridView1.Size = new System.Drawing.Size(1049, 360);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -142,7 +142,7 @@
             // 
             this.ARCHIVO.HeaderText = "ARCHIVO";
             this.ARCHIVO.Name = "ARCHIVO";
-            this.ARCHIVO.Width = 350;
+            this.ARCHIVO.Width = 800;
             // 
             // EDITADO
             // 
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 482);
+            this.ClientSize = new System.Drawing.Size(1077, 482);
             this.Controls.Add(this.cmbEstados);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);

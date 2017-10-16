@@ -31,7 +31,7 @@ namespace GestionXML.reportes
 
             int _id_proyectos = Convert.ToInt32(cbm_proyectos.SelectedValue.ToString());
             
-            clases.Funciones.CargarComboWhere(cmb_Caminos, "id_caminos", "nombre_caminos", "public.proyectos, public.caminos", "caminos.id_proyectos = proyectos.id_proyectos AND proyectos.id_proyectos = '" + _id_proyectos + "' ");
+            clases.Funciones.CargarCombo(cmb_Caminos, "id_caminos", "nombre_caminos", "caminos");
 
 
         }
@@ -73,11 +73,12 @@ namespace GestionXML.reportes
 
         private void cmb_Caminos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmb_Caminos.DropDownStyle = ComboBoxStyle.DropDownList;
-            int _id_proyectos = Convert.ToInt32(cbm_proyectos.SelectedValue.ToString());
+          
+           
+        }
 
-            clases.Funciones.CargarComboWhere(cmb_Caminos, "id_caminos", "nombre_caminos", "public.proyectos, public.caminos", "caminos.id_proyectos = proyectos.id_proyectos AND proyectos.id_proyectos = '" + _id_proyectos + "' ");
-
+        private void cmb_Caminos_DisplayMemberChanged(object sender, EventArgs e)
+        {
            
         }
     }
