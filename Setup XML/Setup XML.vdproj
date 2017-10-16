@@ -214,13 +214,13 @@
         "Entry"
         {
         "MsmKey" = "8:_67B4ED1331B4F893CF4AF9A27CDD4017"
-        "OwnerKey" = "8:_C11986781EF94B328586B01C5032307B"
+        "OwnerKey" = "8:_73D976514C684B23134F74B609716615"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_67B4ED1331B4F893CF4AF9A27CDD4017"
-        "OwnerKey" = "8:_73D976514C684B23134F74B609716615"
+        "OwnerKey" = "8:_C11986781EF94B328586B01C5032307B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -238,6 +238,12 @@
         "Entry"
         {
         "MsmKey" = "8:_73D976514C684B23134F74B609716615"
+        "OwnerKey" = "8:_8A05676C662D6D61614977EC88208F17"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_73D976514C684B23134F74B609716615"
         "OwnerKey" = "8:_C11986781EF94B328586B01C5032307B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -245,12 +251,6 @@
         {
         "MsmKey" = "8:_73D976514C684B23134F74B609716615"
         "OwnerKey" = "8:_0E67DBCF0C6744A9E12852A81F57590B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_73D976514C684B23134F74B609716615"
-        "OwnerKey" = "8:_8A05676C662D6D61614977EC88208F17"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -472,19 +472,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_ACE1761E42052EA9459F2A281CEFA3EF"
+        "OwnerKey" = "8:_6C941241D18140212AFE2D7ED6F964FB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_147990B9B7039288D992180644BBAEA9"
+        "OwnerKey" = "8:_C11986781EF94B328586B01C5032307B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1D7911E40D76186E3B49E93746A9BA27"
+        "OwnerKey" = "8:_3AAFC4790BBA82D7AC3A792D2AD71346"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -502,24 +502,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C11986781EF94B328586B01C5032307B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6C941241D18140212AFE2D7ED6F964FB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3AAFC4790BBA82D7AC3A792D2AD71346"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_73D976514C684B23134F74B609716615"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -527,6 +509,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_67B4ED1331B4F893CF4AF9A27CDD4017"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_147990B9B7039288D992180644BBAEA9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1D7911E40D76186E3B49E93746A9BA27"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -847,6 +841,12 @@
         "OwnerKey" = "8:_3F6E2D0E8B8D0C85C6EBB679213CA85A"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_ACE1761E42052EA9459F2A281CEFA3EF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -865,6 +865,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 y x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:SAP.CrystalReports14.NET.2.0"
+                    {
+                    "Name" = "8:SAP Crystal Reports Runtime Engine for .NET Framework"
+                    "ProductCode" = "8:SAP.CrystalReports14.NET.2.0"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -881,6 +902,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -2991,7 +3020,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Gestor XML"
         "ProductCode" = "8:{E194889A-2C27-4F32-9FFA-E317DEEC1800}"
-        "PackageCode" = "8:{F6A24229-82F5-4C22-8E6E-8310B4CCE2DD}"
+        "PackageCode" = "8:{E38E0F98-BB0A-485C-A371-B950E6D8FFA4}"
         "UpgradeCode" = "8:{90A192B9-C289-4536-A36C-7AF4F316313B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
