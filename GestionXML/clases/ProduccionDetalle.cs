@@ -21,8 +21,8 @@ namespace GestionXML.clases
             try
             {
                 int result = AccesoLogica.Insert(datos, columnas, tipodatos, "ins_produccion_detalle");
-
-               // HOLA
+               
+                // HOLA
             }
             catch (NpgsqlException Ex)
             {

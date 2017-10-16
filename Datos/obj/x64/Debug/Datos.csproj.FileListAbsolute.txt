@@ -25,4 +25,3 @@ C:\Users\mflores\Source\Repos\creaxml\Datos\bin\x64\Debug\ja\Npgsql.resources.dl
 C:\Users\mflores\Source\Repos\creaxml\Datos\bin\x64\Debug\zh-CN\Npgsql.resources.dll
 C:\Users\mflores\Source\Repos\creaxml\Datos\obj\x64\Debug\Datos.dll
 C:\Users\mflores\Source\Repos\creaxml\Datos\obj\x64\Debug\Datos.pdb
-C:\Users\mflores\Source\Repos\creaxml\Datos\obj\x64\Debug\Datos.csprojResolveAssemblyReference.cache

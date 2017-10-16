@@ -67,7 +67,13 @@ namespace GestionXML
                 Crea._id_indice_cabeza = _id_indice_cabeza;
                 Crea._id_usuarios = _id_usuarios;
                 Crea._id_camino = _id_camino;
+                Crea._path_camino=_path_camino;
                 Crea.Show();
+                
+               this.Hide();
+                
+                
+                
             }
             if (result == DialogResult.No)
             {
