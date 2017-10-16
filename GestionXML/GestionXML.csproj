@@ -79,6 +79,10 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Interop.Acrobat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Interop.Acrobat.1.0.1\lib\net\Interop.Acrobat.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Mono.Security.dll</HintPath>
       <Private>True</Private>
@@ -733,15 +737,6 @@
     <None Include="Properties\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="AxAcroPDFLib">
       <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
       <VersionMajor>1</VersionMajor>
