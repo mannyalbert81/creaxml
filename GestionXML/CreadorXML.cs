@@ -875,7 +875,12 @@ namespace GestionXML
             {
                 miXML.Save(@nombre_pdf.Replace(".pdf", ".XML"));
                 MessageBox.Show("XML Generado Correctamente", "XML Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                
                 this.Hide();
+
+
+
             }
             catch (Exception)
             {
