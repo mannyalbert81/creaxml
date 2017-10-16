@@ -58,6 +58,7 @@ namespace GestionXML
             InitializeComponent();
         }
 
+
         private void EditorXML_Load(object sender, EventArgs e)
         {
             dtFecha1.Visible = false;
