@@ -18,6 +18,7 @@ namespace GestionXML.clases
 
             string numero_carton_documentos;
             bool estado_carton_documentos;
+            int id_proyectos = 5;
 
             DataTable dtCartonesOrigen = AccesoLogica.Select2(" * ", "carton_documentos", "id_carton_documentos > 0");
             int reg = dtCartonesOrigen.Rows.Count;
@@ -32,9 +33,9 @@ namespace GestionXML.clases
                         numero_carton_documentos = Convert.ToString(renglon["numero_carton_documentos"].ToString());
                         estado_carton_documentos = Convert.ToBoolean(renglon["estado_carton_documentos"].ToString());
 
-                        string datos = numero_carton_documentos + "?" + estado_carton_documentos;
-                        string columnas = "_numero_carton_documentos?_estado_carton_documentos?";
-                        string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Boolean";
+                        string datos = numero_carton_documentos + "?" + estado_carton_documentos + "?" + id_proyectos;
+                        string columnas = "_numero_carton_documentos?_estado_carton_documentos?id_proyectos";
+                        string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Boolean?NpgsqlDbTypeInteger";
 
                         try
                         {
