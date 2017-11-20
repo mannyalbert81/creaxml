@@ -20,9 +20,9 @@ namespace GestionXML.clases
             bool estado_carton_documentos;
             int id_proyectos = 5;
 
-            DataTable dtCartonesOrigen = AccesoLogica.Select2(" * ", "carton_documentos", "id_carton_documentos > 0");
+            DataTable dtCartonesOrigen = AccesoLogica.Select2("*", "carton_documentos", "id_carton_documentos > 0");
             int reg = dtCartonesOrigen.Rows.Count;
-            
+
             if (reg > 0)
             {
                 //hola
@@ -34,7 +34,7 @@ namespace GestionXML.clases
                         estado_carton_documentos = Convert.ToBoolean(renglon["estado_carton_documentos"].ToString());
 
                         string datos = numero_carton_documentos + "?" + estado_carton_documentos + "?" + id_proyectos;
-                        string columnas = "_numero_carton_documentos?_estado_carton_documentos?id_proyectos";
+                        string columnas = "_numero_carton_documentos?_estado_carton_documentos?_id_proyectos";
                         string tipodatos = "NpgsqlDbType.Varchar?NpgsqlDbType.Boolean?NpgsqlDbTypeInteger";
 
                         try
@@ -61,6 +61,6 @@ namespace GestionXML.clases
                 MessageBox.Show("No encontre Registros", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
     }
 }
