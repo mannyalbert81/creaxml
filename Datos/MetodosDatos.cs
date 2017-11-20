@@ -10,10 +10,11 @@ namespace Datos
 {
     class MetodosDatos
     {
-        public static string cadenaConexion = @"Server=186.4.203.42;Port=5432;User Id=postgres;Password=.Romina.2012;Database=xml;Preload Reader = true;";
+        //UNO
+        public static string cadenaConexion = @"Server=192.168.100.8;Port=5432;User Id=postgres;Password=.Mdigital.2017;Database=xml;Preload Reader = true;";
         //DOS
-        public static string cadenaConexion2 = @"Server=181.198.150.228;Port=5433;User Id=postgres;Password=.Romina.2012;Database=ad_capremci;Preload Reader = true;";
-        //186.65.24.196
+        public static string cadenaConexion2 = @"Server=192.168.100.8;Port=5432;User Id=postgres;Password=.Mdigital.2017;Database=ad_capremci;Preload Reader = true;";
+        
 
 
         public static DataTable EjecutarConsula(string comando)
