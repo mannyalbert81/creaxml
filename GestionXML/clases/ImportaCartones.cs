@@ -24,8 +24,8 @@ namespace GestionXML.clases
             int reg = dtCartonesOrigen.Rows.Count;
 
             if (reg > 0)
-            {
-                //hola
+            { 
+//hola
                 foreach (DataRow renglon in dtCartonesOrigen.Rows)
                 {
                     try
