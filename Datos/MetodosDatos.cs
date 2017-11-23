@@ -10,10 +10,11 @@ namespace Datos
 {
     class MetodosDatos
     {
-        public static string cadenaConexion = @"Server=186.4.203.42;Port=5432;User Id=postgres;Password=.Romina.2012;Database=xml;Preload Reader = true;";
+        public static string cadenaConexion = @"Server=186.4.203.54;Port=5432;User Id=postgres;Password=.Mdigital.2017;Database=xml;Preload Reader = true;";
         //DOS
-        public static string cadenaConexion2 = @"Server=186.4.241.148;Port=5433;User Id=postgres;Password=.Romina.2012;Database=ad_territorial_cor;Preload Reader = true;";
+        public static string cadenaConexion2 = @"Server=186.4.203.54;Port=5432;User Id=postgres;Password=.Mdigital.2017;Database=ad_capremci;Preload Reader = true;";
         //186.65.24.196
+
 
         public static DataTable EjecutarConsula(string comando)
         {
@@ -60,7 +61,7 @@ namespace Datos
             }
         }
 
-    //DOS
+        //DOS
         /// 
 
 
@@ -77,7 +78,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                
+
             }
 
             return data;
