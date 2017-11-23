@@ -41,3 +41,4 @@ c:\Users\ManuelAlberto\Source\Repos\creaxml2\Datos\bin\x64\Debug\zh-CN\Npgsql.re
 c:\Users\ManuelAlberto\Source\Repos\creaxml2\Datos\bin\x64\Debug\es\System.Net.Http.resources.dll
 c:\Users\ManuelAlberto\Source\Repos\creaxml2\Datos\obj\x64\Debug\Datos.dll
 c:\Users\ManuelAlberto\Source\Repos\creaxml2\Datos\obj\x64\Debug\Datos.pdb
+c:\Users\ManuelAlberto\Source\Repos\creaxml2\Datos\obj\x64\Debug\Datos.csprojResolveAssemblyReference.cache
