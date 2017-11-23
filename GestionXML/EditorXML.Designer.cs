@@ -76,8 +76,25 @@
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
-            this.acrobat = new AxAcroPDFLib.AxAcroPDF();
-            ((System.ComponentModel.ISupportInitialize)(this.acrobat)).BeginInit();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbPaginasAnterior = new System.Windows.Forms.ComboBox();
+            this.btnOrganizar = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmbPaginasOrganizar = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnPDF = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbPaginasInsertar = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbPaginasRecortar = new System.Windows.Forms.ComboBox();
+            this.btnCortar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -533,20 +550,167 @@
             this.button29.TabIndex = 48;
             this.button29.UseVisualStyleBackColor = true;
             // 
-            // acrobat
+            // axAcroPDF1
             // 
-            this.acrobat.Enabled = true;
-            this.acrobat.Location = new System.Drawing.Point(12, 27);
-            this.acrobat.Name = "acrobat";
-            this.acrobat.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("acrobat.OcxState")));
-            this.acrobat.Size = new System.Drawing.Size(994, 702);
-            this.acrobat.TabIndex = 0;
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(12, 78);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(994, 651);
+            this.axAcroPDF1.TabIndex = 0;
+            this.axAcroPDF1.Enter += new System.EventHandler(this.acrobat_Enter);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.cmbPaginasAnterior);
+            this.groupBox3.Controls.Add(this.btnOrganizar);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.cmbPaginasOrganizar);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox3.Location = new System.Drawing.Point(364, 5);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(281, 67);
+            this.groupBox3.TabIndex = 58;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Organizar Páginas";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(112, 19);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(83, 15);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Despuúes de:";
+            // 
+            // cmbPaginasAnterior
+            // 
+            this.cmbPaginasAnterior.FormattingEnabled = true;
+            this.cmbPaginasAnterior.Location = new System.Drawing.Point(112, 38);
+            this.cmbPaginasAnterior.Name = "cmbPaginasAnterior";
+            this.cmbPaginasAnterior.Size = new System.Drawing.Size(95, 23);
+            this.cmbPaginasAnterior.TabIndex = 5;
+            // 
+            // btnOrganizar
+            // 
+            this.btnOrganizar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnOrganizar.Image = global::GestionXML.Properties.Resources.organizar_page_blanco;
+            this.btnOrganizar.Location = new System.Drawing.Point(223, 10);
+            this.btnOrganizar.Name = "btnOrganizar";
+            this.btnOrganizar.Size = new System.Drawing.Size(47, 55);
+            this.btnOrganizar.TabIndex = 4;
+            this.btnOrganizar.UseVisualStyleBackColor = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 19);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 15);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "La Página:";
+            // 
+            // cmbPaginasOrganizar
+            // 
+            this.cmbPaginasOrganizar.FormattingEnabled = true;
+            this.cmbPaginasOrganizar.Location = new System.Drawing.Point(6, 38);
+            this.cmbPaginasOrganizar.Name = "cmbPaginasOrganizar";
+            this.cmbPaginasOrganizar.Size = new System.Drawing.Size(95, 23);
+            this.cmbPaginasOrganizar.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnPDF);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.cmbPaginasInsertar);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox2.Location = new System.Drawing.Point(185, 5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(168, 67);
+            this.groupBox2.TabIndex = 57;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Insertar Páginas";
+            // 
+            // btnPDF
+            // 
+            this.btnPDF.BackColor = System.Drawing.Color.Crimson;
+            this.btnPDF.Image = global::GestionXML.Properties.Resources.adobe2;
+            this.btnPDF.Location = new System.Drawing.Point(107, 9);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(47, 55);
+            this.btnPDF.TabIndex = 4;
+            this.btnPDF.UseVisualStyleBackColor = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 18);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(83, 15);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Despuúes de:";
+            // 
+            // cmbPaginasInsertar
+            // 
+            this.cmbPaginasInsertar.FormattingEnabled = true;
+            this.cmbPaginasInsertar.Location = new System.Drawing.Point(6, 37);
+            this.cmbPaginasInsertar.Name = "cmbPaginasInsertar";
+            this.cmbPaginasInsertar.Size = new System.Drawing.Size(95, 23);
+            this.cmbPaginasInsertar.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.cmbPaginasRecortar);
+            this.groupBox1.Controls.Add(this.btnCortar);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Location = new System.Drawing.Point(13, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(161, 68);
+            this.groupBox1.TabIndex = 56;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cortar Páginas";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(2, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 15);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Página:";
+            // 
+            // cmbPaginasRecortar
+            // 
+            this.cmbPaginasRecortar.FormattingEnabled = true;
+            this.cmbPaginasRecortar.Location = new System.Drawing.Point(5, 38);
+            this.cmbPaginasRecortar.Name = "cmbPaginasRecortar";
+            this.cmbPaginasRecortar.Size = new System.Drawing.Size(95, 23);
+            this.cmbPaginasRecortar.TabIndex = 1;
+            // 
+            // btnCortar
+            // 
+            this.btnCortar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnCortar.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnCortar.Image = global::GestionXML.Properties.Resources.cut_page_black;
+            this.btnCortar.Location = new System.Drawing.Point(107, 11);
+            this.btnCortar.Name = "btnCortar";
+            this.btnCortar.Size = new System.Drawing.Size(47, 55);
+            this.btnCortar.TabIndex = 0;
+            this.btnCortar.UseVisualStyleBackColor = false;
             // 
             // EditorXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1325, 733);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button29);
             this.Controls.Add(this.button28);
             this.Controls.Add(this.button27);
@@ -594,13 +758,19 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.acrobat);
+            this.Controls.Add(this.axAcroPDF1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditorXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor de Archivos XML";
             this.Load += new System.EventHandler(this.EditorXML_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.acrobat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -608,7 +778,7 @@
 
         #endregion
 
-        private AxAcroPDFLib.AxAcroPDF acrobat;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
@@ -656,5 +826,19 @@
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbPaginasAnterior;
+        private System.Windows.Forms.Button btnOrganizar;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmbPaginasOrganizar;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnPDF;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmbPaginasInsertar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbPaginasRecortar;
+        private System.Windows.Forms.Button btnCortar;
     }
 }

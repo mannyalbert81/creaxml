@@ -2,10 +2,12 @@
 {
 }
 
-namespace GestionXML.datas {
-    
-    
-    public partial class dtLicencias {
+namespace GestionXML.datas
+{
+
+
+    public partial class dtLicencias
+    {
     }
 }
 namespace GestionXML.datas {

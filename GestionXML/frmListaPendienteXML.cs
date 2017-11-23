@@ -64,6 +64,7 @@ namespace GestionXML
             {
                 CreadorXML Crea = new CreadorXML();   
                 Crea.nombre_pdf = _camino;
+                Crea.nombre_carpeta = _path_camino;
                 Crea._id_indice_cabeza = _id_indice_cabeza;
                 Crea._id_usuarios = _id_usuarios;
                 Crea._id_camino = _id_camino;

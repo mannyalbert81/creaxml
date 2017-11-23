@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio;
+using System.IO;
 
 namespace GestionXML
 {
@@ -266,6 +267,8 @@ namespace GestionXML
                 }
 
             }
+
+            CreaCarpetaTemporal();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -641,5 +644,43 @@ namespace GestionXML
             reportes.FiltroUsuarioEdita frm = new reportes.FiltroUsuarioEdita();
             frm.Show();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+
+        public static void CreaCarpetaTemporal()
+        {
+            string path = @"c:\GESTORXMLDATA";
+
+            try
+            {
+                // Determine whether the directory exists.
+                if (Directory.Exists(path))
+                {
+                    //Console.WriteLine("That path exists already.");
+                    return;
+                }
+
+                // Try to create the directory.
+                DirectoryInfo di = Directory.CreateDirectory(path);
+               // Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(path));
+
+                // Delete the directory.
+                //di.Delete();
+                //Console.WriteLine("The directory was deleted successfully.");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se pudo crear Carpeta Temporal de Datos", "Atencion  !!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally { }
+
+
+
+        }
+
     }
 }

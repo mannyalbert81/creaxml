@@ -115,7 +115,7 @@ namespace GestionXML
 
             if (_tipo_carga == 1)
             {
-                acrobat.src = nombre_pdf;
+                axAcroPDF1.src = nombre_pdf;
             }
             else
             {
@@ -1545,9 +1545,8 @@ namespace GestionXML
             }
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void acrobat_Enter(object sender, EventArgs e)
         {
-            
 
         }
     }
