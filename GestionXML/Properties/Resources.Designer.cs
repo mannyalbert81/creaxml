@@ -83,6 +83,16 @@ namespace GestionXML.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adobe2 {
+            get {
+                object obj = ResourceManager.GetObject("adobe2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar {
             get {
                 object obj = ResourceManager.GetObject("agregar", resourceCulture);
@@ -106,6 +116,16 @@ namespace GestionXML.Properties {
         internal static System.Drawing.Bitmap agregarCarpeta {
             get {
                 object obj = ResourceManager.GetObject("agregarCarpeta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap agrgar_pagina {
+            get {
+                object obj = ResourceManager.GetObject("agrgar_pagina", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +216,36 @@ namespace GestionXML.Properties {
         internal static System.Drawing.Bitmap controlar {
             get {
                 object obj = ResourceManager.GetObject("controlar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cut_page_black {
+            get {
+                object obj = ResourceManager.GetObject("cut_page black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cut_page_color {
+            get {
+                object obj = ResourceManager.GetObject("cut_page color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eliminar_pagina {
+            get {
+                object obj = ResourceManager.GetObject("eliminar_pagina", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +386,16 @@ namespace GestionXML.Properties {
         internal static System.Drawing.Bitmap nuevo_archivo {
             get {
                 object obj = ResourceManager.GetObject("nuevo-archivo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap organizar_page_blanco {
+            get {
+                object obj = ResourceManager.GetObject("organizar_page blanco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

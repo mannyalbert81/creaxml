@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ReportViewerIndice = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+                this.ReportViewerIndice = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
             // ReportViewerIndice

@@ -11,8 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
-
-
+using iTextSharp;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace GestionXML
 {
@@ -21,6 +22,8 @@ namespace GestionXML
         public DateTime _inicio_produccion_detalle;
         public DateTime _fin_produccion_detalle;
         public string nombre_pdf = "";
+        public string nombre_carpeta = "";
+        public string nombre_carpeta_temporal = @"c:\GESTORXMLDATA\";
         public int _id_indice_cabeza = 0;
         public Boolean _fecha1 = false;
         public Boolean _fecha2 = false;
@@ -85,8 +88,7 @@ namespace GestionXML
             button10.Visible = false;
             button11.Visible = false;
             button12.Visible = false;
-
-
+            
             button21.Visible = false;
             button22.Visible = false;
             button23.Visible = false;
@@ -102,6 +104,11 @@ namespace GestionXML
 
             _inicio_produccion_detalle = DateTime.Now;
 
+            int _totalPaginas = CountPageNo(nombre_pdf);
+
+            LlenarComboPaginas(nombre_pdf);
+
+
         }
 
         public void LeeIndice(int _tipo_carga)
@@ -109,7 +116,7 @@ namespace GestionXML
 
             if (_tipo_carga == 1)
             {
-                acrobat.src = nombre_pdf;
+                axAcroPDF1.src  = nombre_pdf;
             }
             else
             {
@@ -1259,6 +1266,685 @@ namespace GestionXML
         private void button24_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        public void LlenarComboPaginas(string nombre_pdf)
+        {
+            int TotalPaginas = CountPageNo(nombre_pdf);
+            cmbPaginasRecortar.Items.Clear();
+            cmbPaginasInsertar.Items.Clear();
+            cmbPaginasAnterior.Items.Clear();
+            cmbPaginasOrganizar.Items.Clear();
+
+            cmbPaginasInsertar.Items.Add(0);
+            cmbPaginasAnterior.Items.Add(0);
+            for (int i = 1; i <= TotalPaginas; i++)
+            {
+                cmbPaginasRecortar.Items.Add(i);
+                cmbPaginasInsertar.Items.Add(i);
+                cmbPaginasAnterior.Items.Add(i);
+                cmbPaginasOrganizar.Items.Add(i);
+            }
+
+            cmbPaginasRecortar.SelectedIndex = 0;
+            cmbPaginasInsertar.SelectedIndex = 0;
+            cmbPaginasAnterior.SelectedIndex = 0;
+            cmbPaginasOrganizar.SelectedIndex = 0;
+        }
+
+
+        
+
+
+        private static void AddPages(string _nombre_regularizacion, int _id_subcategorias)
+        {
+            string _nombre_lecturas = "";
+            string _path_categorias = "";
+            string _path_subcategorias = "";
+            string _nombre_archivo_original = "";
+            string _nombre_archivo_original_pdf = "";
+            int _id_documentos_legal = Convert.ToInt32(_nombre_regularizacion);
+            string _nombre_pagina_agregar = "";
+            string _nombre_regularizado_final = "";
+            string columnas = "documentos_legal.id_documentos_legal, lecturas.nombre_lecturas, categorias.path_categorias, subcategorias.path_subcategorias";
+            string tablas = "public.documentos_legal, public.lecturas, public.categorias, public.subcategorias";
+            string where = "lecturas.id_lecturas = documentos_legal.id_lecturas AND subcategorias.id_categorias = categorias.id_categorias AND subcategorias.id_subcategorias = documentos_legal.id_subcategorias AND documentos_legal.id_documentos_legal = '" + _id_documentos_legal + "'  AND  documentos_legal.procesado =  'FALSE'     ";
+
+            DataTable dtRegularizar = AccesoLogica.Select(columnas, tablas, where);
+            int regReg = dtRegularizar.Rows.Count;
+            if (regReg > 0)
+            {
+
+                foreach (DataRow renglonSub in dtRegularizar.Rows)
+                {
+
+                    _path_categorias = renglonSub["path_categorias"].ToString();
+                    _path_subcategorias = renglonSub["path_subcategorias"].ToString();
+                    _nombre_lecturas = renglonSub["nombre_lecturas"].ToString();
+
+                    _nombre_archivo_original = _path_categorias + _path_subcategorias + @"\" + _nombre_lecturas;
+
+                    _nombre_archivo_original_pdf = _nombre_archivo_original.Replace(".XML", ".pdf");
+                    _nombre_pagina_agregar = @"C:\regularizacion\" + _id_documentos_legal + ".pdf";
+                    _nombre_regularizado_final = _path_categorias + _path_subcategorias + @"\procesados\" + _nombre_lecturas.Replace(".XML", ".pdf"); ;
+
+
+                    //"id_documentos_legal = '" + _id_documentos_legal + "'  "
+                    AccesoLogica.Update("documentos_legal", "procesado = 'TRUE' ", " id_documentos_legal = '" + _id_documentos_legal + "'    ");
+
+                    Console.WriteLine("------------------------------------------");
+                    Console.WriteLine(_nombre_archivo_original_pdf);
+                    Console.WriteLine(_nombre_pagina_agregar);
+                    Console.WriteLine(_nombre_regularizado_final);
+                    Console.WriteLine("------------------------------------------");
+                    string[] sourceFiles = new string[] { _nombre_archivo_original_pdf, _nombre_pagina_agregar };
+
+
+                    //MergeFiles(_nombre_regularizado_final, sourceFiles);
+
+                }
+            }
+
+        }
+
+
+
+
+
+        public static bool MergePDFs(List<String> InFiles, String OutFile)
+        {
+            bool merged = true;
+            try
+            {
+                List<PdfReader> readerList = new List<PdfReader>();
+                foreach (string filePath in InFiles)
+                {
+                    PdfReader pdfReader = new PdfReader(filePath);
+                    readerList.Add(pdfReader);
+                }
+
+                //Define a new output document and its size, type
+                Document document = new Document(PageSize.A4, 0, 0, 0, 0);
+                //Create blank output pdf file and get the stream to write on it.
+                PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(OutFile, FileMode.Create));
+                document.Open();
+
+                foreach (PdfReader reader in readerList)
+                {
+                    PdfReader.unethicalreading = true;
+                    for (int i = 1; i <= reader.NumberOfPages; i++)
+                    {
+                        PdfImportedPage page = writer.GetImportedPage(reader, i);
+                        document.Add(iTextSharp.text.Image.GetInstance(page));
+                    }
+                }
+                document.Close();
+                foreach (PdfReader reader in readerList)
+                {
+                    reader.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                merged = false;
+            }
+
+
+            return merged;
+        }
+
+
+        public static void MergeFiles(string destinationFile, string[] sourceFiles)
+        {
+            
+                
+                try
+                {
+                PdfReader reader = null;
+                int f = 0;
+                    // we create a reader for a certain document
+                    reader = new PdfReader(sourceFiles[f]);
+                    // we retrieve the total number of pages
+                    int n = reader.NumberOfPages;
+                    //Console.WriteLine("There are " + n + " pages in the original file.");
+                    // step 1: creation of a document-object
+                    Document document = new Document(reader.GetPageSizeWithRotation(1));
+                    // step 2: we create a writer that listens to the document
+                    PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(destinationFile, FileMode.Create));
+                    // step 3: we open the document
+                    document.Open();
+                    PdfContentByte cb = writer.DirectContent;
+                    PdfImportedPage page;
+                    int rotation;
+                    // step 4: we add content
+                    while (f < sourceFiles.Length)
+                    {
+                        int i = 0;
+                        while (i < n)
+                        {
+                            i++;
+                            document.SetPageSize(reader.GetPageSizeWithRotation(i));
+                            document.NewPage();
+                            page = writer.GetImportedPage(reader, i);
+                            rotation = reader.GetPageRotation(i);
+                            if (rotation == 90 || rotation == 270)
+                            {
+                                cb.AddTemplate(page, 0, -1f, 1f, 0, 0, reader.GetPageSizeWithRotation(i).Height);
+                            }
+                            else
+                            {
+                                cb.AddTemplate(page, 1f, 0, 0, 1f, 0, 0);
+                            }
+                            //Console.WriteLine("Processed page " + i);
+                        }
+                        f++;
+                        if (f < sourceFiles.Length)
+                        {
+                            reader = new PdfReader(sourceFiles[f]);
+                            // we retrieve the total number of pages
+                            n = reader.NumberOfPages;
+                            //Console.WriteLine("*********************************************");
+                            //Console.WriteLine("There are " + n + " pages in the original file.");
+                        }
+                    }
+                    // step 5: we close the document
+                    document.Close();
+                    reader.Close();
+                    reader.Dispose();
+                    document.Dispose();
+                    writer.Close();
+                    writer.Dispose();
+                    cb = null;
+                    page = null;
+                    rotation = 0;
+                }
+                catch (Exception e)
+                {
+                    string strOb = e.Message;
+                    Console.WriteLine("************ERRORR***********************");
+                    Console.WriteLine(strOb);
+                    Console.WriteLine("************ERRORR***********************");
+
+
+                }
+            
+            
+        }
+
+        public static int CountPageNo(string strFileName)
+        {
+            // we create a reader for a certain document
+            PdfReader reader = new PdfReader(strFileName);
+            // we retrieve the total number of pages
+            int _paginas = reader.NumberOfPages;
+            reader.Close();
+
+            return _paginas;
+
+            
+        }
+
+
+        public static void ExtractPages(string sourcePdfPath, string outputPdfPath,
+                                   int startPage, int endPage)
+        {
+            PdfReader reader = null;
+            Document sourceDocument = null;
+            PdfCopy pdfCopyProvider = null;
+            PdfImportedPage importedPage = null;
+
+            try
+            {
+                // Intialize a new PdfReader instance with the contents of the source Pdf file:
+                reader = new PdfReader(sourcePdfPath);
+
+                // For simplicity, I am assuming all the pages share the same size
+                // and rotation as the first page:
+                sourceDocument = new Document(reader.GetPageSizeWithRotation(startPage));
+
+                // Initialize an instance of the PdfCopyClass with the source 
+                // document and an output file stream:
+                pdfCopyProvider = new PdfCopy(sourceDocument,
+                    new System.IO.FileStream(outputPdfPath, System.IO.FileMode.Create));
+
+                sourceDocument.Open();
+
+                // Walk the specified range and add the page copies to the output file:
+                for (int i = startPage; i <= endPage; i++)
+                {
+                    importedPage = pdfCopyProvider.GetImportedPage(reader, i);
+                    pdfCopyProvider.AddPage(importedPage);
+                }
+                sourceDocument.Close();
+                reader.Close();
+                pdfCopyProvider.Close();
+                importedPage = null;
+
+                sourceDocument.Dispose();
+                reader.Dispose();
+                pdfCopyProvider.Dispose();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Exportr Archivos: "+ex.Message);
+                
+            }
+        }
+
+
+
+
+
+
+        private void btnCortar_Click_1(object sender, EventArgs e)
+        {
+            int _paginaCortar = 0;
+
+            _paginaCortar = Convert.ToInt16( cmbPaginasRecortar.SelectedItem.ToString());
+
+            if (_paginaCortar > 0)
+            {
+                int _totalPaginas = CountPageNo(nombre_pdf);
+                int _inicio = 0;
+                int _final = 0;
+
+                int _inicio2 = 0;
+                int _final2 = 0;
+
+                if (_paginaCortar == 1)
+                {
+                    _inicio = 2;
+                    _final = _totalPaginas;
+                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "CUT.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
+
+                    axAcroPDF1.LoadFile("none");
+                    //axAcroPDF1.Dispose();
+                  
+
+                    try
+                    {
+                        File.Delete(nombre_pdf);
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
+                    }
+
+                    File.Copy(nombre_pdf.Replace(".pdf", "CUT.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), nombre_pdf);
+                    axAcroPDF1.src = nombre_pdf;
+
+
+                    LlenarComboPaginas(nombre_pdf);
+                    
+
+                }
+
+
+
+
+
+                if (_paginaCortar == _totalPaginas)
+                {
+                    _inicio = 1;
+                    _final = _totalPaginas - 1;
+                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "CUT.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
+
+                    axAcroPDF1.LoadFile("none");
+                    //axAcroPDF1.Dispose();
+
+
+                    try
+                    {
+                        File.Delete(nombre_pdf);
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
+                    }
+
+                    File.Copy(nombre_pdf.Replace(".pdf", "CUT.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), nombre_pdf);
+                    axAcroPDF1.src = nombre_pdf;
+
+
+                    LlenarComboPaginas(nombre_pdf);
+
+                    
+
+                }
+
+                if (_paginaCortar > 1 && _paginaCortar < _totalPaginas)
+                {
+                    _inicio = 1;
+                    _final = _paginaCortar - 1;
+                    
+                    _inicio2 = _paginaCortar + 1;
+                    _final2 = _totalPaginas;
+                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
+                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio2, _final2);
+                        
+
+                  
+                    List<string> Listaarchivos = new List<string>();
+                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                    
+                    axAcroPDF1.LoadFile("none");
+                    //axAcroPDF1.Dispose();
+
+
+                    try
+                    {
+                        File.Delete(nombre_pdf);
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
+                    }
+                  
+                    MergePDFs(Listaarchivos, nombre_pdf);
+
+
+                    axAcroPDF1.src = nombre_pdf;
+
+                    
+                    LlenarComboPaginas(nombre_pdf);
+
+                  
+                    try
+                    {
+                        File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                        File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
+                    }
+                }
+                
+
+
+            }
+
+            else
+            {
+
+                MessageBox.Show("Primero Seleccione la página despúes de la cual insertará el archivo seleccionado", "ATENCION !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+    
+            
+            
+
+
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            // Displays an OpenFileDialog so the user can select a Cursor.
+            openFilePDFInsertar.Filter = "Archivos PDF|*.pdf";
+            openFilePDFInsertar.Title = "Seleccione un Archivo PDF";
+
+            // Show the Dialog.
+            // If the user clicked OK in the dialog and
+            // a .CUR file was selected, open it.
+            if (openFilePDFInsertar.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                // Assign the cursor in the Stream to the Form's Cursor property.
+                //this.Cursor = new Cursor(openFilePDFInsertar.OpenFile());
+                string _nombre_archivo_insertar = openFilePDFInsertar.FileName;
+
+                //MessageBox.Show("Archivo ->" + _camino_archivo_insertar);
+
+                int _paginaCortar = 0;
+                _paginaCortar = Convert.ToInt16(cmbPaginasInsertar.SelectedItem.ToString());
+                
+                    int _totalPaginas = CountPageNo(nombre_pdf);
+                    int _inicio = 0;
+                    int _final = 0;
+
+                    int _inicio2 = 0;
+                    int _final2 = 0;
+
+                    if (_paginaCortar == 0)
+                    {
+                        _inicio = 1;
+                        _final = _totalPaginas;
+                        
+
+                        ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
+                        
+                        List<string> Listaarchivos = new List<string>();
+                        Listaarchivos.Add(_nombre_archivo_insertar);
+                        Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                        
+
+                        axAcroPDF1.LoadFile("none");
+                        //axAcroPDF1.Dispose();
+
+
+                        try
+                        {
+                            File.Delete(nombre_pdf);
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
+                        }
+
+                        MergePDFs(Listaarchivos, nombre_pdf);
+
+
+                        axAcroPDF1.src = nombre_pdf;
+
+                        LlenarComboPaginas(nombre_pdf);
+
+                        try
+                        {
+                            File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                            File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
+                        }
+
+                    }
+                    if (_paginaCortar == 1)
+                    {
+                        _inicio = 1;
+                        _final = 1;
+
+                        _inicio2 = _paginaCortar + 1;
+                        _final2 = _totalPaginas;
+
+
+                        ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
+                        ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio2, _final2);
+
+                        List<string> Listaarchivos = new List<string>();
+                        Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                        Listaarchivos.Add(_nombre_archivo_insertar);
+                        Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+
+
+                        axAcroPDF1.LoadFile("none");
+                        //axAcroPDF1.Dispose();
+
+
+                        try
+                        {
+                            File.Delete(nombre_pdf);
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
+                        }
+
+                        MergePDFs(Listaarchivos, nombre_pdf);
+
+
+                        axAcroPDF1.src = nombre_pdf;
+
+                        LlenarComboPaginas(nombre_pdf);
+
+                        try
+                        {
+                            File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                            File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
+                        }
+
+                    }
+                    if (_paginaCortar == _totalPaginas)
+                    {
+                        _inicio = 1;
+                        _final = _totalPaginas;
+
+                        
+
+                        ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
+                        
+                        List<string> Listaarchivos = new List<string>();
+                        Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                        Listaarchivos.Add(_nombre_archivo_insertar);
+                        
+
+                        axAcroPDF1.LoadFile("none");
+                        //axAcroPDF1.Dispose();
+
+
+                        try
+                        {
+                            File.Delete(nombre_pdf);
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
+                        }
+
+                        MergePDFs(Listaarchivos, nombre_pdf);
+
+
+                        axAcroPDF1.src = nombre_pdf;
+
+                        LlenarComboPaginas(nombre_pdf);
+
+                        try
+                        {
+                            File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                            File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
+                        }
+
+
+                    }
+                    if (_paginaCortar > 1 && _paginaCortar < _totalPaginas)
+                    {
+                        _inicio = 1;
+                        _final = _paginaCortar - 1;
+
+                        _inicio2 = _paginaCortar + 1;
+                        _final2 = _totalPaginas;
+
+                        ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
+                        ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio2, _final2);
+
+                        List<string> Listaarchivos = new List<string>();
+                        Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                        Listaarchivos.Add(_nombre_archivo_insertar);
+                        Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+
+
+                        axAcroPDF1.LoadFile("none");
+                        //axAcroPDF1.Dispose();
+
+
+                        try
+                        {
+                            File.Delete(nombre_pdf);
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
+                        }
+
+                        MergePDFs(Listaarchivos, nombre_pdf);
+
+
+                        axAcroPDF1.src = nombre_pdf;
+
+                        LlenarComboPaginas(nombre_pdf);
+
+                        try
+                        {
+                            File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                            File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
+                        }
+                    }
+
+                
+
+
+
+
+
+
+
+
+
+            }
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            int _paginas_organizar = Convert.ToInt16(cmbPaginasOrganizar.SelectedItem.ToString()); ;
+            int _pagina_anterior = Convert.ToInt16(cmbPaginasAnterior.SelectedItem.ToString());
+
+
+            if (_paginas_organizar == 1 && _pagina_anterior == 0)
+            {
+                MessageBox.Show("Esta Página ya es la Primera del Documento", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+
+            }
         }
     }
 
