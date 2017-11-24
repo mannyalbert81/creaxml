@@ -11,9 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
-using iTextSharp;
-using iTextSharp.text.pdf;
-using iTextSharp.text;
+using System.Xml;
 
 namespace GestionXML
 {
@@ -241,7 +239,7 @@ namespace GestionXML
 
                                 dtFecha3.AccessibleDescription = _nombre_indice_detalle;
                                 dtFecha3.Location = new Point(1045, 140);
-                               
+
                                 dtFecha3.Visible = true;
                                 dtFecha3.CustomFormat = "yyyy-MM-dd";
 
@@ -797,8 +795,8 @@ namespace GestionXML
 
                         try
                         {
-                            string escaped = _nombre_produccion_detalle.Replace(@"\",@"\\");
-                            AccesoLogica.Update("produccion_detalle", " id_usuarios_edita = '"+id_usu+"' , estado_produccion_detalle = 'TRUE'   ", "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = E'"+ escaped +"'    ");
+                            string escaped = _nombre_produccion_detalle.Replace(@"\", @"\\");
+                            AccesoLogica.Update("produccion_detalle", " id_usuarios_edita = '" + id_usu + "' , estado_produccion_detalle = 'TRUE'   ", "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = E'" + escaped + "'    ");
                             // textBox12.Visible = true;
                             //textBox12.Text = "   id_caminos = '" + _id_camino + "'  AND nombre_produccion_detalle = 'E" + escaped + "'    ";
 
@@ -1329,22 +1327,22 @@ namespace GestionXML
                         };
 
             int _contador = 1;
-            
+
 
             foreach (var item in items)
             {
-                
+
                 // use item.Action or item.FileName
                 if (item._name.ToString() == "FACHA")
                 {
                     if (item._name.ToString() == dtFecha1.AccessibleDescription)
                     {
-                         dtFecha1.Text = item._value.ToString().Trim();
+                        dtFecha1.Text = item._value.ToString().Trim();
                     }
                 }
                 else
                 {
-                    
+
                     if (item._name.ToString() == textBox1.AccessibleDescription)
                     {
                         textBox1.Text = item._value.ToString().Trim().Replace("'", "");
@@ -1547,403 +1545,11 @@ namespace GestionXML
             }
         }
 
-        private void acrobat_Enter(object sender, EventArgs e)
+        private void button13_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnCortar_Click(object sender, EventArgs e)
-        {
-            int _paginaCortar = 0;
-
-            _paginaCortar = Convert.ToInt16(cmbPaginasRecortar.SelectedItem.ToString());
-
-            if (_paginaCortar > 0)
-            {
-                int _totalPaginas = CountPageNo(nombre_pdf);
-                int _inicio = 0;
-                int _final = 0;
-
-                int _inicio2 = 0;
-                int _final2 = 0;
-
-                if (_paginaCortar == 1)
-                {
-                    _inicio = 2;
-                    _final = _totalPaginas;
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "CUT.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
-
-                    axAcroPDF1.LoadFile("none");
-                    //axAcroPDF1.Dispose();
-
-
-                    try
-                    {
-                        File.Delete(nombre_pdf);
-
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
-                    }
-
-                    File.Copy(nombre_pdf.Replace(".pdf", "CUT.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), nombre_pdf);
-                    axAcroPDF1.src = nombre_pdf;
-
-
-                    LlenarComboPaginas(nombre_pdf);
-
-
-                }
-
-
-
-
-
-                if (_paginaCortar == _totalPaginas)
-                {
-                    _inicio = 1;
-                    _final = _totalPaginas - 1;
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "CUT.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
-
-                    axAcroPDF1.LoadFile("none");
-                    //axAcroPDF1.Dispose();
-
-
-                    try
-                    {
-                        File.Delete(nombre_pdf);
-
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
-                    }
-
-                    File.Copy(nombre_pdf.Replace(".pdf", "CUT.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), nombre_pdf);
-                    axAcroPDF1.src = nombre_pdf;
-
-
-                    LlenarComboPaginas(nombre_pdf);
-
-
-
-                }
-
-                if (_paginaCortar > 1 && _paginaCortar < _totalPaginas)
-                {
-                    _inicio = 1;
-                    _final = _paginaCortar - 1;
-
-                    _inicio2 = _paginaCortar + 1;
-                    _final2 = _totalPaginas;
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio2, _final2);
-
-
-
-                    List<string> Listaarchivos = new List<string>();
-                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-
-                    axAcroPDF1.LoadFile("none");
-                    //axAcroPDF1.Dispose();
-
-
-                    try
-                    {
-                        File.Delete(nombre_pdf);
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
-                    }
-
-                    MergePDFs(Listaarchivos, nombre_pdf);
-
-
-                    axAcroPDF1.src = nombre_pdf;
-
-
-                    LlenarComboPaginas(nombre_pdf);
-
-
-                    try
-                    {
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
-                    }
-                }
-
-
-
-            }
-
-            else
-            {
-
-                MessageBox.Show("Primero Seleccione la página despúes de la cual insertará el archivo seleccionado", "ATENCION !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-
-
 
 
         }
-
-        private void cmbPaginasRecortar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPDF_Click(object sender, EventArgs e)
-        {
-            // Displays an OpenFileDialog so the user can select a Cursor.
-            openFilePDFInsertar.Filter = "Archivos PDF|*.pdf";
-            openFilePDFInsertar.Title = "Seleccione un Archivo PDF";
-
-            // Show the Dialog.
-            // If the user clicked OK in the dialog and
-            // a .CUR file was selected, open it.
-            if (openFilePDFInsertar.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                // Assign the cursor in the Stream to the Form's Cursor property.
-                //this.Cursor = new Cursor(openFilePDFInsertar.OpenFile());
-                string _nombre_archivo_insertar = openFilePDFInsertar.FileName;
-
-                //MessageBox.Show("Archivo ->" + _camino_archivo_insertar);
-
-                int _paginaCortar = 0;
-                _paginaCortar = Convert.ToInt16(cmbPaginasInsertar.SelectedItem.ToString());
-
-                int _totalPaginas = CountPageNo(nombre_pdf);
-                int _inicio = 0;
-                int _final = 0;
-
-                int _inicio2 = 0;
-                int _final2 = 0;
-
-                if (_paginaCortar == 0)
-                {
-                    _inicio = 1;
-                    _final = _totalPaginas;
-
-
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
-
-                    List<string> Listaarchivos = new List<string>();
-                    Listaarchivos.Add(_nombre_archivo_insertar);
-                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-
-
-                    axAcroPDF1.LoadFile("none");
-                    //axAcroPDF1.Dispose();
-
-
-                    try
-                    {
-                        File.Delete(nombre_pdf);
-
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
-                    }
-
-                    MergePDFs(Listaarchivos, nombre_pdf);
-
-
-                    axAcroPDF1.src = nombre_pdf;
-
-                    LlenarComboPaginas(nombre_pdf);
-
-                    try
-                    {
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
-                    }
-
-                }
-                if (_paginaCortar == 1)
-                {
-                    _inicio = 1;
-                    _final = 1;
-
-                    _inicio2 = _paginaCortar + 1;
-                    _final2 = _totalPaginas;
-
-
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio2, _final2);
-
-                    List<string> Listaarchivos = new List<string>();
-                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                    Listaarchivos.Add(_nombre_archivo_insertar);
-                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-
-
-                    axAcroPDF1.LoadFile("none");
-                    //axAcroPDF1.Dispose();
-
-
-                    try
-                    {
-                        File.Delete(nombre_pdf);
-
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
-                    }
-
-                    MergePDFs(Listaarchivos, nombre_pdf);
-
-
-                    axAcroPDF1.src = nombre_pdf;
-
-                    LlenarComboPaginas(nombre_pdf);
-
-                    try
-                    {
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
-                    }
-
-                }
-                if (_paginaCortar == _totalPaginas)
-                {
-                    _inicio = 1;
-                    _final = _totalPaginas;
-
-
-
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
-
-                    List<string> Listaarchivos = new List<string>();
-                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                    Listaarchivos.Add(_nombre_archivo_insertar);
-
-
-                    axAcroPDF1.LoadFile("none");
-                    //axAcroPDF1.Dispose();
-
-
-                    try
-                    {
-                        File.Delete(nombre_pdf);
-
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
-                    }
-
-                    MergePDFs(Listaarchivos, nombre_pdf);
-
-
-                    axAcroPDF1.src = nombre_pdf;
-
-                    LlenarComboPaginas(nombre_pdf);
-
-                    try
-                    {
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
-                    }
-
-
-                }
-                if (_paginaCortar > 1 && _paginaCortar < _totalPaginas)
-                {
-                    _inicio = 1;
-                    _final = _paginaCortar - 1;
-
-                    _inicio2 = _paginaCortar + 1;
-                    _final2 = _totalPaginas;
-
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio, _final);
-                    ExtractPages(nombre_pdf, nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal), _inicio2, _final2);
-
-                    List<string> Listaarchivos = new List<string>();
-                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                    Listaarchivos.Add(_nombre_archivo_insertar);
-                    Listaarchivos.Add(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-
-
-                    axAcroPDF1.LoadFile("none");
-                    //axAcroPDF1.Dispose();
-
-
-                    try
-                    {
-                        File.Delete(nombre_pdf);
-
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo" + ex.Message);
-                    }
-
-                    MergePDFs(Listaarchivos, nombre_pdf);
-
-
-                    axAcroPDF1.src = nombre_pdf;
-
-                    LlenarComboPaginas(nombre_pdf);
-
-                    try
-                    {
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART1.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                        File.Delete(nombre_pdf.Replace(".pdf", "PART2.pdf").Replace(nombre_carpeta, nombre_carpeta_temporal));
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show("Error al Eliminar Archivo PARTES  " + ex.Message);
-                    }
-                }
-
-
-
-
-
-
-
-
-
-
-
-            }
-        }
-
     }
 
 }

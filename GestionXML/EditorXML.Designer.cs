@@ -77,24 +77,7 @@
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.cmbPaginasAnterior = new System.Windows.Forms.ComboBox();
-            this.btnOrganizar = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cmbPaginasOrganizar = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPDF = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.cmbPaginasInsertar = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cmbPaginasRecortar = new System.Windows.Forms.ComboBox();
-            this.btnCortar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -111,7 +94,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(1352, 114);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(332, 22);
             this.textBox2.TabIndex = 2;
@@ -132,7 +115,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(1352, 172);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(332, 22);
             this.textBox3.TabIndex = 3;
@@ -153,7 +136,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(1352, 228);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(332, 22);
             this.textBox4.TabIndex = 8;
@@ -174,7 +157,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(1352, 287);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(332, 22);
             this.textBox5.TabIndex = 10;
@@ -195,7 +178,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(1352, 347);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(332, 22);
             this.textBox6.TabIndex = 12;
@@ -216,7 +199,7 @@
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(1352, 409);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(332, 22);
             this.textBox7.TabIndex = 14;
@@ -237,7 +220,7 @@
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(1352, 465);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(332, 22);
             this.textBox8.TabIndex = 16;
@@ -260,7 +243,7 @@
             this.btnGuardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnGuardar.Location = new System.Drawing.Point(1432, 752);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(200, 54);
             this.btnGuardar.TabIndex = 17;
@@ -271,7 +254,7 @@
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(1352, 523);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(332, 22);
             this.textBox9.TabIndex = 19;
@@ -291,7 +274,7 @@
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(1352, 583);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(332, 22);
             this.textBox10.TabIndex = 21;
@@ -311,7 +294,7 @@
             // textBox11
             // 
             this.textBox11.Location = new System.Drawing.Point(1352, 642);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(332, 22);
             this.textBox11.TabIndex = 23;
@@ -331,7 +314,7 @@
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(1352, 698);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(4);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(332, 22);
             this.textBox12.TabIndex = 25;
@@ -351,7 +334,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(1352, 57);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(332, 22);
             this.textBox1.TabIndex = 1;
@@ -363,7 +346,7 @@
             this.btnSalir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSalir.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnSalir.Location = new System.Drawing.Point(1432, 814);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(200, 54);
             this.btnSalir.TabIndex = 39;
@@ -375,7 +358,7 @@
             // 
             this.button21.Image = global::GestionXML.Properties.Resources.clipboard;
             this.button21.Location = new System.Drawing.Point(1723, 54);
-            this.button21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button21.Margin = new System.Windows.Forms.Padding(4);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(33, 28);
             this.button21.TabIndex = 40;
@@ -386,7 +369,7 @@
             // 
             this.button12.Image = global::GestionXML.Properties.Resources.vision;
             this.button12.Location = new System.Drawing.Point(1685, 695);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(33, 28);
             this.button12.TabIndex = 38;
@@ -397,7 +380,7 @@
             // 
             this.button11.Image = global::GestionXML.Properties.Resources.vision;
             this.button11.Location = new System.Drawing.Point(1685, 640);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(33, 28);
             this.button11.TabIndex = 37;
@@ -408,7 +391,7 @@
             // 
             this.button10.Image = global::GestionXML.Properties.Resources.vision;
             this.button10.Location = new System.Drawing.Point(1685, 581);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(33, 28);
             this.button10.TabIndex = 36;
@@ -419,7 +402,7 @@
             // 
             this.button9.Image = global::GestionXML.Properties.Resources.vision;
             this.button9.Location = new System.Drawing.Point(1685, 521);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(33, 28);
             this.button9.TabIndex = 35;
@@ -430,7 +413,7 @@
             // 
             this.button8.Image = global::GestionXML.Properties.Resources.vision;
             this.button8.Location = new System.Drawing.Point(1685, 463);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(33, 28);
             this.button8.TabIndex = 34;
@@ -441,7 +424,7 @@
             // 
             this.button7.Image = global::GestionXML.Properties.Resources.vision;
             this.button7.Location = new System.Drawing.Point(1685, 406);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(33, 28);
             this.button7.TabIndex = 33;
@@ -452,7 +435,7 @@
             // 
             this.button6.Image = global::GestionXML.Properties.Resources.vision;
             this.button6.Location = new System.Drawing.Point(1685, 345);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(33, 28);
             this.button6.TabIndex = 32;
@@ -463,7 +446,7 @@
             // 
             this.button5.Image = global::GestionXML.Properties.Resources.vision;
             this.button5.Location = new System.Drawing.Point(1685, 284);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(33, 28);
             this.button5.TabIndex = 31;
@@ -474,7 +457,7 @@
             // 
             this.button4.Image = global::GestionXML.Properties.Resources.vision;
             this.button4.Location = new System.Drawing.Point(1685, 224);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(33, 28);
             this.button4.TabIndex = 30;
@@ -485,7 +468,7 @@
             // 
             this.button3.Image = global::GestionXML.Properties.Resources.vision;
             this.button3.Location = new System.Drawing.Point(1685, 170);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(33, 28);
             this.button3.TabIndex = 29;
@@ -496,7 +479,7 @@
             // 
             this.button2.Image = global::GestionXML.Properties.Resources.vision;
             this.button2.Location = new System.Drawing.Point(1685, 112);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(33, 28);
             this.button2.TabIndex = 28;
@@ -507,7 +490,7 @@
             // 
             this.button1.Image = global::GestionXML.Properties.Resources.vision;
             this.button1.Location = new System.Drawing.Point(1685, 54);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(33, 28);
             this.button1.TabIndex = 27;
@@ -518,7 +501,7 @@
             // 
             this.button22.Image = global::GestionXML.Properties.Resources.clipboard;
             this.button22.Location = new System.Drawing.Point(1723, 112);
-            this.button22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button22.Margin = new System.Windows.Forms.Padding(4);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(33, 28);
             this.button22.TabIndex = 41;
@@ -529,7 +512,7 @@
             // 
             this.button23.Image = global::GestionXML.Properties.Resources.clipboard;
             this.button23.Location = new System.Drawing.Point(1723, 170);
-            this.button23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button23.Margin = new System.Windows.Forms.Padding(4);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(33, 28);
             this.button23.TabIndex = 42;
@@ -540,7 +523,7 @@
             // 
             this.button24.Image = global::GestionXML.Properties.Resources.clipboard;
             this.button24.Location = new System.Drawing.Point(1723, 225);
-            this.button24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button24.Margin = new System.Windows.Forms.Padding(4);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(33, 28);
             this.button24.TabIndex = 43;
@@ -551,7 +534,7 @@
             // 
             this.button25.Image = global::GestionXML.Properties.Resources.clipboard;
             this.button25.Location = new System.Drawing.Point(1723, 284);
-            this.button25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button25.Margin = new System.Windows.Forms.Padding(4);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(33, 28);
             this.button25.TabIndex = 44;
@@ -561,7 +544,7 @@
             // 
             this.button26.Image = global::GestionXML.Properties.Resources.clipboard;
             this.button26.Location = new System.Drawing.Point(1723, 345);
-            this.button26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button26.Margin = new System.Windows.Forms.Padding(4);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(33, 28);
             this.button26.TabIndex = 45;
@@ -571,7 +554,7 @@
             // 
             this.button27.Image = global::GestionXML.Properties.Resources.clipboard;
             this.button27.Location = new System.Drawing.Point(1723, 406);
-            this.button27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button27.Margin = new System.Windows.Forms.Padding(4);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(33, 28);
             this.button27.TabIndex = 46;
@@ -581,7 +564,7 @@
             // 
             this.button28.Image = global::GestionXML.Properties.Resources.clipboard;
             this.button28.Location = new System.Drawing.Point(1723, 463);
-            this.button28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button28.Margin = new System.Windows.Forms.Padding(4);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(33, 28);
             this.button28.TabIndex = 47;
@@ -591,7 +574,7 @@
             // 
             this.button29.Image = global::GestionXML.Properties.Resources.clipboard;
             this.button29.Location = new System.Drawing.Point(1723, 521);
-            this.button29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button29.Margin = new System.Windows.Forms.Padding(4);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(33, 28);
             this.button29.TabIndex = 48;
@@ -601,183 +584,16 @@
             // 
             this.axAcroPDF1.Enabled = true;
             this.axAcroPDF1.Location = new System.Drawing.Point(0, 0);
-            this.axAcroPDF1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
             this.axAcroPDF1.Size = new System.Drawing.Size(240, 240);
             this.axAcroPDF1.TabIndex = 59;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.cmbPaginasAnterior);
-            this.groupBox3.Controls.Add(this.btnOrganizar);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.cmbPaginasOrganizar);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox3.Location = new System.Drawing.Point(485, 6);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(375, 82);
-            this.groupBox3.TabIndex = 58;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Organizar Páginas";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(149, 23);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(99, 18);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Despuúes de:";
-            // 
-            // cmbPaginasAnterior
-            // 
-            this.cmbPaginasAnterior.FormattingEnabled = true;
-            this.cmbPaginasAnterior.Location = new System.Drawing.Point(149, 47);
-            this.cmbPaginasAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbPaginasAnterior.Name = "cmbPaginasAnterior";
-            this.cmbPaginasAnterior.Size = new System.Drawing.Size(125, 26);
-            this.cmbPaginasAnterior.TabIndex = 5;
-            // 
-            // btnOrganizar
-            // 
-            this.btnOrganizar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnOrganizar.Image = global::GestionXML.Properties.Resources.organizar_page_blanco;
-            this.btnOrganizar.Location = new System.Drawing.Point(297, 12);
-            this.btnOrganizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnOrganizar.Name = "btnOrganizar";
-            this.btnOrganizar.Size = new System.Drawing.Size(63, 68);
-            this.btnOrganizar.TabIndex = 4;
-            this.btnOrganizar.UseVisualStyleBackColor = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(8, 23);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 18);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "La Página:";
-            // 
-            // cmbPaginasOrganizar
-            // 
-            this.cmbPaginasOrganizar.FormattingEnabled = true;
-            this.cmbPaginasOrganizar.Location = new System.Drawing.Point(8, 47);
-            this.cmbPaginasOrganizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbPaginasOrganizar.Name = "cmbPaginasOrganizar";
-            this.cmbPaginasOrganizar.Size = new System.Drawing.Size(125, 26);
-            this.cmbPaginasOrganizar.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnPDF);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.cmbPaginasInsertar);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Location = new System.Drawing.Point(247, 6);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(224, 82);
-            this.groupBox2.TabIndex = 57;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Insertar Páginas";
-            // 
-            // btnPDF
-            // 
-            this.btnPDF.BackColor = System.Drawing.Color.Crimson;
-            this.btnPDF.Image = global::GestionXML.Properties.Resources.adobe2;
-            this.btnPDF.Location = new System.Drawing.Point(143, 11);
-            this.btnPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(63, 68);
-            this.btnPDF.TabIndex = 4;
-            this.btnPDF.UseVisualStyleBackColor = false;
-            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(8, 22);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(99, 18);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Despuúes de:";
-            // 
-            // cmbPaginasInsertar
-            // 
-            this.cmbPaginasInsertar.FormattingEnabled = true;
-            this.cmbPaginasInsertar.Location = new System.Drawing.Point(8, 46);
-            this.cmbPaginasInsertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbPaginasInsertar.Name = "cmbPaginasInsertar";
-            this.cmbPaginasInsertar.Size = new System.Drawing.Size(125, 26);
-            this.cmbPaginasInsertar.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.cmbPaginasRecortar);
-            this.groupBox1.Controls.Add(this.btnCortar);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(17, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(215, 84);
-            this.groupBox1.TabIndex = 56;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cortar Páginas";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 23);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 18);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Página:";
-            // 
-            // cmbPaginasRecortar
-            // 
-            this.cmbPaginasRecortar.FormattingEnabled = true;
-            this.cmbPaginasRecortar.Location = new System.Drawing.Point(7, 47);
-            this.cmbPaginasRecortar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbPaginasRecortar.Name = "cmbPaginasRecortar";
-            this.cmbPaginasRecortar.Size = new System.Drawing.Size(125, 26);
-            this.cmbPaginasRecortar.TabIndex = 1;
-            this.cmbPaginasRecortar.SelectedIndexChanged += new System.EventHandler(this.cmbPaginasRecortar_SelectedIndexChanged);
-            // 
-            // btnCortar
-            // 
-            this.btnCortar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnCortar.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnCortar.Image = global::GestionXML.Properties.Resources.cut_page_black;
-            this.btnCortar.Location = new System.Drawing.Point(143, 14);
-            this.btnCortar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCortar.Name = "btnCortar";
-            this.btnCortar.Size = new System.Drawing.Size(63, 68);
-            this.btnCortar.TabIndex = 0;
-            this.btnCortar.UseVisualStyleBackColor = false;
-            this.btnCortar.Click += new System.EventHandler(this.btnCortar_Click);
             // 
             // EditorXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1767, 902);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button29);
             this.Controls.Add(this.button28);
             this.Controls.Add(this.button27);
@@ -827,18 +643,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.axAcroPDF1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditorXML";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor de Archivos XML";
             this.Load += new System.EventHandler(this.EditorXML_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -894,19 +704,5 @@
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox cmbPaginasAnterior;
-        private System.Windows.Forms.Button btnOrganizar;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cmbPaginasOrganizar;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnPDF;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cmbPaginasInsertar;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cmbPaginasRecortar;
-        private System.Windows.Forms.Button btnCortar;
     }
 }
