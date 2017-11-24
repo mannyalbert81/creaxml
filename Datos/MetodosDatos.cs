@@ -16,6 +16,7 @@ namespace Datos
         //186.65.24.196
 
 
+
         public static DataTable EjecutarConsula(string comando)
         {
             DataTable data = new DataTable();

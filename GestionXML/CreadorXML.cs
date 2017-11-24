@@ -1947,10 +1947,9 @@ namespace GestionXML
             }
         }
 
-        private void openFilePDFInsertar_FileOk(object sender, CancelEventArgs e)
-        {
+  
 
-        }
+      
     }
 
 
