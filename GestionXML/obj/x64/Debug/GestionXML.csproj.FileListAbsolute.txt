@@ -390,3 +390,6 @@ C:\Users\steve\Source\Repos\creaxml\GestionXML\bin\x64\Debug\ja\Npgsql.resources
 C:\Users\steve\Source\Repos\creaxml\GestionXML\bin\x64\Debug\zh-CN\Npgsql.resources.dll
 C:\Users\steve\Source\Repos\creaxml\GestionXML\bin\x64\Debug\Interop.AcroPDFLib.dll
 C:\Users\steve\Source\Repos\creaxml\GestionXML\bin\x64\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\steve\Source\Repos\creaxml\GestionXML\bin\x64\Debug\FlashControlV71.dll
+C:\Users\steve\Source\Repos\creaxml\GestionXML\bin\x64\Debug\stdole.dll
+C:\Users\steve\Source\Repos\creaxml\GestionXML\bin\x64\Debug\ShockwaveFlashObjects.dll
