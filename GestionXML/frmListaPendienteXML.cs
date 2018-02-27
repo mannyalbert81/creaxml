@@ -71,7 +71,7 @@ namespace GestionXML
                 //Crea._path_camino=_path_camino;
                 Crea.Show();
                 
-               this.Hide();
+            //   this.Hide();
                 
                 
                 
